@@ -1,7 +1,7 @@
 # main links links
 main:
   - title: "Research"
-    url: /navigation/
+    url: permalink: /navigation/
     
   - title: "Teaching"
     url: https://esling.github.io/navigation/
