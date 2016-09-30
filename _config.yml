@@ -7,11 +7,11 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Esling"
+title                    : "Site Title"
 title_separator          : "-"
-name                     : "Philippe Esling"
+name                     : "Your Name"
 description              : "An amazing website."
-url                      : "http://esling.github.io"
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -57,7 +57,7 @@ yandex_site_verification :
 twitter:
   username               :
 facebook:
-  username               : https://www.facebook.com/philippe.esling
+  username               :
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -77,17 +77,17 @@ analytics:
 
 # Site Author
 author:
-  name             : "Philippe Esling"
+  name             : "Your Name"
   avatar           : "bio-photo.jpg"
-  bio              : "Associate Professor"
-  location         : "UPMC - IRCAM (Paris)"
-  email            : "esling@ircam.fr"
-  uri              : 
+  bio              : "I am an amazing person."
+  location         : "Somewhere"
+  email            :
+  uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "https://www.facebook.com/philippe.esling"
+  facebook         :
   foursquare       :
   github           :
   google_plus      :
