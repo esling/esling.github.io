@@ -4,13 +4,13 @@ main:
     url: permalink: /navigation/
     
   - title: "Teaching"
-    url: https://esling.github.io/navigation/
+    url: https://esling.github.io/teaching/
     
   - title: "Projects"
-    url: https://esling.github.io/navigation/
+    url: https://esling.github.io/projects/
 
   - title: "Softwares"
-    url: https://esling.github.io/navigation/
+    url: https://esling.github.io/softwares/
     
   - title: "Curriculum"
-    url: https://esling.github.io/navigation/
+    url: https://esling.github.io/curriculum/
