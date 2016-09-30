@@ -1,7 +1,16 @@
 # main links links
 main:
-  - title: "Sample Navigation Link"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/navigation/
+  - title: "Research"
+    url: https://esling.github.io/navigation/
+    
+  - title: "Teaching"
+    url: https://esling.github.io/navigation/
+    
+  - title: "Projects"
+    url: https://esling.github.io/navigation/
 
-  - title: "Sample Navigation Link 2"
-    url: /
+  - title: "Softwares"
+    url: https://esling.github.io/navigation/
+    
+  - title: "Curriculum"
+    url: https://esling.github.io/navigation/
