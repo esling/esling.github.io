@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "Philippe Esling"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "Philippe Esling"
 description              : "An amazing website."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -108,7 +108,7 @@ author:
 
 
 # Reading Files
-include: ["_pages"]
+include:
   - .htaccess
   - _pages
 exclude:
