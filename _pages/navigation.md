@@ -1,3 +1,4 @@
+permalink: /navigation/
 
 ====== Philippe ESLING ======
 
