@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Philippe Esling"
+title                    : "Site Title"
 title_separator          : "-"
-name                     : "Philippe Esling"
-description              : "Main website."
+name                     : "Your Name"
+description              : "An amazing website."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
