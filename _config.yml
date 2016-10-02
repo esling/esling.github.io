@@ -10,11 +10,11 @@ locale                   : "en-GB"
 title                    : "Philippe Esling"
 title_separator          : "-"
 name                     : "Philippe Esling"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description              : "Academic website for Philippe Esling."
+url                      : "https://esling.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+teaser                   : "post-teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -26,8 +26,8 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    num_posts            : 10
+    colorscheme          : "light"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : # "master", "gh-pages"
@@ -48,7 +48,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification :
+google_site_verification : "UA-85107820-1"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -57,22 +57,26 @@ yandex_site_verification :
 twitter:
   username               :
 facebook:
-  username               :
+  username               : "philippe.esling"
   app_id                 :
-  publisher              :
-og_image                 : # Open Graph/Twitter default site image
+  publisher              : "philippe.esling"
+og_image                 : "site-logo.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://facebook.com/philippe.esling"
+    - "https://scholar.google.fr/citations?user=soZrPYAAAAAJ&hl=fr&oi=ao"
+    - "http://repmus.ircam.fr/esling"
+    - "https://www.researchgate.net/profile/Philippe_Esling"
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-universal"
   google:
-    tracking_id          :
+    tracking_id          : "UA-85107820-1"
 
 
 # Site Author
@@ -87,9 +91,9 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "philippe.esling"
   foursquare       :
-  github           :
+  github           : "esling"
   google_plus      :
   keybase          :
   instagram        :
@@ -227,3 +231,16 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+defaults:
+  # _posts
+  - scope:
+    path: ""
+    type: posts
+  values:
+    layout: single
+    author_profile: true
+    read_time: true
+    comments: true
+    share: true
+    related: true
