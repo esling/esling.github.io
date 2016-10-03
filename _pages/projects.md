@@ -14,7 +14,13 @@ if (yop) {
   }
 ```
 
+$\Gamma$
 $\sum{x}{y}x+y$
+
+\begin{equation}
+\Gamma(z) := \int_{0}^{\infty}t^{z-1}e^{-t}dt.
+\label{eq1}
+\end{equation}
 
 
 ### Artificial creative intelligence
