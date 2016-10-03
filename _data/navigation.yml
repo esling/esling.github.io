@@ -18,31 +18,31 @@ main:
 # general research links
 research:
   - title: "Publications"
-  url: /publications/
+    url: /publications/
   
   - title: "Projects"
-  url: /projects/
+    url: /projects/
   
   - title: "Supervision"
-  url: /supervision/
+    url: /supervision/
   
 research-projects:
   - title: "Publications"
-  url: /publications/
+    url: /publications/
   
-  -title: "Projects"
-  children:
-    - title: "Multiscale time series mining"
-    url: /projects-ts/
-    - title: "Artificial creative intelligence"
-    url: /projects-ai/
-    - title: "Musical orchestration"
-    url: /projects-orchestration/
-    - title: "Ecological monitoring"
-    url: /projects-monitoring/
-    - title: "Heart diseases"
-    url: /projects-heart/
+  - title: "Projects"
+    children:
+      - title: "Multiscale time series mining"
+        url: /projects-ts/
+      - title: "Artificial creative intelligence"
+        url: /projects-ai/
+      - title: "Musical orchestration"
+        url: /projects-orchestration/
+      - title: "Ecological monitoring"
+        url: /projects-monitoring/
+      - title: "Heart diseases"
+        url: /projects-heart/
     
-  -title: "Supervision"
-  url: /supervision/
+  - title: "Supervision"
+    url: /supervision/
   
