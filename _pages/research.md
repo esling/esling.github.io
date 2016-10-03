@@ -18,7 +18,7 @@ You can find detailed lists of
 
 ### Selected publications  
 
-[Journal](#link){: .btn .btn--success}
+[Journal](#link){: .btn .btn--success} <i class="fa fa-fw fa-pdf-o" aria-hidden="true"></i>  
 Guanliang Chen, Dan Davis, Markus Krause, Efthimia Aivaloglou, Claudia Hauff and Geert-Jan Houben. *Can Learners be Earners? Investigating a Design to Enable MOOC Learners to Apply their Skills and Earn Money in an Online Market Place*, accepted as regular article (12 pages) at the [IEEE Transactions on Learning Technologies](https://www.computer.org/web/tlt/).  
 [[TLT Preprint &#8594;]](http://doi.ieeecomputersociety.org/10.1109/TLT.2016.2614302)
 
