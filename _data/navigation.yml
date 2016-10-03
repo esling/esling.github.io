@@ -1,16 +1,16 @@
 # main links links
 main:
   - title: "Research"
-    url: /navigation/
+    url: /research/
     
   - title: "Teaching"
-    url: https://esling.github.io/teaching/
+    url: /teaching/
     
   - title: "Projects"
-    url: https://esling.github.io/projects/
+    url: /projects/
 
-  - title: "Softwares"
-    url: https://esling.github.io/softwares/
+  - title: "Software"
+    url: /softwares/
     
-  - title: "Curriculum"
-    url: https://esling.github.io/curriculum/
+  - title: "Blog"
+    url: /blog/
