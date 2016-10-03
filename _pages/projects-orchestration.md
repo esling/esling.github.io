@@ -2,6 +2,8 @@
 layout: single
 permalink: /projects-orchestration/
 author_profile: true
+sidebar:
+  nav: "research-projects"
 ---
 
 ### [Musical orchestration](/projects-orchestration/)
