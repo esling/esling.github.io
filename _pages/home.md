@@ -4,7 +4,7 @@ permalink: /
 author_profile: true
 ---
 
-I am currently an associate professor and research in data mining and artificial intelligence at [IRCAM](www.ircam.fr) and computer science at [Paris 6 Unversity (UPMC)](www.upmc.fr)
+I am currently an associate professor and research in data mining and artificial intelligence at [IRCAM](http://www.ircam.fr) and computer science at [Paris 6 Unversity (UPMC)](http://www.upmc.fr)
 
 * [Research](/research/)
 * [Teaching](/teaching/)
@@ -12,7 +12,7 @@ I am currently an associate professor and research in data mining and artificial
 * [Software](/software/)
 
 ## Contact information
-Philippe ESLING
+Philippe ESLING\\
 c/o IRCAM
 1, Place Igor Stravinsky
 F-75004 Paris, France
