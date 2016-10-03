@@ -1,5 +1,5 @@
 ---
 layout: single
-permalink: /navigation/
+permalink: /blog/
 author_profile: true
 ---
