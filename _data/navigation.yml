@@ -32,9 +32,9 @@ research-projects:
   
   - title: "Projects"
     children:
-      - title: "Multiscale time series mining"
+      - title: "Time series mining"
         url: /projects-ts/
-      - title: "Artificial creative intelligence"
+      - title: "Creative intelligence"
         url: /projects-ai/
       - title: "Musical orchestration"
         url: /projects-orchestration/
