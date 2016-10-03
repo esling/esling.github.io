@@ -2,6 +2,8 @@
 layout: single
 permalink: /projects-mots/
 author_profile: true
+sidebar:
+  nav: "research-projects"
 ---
 
 ### Multiobjective time series matching
