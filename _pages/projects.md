@@ -14,7 +14,7 @@ if (yop) {
   }
 ```
 
-$\Gamma$
+$$ \Gamma $$
 $\sum{x}{y}x+y$
 
 \begin{equation}
