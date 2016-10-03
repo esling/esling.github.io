@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /projects-mots/
-author_profile: true
+author_profile: false
 sidebar:
   nav: "research-projects"
 ---
