@@ -2,6 +2,8 @@
 layout: single
 permalink: /projects-ai/
 author_profile: false
+sidebar:
+  nav: "research-projects"
 ---
 
 ### Artificial creative intelligence
