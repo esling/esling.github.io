@@ -16,7 +16,7 @@ This section summarizes the courses in machine learning applied to music computi
 
 ## Course summary
 
-### I - Introduction [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf)
+### [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) [![](../images/html.png)](../atiam-ml-0-intro/) I - Introduction 
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
