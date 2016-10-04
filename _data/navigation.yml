@@ -111,11 +111,11 @@ teaching-atiam-ml:
         url: /atiam-ml/
         children:
           - title: "1. Introduction"
-          url: /atiam-ml-1-introduction/
+            url: /atiam-ml-1-introduction/
           - title: "2. Neural networks"
-          url: /atiam-ml-2-neural-networks/
+            url: /atiam-ml-2-neural-networks/
           - title: "3. Support Vector Machines"
-          url: /atiam-ml-3-support-vector-machines
+            url: /atiam-ml-3-support-vector-machines
   - title: "L3 - JAVA"
     url: /teaching-java/
   - title: "M1 - DLP"
