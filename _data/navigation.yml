@@ -80,6 +80,25 @@ teaching:
     url: /teaching-ppc/
     
 
+teaching-atiam:
+  - title: "ATIAM"
+    url: /atiam/
+    children:
+      - title: "Fundamentals"
+        url: /atiam-fundamentals/
+      - title: "Distributed music"
+        url: /atiam-distributed/
+      - title: "Machine learning"
+        url: /atiam-ml/
+  - title: "L3 - JAVA"
+    url: /teaching-java/
+  - title: "M1 - DLP"
+    url: /teaching-dlp/
+  - title: "M1 - PC2R"
+    url: /teaching-pc2r/
+  - title: "M2 - PPC"
+    url: /teaching-ppc/
+
 teaching-atiam-ml:
   - title: "ATIAM"
     url: /atiam/
