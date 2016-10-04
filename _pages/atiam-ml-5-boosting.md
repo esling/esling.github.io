@@ -6,4 +6,4 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
-## Support vector machines
+## Boosting
