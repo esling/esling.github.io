@@ -1,5 +1,9 @@
 ---
 layout: single
 permalink: /teaching/
-author_profile: true
+author_profile: false
+sidebar:
+  nav: "teaching"
 ---
+
+## Teachings
