@@ -12,7 +12,7 @@ sidebar:
 
 ## International Journals
 
-#### 2015
+### 2015
 JA Visco, L Apothéloz-Perret-Gentil, A Cordonier, Esling P., L Pillet, “Environmental monitoring: inferring the diatom index from Next-Generation Sequencing data”, Environmental science & technology 49 (13), 7597-7605. IF: 5.330
 
 J Pawlowski, F Lejzerowicz, Esling P., L Apotheloz-Perret-Gentil, “Inferring biotic indices from metabarcoding data: promises and challenges”, Genome 58 (5), 265-265 2015. IF: 13.852
