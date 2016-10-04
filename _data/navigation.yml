@@ -101,12 +101,34 @@ teaching-atiam:
     url: /teaching-ppc/
     
 teaching-atiam-ml:
-  - title: "Fundamentals"
-    url: /atiam-fundamentals/
-  - title: "Distributed music"
-    url: /atiam-distributed/
+  - title: "Summary"
+    url: /atiam-ml/
   - title: "Machine learning"
     url: /atiam-ml/
     children:
     - title: "0 - Introduction"
-      url: /atiam-intro/
+      url: /atiam-ml-0-intro/
+    - title: "1 - Nearest Neighbors"
+      url: /atiam-ml-1-nearest-neighbors/
+    - title: "2 - Neural Networks"
+      url: /atiam-ml-2-neural-networks/
+    - title: "3 - Support Vector Machines"
+      url: /atiam-ml-3-support-vector-machines/
+    - title: "4 - Clustering"
+      url: /atiam-ml-4-clustering/
+    - title: "5 - Boosting"
+      url: /atiam-ml-5-boosting/
+    - title: "6 - Probabilistic Models"
+      url: /atiam-ml-6-probabilistic-models/
+    - title: "7 - Bayesian Inference"
+      url: /atiam-ml-7-bayesian-inference/
+    - title: "8 - Gaussian mixtures"
+      url: /atiam-ml-8-gaussian-mixtures/
+    - title: "9 - Markov models"
+      url: /atiam-ml-9-markov-models/
+    - title: "10 - Data complexity"
+      url: /atiam-ml-10-data-complexity/
+    - title: "11 - Deep learning"
+      url: /atiam-ml-11-deep-learning/
+    - title: "12 - Going further"
+      url: /atiam-ml-12-going-further/
