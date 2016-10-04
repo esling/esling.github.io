@@ -1,3 +1,11 @@
+---
+layout: single
+permalink: /projects-ai/
+author_profile: false
+sidebar:
+  nav: "teaching-atiam"
+---
+
 ## ATIAM
 
 This page contains the slides and assignments for parts of the musical informatics lesson presented at the ATIAM master in IRCAM.
