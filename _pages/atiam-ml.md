@@ -20,40 +20,38 @@ This section summarizes the courses in machine learning applied to music computi
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
-==== II - Neural Networks ====
-** {{ml.cours.2.pdf|Slides}} **
+#### II - Neural Networks
   - The artificial neuron
   - Neural networks
   - Architecture zoo
-==== III - Support Vector Machines ====
-** {{ml.cours.2.pdf|Slides}} **
+#### III - Support Vector Machines
   - Support Vector Machines
   - Properties of kernels
-==== IV - Unsupervised clustering ====
+#### IV - Unsupervised clustering
   - Clustering motivations
   - K-Means and k-medoids
   - Hierarchical clustering
-==== V - Meta-heuristics ====
+#### V - Meta-heuristics
   - Genetic algorithms
   - Boosting
-==== VI - Probabilistic inference ====
+#### VI - Probabilistic models
   - Probabilities and distributions
   - Belief networks
-==== VII - Bayesian inference ====
+#### VII - Bayesian inference 
   - Bayesian learning
   - Undirected graphical models
   - Maximum likelihood
-==== VIII - Gaussian Mixture Models ====
+#### VIII - Gaussian Mixture Models
   - Expectation Maximization
   - Mixture models
-==== IX - Probabilistic Graphical Models ====
+#### IX - Probabilistic Graphical Models
   - Undirected graphical models
   - Hidden Markov models
-==== X - Data complexity and GPU computing ====
+#### X - Data complexity and GPU computing
   - Pitfalls of machine learning
   - Data complexity
   - GPU computing
-==== XI - Deep learning ====
+#### XI - Deep learning
   - Deep learning
   - Applications
 
