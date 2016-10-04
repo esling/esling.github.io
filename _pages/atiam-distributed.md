@@ -1,3 +1,13 @@
+---
+layout: single
+permalink: /atiam-distributed/
+author_profile: false
+share: true
+comments: true
+sidebar:
+  nav: "teaching-atiam"
+---
+
 ## Distributed musical informatics
 
 #### Slides
