@@ -12,9 +12,9 @@ sidebar:
 
 ### ATIAM - M2
 
-Fundamentals - Data structures
-OSC Protocol and distributed computing
-Musical machine learning
+* [Fundamentals - Data structures](/atiam-fundamentals/)
+* [OSC Protocol and distributed computing](/atiam-distributed/)
+* [Musical machine learning](/atiam-ml/)
 
 ## UPMC - M1
 
