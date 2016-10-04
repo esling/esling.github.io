@@ -16,18 +16,21 @@ This section summarizes the courses in machine learning applied to music computi
 
 ## Course summary
 
-### [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) [![](../images/html.png)](../atiam-ml-0-intro/) I - Introduction 
+## [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) [![](../images/html.png)](../atiam-ml-0-intro/) I - Introduction 
   * Introduction to artificial intelligence
   * Properties of machine learning
-  * Nearest-neighbors
+  * Nearest-neighbors  
+  
 ### II - Neural Networks
   - The artificial neuron
   - Neural networks
-  - Architecture zoo
-#### III - Support Vector Machines
+  - Architecture zoo  
+  
+### III - Support Vector Machines
   - Support Vector Machines
-  - Properties of kernels
-#### IV - Unsupervised clustering
+  - Properties of kernels  
+  
+### IV - Unsupervised clustering
   - Clustering motivations
   - K-Means and k-medoids
   - Hierarchical clustering
