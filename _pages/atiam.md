@@ -14,22 +14,6 @@ This page contains the slides and assignments for parts of the musical informati
   * [Distributed musical informatics](/atiam-distributed/)
   * [Musical machine learning](/atiam-ml/)
 
-===== Distributed musical informatics =====
-
-==== Slides ====
-
-  * Open Sound Control (OSC) protocols - {{:esling:generic.6.osc.pdf| Slides}}
-
-**Supporting information**:
-  - Official [[http://opensoundcontrol.org/|OSC website]]
-  - List of [[http://opensoundcontrol.org/implementations|implementations]]
-
-  * High-Performance Computing (HPC) and parallelism - {{:esling:generic.6b.concurrence.pdf| Slides}}
-
-**Suggested reading**:
-  - Official [[http://openmp.org/wp/|OpenMP implementation]]
-  - Description of [[http://www.mathworks.com/products/parallel-computing/|MATLAB Parallel]]
-
 ===== Musical machine learning =====
 
 The [[esling:atiam-ml.html|main page]] for musical machine learning can be found [[esling:atiam-ml.html|here]], but this provides a quick summary of the program.
