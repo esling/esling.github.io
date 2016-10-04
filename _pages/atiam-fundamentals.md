@@ -1,3 +1,11 @@
+---
+layout: single
+permalink: /atiam-fundamentals/
+author_profile: false
+sidebar:
+  nav: "teaching-atiam"
+---
+
 ## ATIAM - Fundamentals
 
 ### Slides
