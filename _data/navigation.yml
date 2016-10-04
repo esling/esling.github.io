@@ -78,7 +78,8 @@ teaching:
     url: /teaching-pc2r/
   - title: "M2 - PPC"
     url: /teaching-ppc/
-    
+  - title: "Summary"
+    url: /teaching-summary/
 
 teaching-atiam:
   - title: "ATIAM"
@@ -100,23 +101,12 @@ teaching-atiam:
     url: /teaching-ppc/
     
 teaching-atiam-ml:
-  - title: "ATIAM"
-    url: /atiam/
+  - title: "Fundamentals"
+    url: /atiam-fundamentals/
+  - title: "Distributed music"
+    url: /atiam-distributed/
+  - title: "Machine learning"
+    url: /atiam-ml/
     children:
-      - title: "Fundamentals"
-        url: /atiam-fundamentals/
-      - title: "Distributed music"
-        url: /atiam-distributed/
-      - title: "Machine learning"
-        url: /atiam-ml/
-        children:
-          - title: "0 - Introduction"
-            url: /atiam-intro/
-  - title: "L3 - JAVA"
-    url: /teaching-java/
-  - title: "M1 - DLP"
-    url: /teaching-dlp/
-  - title: "M1 - PC2R"
-    url: /teaching-pc2r/
-  - title: "M2 - PPC"
-    url: /teaching-ppc/
+    - title: "0 - Introduction"
+      url: /atiam-intro/
