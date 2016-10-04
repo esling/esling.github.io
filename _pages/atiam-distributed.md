@@ -2,13 +2,15 @@
 
 #### Slides
 
-  * Open Sound Control (OSC) protocols - {{:esling:generic.6.osc.pdf| Slides}}
+##### Open Sound Control (OSC) protocols
+[![](../images/pdf.png) Slides](../documents/esling:generic.6.osc.pdf)
 
 *Supporting information*:
-  - Official [OSC website](http://opensoundcontrol.org)
-  - List of [implementations](http://opensoundcontrol.org/implementations)
+  * Official [OSC website](http://opensoundcontrol.org)
+  * List of [implementations](http://opensoundcontrol.org/implementations)
 
-  * High-Performance Computing (HPC) and parallelism - {{:esling:generic.6b.concurrence.pdf| Slides}}
+##### High-Performance Computing (HPC) and parallelism
+[![](../images/pdf.png) Slides](../documents/esling:generic.6b.concurrence.pdf)
 
 *Suggested reading*:
   - Official [OpenMP implementation](http://openmp.org/wp/)
