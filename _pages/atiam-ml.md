@@ -6,7 +6,7 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
-## Musical machine learning
+# Musical machine learning
 
 This section summarizes the courses in machine learning applied to music computing given along the ATIAM Masters at IRCAM.
   * [Course summary](/atiam-ml/#course-summary)
@@ -14,13 +14,13 @@ This section summarizes the courses in machine learning applied to music computi
   * [Exercices](/atiam-ml/#exercices)
   * [References](/atiam-ml/#references)
 
-### Course summary
+## Course summary
 
-#### I - Introduction [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf)
+### I - Introduction [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf)
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
-#### II - Neural Networks
+### II - Neural Networks
   - The artificial neuron
   - Neural networks
   - Architecture zoo
