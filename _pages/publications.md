@@ -5,7 +5,7 @@ author_profile: false
 sidebar:
   nav: "research-publications"
 ---
-Find me on various academia websites  
+Find me on academia sites  
 [Google Scholar](https://scholar.google.com/citations?user=soZrPYAAAAAJ&hl=en)  
 [ResearchGate](https://www.researchgate.net/profile/Philippe_Esling)  
 [DBLP](http://dblp.uni-trier.de/pers/hd/e/Esling:Philippe)  
