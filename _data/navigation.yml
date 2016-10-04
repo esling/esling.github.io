@@ -53,13 +53,13 @@ research-publications:
     url: /publications/
     children:
       - title: "Journals"
-        url: #international-journals
+        url: /publications/#international-journals
       - title: "Conferences"
-        url: #international-conferences
+        url: /publications/#international-conferences
       - title: "Book chapters"
-        url: #book-chapters
+        url: /publications/#book-chapters
       - title: "Invited"
-        url: #invited-speaker-conference
+        url: /publications/#invited-speaker-conference
   
   - title: "Projects"
     url: /projects/
