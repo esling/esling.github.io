@@ -3,7 +3,7 @@ layout: single
 permalink: /publications/
 author_profile: false
 sidebar:
-  nav: "research"
+  nav: "research-publications"
 ---
 
 [Google Scholar](https://scholar.google.com/citations?user=soZrPYAAAAAJ&hl=en)  
