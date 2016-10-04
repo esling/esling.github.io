@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /projects-ai/
+permalink: /atiam/
 author_profile: false
 sidebar:
   nav: "teaching-atiam"
