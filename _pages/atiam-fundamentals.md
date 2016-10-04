@@ -2,6 +2,7 @@
 layout: single
 permalink: /atiam-fundamentals/
 author_profile: false
+share: true
 sidebar:
   nav: "teaching-atiam"
 ---
