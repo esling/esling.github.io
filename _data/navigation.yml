@@ -31,6 +31,7 @@ research-projects:
     url: /publications/
   
   - title: "Projects"
+    url: /projects/
     children:
       - title: "Time series mining"
         url: /projects-ts/
@@ -46,3 +47,22 @@ research-projects:
   - title: "Supervision"
     url: /supervision/
   
+
+research-publications:
+  - title: "Publications"
+    url: /publications/
+    children:
+      - title: "Journals"
+        url: #international-journals
+      - title: "Conferences"
+        url: #international-conferences
+      - title: "Book chapters"
+        url: #book-chapters
+      - title: "Invited"
+        url: #invited-speaker-conference
+  
+  - title: "Projects"
+    url: /projects/
+  
+  - title: "Supervision"
+    url: /supervision/
