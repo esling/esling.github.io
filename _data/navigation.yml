@@ -112,7 +112,7 @@ teaching-atiam-ml:
       url: /atiam-ml-1-nearest-neighbors/
     - title: "2 - Neural Networks"
       url: /atiam-ml-2-neural-networks/
-    - title: "3 - Support Vector Machines"
+    - title: "3 - Support Vectors"
       url: /atiam-ml-3-support-vector-machines/
     - title: "4 - Clustering"
       url: /atiam-ml-4-clustering/
