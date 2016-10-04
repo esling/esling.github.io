@@ -29,10 +29,10 @@ Pawlowski J., F Lejzerowicz, **Esling P.**, L Apotheloz-Perret-Gentil, *Inferrin
 Pawlowski, J., **Esling, P.**, Lejzerowicz, F., Cordier, T., Visco, J. A., Martins, C. I., ... & Cedhagen, T. *Benthic monitoring of salmon farms in Norway using foraminiferal metabarcoding*. Aquaculture Environment Interactions, **8**, 371-386.    
 [![](../images/pdf.png)](http://www.int-res.com/articles/aei2016/8/q008p371.pdf) [![](../images/html.png)](http://www.int-res.com/abstracts/aei/v8/p371-386/) [![](../images/file.png)]() [[Blog]](/blog/)  
 
-Pawłowska J., M Zajączkowski, M Łącka, F Lejzerowicz, **Esling P.**, J Pawlowski *Palaeoceanographic changes in Hornsund Fjord (Spitsbergen, Svalbard) over the last millennium: new insights from ancient DNA* Climate of the Past Discussions, **11** 3665-3698. *IF: 1.23*
+Pawłowska J., M Zajączkowski, M Łącka, F Lejzerowicz, **Esling P.**, J Pawlowski *Palaeoceanographic changes in Hornsund Fjord (Spitsbergen, Svalbard) over the last millennium: new insights from ancient DNA* Climate of the Past Discussions, **11** 3665-3698. *IF: 1.23*  
 [![](../images/pdf.png)](https://www.researchgate.net/profile/Joanna_Pawtowska/publication/281268986_Palaeoceanographic_changes_in_Hornsund_Fjord_Spitsbergen_Svalbard_over_the_last_millennium_new_insights_from_ancient_DNA/links/55dd864108ae591b309adcae.pdf) [![](../images/html.png)](http://www.clim-past.net/12/1459/2016/cp-12-1459-2016-discussion.html) [![](../images/file.png)]() [[Blog]](/blog/)  
 
-Pochon X., SA Wood, NB Keeley, F Lejzerowicz, **P Esling**, J Drew, J Pawlowski *Accurate assessment of the impact of salmon farming on benthic sediment enrichment using foraminiferal metabarcoding* Marine pollution bulletin, **100** (1), 370-382 
+Pochon X., SA Wood, NB Keeley, F Lejzerowicz, **P Esling**, J Drew, J Pawlowski *Accurate assessment of the impact of salmon farming on benthic sediment enrichment using foraminiferal metabarcoding* Marine pollution bulletin, **100** (1), 370-382  
 [![](../images/pdf.png)](https://www.researchgate.net/profile/Xavier_Pochon/publication/281514287_Accurate_assessment_of_the_impact_of_salmon_farming_on_benthic_sediment_enrichment_using_foraminiferal_metabarcoding/links/560de7c508ae6cf68154200b.pdf) [![](../images/html.png)](http://www.sciencedirect.com/science/article/pii/S0025326X15005263) [![](../images/file.png)]() [[Blog]](/blog/)  
 
 ### 2014
