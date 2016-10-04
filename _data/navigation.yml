@@ -111,7 +111,7 @@ teaching-atiam-ml:
         url: /atiam-ml/
         children:
           - title: "0 - Introduction"
-          url: /atiam-intro/
+            url: /atiam-intro/
   - title: "L3 - JAVA"
     url: /teaching-java/
   - title: "M1 - DLP"
