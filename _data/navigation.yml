@@ -101,8 +101,15 @@ teaching-atiam:
     url: /teaching-ppc/
     
 teaching-atiam-ml:
-  - title: "Summary"
-    url: /atiam-ml/
+  - title: "ATIAM"
+    url: /atiam/
+    children:
+      - title: "Fundamentals"
+        url: /atiam-fundamentals/
+      - title: "Distributed music"
+        url: /atiam-distributed/
+      - title: "Machine learning"
+        url: /atiam-ml/
   - title: "Machine learning"
     url: /atiam-ml/
     children:
