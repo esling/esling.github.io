@@ -39,7 +39,7 @@ In order to do so, we will work with several datasets that should be downloaded 
   * **Source separation** - *SMC Mirum* dataset
   * **Speech recognition** - *CMU Arctic* dataset
 
-For the first parts of the tutorial, we will mostly use the classification dataset only. In order to facilitate the interactions, we provide the function ''importDataset'' that allows to import different audio datasets
+For the first parts of the tutorial, we will mostly use the classification dataset only. In order to facilitate the interactions, we provide the function `importDataset` that allows to import different audio datasets
 
 {% highlight Matlab %}
 function dataStruct = importDataset(classPath, type)
