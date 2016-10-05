@@ -50,12 +50,12 @@ dataStruct.classes    % Vector of indexes assigning each file to a class
 dataStruct.classNames % Cell of class names
 {% endhighlight %}  
 
-<div>{: .notice--info}
+<div>
 ** Exercice to perform **  
 
   1. Launch the import procedure  and check the corresponding structure
   2. Code a simple count function that prints the number of examples for each classes (along with its name)
-</div>
+</div>{: .notice--info}
   
 
 ### 1.2 - Preprocessing
