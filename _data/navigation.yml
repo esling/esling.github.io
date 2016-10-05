@@ -110,7 +110,7 @@ teaching-atiam-ml:
         url: /atiam-distributed/
       - title: "Machine learning"
         url: /atiam-ml/
-  - title: "Machine learning"
+  - title: "Summary"
     url: /atiam-ml/
     children:
     - title: "0 - Introduction"
