@@ -14,14 +14,14 @@ sidebar:
 
 The present tutorials covers coding exercices designed to implement the core notions seen in the machine learning lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercices here target these techniques specifically applied to musical or audio data.
 
-## [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
+# [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
 
 The corresponding slides cover
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
 
-## Tutorial 
+# Tutorial 
 In this introduction, we will cover basic Music Information Retrieval (MIR) interactions, in which we process a dataset of sound files and try to observe the properties of their various temporal and spectral features. Hence, we will quickly review basic calculus required to perform further machine learning tasks.
 
 ### 1.0 - Reference code
