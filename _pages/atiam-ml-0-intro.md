@@ -22,11 +22,11 @@ The corresponding slides cover
 ## Tutorial 
 In this introduction, we will cover basic Music Information Retrieval (MIR) interactions, in which we process a dataset of sound files and try to observe the properties of their various temporal and spectral features. Hence, we will quickly review basic calculus required to perform further machine learning tasks.
 
-== 1.0 - Reference code ==
+### 1.0 - Reference code
 
 Get the baseline code from this {{:esling:atiam_ml_exercises.zip|link}}
 
-== 1.1 - Datasets ==
+### 1.1 - Datasets
 In order to do so, we will work with several datasets that should be downloaded on your local computer first from this [[https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151|link]]
   * Classification - MuscleFish dataset
   * Music-speech - MIREX Recognition set
@@ -52,7 +52,7 @@ dataStruct.classNames % Cell of class names
   - Code a simple count function that prints the number of examples for each classes (along with its name)
 </blockquote>
 \\
-== 1.2 - Preprocessing ==
+### 1.2 - Preprocessing
 We will rely on a set of spectral transforms that allow to obtain a more descriptive view over the audio information. As most of these is out of the scope of the machine learning course, we redirect you to a [[https://ccrma.stanford.edu/~jos/sasp/|signal processing course]] proposed by [[https://ccrma.stanford.edu/~jos/|Julius O. Smith]].\\
 
 The following functions to compute various types of transforms are given as part of the basic package, in the //0b_Preprocessing// folder
@@ -90,7 +90,7 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 ;#;
 \\
 
-== 1.3 - Features ==
+### 1.3 - Features
 As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing the following features in the //0c_Features// folder
   * ''featureSpectralCentroid.m'' - Spectral centroid
   * ''featureSpectralCrest.m'' - Spectral crest
