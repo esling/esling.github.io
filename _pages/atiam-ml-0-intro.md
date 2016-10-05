@@ -53,11 +53,11 @@ dataStruct.classNames % Cell of class names
 {% endhighlight %}  
 
 <div>
-**Exercice**
-
-  1. Launch the import procedure  and check the corresponding structure
-  2. Code a simple count function that prints the number of examples for each classes (along with its name)
-  
+<b>Exercice</b>
+<ol>
+<li>Launch the import procedure  and check the corresponding structure</li>
+<li>Code a simple count function that prints the number of examples for each classes (along with its name)</li>
+</ol>
 </div>{: .notice--info}
 
 ### 1.2 - Preprocessing
