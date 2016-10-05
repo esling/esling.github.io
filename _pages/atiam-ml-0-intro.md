@@ -73,8 +73,9 @@ The following functions to compute various types of transforms are given as part
   * `spec2cep.m`   - [Cepstrum](https://en.wikipedia.org/wiki/Cepstrum) transform
   * `cqt.m`        - [Constant-Q](https://en.wikipedia.org/wiki/Constant_Q_transform) transform
 
-In order to perform the various computations, we provide the following function, which performs the different transforms on a complete dataset.
-<code matlab>
+In order to perform the various computations, we provide the following function, which performs the different transforms on a complete dataset.  
+
+{% highlight Matlab %}
 function dataStruct = computeTransforms(dataStruct)
 % dataStruct   : Dataset structure with filenames
 
@@ -85,10 +86,8 @@ dataStruct.spectrumMel       % Spectrum in Mel scale
 dataStruct.spectrumChroma    % Chroma vectors
 dataStruct.spectrumCepstrum  % Cepstrum
 dataStruct.spectrumConstantQ % Constant-Q transform
-</code>
+{% endhighlight %}  
 
-
-\\
 <blockquote>
 ** Exercice to perform **
   - Launch the transform computation procedure and check the corresponding structure
