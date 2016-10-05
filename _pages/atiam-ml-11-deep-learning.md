@@ -12,7 +12,7 @@ sidebar:
 
 The present tutorials covers .
 
-## [![](../images/pdf.png)](../documents/MML.Lesson.10.Data.Complexity.pdf) Slides
+## [![](../images/pdf.png)](../documents/MML.Lesson.11.Deep.Learning.pdf) Slides
 
 The corresponding slides cover
 
