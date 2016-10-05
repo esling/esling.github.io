@@ -2,6 +2,8 @@
 layout: single
 permalink: /atiam-ml-0-intro/
 author_profile: false
+share: true
+comments: true
 sidebar:
   nav: "teaching-atiam-ml"
 ---
