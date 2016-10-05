@@ -52,7 +52,6 @@ dataStruct.classes    % Vector of indexes assigning each file to a class
 dataStruct.classNames % Cell of class names
 {% endhighlight %}  
 
-{% highlight %}
 [**Exercice**  
 
   1. Launch the import procedure  and check the corresponding structure</li>
