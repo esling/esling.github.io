@@ -58,7 +58,8 @@ dataStruct.classNames % Cell of class names
   1. Launch the import procedure  and check the corresponding structure
   2. Code a count function that prints the name and number of examples for each classes 
 
-</div>{: .notice--info}
+</div>{: .notice--info}  
+
 
 ### 1.2 - Preprocessing
 
