@@ -6,4 +6,16 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
-## Neural networks
+# Neural networks
+
+The present tutorials covers .
+
+## [![](../images/pdf.png)](../documents/MML.Lesson.2.Neural.networks.pdf) Slides
+
+The corresponding slides cover
+
+  - The artificial neuron
+  - Neural networks
+  - Architecture zoo  
+
+## Tutorial 
