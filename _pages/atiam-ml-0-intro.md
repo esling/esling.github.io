@@ -97,7 +97,7 @@ dataStruct.spectrumConstantQ % Constant-Q transform
   2. For each class, select a random element and plot its various transforms on a single plot. You should obtain plots similar to those shown afterwards.
   3. For each transform, try to spot major pros and cons of their representation.
 
-</div>
+</div>{: .notice--info}
 
 ;#;
 {{:esling:aml_p1_altotrombone.jpg?nolink&400 |}}{{:esling:aml_p1_speech.jpg?nolink&400 |}}
@@ -106,6 +106,7 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 
 ### 1.3 - Features
 As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing the following features in the `0c_Features` folder
+
   * `featureSpectralCentroid.m` - Spectral centroid
   * `featureSpectralCrest.m` - Spectral crest
   * `featureSpectralDecrease.m` - Spectral decrease
@@ -130,13 +131,18 @@ dataStruct.SpectralCentroidStd  % Standard deviation
 {% endhighlight %}  
 
 
-** Exercice to perform **
-  - Launch the feature computation procedure and check the corresponding structure
-  - This time for each class, superimpose the plots of various features on a single plot, along with a boxplot of mean and standard deviations. You should obtain plots similar to those shown afterwards.
-  - What conclusions can you make on the discriminative power of each feature ?
-  - Perform scatter plots of the mean features for all the dataset, while coloring different classes.
-  - What conclusions can you make on the discriminative power of mean features ?
-</blockquote>
+**Exercice**
+
+<div markdown="1">
+
+  1. Launch the feature computation procedure and check the corresponding structure
+  2. This time for each class, superimpose the plots of various features on a single plot, along with a boxplot of mean and standard deviations. You should obtain plots similar to those shown afterwards.
+  3. What conclusions can you make on the discriminative power of each feature ?
+  4. Perform scatter plots of the mean features for all the dataset, while coloring different classes.
+  5. What conclusions can you make on the discriminative power of mean features ?
+
+</div>{: .notice--info}
+
 ;#;
 {{:esling:aml_p1b_bells.jpg?nolink&400 |}}{{:esling:aml_p1b_speech.jpg?nolink&400 |}}\\
 {{:esling:aml_p1c_scatter1.jpg?nolink&400 |}}{{:esling:aml_p1c_scatter2.jpg?nolink&400 |}}
