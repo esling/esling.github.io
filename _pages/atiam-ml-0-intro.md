@@ -75,6 +75,7 @@ The following functions to compute various types of transforms are given as part
 
 In order to perform the various computations, we provide the following function, which performs the different transforms on a complete dataset.  
 
+
 {% highlight Matlab %}
 function dataStruct = computeTransforms(dataStruct)
 % dataStruct   : Dataset structure with filenames
@@ -86,7 +87,7 @@ dataStruct.spectrumMel       % Spectrum in Mel scale
 dataStruct.spectrumChroma    % Chroma vectors
 dataStruct.spectrumCepstrum  % Cepstrum
 dataStruct.spectrumConstantQ % Constant-Q transform
-{% endhighlight %}  
+{% endhighlight %}   
 
 **Exercice**  
 <div markdown="1">  
@@ -103,17 +104,17 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 \\
 
 ### 1.3 - Features
-As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing the following features in the ``0c_Features`` folder
-  * ''featureSpectralCentroid.m'' - Spectral centroid
-  * ''featureSpectralCrest.m'' - Spectral crest
-  * ''featureSpectralDecrease.m'' - Spectral decrease
-  * ''featureSpectralFlatness.m'' - Spectral flatness
-  * ''featureSpectralKurtosis.m'' - Spectral kurtosis
-  * ''featureSpectralRolloff.m'' - Spectral rolloff
-  * ''featureSpectralSkewness.m'' - Spectral skewness
-  * ''featureSpectralSlope.m'' - Spectral slope
-  * ''featureSpectralSpread.m'' - Spectral spread
-  * ''featureMFCC.m'' - Mel-Frequency Cepstral Coefficients (MFCC)
+As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing the following features in the `0c_Features` folder
+  * `featureSpectralCentroid.m` - Spectral centroid
+  * `featureSpectralCrest.m` - Spectral crest
+  * `featureSpectralDecrease.m` - Spectral decrease
+  * `featureSpectralFlatness.m` - Spectral flatness
+  * `featureSpectralKurtosis.m` - Spectral kurtosis
+  * `featureSpectralRolloff.m` - Spectral rolloff
+  * `featureSpectralSkewness.m` - Spectral skewness
+  * `featureSpectralSlope.m` - Spectral slope
+  * `featureSpectralSpread.m` - Spectral spread
+  * `featureMFCC.m` - Mel-Frequency Cepstral Coefficients (MFCC)
 
 Once again, we provide a function to perform the computation of different features on a complete set. Note that for each feature, we compute the temporal evolution in a vector along with the mean and standard deviation of each feature. We only detail the resulting data structure for a single feature.  
 
