@@ -8,6 +8,8 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+{% include toc %}
+
 # Introduction
 
 The present tutorials covers coding exercices designed to implement the core notions seen in the machine learning lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercices here target these techniques specifically applied to musical or audio data.
