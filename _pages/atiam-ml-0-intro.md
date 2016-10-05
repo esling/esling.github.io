@@ -32,7 +32,7 @@ In this introduction, we will cover basic Music Information Retrieval (MIR) inte
 Get the baseline code from this [zip file ![](../images/file.png)](../documents/atiam_ml_exercises.zip)
 
 ### 1.1 - Datasets
-In order to do so, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)] [[https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151|link]]
+In order to do so, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)](https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151)
 
   * **Classification** - *MuscleFish* dataset
   * **Music-speech** - *MIREX Recognition* set
