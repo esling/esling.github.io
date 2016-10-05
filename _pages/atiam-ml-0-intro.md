@@ -16,9 +16,10 @@ The present tutorials covers coding exercices designed to implement the core not
 
 # Reference slides
 
-Download the [![](../images/pdf.png) slides](../documents/MML.Lesson.1.Introduction.pdf)
+Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf)
 
 The corresponding slides cover
+
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
@@ -28,14 +29,15 @@ In this introduction, we will cover basic Music Information Retrieval (MIR) inte
 
 ### 1.0 - Reference code
 
-Get the baseline code from this {{:esling:atiam_ml_exercises.zip|link}}
+Get the baseline code from this [zip file ![](../images/file.png)](../documents/atiam_ml_exercises.zip)
 
 ### 1.1 - Datasets
-In order to do so, we will work with several datasets that should be downloaded on your local computer first from this [[https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151|link]]
-  * Classification - MuscleFish dataset
-  * Music-speech - MIREX Recognition set
-  * Source separation - SMC Mirum dataset
-  * Speech recognition - CMU Arctic dataset
+In order to do so, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)] [[https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151|link]]
+
+  * **Classification** - *MuscleFish* dataset
+  * **Music-speech** - *MIREX Recognition* set
+  * **Source separation** - *SMC Mirum* dataset
+  * **Speech recognition** - *CMU Arctic* dataset
 
 For the first parts of the tutorial, we will mostly use the classification dataset only. In order to facilitate the interactions, we provide the function ''importDataset'' that allows to import different audio datasets
 
@@ -50,7 +52,7 @@ dataStruct.classes    % Vector of indexes assigning each file to a class
 dataStruct.classNames % Cell of class names
 {% endhighlight %}  
 
-* Exercice to perform *  
+**Exercice to perform**  
 
   1. Launch the import procedure  and check the corresponding structure
   2. Code a simple count function that prints the number of examples for each classes (along with its name){: .notice--info}
