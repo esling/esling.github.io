@@ -56,7 +56,7 @@ dataStruct.classNames % Cell of class names
 <div markdown="1">  
 
   1. Launch the import procedure  and check the corresponding structure
-  2. Code a simple count function that prints the number of examples for each classes (along with its name)  
+  2. Code a count function that prints the name and number of examples for each classes 
 
 </div>{: .notice--info}
 
@@ -88,19 +88,22 @@ dataStruct.spectrumCepstrum  % Cepstrum
 dataStruct.spectrumConstantQ % Constant-Q transform
 {% endhighlight %}  
 
-<blockquote>
-** Exercice to perform **
-  - Launch the transform computation procedure and check the corresponding structure
-  - For each class, select a random element and plot its various transforms on a single plot. You should obtain plots similar to those shown afterwards.
-  - For each transform, try to spot major pros and cons of their representation.
-</blockquote>
+**Exercice**  
+<div markdown="1">  
+
+  1. Launch the transform computation procedure and check the corresponding structure
+  2. For each class, select a random element and plot its various transforms on a single plot. You should obtain plots similar to those shown afterwards.
+  3. For each transform, try to spot major pros and cons of their representation.
+
+</div>
+
 ;#;
 {{:esling:aml_p1_altotrombone.jpg?nolink&400 |}}{{:esling:aml_p1_speech.jpg?nolink&400 |}}
 ;#;
 \\
 
 ### 1.3 - Features
-As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing the following features in the //0c_Features// folder
+As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing the following features in the ``0c_Features`` folder
   * ''featureSpectralCentroid.m'' - Spectral centroid
   * ''featureSpectralCrest.m'' - Spectral crest
   * ''featureSpectralDecrease.m'' - Spectral decrease
@@ -112,8 +115,9 @@ As you might have noted from the previous exercice, most spectral transforms hav
   * ''featureSpectralSpread.m'' - Spectral spread
   * ''featureMFCC.m'' - Mel-Frequency Cepstral Coefficients (MFCC)
 
-Once again, we provide a function to perform the computation of different features on a complete set. Note that for each feature, we compute the temporal evolution in a vector along with the mean and standard deviation of each feature. We only detail the resulting data structure for a single feature.
-<code matlab>
+Once again, we provide a function to perform the computation of different features on a complete set. Note that for each feature, we compute the temporal evolution in a vector along with the mean and standard deviation of each feature. We only detail the resulting data structure for a single feature.  
+
+{% highlight Matlab %}
 function dataStruct = computeFeatures(dataStruct)
 % dataStruct   : Dataset structure with filenames
 
@@ -121,11 +125,9 @@ function dataStruct = computeFeatures(dataStruct)
 dataStruct.SpectralCentroid     % Temporal value of a feature
 dataStruct.SpectralCentroidMean % Mean value of that feature
 dataStruct.SpectralCentroidStd  % Standard deviation
-</code>
+{% endhighlight %}  
 
 
-\\
-<blockquote>
 ** Exercice to perform **
   - Launch the feature computation procedure and check the corresponding structure
   - This time for each class, superimpose the plots of various features on a single plot, along with a boxplot of mean and standard deviations. You should obtain plots similar to those shown afterwards.
