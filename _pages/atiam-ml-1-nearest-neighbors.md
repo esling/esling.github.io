@@ -6,4 +6,15 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
-## Nearest neighbors
+# Nearest neighbors
+
+The present tutorials covers .
+
+## [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
+
+The corresponding slides cover
+  * Introduction to artificial intelligence
+  * Properties of machine learning
+  * Nearest-neighbors
+
+## Tutorial 
