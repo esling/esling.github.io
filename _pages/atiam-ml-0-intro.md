@@ -51,8 +51,9 @@ dataStruct.filenames  % Cell containing the list of audio files
 dataStruct.classes    % Vector of indexes assigning each file to a class
 dataStruct.classNames % Cell of class names
 {% endhighlight %}  
-
-**Exercice**  
+  
+  
+**Exercise**  
 <div markdown="1">  
 
   1. Launch the import procedure  and check the corresponding structure
@@ -89,8 +90,9 @@ dataStruct.spectrumChroma    % Chroma vectors
 dataStruct.spectrumCepstrum  % Cepstrum
 dataStruct.spectrumConstantQ % Constant-Q transform
 {% endhighlight %}   
+  
 
-**Exercice**  
+**Exercise**  
 <div markdown="1">  
 
   1. Launch the transform computation procedure and check the corresponding structure
@@ -130,8 +132,8 @@ dataStruct.SpectralCentroidMean % Mean value of that feature
 dataStruct.SpectralCentroidStd  % Standard deviation
 {% endhighlight %}  
 
-
-**Exercice**
+  
+**Exercise**
 
 <div markdown="1">
 
