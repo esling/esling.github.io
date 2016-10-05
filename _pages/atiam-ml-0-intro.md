@@ -14,7 +14,9 @@ sidebar:
 
 The present tutorials covers coding exercices designed to implement the core notions seen in the machine learning lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercices here target these techniques specifically applied to musical or audio data.
 
-# [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
+# Reference slides
+
+Download the [![](../images/pdf.png) slides](../documents/MML.Lesson.1.Introduction.pdf)
 
 The corresponding slides cover
   * Introduction to artificial intelligence
