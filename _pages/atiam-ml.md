@@ -9,6 +9,7 @@ sidebar:
 # Musical machine learning
 
 This section summarizes the courses in machine learning applied to music computing given along the ATIAM Masters at IRCAM.
+
   * [Course summary](/atiam-ml/#course-summary)
   * [Tutorials](/atiam-ml/#tutorials)
   * [Exercices](/atiam-ml/#exercices)
