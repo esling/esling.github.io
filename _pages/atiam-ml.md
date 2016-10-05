@@ -78,7 +78,7 @@ The present tutorials covers coding exercices designed to implement the core not
 
 # References
 
-  * Linear algebra [revision slides](http://see.stanford.edu/materials/aimlcs229/cs229-linalg.pdf)]] from [Andrew Ng](http://ai.stanford.edu/~ang/)
+  * Linear algebra [revision slides](http://see.stanford.edu/materials/aimlcs229/cs229-linalg.pdf) from [Andrew Ng](http://ai.stanford.edu/~ang/)
   * Probability [revision slides](http://see.stanford.edu/materials/aimlcs229/cs229-prob.pdf) from [Andrew Ng]()
   * Statistics [course notes](http://math.arizona.edu/~faris/stat.pdf) from [William Faris](http://math.arizona.edu/~faris/)
   * Sampling [pages 20 to 31](http://homepages.inf.ed.ac.uk/imurray2/pub/07thesis/murray_thesis_2007.pdf) from [Iain Murray](http://homepages.inf.ed.ac.uk/imurray2/)
