@@ -54,8 +54,8 @@ dataStruct.classNames % Cell of class names
 
 [**Exercice**  
 
-  1. Launch the import procedure  and check the corresponding structure</li>
-  2. Code a simple count function that prints the number of examples for each classes (along with its name)</li>
+  1. Launch the import procedure  and check the corresponding structure
+  2. Code a simple count function that prints the number of examples for each classes (along with its name)
 ](){: .notice--info}
 
 ### 1.2 - Preprocessing
