@@ -1,7 +1,8 @@
 ---
 layout: single
 permalink: /atiam-ml-5-boosting/
-author_profile: falseshare: true
+author_profile: false
+share: true
 comments: true
 sidebar:
   nav: "teaching-atiam-ml"
