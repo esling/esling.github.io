@@ -37,7 +37,7 @@ In order to do so, we will work with several datasets that should be downloaded 
 
 For the first parts of the tutorial, we will mostly use the classification dataset only. In order to facilitate the interactions, we provide the function ''importDataset'' that allows to import different audio datasets
 
-<code matlab>
+{% highlight Matlab %}
 function dataStruct = importDataset(classPath, type)
 % classPath  : Path to the dataset (string)
 % type       : Type of dataset (string: 'classify', 'plain', 'metadata')
@@ -46,15 +46,18 @@ function dataStruct = importDataset(classPath, type)
 dataStruct.filenames  % Cell containing the list of audio files
 dataStruct.classes    % Vector of indexes assigning each file to a class
 dataStruct.classNames % Cell of class names
-</code>
-\\
-<blockquote>
-** Exercice to perform **
-  - Launch the import procedure  and check the corresponding structure
-  - Code a simple count function that prints the number of examples for each classes (along with its name)
-</blockquote>
-\\
+{% endhighlight %}  
+
+<div>{: .notice--info}
+** Exercice to perform **  
+
+  1. Launch the import procedure  and check the corresponding structure
+  2. Code a simple count function that prints the number of examples for each classes (along with its name)
+</div>
+  
+
 ### 1.2 - Preprocessing
+
 We will rely on a set of spectral transforms that allow to obtain a more descriptive view over the audio information. As most of these is out of the scope of the machine learning course, we redirect you to a [[https://ccrma.stanford.edu/~jos/sasp/|signal processing course]] proposed by [[https://ccrma.stanford.edu/~jos/|Julius O. Smith]].\\
 
 The following functions to compute various types of transforms are given as part of the basic package, in the //0b_Preprocessing// folder
