@@ -61,7 +61,7 @@ dataStruct.classNames % Cell of class names
 
 ### 1.2 - Preprocessing
 
-We will rely on a set of spectral transforms that allow to obtain a more descriptive view over the audio information. As most of these is out of the scope of the machine learning course, we redirect you to a [[https://ccrma.stanford.edu/~jos/sasp/|signal processing course]] proposed by [[https://ccrma.stanford.edu/~jos/|Julius O. Smith]].\\
+We will rely on a set of spectral transforms that allow to obtain a more descriptive view over the audio information. As most of these is out of the scope of the machine learning course, we redirect you to a [signal processing course](https://ccrma.stanford.edu/~jos/sasp/) proposed by [Julius O. Smith](https://ccrma.stanford.edu/~jos/).  
 
 The following functions to compute various types of transforms are given as part of the basic package, in the //0b_Preprocessing// folder
   * ''stft.m''       - [[https://en.wikipedia.org/wiki/Short-time_Fourier_transform| Short-term Fourier transform]]
