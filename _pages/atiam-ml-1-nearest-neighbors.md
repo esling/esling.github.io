@@ -12,7 +12,7 @@ sidebar:
 
 # Nearest neighbors
 
-The present tutorials corresponds to the same first lesson and follows the introductory developments performed in the [previous tutorial](/atiam-ml-0-intro/0). Based on the features computed, we will implement a simple querying and classification system based on [Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
+The present tutorials corresponds to the same first lesson and follows the introductory developments performed in the [previous tutorial](/atiam-ml-0-intro/). Based on the features computed, we will implement a simple querying and classification system based on [Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
 
 # Reference slides
 
@@ -60,12 +60,10 @@ In a first step, we can use the nearest-neighbor method to devise a very simple 
 
 </div>{: .notice--info}  
 
-;#;
 {{:esling:aml_p2_query1.jpg?nolink&400 |}}{{:esling:aml_p2_query2.jpg?nolink&400 |}}
-;#;
-\\
 
-### 2.2 - Classification ==
+
+### 2.2 - Classification
 
 For the second part of this tutorial, we will rely on the same technique (computing the distance of a selected point to the rest of the dataset) in a classification framework. The overarching idea behind kNN classification is that elements from a same class should have similar properties in the *feature space*. Hence, the closest feature to those of an element should be from elements of its right class. These types of approaches are usually termed as *distance-based* classification methods.
 
@@ -97,18 +95,16 @@ function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normaliz
 
 </div>>{: .notice--info} 
 
-###
 {{:esling:aml_p2_class.jpg?nolink&800 |}}
-###
-\\
+
 
 ### 2.3 - Evaluation
 
 When proposing new algorithms for machine learning problems, the fundamental aspects of corresponding research lies in correctly evaluating their performances. Depending on the application, method proposed, dataset and even the nature of corresponding data, a plethora of evaluation measures can be used. We highly recommend the following articles for those interested in future work around machine learning, so that you develop your critical mind and do not limit yourself to narrow evaluations (by relying on statistical tests) and also that you avoid **cherry picking**  
 
-  * Demšar, J. (2006). //Statistical comparisons of classifiers over multiple data sets.// The Journal of Machine Learning Research, 7, 1-30. [PDF Link ![](../images/pdf.png)](http://machinelearning.wustl.edu/mlpapers/paper_files/Demsar06.pdf)  
-  * Sturm, B. L. (2013). //Classification accuracy is not enough.// Journal of Intelligent Information Systems, 41(3), 371-406. [PDF Link ![](../images/pdf.png)](http://vbn.aau.dk/files/70797941/Sturm20121030.pdf)  
-  * Keogh, E., & Kasetty, S. (2003). //On the need for time series data mining benchmarks: a survey and empirical demonstration.// Data Mining and knowledge discovery, 7(4), 349-371. [PDF Link ![](../images/pdf.png)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2240&rep=rep1&type=pdf)  
+  * Demšar, J. (2006).   Statistical comparisons of classifiers over multiple data sets.   The Journal of Machine Learning Research, 7, 1-30.   [PDF Link ![](../images/pdf.png)](http://machinelearning.wustl.edu/mlpapers/paper_files/Demsar06.pdf)  
+  * Sturm, B. L. (2013).   Classification accuracy is not enough.   Journal of Intelligent Information Systems, 41(3), 371-406. [PDF Link ![](../images/pdf.png)](http://vbn.aau.dk/files/70797941/Sturm20121030.pdf)  
+  * Keogh, E., & Kasetty, S. (2003).   On the need for time series data mining benchmarks: a survey and empirical demonstration.   Data Mining and knowledge discovery, 7(4), 349-371. [PDF Link ![](../images/pdf.png)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2240&rep=rep1&type=pdf)  
 
 However, for the scope of this tutorial, we will stick to the typical measures that are minimally required to evaluate your classifier. Overall, the most important aspects of evaluation lies in different ways of comparing the *real labels* (ground truth) to the *assigned labels* (picked by the classifier).
 
