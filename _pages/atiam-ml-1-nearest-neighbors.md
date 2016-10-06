@@ -8,33 +8,40 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+{% include toc %}
+
 # Nearest neighbors
 
-The present tutorials covers .
+The present tutorials corresponds to the same first lesson and follows the introductory developments performed in the [previous tutorial](/atiam-ml-0-intro/0). Based on the features computed, we will implement a simple querying and classification system based on [Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
 
-## [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
+# Reference slides
+
+Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
 
 The corresponding slides cover
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
 
-## Tutorial 
+# Tutorial 
 
-In this tutorial, we will cover the simplest querying and classification algorithms derived from the k-Nearest Neighbor method. The idea is to find the closest neighbor to a point by assessing its multi-dimensional distance to the rest of the dataset.\\
+In this tutorial, we will cover the simplest querying and classification algorithms derived from the k-Nearest Neighbor method. The idea is to find the closest neighbor to a point by assessing its multi-dimensional distance to the rest of the dataset.  
 
-INSERT MATH HERE
+$$
+\begin{equation}
+\end{equation}
+$$
 
-By looking at the previously given definitions, start by thinking about the following questions.
+By looking at the previously given definitions, start by thinking about the following questions.  
 
-\\
-<blockquote>
-** Questions **
-  - We considered that features were n-dimensional, but what problems can arise from audio features?
-  - If we consider the equation of nearest neighbor, what constraints are implicitly made on the distances?
-  - Does the Euclidean distance seems like a sound way to measure the similarity between temporal features?
-</blockquote>
-\\
+**Exercise**  
+<div markdown="1"> 
+
+  1. We considered that features were n-dimensional, but what problems can arise from audio features?
+  2. If we consider the equation of nearest neighbor, what constraints are implicitly made on the distances?
+  3. Does the Euclidean distance seems like a sound way to measure the similarity between temporal features?
+
+</div>
 
 == 2.2 - Querying ==
 
