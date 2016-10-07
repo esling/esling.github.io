@@ -69,9 +69,11 @@ The first step is to generate a training set. To get a single training example $
 #### Objective
 
 As seen in course, the learning of an autoencoder is based on a cost function that tries to reconstruct the input from a combination of hidden units. The sparsity aspects allow to force the network to make this reconstruction from fewer data. To do so, we need to both define the cost function $$J_{sparse}(W,b)$$ and the corresponding derivatives of $$J_{sparse}$$ with respect to the different parameters. We will use the sigmoid function for the activation function
+
 $$
 \begin{equation}
 f(z) = \frac{1}{{1+e^{-z}}} 
+\label{eq1}
 \end{equation}
 $$
 
