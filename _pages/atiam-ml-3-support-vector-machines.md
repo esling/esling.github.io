@@ -38,7 +38,19 @@ Once again, to simplify your work, we provide the following set of functions tha
 
 ### 4.1 - Linear classification
 
-For the first part of this tutorial, we will compute the main iterations of the algorithm (minimization of the objective function), while relying on a *linear* kernel. This implies that we will only be able to perform linear discrimination. However, remember that the SVM will provide an optimal and (gloriously) convex answer to this problem.
+We briefly recall here that the goal of SVMs is to find a solution to the following problem
+
+$$
+\begin{equation}
+\begin{cases}
+\mathbf{w}\cdot\mathbf{x}^{+}+\mathbf{b}\geq1\\
+\mathbf{w}\cdot\mathbf{x}^{-}+\mathbf{b}\leq-1
+\end{cases}
+\label{eq1}
+\end{equation}
+$$
+
+For the first part of this tutorial, we will compute the main iterations of the algorithm (minimization of the objective function), while relying on a *linear* kernel. This implies that we will only be able to perform linear discrimination. However, remember that the formulation of the SVMs provide an *optimal* and (gloriously) *convex* answer to this problem.
 
 {% highlight Matlab %}
 function pred = svmPredict(model, X)
