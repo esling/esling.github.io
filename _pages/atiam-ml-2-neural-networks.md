@@ -115,6 +115,32 @@ y_{2}=\sigma\left(\sum_{i = 1}^{n}w_{i}.y_{1}^{i} + b\right)
 \end{equation}
 $$  
 
+Therefore, in order to *propagate* the derivatives, we can simply use the chain rule
+
+$$
+\begin{equation}
+\frac{\delta\mathcal{P}}{\delta w_{1}}=\frac{\delta\mathcal{P}}{\delta y_{2}}.\frac{\delta y_{2}}{\delta w_{1}}
+\label{eq6}
+\end{equation}
+$$  
+
+Therefore, we can compute the derivative for the last layer as
+
+$$
+\begin{equation}
+\delta_{i}^{L}=g'\left(h_{i}^{L}\right)\left[\delta_{i}^{u}-y_{i}^{L}\right]
+\label{eq7}
+\end{equation}
+$$  
+
+And for any previous layer, we rely on the development of the chain rule giving
+
+$$
+\begin{equation}
+\delta_{i}^{l}=g'\left(h_{i}^{l}\right)\sum_{j}w_{ij}^{l+1}\delta_{j}^{l+1}\mbox{ }l\in\left[1\ldots L-1\right]
+\label{eq8}
+\end{equation}
+$$  
 
 We provide the prototypical set of XOR values in the `xorPat.mat` along with their class values in `xorAns.mat`. The variables that will be used by your code are the following.
 
