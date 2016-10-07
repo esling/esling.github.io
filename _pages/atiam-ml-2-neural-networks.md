@@ -110,10 +110,10 @@ In most cases, classification problems are far from being linear. Therefore, we 
 
 $$
 \begin{equation}
-y_2=\sigma\left(\sum_{i = 1}^{n}w_{i}.y_{1}^{i} + b\right)
-\label{eq1}
+y_{2}=\sigma\left(\sum_{i = 1}^{n}w_{i}.y_{1}^{i} + b\right)
+\label{eq5}
 \end{equation}
-$$
+$$  
 
 
 We provide the prototypical set of XOR values in the `xorPat.mat` along with their class values in `xorAns.mat`. The variables that will be used by your code are the following.
@@ -140,7 +140,7 @@ TSS_Limit         % Sum-squared error limit
   4. Perform multiple re-runs of the learning procedure (re-launching with different initializations)
   5. What observations can you make on the learning process?
   6. What happens if you initialize all weights to zeros?
-  7. (Optional) Implement the //sparsity// constraint in your neural network.
+  7. (Optional) Implement the *sparsity* constraint in your neural network.
 
 </div>{: .notice--info}
 
