@@ -43,7 +43,15 @@ To simplify your work, we provide the following set of functions that you should
 
 ### 3.1 - Single neuron discrimination
 
-For the first parts of the tutorial, we will perform the simplest classification model possible in a neural network setting, a single neuron. We briefly recall here that 
+For the first parts of the tutorial, we will perform the simplest classification model possible in a neural network setting, a single neuron. We briefly recall here that a single neuron computes the function
+
+
+$$
+\begin{equation}
+y=\left(\sum_{i\in in_{x}}w_{i}.x_{i}\geq T\right)
+\label{eq1}
+\end{equation}
+$$
 
 Therefore, a single neuron can only perform a *linear* discrimination of the space. We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that it can solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
 
