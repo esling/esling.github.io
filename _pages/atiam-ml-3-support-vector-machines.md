@@ -50,7 +50,7 @@ $$
 \end{equation}
 $$
 
-By setting the variable $$ y_{i}=\nicefrac{+}{-}1 $$, we can rewrite this problem as 
+By setting the variable $$ y_{i}={+}/{-}1 $$, we can rewrite this problem as 
 
 $$
 \begin{equation}
@@ -59,7 +59,7 @@ y_{i}\left(x_{i}\cdot\mathbf{w}+\mathbf{b}\right)-1\geq0
 \end{equation}
 $$
 
-The idea is that for some of the input vectors, we will have an equality in equation (1), where $$ \mathbf{w}\cdot\mathbf{x}^{+}+\mathbf{b}=1 $$ and $$ \mathbf{w}\cdot\mathbf{x}^{-}+\mathbf{b}=-1 $$. By substracting those two equation, we see that we are trying to find a solution to 
+The idea is that for some of the input vectors (called *support vectors*), we will have an equality in equation (1), where $$ \mathbf{w}\cdot\mathbf{x}^{+}+\mathbf{b}=1 $$ and $$ \mathbf{w}\cdot\mathbf{x}^{-}+\mathbf{b}=-1 $$. By substracting those two equation, we see that we are trying to find a solution to 
 
 $$
 \begin{equation}
@@ -67,8 +67,9 @@ $$
 \label{eq3}
 \end{equation}
 $$
- 
 
+Therefore, solving the set of equations amounts to find the maximal margin between the support vectors (as they *support* classification).
+ 
 For the first part of this tutorial, we will compute the main iterations of the algorithm (minimization of the objective function), while relying on a *linear* kernel. This implies that we will only be able to perform linear discrimination. However, remember that the formulation of the SVMs provide an *optimal* and (gloriously) *convex* answer to this problem.
 
 {% highlight Matlab %}
