@@ -29,6 +29,7 @@ The corresponding slides cover
 In this tutorial, we will cover a more advanced classification algorithm through the use of neural networks. The tutorial starts by performing a simple single neuron discrimination of two random distributions. Then, we will study the typical XOR problem by using a more advanced 2-layer perceptron. Finally, we generalize the use of neural networks in order to perform classification on our set of audio files.
 
 To simplify your work, we provide the following set of functions that you should find in the *2_Neural_Networks* folder
+
   * `plot3view.m` - Allows to plot a 3-dimensional view of data points
   * `plotBoundary.m` - Plots the decision boundary of a single neuron with 2-dimensional inputs
   * `plotBoundarySurface.m` - Plots the decision surface of a single neuron with 3-dimensional inputs
@@ -116,7 +117,7 @@ We now return to our original classification problem and will try to perform neu
   2. Use the provided code to perform classification on a pre-defined set of features
   3. As previously, change the set of features to assess their different accuracies
   4. Evaluate the neural network accuracy for all features combinations
-  5. (Optional) Implement the //sparsity// constraint in your neural network.
+  5. (Optional) Implement the *sparsity* constraint in your neural network.
 
 </div>{: .notice--info}
 
