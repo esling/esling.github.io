@@ -41,19 +41,19 @@ To simplify your work, we provide the following set of functions that you should
   * `xorPats.dat` - Point values for the XOR problem
 
 
-### 3.1 - Single neuron discrimination
+### 3.1 - Single neuron
 
-For the first parts of the tutorial, we will perform the simplest classification model possible in a neural network setting, a single neuron. We briefly recall here that a single neuron computes the function
+For the first parts of the tutorial, we will perform the simplest classification model possible in a neural network setting, a single neuron. We briefly recall here that; given an input vector $$ \mathbb{x} \in \mathbf{R}^{n} $$, a single neuron computes the function
 
 
 $$
 \begin{equation}
-y=\left(\sum_{i\in in_{x}}w_{i}.x_{i}\geq T\right)
+y=\sigma\left(\sum_{i\in in_{x}}w_{i}.x_{i}\geq T\right)
 \label{eq1}
 \end{equation}
 $$
 
-Therefore, a single neuron can only perform a *linear* discrimination of the space. We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that it can solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
+Therefore, if we consider the a single neuron can only perform a *linear* discrimination of the space. We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that it can solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
 
 {% highlight Matlab %}
 patterns      % 2 x n matrix of random points
@@ -78,7 +78,7 @@ weights       % 3 x 1 vector of neuron weights
 {{:esling:aml_p3_linear1.jpg?nolink&400 |}}{{:esling:aml_p3_linear2.jpg?nolink&400 |}}
 ;#;
 
-### 3.2 - 2-layer classification on the XOR problem
+### 3.2 - 2-layer XOR problem
 In most cases, classification problems are far from being linear. Therefore, we need more advanced methods to be able to compute non-linear class boundaries. The advantage of neural networks is that the same principle can be applied in a *layer-wise* fashion. This allows to further discriminate the space in sub-regions (as seen in the course). We will try to implement the 2-layer *perceptron* that can provide a solution to the infamous XOR problem.
 The idea is now to have the output of the first neurons to be connected to a set of other neurons. 
 
@@ -114,7 +114,7 @@ TSS_Limit         % Sum-squared error limit
 {{:esling:aml_p3_xor1.jpg?nolink&400 |}}{{:esling:aml_p3_xor2.jpg?nolink&400 |}}
 ;#;
 
-### 3.3 - 3-layer generalization to audio classification
+### 3.3 - 3-layer audio classification
 We now return to our original classification problem and will try to perform neural network learning on a set of audio files. The data structure will be the same as the one used for parts 1 and 2. As discussed during the courses, even though a 2-layer neural network can provide non-linear boundaries, it can not perform "holes" inside those regions. In order to obtain an improved classification, we will now rely on a 3-layer neural network. The modification to the code of section 3.2 should be minimal, as the back-propagation will be similar for the new layer as one of the two others.
 
 
