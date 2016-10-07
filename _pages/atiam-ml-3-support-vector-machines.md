@@ -75,9 +75,9 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
 **Exercise**  
 <div markdown="1">  
 
-  - Update your ''svmTrain'' code to be able to rely on a Gaussian (RBF) kernel instead of a linear one.
-  - Run your ''svmTrain'' function on the ''example2.mat'' (non-linear) dataset, you should obtain the result displayed below.
-  - Once again, display the decision boundary at each iteration of the algorithm.
+  1. Update your `svmTrain` code to be able to rely on a Gaussian (RBF) kernel instead of a linear one.
+  2. Run your `svmTrain` function on the `example2.mat` (non-linear) dataset, you should obtain the result displayed below.
+  3. Once again, display the decision boundary at each iteration of the algorithm.
 
 </div>{: .notice--info}  
 \\
