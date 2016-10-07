@@ -12,13 +12,12 @@ I am currently an associate professor and research in data mining and artificial
 * [Software](/software/)
 
 ## Contact information
-Philippe Esling\s\s
-c/o IRCAM\s\s
-1, Place Igor Stravinsky\s\s
-F-75004 Paris, France\s\s
+> Philippe Esling  
+> c/o IRCAM  
+> 1, Place Igor Stravinsky  
+> F-75004 Paris, France  
 
-Associate professor - University Paris 6 - UPMC\s\s
-PhD - Acoustics, Signal Processing and Informatics\s\s
-IRCAM - CNRS UMR 9912\s\s
-Music Representations\s\s
-esling (at) ircam [dot] fr
+Associate professor - University Paris 6 - UPMC  
+PhD - Acoustics, Signal Processing and Informatics  
+IRCAM - CNRS UMR 9912  
+Music Representations  
