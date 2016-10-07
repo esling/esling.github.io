@@ -63,6 +63,22 @@ $$
 
 In order to know how to change the weights based on the value of the errors, we need to now "how to change it to make it better". Therefore, we should compute the sets of derivatives of the error given each parameter
 
+$$
+\begin{equation}
+\Delta\bar{\mathbf{w}}=\left(\frac{\delta\mathcal{L}_{\mathcal{D}}}{\delta w_{1}},\ldots,\frac{\delta\mathcal{L}_{\mathcal{D}}}{\delta w_{n}}\right)
+\label{eq3}
+\end{equation}
+$$ 
+
+Given that we have simply an $$ L_2 $$ (Euclidean) error criterion on a single neuron for the time being, the update of the weights can be simply computed by 
+
+$$
+\begin{equation}
+w_{j}^{t+1}=w_{j}^{t}+\eta.\left(d-y\right).x_{j}
+\label{eq4}
+\end{equation}
+$$
+
 We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that a single neuron is enough to solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
 
 {% highlight Matlab %}
