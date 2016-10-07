@@ -57,8 +57,11 @@ with $$ \mathbf{w} \in \mathbb{R}^{n} $$ a weight matrix, $$ b $$ a bias and $$ 
 $$
 \begin{equation}
 \mathcal{L}=\sum_{j=1}^{k_{\mathcal{D}}}\left\Vert d_{j}-y_{j}\right\Vert ^{2}
-
+\label{eq2}
+\end{equation}
 $$
+
+In order to know how to change the weights based on the value of the errors, we need to now "how to change it to make it better". Therefore, we should compute the sets of derivatives of the error given each parameter
 
 We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that a single neuron is enough to solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
 
