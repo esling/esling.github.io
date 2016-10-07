@@ -28,6 +28,7 @@ The corresponding slides cover
 In this tutorial, we will cover a more advanced classification algorithm through the use of *Support Vector Machines* (SVMs). The goal is to gain an intuition of how SVMs works and how to use *Gaussian kernel* with SVMs to find out the decision boundary. The implementation proposed here follows the *Sequential Minimal Optimization* (SMO) algorithm for training support vector machines. You can find the full details on the mathematics involved in the following [paper link](http://cs229.stanford.edu/materials/smo.pdf).
 
 Once again, to simplify your work, we provide the following set of functions that you should find in the *3_Support_Vector_Machines* folder
+
   * `example1.mat` - Example data for a quasi-linear problem
   * `example2.mat` - Example data for a non-linear but well-defined problem
   * `example3.mat` - Example data for a slightly non-linear problem with outliers
