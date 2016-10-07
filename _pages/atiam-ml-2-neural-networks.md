@@ -43,7 +43,7 @@ To simplify your work, we provide the following set of functions that you should
 
 ### 3.1 - Single neuron
 
-For the first parts of the tutorial, we will perform the simplest classification model possible in a neural network setting, a single neuron. We briefly recall here that; given an input vector $$ \mathbb{x} \in \mathbf{R}^{n} $$, a single neuron computes the function  
+For the first parts of the tutorial, we will perform the simplest classification model possible in a neural network setting, a single neuron. We briefly recall here that; given an input vector $$ \mathbf{x} \in \mathbb{R}^{n} $$, a single neuron computes the function  
 
 $$
 \begin{equation}
@@ -52,7 +52,7 @@ y=\sigma\left(\sum_{i = 1}^{n}w_{i}.x_{i} + b\right)
 \end{equation}
 $$
 
-with $$ \mathbb{w} \in \mathbf{R}^{n} $$ a weight matrix, $$ b $$ a bias and $$ \sigma\left(\right) $$ an *activation function*. Therefore, if we consider the *threshold* activation function ($$ \sigma_0\left(x\right)=1 $$ if $$ x \geq 0$$), a single neuron simply performs an *affine transform* and then a *linear* discrimination of the space. We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that it can solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
+with $$ \mathbf{w} \in \mathbb{R}^{n} $$ a weight matrix, $$ b $$ a bias and $$ \sigma\left(\right) $$ an *activation function*. Therefore, if we consider the *threshold* activation function ($$ \sigma_0\left(x\right)=1 $$ if $$ x \geq 0$$), a single neuron simply performs an *affine transform* and then a *linear* discrimination of the space. We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that it can solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
 
 {% highlight Matlab %}
 patterns      % 2 x n matrix of random points
