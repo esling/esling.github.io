@@ -38,7 +38,7 @@ Once again, to simplify your work, we provide the following set of functions tha
 
 ### 4.1 - Linear classification
 
-We briefly recall here that the goal of SVMs is to find a solution to the following problem
+We briefly recall here that the goal of SVMs is that given a set of input vectors $$ \mathbf{x} $$ separated in two classes ($$ \mathbf{x}^{+} $$ and $$ \mathbf{x}^{-} $$, we would like to find the *optimal boundary* (separating line) between the two classes. To do so, we want to find the separation that gives the *maximal margin* between the two sets. Hence, let us first try to find a solution to the following problem
 
 $$
 \begin{equation}
@@ -49,6 +49,25 @@ $$
 \label{eq1}
 \end{equation}
 $$
+
+By setting the variable $$ y_{i}=\nicefrac{+}{-}1 $$, we can rewrite this problem as 
+
+$$
+\begin{equation}
+y_{i}\left(x_{i}\cdot\mathbf{w}+\mathbf{b}\right)-1\geq0
+\label{eq2}
+\end{equation}
+$$
+
+The idea is that for some of the input vectors, we will have an equality in equation (1), where $$ \mathbf{w}\cdot\mathbf{x}^{+}+\mathbf{b}=1 $$ and $$ \mathbf{w}\cdot\mathbf{x}^{-}+\mathbf{b}=-1 $$. By substracting those two equation, we see that we are trying to find a solution to 
+
+$$
+\begin{equation}
+\frac{\mathbf{w}}{\left\Vert \mathbf{w}\right\Vert }\cdot\left(x^{+}-x^{-}\right)=\frac{2}{\left\Vert \mathbf{w}\right\Vert }=Width
+\label{eq3}
+\end{equation}
+$$
+ 
 
 For the first part of this tutorial, we will compute the main iterations of the algorithm (minimization of the objective function), while relying on a *linear* kernel. This implies that we will only be able to perform linear discrimination. However, remember that the formulation of the SVMs provide an *optimal* and (gloriously) *convex* answer to this problem.
 
