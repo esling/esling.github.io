@@ -31,6 +31,7 @@ The corresponding slides cover
 <div align="center">*Figure 3: A Hidden Markov Model, resulting from connecting several of the Bayes Net above in a sequence*</div>
 
 Hidden Markov Models (HMMs) are used to model the changes over time (or another dimension), in which different elements might be connected. To capture this, we can include conditional probabilities, expressing how a random variable changes over time. In this model, we assume that each state depends only on the previous one, not all previous states, which is called the ***Markov property*** and can be written as
+
 $$
 \begin{equation}
 P\left(x_{t} \mid x_{t - 1}, x_{t - 2}, \dots x_{2},x_{1}\right) = P\left(x_{t} \mid x_{t - 1}\right)
@@ -117,20 +118,11 @@ If we decompose our original question of finding $$P(o \mid h)$$, we can see tha
 
 We use Forward-Backward in order to efficiently compute for each sequence how often we see each transition and what the probability of that sequence is. We need both for the fractional counts. Forward-Backward is the E step in an EM implementation: we compute the expected counts given the current model parameters.
 
-When you model the lattice, it is a good idea to use a matrix or some such data structure in your
-implementation, so you can access the nodes directly. In the following, we’ll use a matrix with two
-columns for each word, to make everything easier to see. In practice, people use one column per word and later
-tease out the fractional counts for each type of parameter.
+** The Forward Algorithm **
 
-**The Forward Algorithm **
-<img src="pics/alphalattice.png" width="600px"/>
-<div align="center">*Figure 10: Computing the alphas in the Forward pass*</div>
+In the forward pass, we compute a new lattice with the same dimensions as the original one, which forward pass contains for each node the sum of all possible paths that lead up to there (see Figure 10). These values are also called alphas. $\alpha[i, j]$ denotes the probability of all paths up to node $$(i, j)$$ (i.e., assigning tag $$i$$ to word $$j$$). 
 
-In the forward pass, we compute a new lattice with the same dimensions as the original one, which forward pass
-contains for each node the sum of all possible paths that lead up to there (see Figure 10). These values
-are also called alphas. $\alpha[i, j]$ denotes the probability of all paths up to node $(i, j)$ (i.e., assigning tag $i$ to word $j$). 
-
-$\alpha[START]$ is always $1.0$. Each subsequent $\alpha$ is just the sum of all transitions arriving there, each multiplied by the $\alpha$ of the node where it (the transition) originated.
+$$\alpha[START]$$ is always $1.0$. Each subsequent $\alpha$ is just the sum of all transitions arriving there, each multiplied by the $\alpha$ of the node where it (the transition) originated.
 
 $\alpha[END]$ is the sum of all paths through the lattice, which is equal to $P(sentence)$. $P(data)$ is the
 sum of all $P(sentence)$ in the data. In each iteration, just add up all the $\alpha[END]$ of the sentences.
@@ -188,8 +180,7 @@ this case the bigger half. The ***M step*** is comparatively trivial: after havi
 just normalize our fractional counts to get probabilities back (remember, probabilities are just normalized
 counts).
 
-<a name="secreading"></a>8 Useful Reading
-==
+#### References
 
 If you want to read the original, go for [Dempster/Laird/Rubin (1977)](#refDempster).
 [Rabiner/Juang (1986)](#refRabiner) is a general overview over ***parameter estimation***, but very math-heavy. [Manning/Schütze (2000)](#refMS) has a chapter on EM, based on clustering, but with an eye on other NLP applications.
@@ -257,29 +248,3 @@ to the matching fractional counts, and the result is passed through a ***Digamma
 exponentiated. To normalize, we add the sum of all elements in the shape vector to our denominator
 and again run it though Digamma and exponentiation. This is like a softer version of smoothing with
 pseudo-counts, where we have separate counts for each parameter.
-
-
-9.3 Type and Token Constraints
---
-
-So far, we have pretended that every word can be labeled with all tags. However, we know that that is
-not true: for example, “I” can never be a preposition or an adverb. One way to encode that knowledge
-is to add a ***dictionary***. For each word, it lists the allowed tags. Essentially, this sets all 
-parameters for disallowed tags to 0. Using a dictionary encodes general type constraints for a word, type
-i.e., the ***constraints*** hold whenever we see the word anywhere in our data. Dictionaries are either built 
-by hand or derived from some annotated data. In our example, we could restrict the legal tags for the
-word “I” to just nouns.
-
-There is another type of constraints, namely ***token constraints***. A token is a specific word in a 
-specific context, so these constraints only hold for certain words in certain contexts. In our example,
-we just might happen to know that the first “can” is a verb. ***Type constraints*** can come from simple
-rules (e.g., something like “any word after the is either an adjective or a noun”), manual annotations
-(going through the data and tagging some sentences) or through transfer from another data set.
-
-Both types of constraints basically do the same thing, though: they reduce the number of nodes for a word
-in our lattice. Type constraints do that for all occurrences of the word, token constraints only for some.
-When we have an actual annotation for a word, the number of nodes is reduced to one. This greatly
-reduces the number of legal paths through a sentence, so not only does it make forward-backward
-more efficient, it also guides the algorithm because you can now only collect fractional counts for
-certain parameters. See [Täckström et al. (2013)](#refOscar) for examples of using type and token constraints in an
-application.
