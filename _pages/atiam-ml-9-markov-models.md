@@ -29,66 +29,34 @@ The corresponding slides cover
 <img src="pics/hmm-example.png" width="300px"/>
 <div align="center">*Figure 3: A Hidden Markov Model, resulting from connecting several of the Bayes Net above in a sequence*</div>
 
-Things change over time, but they might be connected. Tomorrow’s weather does not just happen, it
-actually depends on the weather of today. If we want to capture this, we can include another kind of
-conditional probabilities, namely the ones expressing how a random variable changes over time. This
-is the Markov part of HMMs. To make things easier, we assume that each state depends only on the
-previous one, not all previous states. This is one of the so-called ***Markov properties***. In order to 
-make it a hidden Markov model, we assume that the random variable we are actually interested in is
-unobservable, but related to something we can observe.
+Hidden Markov Models (HMMs) are used to model the changes over time (or another dimension), in which different elements might be connected. To capture this, we can include conditional probabilities, expressing how a random variable changes over time. In this model, we assume that each state depends only on the previous one, not all previous states, which is called the ***Markov property*** and can be written as
+$$
+\begin{equation}
+P\left(x_{t} \mid x_{t - 1}, x_{t - 2}, \dots x_{2},x_{1}\right) = P\left(x_{t} \mid x_{t - 1}\right)
+\end{equation}
+$$
 
-Using our example from above, we have the following scenario: one year from now, we want to get
-the sequence of sunny and rainy days that occurred (see Figure 3). We do not remember the weather
-($W$ is hidden), but we do have our diary, in which we noted for each day whether we were late or not
-($L$ is our observed variable, and it is dependent on $W$). We just copy the Bayes net from above for
-each day, and add the new transition probabilities $P(W_t | W_{t-1})$ between each of the Bayes nets. The
-probability means “how likely is it to be {`rainy`, `sunny`} today if it was {`rainy`, `sunny`} yesterday".
+Hence, the model can be represented as a **Graphical Probabilistic Model** (GPM), in which the connections (arcs) between different states (nodes) are weighted by the probability of going to one state. This type of model is simply called a **Markov chain**. In order to make it a **Hidden** Markov Model, we assume that there is some observable variables but in fact, the real transitions come from a random variable that we are actually interested in but is not observable directly.
 
-In this case, we do have another hidden variable, $T$, but it is not necessary for HMMs in general. In most applications (such as the tagging we will see later), you only have one hidden layer. The important
-part is that whether I am late one day does not depend on whether I was late the day before, but on the
-*weather* on that day. Also, the traffic of today is independent of yesterday’s traffic. This is why there
-are no arcs between the $T$ and $L$ variables, only the $W$ nodes. This is another Markov property, that the
-observations (here, $L$) are independent of one another. We guesstimated the probabilities $P(T|W)$ and
-$P(L|T)$ based on intuitions or data (we will later say, we *initialized* them), and we could now use EM
-to adjust them to reflect observations, using our diary as data and reconstructing the weather one year
-ago.
+Based on this model, several tasks can be performed 
 
-As mentioned in the first section, there are several algorithms to do EM (especially the E step), and
-the one we will be using is the ***Forward-Backward*** (or Baum-Welch) algorithm for labeling (there are other
-algorithms for other tasks).
+In most applications, a single hidden layer is sufficient to model the behavior of a system. There are several algorithms to do the inference in a HMM, but we will be using the ***Forward-Backward*** (or Baum-Welch) algorithm for labeling.
 
-<a name="secgoal"></a>4 The Goal
-==
+What we want in the end is the ***model parameters*** of our grpahical model (the conditional probability tables) that best explain the observed data. The configuration we want is the one which **maximizes the likelihood** of observing our data given one set of parameters for the model (the global maxima). Hence, we model a joint probability distribution $$P(x,y)$$. We can write that as
 
-What we want from EM is the ***model parameters*** of our grpahical model (i.e., the conditional probability tables) that best explain the observed data. If we plot how 
-well a specific model configuration explains the data over all possible parameter configurations, we get the
-graph in Figure 5.
-<img src="pics/localmaxima.png" width="450px"/>
-<div align="center">*Figure 5: What we try to optimize with EM*</div>
+$$
+\begin{equation}
+P(x,y) = P(y) \times P(x|y) = P(x) \times P(y|x)
+\end{equation}
+$$
 
-The configuration we want is the one at the highest peak. As you can see, there are several smaller
-peaks. These are local maxima (they are a bit of a hassle, but we come back to that later).
+In our case, however, we don’t want to model $$x$$s and $$y$$s, but the probability of a word and tag sequence occurring together, $$P(\mathbf{w}, \mathbf{t})$$. So let’s substitute $$x$$ and $$y$$ for $$\mathbf{w}$$ and $$\mathbf{t}$$
 
-Let’s first look at how we get those parameters. There will be a few formulas involved, but
-don’t be intimidated, they are easier than they look.
-
-Remember that EM models a joint probability distribution $P(x,y)$. We can write that as
-
-$$P(x,y) = P(y) \times P(x|y) = P(x) \times P(y|x)$$
-
-The last two parts are the same because we don’t care about the order of $x$ and $y$. To see why that is
-so, look at the diagram in Figure 6. 
-<img src="pics/venn.png" width="200px"/>
-<div align="center">*Figure 6: Venn diagram for $P(x,y)$*</div>
-
-$P(x,y)$ is the grey area. To get that, we can just look at $x$ and the
-part of it that overlaps with $y$. This is $P(x) \times P(y|x)$. You could call this very $x$-centric. If you don’t like that (and I won't blame you), you can get the same result by looking at $y$ and the part of it that overlaps with $x$. That would be $P(y) \times P(x|y)$, which is, as you can see, the same as $P(x) \times P(y|x)$.
-
-In our case, however, we don’t want to model $x$s and $y$s, but the probability of a word and tag
-sequence occurring together, $P(\mathbf{w}, \mathbf{t})$. So let’s substitute $x$ and $y$ for $\mathbf{w}$ and $\mathbf{t}$ and see what we get.
-Something like
-
-$$P(\mathbf{w},\mathbf{t}) = P(\mathbf{t}) \times P(\mathbf{w}|\mathbf{t}) = P(\mathbf{w}) \times P(\mathbf{t}|\mathbf{w})$$
+$$
+\begin{equation}
+P(\mathbf{w},\mathbf{t}) = P(\mathbf{t}) \times P(\mathbf{w}|\mathbf{t}) = P(\mathbf{w}) \times P(\mathbf{t}|\mathbf{w})
+\end{equation}
+$$
 
 If we translate this into English, it says that the probability of seeing the word and tag sequence together ($P(\mathbf{w}, \mathbf{t})$) is equal to the probability
 of the tag sequence $P(\mathbf{t})$ times the probability that we generate the words from that tag sequence
