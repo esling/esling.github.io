@@ -42,42 +42,31 @@ Based on this model, several tasks can be performed
 
 In most applications, a single hidden layer is sufficient to model the behavior of a system. There are several algorithms to do the inference in a HMM, but we will be using the ***Forward-Backward*** (or Baum-Welch) algorithm for labeling.
 
-What we want in the end is the ***model parameters*** of our grpahical model (the conditional probability tables) that best explain the observed data. The configuration we want is the one which **maximizes the likelihood** of observing our data given one set of parameters for the model (the global maxima). Hence, we model a joint probability distribution $$P(x,y)$$. We can write that as
+What we want in the end is the ***model parameters*** of our grpahical model (the conditional probability tables) that best explain the observed data. The configuration we want is the one which **maximizes the likelihood** of observing our data given one set of parameters for the model (the global maxima). Hence, we model a joint probability distribution  $$P(\mathbf{o}, \mathbf{h})$$., which represents the probability of an observation $$\mathbf{o}$$ and a hidden variable $$\mathbf{h}$$ sequence occurring together
 
 $$
 \begin{equation}
-P(x,y) = P(y) \times P(x|y) = P(x) \times P(y|x)
+P(\mathbf{o},\mathbf{h}) = P(\mathbf{h}) \times P(\mathbf{o}|\mathbf{h}) = P(\mathbf{o}) \times P(\mathbf{h}|\mathbf{o})
 \end{equation}
 $$
 
-In our case, however, we don’t want to model $$x$$s and $$y$$s, but the probability of a word and tag sequence occurring together, $$P(\mathbf{w}, \mathbf{t})$$. So let’s substitute $$x$$ and $$y$$ for $$\mathbf{w}$$ and $$\mathbf{t}$$
+This means that the probability of seeing an observation and hidden sequence together $$P(\mathbf{o}, \mathbf{o})$$ is equal to the probability of the hidden sequence $$P(\mathbf{h})$$ times the probability that we generate these observations given the hidden sequence
+$$P(\mathbf{o}|\mathbf{h})$$. It is also equal to the probability of seeing those observations $$P(\mathbf{o})$$ times the probability of
+turning those observations into that hidden sequence $$P(\mathbf{h}|\mathbf{o})$$.
+
+What we want to maximize is the last part, $$P(\mathbf{h}|\mathbf{o})$$ (i.e., what is the best hidden sequence for the observations we see), so we can rewrite the previous equation as
 
 $$
 \begin{equation}
-P(\mathbf{w},\mathbf{t}) = P(\mathbf{t}) \times P(\mathbf{w}|\mathbf{t}) = P(\mathbf{w}) \times P(\mathbf{t}|\mathbf{w})
+\frac{P(\mathbf{h}) \times P(\mathbf{o}|\mathbf{h})}{P(\mathbf{o})} = P(\mathbf{h}|\mathbf{o})
 \end{equation}
 $$
 
-If we translate this into English, it says that the probability of seeing the word and tag sequence together ($P(\mathbf{w}, \mathbf{t})$) is equal to the probability
-of the tag sequence $P(\mathbf{t})$ times the probability that we generate the words from that tag sequence
-($P(\mathbf{w}|\mathbf{t})$). It is also equal to the probability of seeing those words ($P(\mathbf{w})$) times the probability of
-turning those words into that tag sequence ($P(\mathbf{t}|\mathbf{w})$). Both of these formulations are equivalent to $P(\mathbf{w}, \mathbf{t})$, and that fact will come in handy.
+Since we observe $$\mathbf{o}$$, we know that $$P(\mathbf{o}) = 1.0$$, so we can simply write
 
-What we want to maximize is the last part, $P(\mathbf{t}|\mathbf{w})$ (i.e., what is the best tag sequence for the sentence
-we see), since we already have the words and want to know the tags. Let’s take the last two parts and move a
-few things around to get $P(\mathbf{t}|\mathbf{w})$ alone.
+$$P(\mathbf{h}|\mathbf{o}) = P(\mathbf{h}) \times P(\mathbf{o}|\mathbf{h})$$
 
-$$\frac{P(\mathbf{t}) \times P(\mathbf{w}|\mathbf{t})}{P(\mathbf{w})} = P(\mathbf{t}|\mathbf{w})$$
-
-Ok, that’s something. Take a deep breath and make sure you followed this.
-Since we observe $\mathbf{w}$ (the sentence), we can say that $P(\mathbf{w})$ is $1.0$. In that case we can forget
-about that denominator (anything divided by $1.0$ stays the same as it was)! So what we want to optimize ($P(\mathbf{t}|\mathbf{w})) becomes simply
-
-$$P(\mathbf{t}|\mathbf{w}) = P(\mathbf{t}) \times P(\mathbf{w}|\mathbf{t})$$
-
-Much cleaner, hmm?
-
-Let’s look at that P(\mathbf{t}). It's a sequence of tags, where each depends on the previous one. The probability of seeing the whole tag sequence $t_1, t_2, \cdots t_n$ (i.e., P(\mathbf{t})) is therefore really
+If we now consider $$P(\mathbf{t})$$. It's a sequence of tags, where each depends on the previous one. The probability of seeing the whole tag sequence $t_1, t_2, \cdots t_n$ (i.e., P(\mathbf{t})) is therefore really
 just the product of seeing each of the tags following another tag. We can write that as
 
 $$P(\mathbf{t}) = P(t_1) \times P(t_2|t_1) \times P(t_3|t_2) \times \cdots \times P(t_n|t_{n-1})$$
@@ -86,17 +75,10 @@ or for short
 
 $$P(\mathbf{t}) = P(t_1) \times \prod^n_2 P(t_i|t_{i-1})$$
 
-Ok, so we played with the formula, made it cleaner, and dissected $P(\mathbf{t})$. But how does that help us?
-Good question...
-
 We wanted to find the parameters for our model, and now we have them: $P(\mathbf{t})$ and $P(\mathbf{w}|{t})$. So we
 put it all together, and what we want to optimize is finally the product of our two parameters.
 
 $$ P(\mathbf{t}|\mathbf{w}) = P(t_1) \times P(w_1|t_1) \times \prod^n_2 P(t_i|t_{i-1}) \times P(w_i|t_i)$$
-
-By the way: parameters come in two flavors: ***free parameters*** (these are the ones we want EM to 
-optimize) and ***fixed parameters*** (we already know these and don’t want EM to change them). You can 
-make all parameters free and let EM handle them, or just some!
 
 <a name="secimplementation"></a>5 Implementation Details
 ==
