@@ -30,24 +30,14 @@ The corresponding slides cover
 
 Two alternative interpretations of probability can be considered  
 
-  * **Frequentist** (the more *classical* approach), assumes that probability is the long-run frequency of events. For example, the *probability of plane accidents* is interpreted as the *long-term frequency of plane accidents*. This becomes more difficult to understand when events have no long-term frequency of occurrences. Interestingly, in that case (such as the probability of electing one candidate, which happens only once) frequentists consider alternative realities and saying across all these realities, the frequency of occurrences defines the probability. 
-  * **Bayesian** interprets probability as measure of *believability in an event*, that is, how confident we are in an event occurring. : (eg. outcomes of presidential elections, but the election itself only happens once! Frequentists get around this by invoking alternative realities and saying across all these realities, the frequency of occurrences defines the probability. 
+  * **Frequentist** (the more *classical* approach), assumes that probability is the long-run frequency of events. For example, the *probability of plane accidents* is interpreted as the *long-term frequency of plane accidents*. This becomes harder to interpret when events have no long-term frequency of occurrences. Interestingly, in that case (eg. probability in an election, which happens only once) frequentists consider alternative realities and that across all these realities, the frequency of occurrences defines the probability. 
+  * **Bayesian** interprets probability as measure of *believability in an event*. Therefore, a probability is measure of *belief*, or confidence, of an event occurring. Interestingly, this definition leaves room for conflicting beliefs between individuals, based on the different *information* they have about the world. Hence, bayesian inference is mostly based on updating your beliefs after considering new evidence, which differs from more traditional statistical inference by preserving *uncertainty*.
 
-Bayesians, on the other hand, have a more intuitive approach. Bayesians interpret a probability as measure of *belief*, or confidence, of an event occurring. Beliefs between 0 and 1 allow for weightings of other outcomes. This is also interesting, as this definition leaves room for conflicting beliefs between individuals. Different individuals have different beliefs of events occurring, because they possess different *information* about the world. Bayesian inference is mostly based on updating your beliefs after considering new evidence. Bayesian inference differs from more traditional statistical inference by preserving *uncertainty*. At first, this sounds like a bad statistical technique. Isn't statistics all about deriving *certainty* from randomness? To reconcile this, we need to start thinking like Bayesians.
+To align with probability notation, we denote a belief about event $$A$$ as $$P\left(A\right)$$, called the *prior probability* of an event to occur. We denote the updated belief as $$ P\left( A \mid X \right) $$, interpreted as the probability of $$A$$ *given* the new evidence $$X$$, called the *posterior probability*. The prior beliefis not completely removed after seeing new evidence $X$, but we *re-weight the prior* to incorporate new evidence (i.e. we put more weight, or confidence, on some beliefs versus others). By introducing prior uncertainty about events, we admit that any guess we make can be wrong. However, with more and more instances of evidence, our prior belief is *washed out* by the new evidence. As we gather an *infinite* amount of evidence $$N \rightarrow \infty$$, the Bayesian results (often) align with frequentist results. Hence for small $$N$$, inference is *unstable*, where frequentist estimates have more variance and larger confidence intervals. However, by introducing a prior, and returning probabilities, we *preserve the uncertainty* that reflects the instability of statistical inference of a small $N$ dataset. 
 
-To align with traditional probability notation, we denote our belief about event $$A$$ as $$P\left(A\right)$$. We call this quantity the *prior probability* of an event to occur. We denote our updated belief as $$ P\left( A \mid X \right) $$, interpreted as the probability of $A$ *given* the evidence $X$. We call the updated belief the *posterior probability* so as to contrast it with the prior probability. 
+** Bayesian framework **
 
-We do not completely discard the prior belief after seeing new evidence $X$, but we *re-weight the prior* to incorporate new evidence (i.e. we put more weight, or confidence, on some beliefs versus others). By introducing prior uncertainty about events, we admit that any guess we make is potentially very wrong. After observing data, evidence, or other information, we update our beliefs, and our guess becomes *less wrong*.
-
-** Incorporating evidence **
-
-As we acquire more and more instances of evidence, our prior belief is *washed out* by the new evidence. Denote $$N$$ as the number of instances of evidence we possess. As we gather an *infinite* amount of evidence, say as $$N \rightarrow \infty$$, our Bayesian results (often) align with frequentist results. Hence for small $N$, inference is *unstable*, where frequentist estimates have more variance and larger confidence intervals. This is where Bayesian analysis excels. By introducing a prior, and returning probabilities (instead of a scalar estimate), we *preserve the uncertainty* that reflects the instability of statistical inference of a small $N$ dataset. 
-
-Frequentist methods are still largely useful in tools such as least squares linear regression, LASSO regression, and expectation-maximization algorithms. Bayesian methods complement these techniques by solving problems that these approaches cannot, or by illuminating the underlying system with more flexible modeling. 
-
-** Developing Bayesian framework **
-
-We are interested in beliefs, which can be interpreted as probabilities by thinking Bayesian. We have a *prior* belief in event $A$, beliefs formed by previous information. Secondly, we observe some evidence and we want to update our belief to incorporate this. We call this new belief the *posterior* probability. Updating our belief is done via the following equation, known as the Bayes' Theorem
+Updating the *prior belief* to obtain our *posterior belief* is done via the the Bayes' Theorem
 
 $$
 \begin{equation}
@@ -55,7 +45,7 @@ $$
 \end{equation}
 $$
 
-Hence, we see that our posterior belief of event $$A$$ given the new evidence $$X$$ is proportional to ($$\propto$$) the *likelihood* of observing this particular evidence $$X$$ given the event $$A$$ multiplied by our prior belief in that event $$A$$.
+We see that our posterior belief of event $$A$$ given the new evidence $$X$$ is proportional to ($$\propto$$) the *likelihood* of observing this particular evidence $$X$$ given the event $$A$$ multiplied by our prior belief in that event $$A$$.
 
 ** But what is $\lambda \;$? **
 
