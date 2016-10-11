@@ -76,72 +76,120 @@ $$ \mathbb{E}(\hat{p}) = p $$
 **Exercise**
 <div markdown = "1">
 
-  1. Compute the *log-likelihood* $$J=\log(\mathcal{L}(p|\mathbf{x}))$$ of our given problem
+  1. Compute the *log-likelihood* $$J=\log(\mathcal{L}(p \mid \mathbf{x}))$$ of our given problem
   2. Based on this, compute its derivative $$ \frac{dJ}{dp} $$
   3. Solve it to find the estimator $$\hat{p}$$
-  4. Verify that this estimator is unbiased
+  4. Verify that this estimator is unbiased $$ \mathbb{E}(\hat{p}) = p $$)
+  5. Compute the variance of the estimator $$ \mathbb{E}\left(\hat{p}^2\right) $$
 
-</div>
+</div>{: .notice--info}  
 
 **Solution**
 <div markdown = "1">
 
 Because this problem is simple, we can solve for this in general noting that since $$x=0$$ or $$x=1$$, the terms in the product of $$\mathcal{L}$$ above are either $$p$$, if $$x_i=1$$ or $$1-p$$ if $$x_i=0$$. This means that we can write
 
-$$ \mathcal{L}(p|\mathbf{x})= p^{\sum_{i=1}^n x_i}(1-p)^{n-\sum_{i=1}^n x_i} $$
+$$ 
+\begin{equation}
+\mathcal{L}(p|\mathbf{x})= p^{\sum_{i=1}^n x_i}(1-p)^{n-\sum_{i=1}^n x_i} 
+\end{equation}
+$$
 
 with the corresponding *log-likelihood* defined as
 
-$$ J=\log(\mathcal{L}(p|\mathbf{x})) =  \log(p)  \sum_{i=1}^n x_i +   \log(1-p) \left(n-\sum_{i=1}^n x_i\right)$$ 
+$$ 
+\begin{equation}
+J=\log(\mathcal{L}(p|\mathbf{x})) =  \log(p)  \sum_{i=1}^n x_i +   \log(1-p) \left(n-\sum_{i=1}^n x_i\right)
+\end{equation}
+$$ 
 
 Taking the derivative of this gives:
 
-$$  \frac{dJ}{dp} = \frac{1}{p}\sum_{i=1}^n x_i + \frac{(n-\sum_{i=1}^n x_i)}{p-1} $$
+$$  
+\begin{equation}
+\frac{dJ}{dp} = \frac{1}{p}\sum_{i=1}^n x_i + \frac{(n-\sum_{i=1}^n x_i)}{p-1} 
+\end{equation}
+$$
 
 and solving this leads to
 
-$$  \hat{p} = \frac{1}{ n} \sum_{i=1}^n x_i $$
+$$  
+\begin{equation}
+\hat{p} = \frac{1}{ n} \sum_{i=1}^n x_i 
+\end{equation}
+$$
 
-This is our *estimator* for $p$. Up til now, we have been using `sympy` to solve for this based on the data $x_i$ but now we have it generally and don't have to solve for it again. To check if this estimator is biased, we compute its expectation:
+This is our *estimator* for $p$. To check if this estimator is biased, we compute its expectation:
 
-$$ \mathbb{E}\left(\hat{p}\right) =\frac{1}{n}\sum_i^n \mathbb{E}(x_i) = \frac{1}{n} n \mathbb{E}(x_i) $$
+$$ 
+\begin{equation}
+\mathbb{E}\left(\hat{p}\right) =\frac{1}{n}\sum_i^n \mathbb{E}(x_i) = \frac{1}{n} n \mathbb{E}(x_i) 
+\end{equation}
+$$
 
 by linearity of the expectation and where
 
-$$\mathbb{E}(x_i)  = p$$
+$$
+\begin{equation}
+\mathbb{E}(x_i)  = p
+\end{equation}
+$$
 
 Therefore,
 
-$$ \mathbb{E}\left(\hat{p}\right) =p $$
+$$ 
+\begin{equation}
+\mathbb{E}\left(\hat{p}\right) =p 
+\end{equation}
+$$
 
 This means that the esimator is unbiased. This is good news. We almost always want our estimators to be unbiased. Similarly, 
 
-$$ \mathbb{E}\left(\hat{p}^2\right) = \frac{1}{n^2} \mathbb{E}\left[\left(  \sum_{i=1}^n x_i \right)^2 \right]$$
+$$ 
+\begin{equation}
+\mathbb{E}\left(\hat{p}^2\right) = \frac{1}{n^2} \mathbb{E}\left[\left(  \sum_{i=1}^n x_i \right)^2 \right]
+\begin{equation}
+$$
 
 and where
 
-$$ \mathbb{E}\left(x_i^2\right) =p$$
+$$
+\begin{equation}
+\mathbb{E}\left(x_i^2\right) =p
+\end{equation}
+$$
 
 and by the independence assumption,
 
-$$ \mathbb{E}\left(x_i x_j\right) =\mathbb{E}(x_i)\mathbb{E}( x_j) =p^2$$
+$$
+\begin{equation}
+\mathbb{E}\left(x_i x_j\right) =\mathbb{E}(x_i)\mathbb{E}( x_j) =p^2
+\end{equation}
+$$
 
 Thus,
 
-$$ \mathbb{E}\left(\hat{p}^2\right) =\left(\frac{1}{n^2}\right) n 
+$$ 
+\begin{equation}
+\mathbb{E}\left(\hat{p}^2\right) =\left(\frac{1}{n^2}\right) n 
 \left[
 p+(n-1)p^2
 \right]
+\end{equation}
 $$
 
 So, the variance of the estimator, $\hat{p}$ is the following:
 
-$$ \sigma_\hat{p}^2 = \mathbb{E}\left(\hat{p}^2\right)- \mathbb{E}\left(\hat{p}\right)^2  = \frac{p(1-p)}{n} $$
+$$ 
+\begin{equation}
+\sigma_\hat{p}^2 = \mathbb{E}\left(\hat{p}^2\right)- \mathbb{E}\left(\hat{p}\right)^2  = \frac{p(1-p)}{n} 
+\end{equation}
+$$
 
 Note that the $n$ in the denominator means that the variance asymptotically goes to zero as $n$ increases (i.e. we consider more and more samples). This is good news also because it means that more and more coin flips leads to a better estimate of the underlying $p$.
 
 Unfortunately, this formula for the variance is practically useless because we have to know $p$ to compute it and $p$ is the parameter we are trying to estimate in the first place! But, looking at $ \sigma_\hat{p}^2 $, we can immediately notice that if $p=0$, then there is no estimator variance because the outcomes are guaranteed to be tails. Also, the maximum of this variance, for whatever $n$, happens at $p=1/2$. This is our worst case scenario and the only way to compensate is with more samples (i.e. larger $n$). 
-</div>
+</div>{: .notice--success}  
 
 All we have computed is the mean and variance of the estimator. In general, this is insufficient to characterize the underlying probability density of $\hat{p}$, except if we somehow knew that  $\hat{p}$ were normally distributed. This is where the powerful [*central limit theorem*](http://mathworld.wolfram.com/CentralLimitTheorem.html) comes in. The form of the estimator, which is just a mean estimator, implies that we can apply this theorem and conclude that  $\hat{p}$ is normally distributed. However, there's a wrinkle here: the theorem tells us that  $\hat{p}$ is asymptotically normal, it doesn't quantify how many samples $n$ we need to approach this asymptotic paradise. In our simulation this is no problem since we can generate as much data as we like, but in the real world, with a costly experiment, each sample may be precious. In the following, we won't apply this theorem and instead proceed analytically.
 
