@@ -147,7 +147,7 @@ This means that the esimator is unbiased. This is good news. We almost always wa
 
 $$ 
 \begin{equation}
-\mathbb{E}\left(\hat{p}^2\right) = \frac{1}{n^2} \mathbb{E}\left[\left(  \sum_{i=1}^n x_i \right)^2 \right]
+\mathbb{E}\left(\hat{p}^{2}\right) = \frac{1}{n^2} \mathbb{E}\left[\left(\sum_{i=1}^{n} x_{i} \right)^{2} \right]
 \begin{equation}
 $$
 
