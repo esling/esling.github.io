@@ -276,26 +276,26 @@ $$
 
 ** Means of the sample distributions for 2-dimensional features **
 
-$ \pmb{\mu}_{\,1} = \bigg[ 
+$$
+\pmb{\mu}_{\,1} = \bigg[ 
 \begin{array}{c}
 0 \\
 0 \\
-\end{array} \bigg] $,
-$ \; \pmb{\mu}_{\,2} = \bigg[ 
+\end{array} \bigg] $$,
+$$ \; \pmb{\mu}_{\,2} = \bigg[ 
 \begin{array}{c}
 9 \\
 0 \\
-\end{array} \bigg] $,
-$ \; \pmb{\mu}_{\,3} = \bigg[ 
+\end{array} \bigg] $$,
+$$ \; \pmb{\mu}_{\,3} = \bigg[ 
 \begin{array}{c}
 6 \\
 6 \\
-\end{array} \bigg] $
-
+\end{array} \bigg] $$
 
 ** Covariance matrices for the statistically independend and identically distributed ('i.i.d') features **
 
-$ \Sigma_i = \bigg[ 
+$$ \Sigma_i = \bigg[ 
 \begin{array}{cc}
 \sigma_{11}^2 & \sigma_{12}^2\\
 \sigma_{21}^2 & \sigma_{22}^2 \\
@@ -314,12 +314,12 @@ $ \Sigma_i = \bigg[
 \begin{array}{cc}
 4 & 0\\
 0 & 4 \\
-\end{array} \bigg] \\$
+\end{array} \bigg] \\$$
 
 ** Equal prior probabilities **
-$P(\omega_1\; |\; \pmb x) \; = \;  P(\omega_2\; |\; \pmb x) \; = \; P(\omega_3\; |\; \pmb x) \; = \frac{1}{3}$
+$$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\omega_3\; \mid \; \pmb x) \; = \frac{1}{3}$$
 
-** Exercise **
+**Exercise**
 <div markdown = "1">
 
   1. Generate some data (sample from the multivariate Gaussians)
@@ -327,15 +327,23 @@ $P(\omega_1\; |\; \pmb x) \; = \;  P(\omega_2\; |\; \pmb x) \; = \; P(\omega_3\;
 
 </div>
 
-Here, our **objective function** is to maximize the discriminant function $g_i(\pmb x)$, which we define as the posterior probability to perform a **minimum-error classification** (Bayes classifier). 
+Here, our **objective function** is to maximize the discriminant function $$g_i(\pmb x)$$, which we define as the posterior probability to perform a **minimum-error classification** (Bayes classifier). 
 
-$ g_1(\pmb x) = P(\omega_1 | \; \pmb{x}), \quad  g_2(\pmb{x}) = P(\omega_2 | \; \pmb{x}), \quad  g_3(\pmb{x}) = P(\omega_2 | \; \pmb{x})$
+$$
+\begin{equation}
+g_1(\pmb x) = P(\omega_1 \mid \; \pmb{x}), \quad  g_2(\pmb{x}) = P(\omega_2 \mid \; \pmb{x}), \quad  g_3(\pmb{x}) = P(\omega_2 \mid \; \pmb{x})
+\end{equation}
+$$
 
-So that our decision rule is to choose the class $\omega_i$ for which $g_i(\pmb x)$ is max., where  
- $ \quad g_i(\pmb{x}) = \pmb{x}^{\,t} \bigg( - \frac{1}{2} \Sigma_i^{-1} \bigg) \pmb{x} + \bigg( \Sigma_i^{-1} \pmb{\mu}_{\,i}\bigg)^t \pmb x + \bigg( -\frac{1}{2} \pmb{\mu}_{\,i}^{\,t}  \Sigma_{i}^{-1} \pmb{\mu}_{\,i} -\frac{1}{2} ln(|\Sigma_i|)\bigg) $
+So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\pmb x)$$ is max., where  
+ $$ 
+ \begin{equation}
+ \quad g_i(\pmb{x}) = \pmb{x}^{\,t} \bigg( - \frac{1}{2} \Sigma_i^{-1} \bigg) \pmb{x} + \bigg( \Sigma_i^{-1} \pmb{\mu}_{\,i}\bigg)^t \pmb x + \bigg( -\frac{1}{2} \pmb{\mu}_{\,i}^{\,t}  \Sigma_{i}^{-1} \pmb{\mu}_{\,i} -\frac{1}{2} ln(\abs{\Sigma_i})\bigg) 
+ \end{equation}
+ $$
  
  
-** Exercise **
+**Exercise**
 <div markdown = "1">
 
   1. Implement the discriminant function
@@ -348,75 +356,106 @@ So that our decision rule is to choose the class $\omega_i$ for which $g_i(\pmb 
 
 #### 7.3 - Unknown parameters case
 
-** About the Maximum Likelihood Estimate (MLE) **
+**About the Maximum Likelihood Estimate (MLE)**
 
-In contrast to the first section, let us assume that we only know the number of parameters for the class conditional densities $p (\; \pmb x \; | \; \omega_i)$, and we want to use a Maximum Likelihood Estimation (MLE) to estimate the quantities of these parameters from the training data (*here:* our random sample data).
+In contrast to the first section, let us assume that we only know the number of parameters for the class conditional densities $$p (\; \pmb x \; \mid \; \omega_i)$$, and we want to use a Maximum Likelihood Estimation (MLE) to estimate the quantities of these parameters from the training data (*here:* our random sample data).
 
 
-Given the information about the form of the model - the data is normal distributed - the 2 parameters to be estimated are $\pmb \mu_i$ and $\pmb \Sigma_i$, which are summarized by the   
-parameter vector $\pmb \theta_i = \bigg[ \begin{array}{c}
+Given the information about the form of the model - the data is normal distributed - the 2 parameters to be estimated are $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which are summarized by the   
+parameter vector 
+$$\pmb \theta_i = \bigg[ \begin{array}{c}
 \ \theta_{i1} \\
 \ \theta_{i2} \\
 \end{array} \bigg]=
 \bigg[ \begin{array}{c}
 \pmb \mu_i \\
 \pmb \Sigma_i \\
-\end{array} \bigg]$ 
+\end{array} \bigg]$$ 
 
-For the Maximum Likelihood Estimate (MLE), we assume that we have a set of samples $D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} $ that are *i.i.d.* (independent and identically distributed, drawn with probability $p(\pmb x \; | \; \omega_i, \; \pmb \theta_i) $).  
-Thus, we can **work with each class separately** and omit the class labels, so that we write the probability density as $p(\pmb x \; | \; \pmb \theta)$ 
+For the Maximum Likelihood Estimate (MLE), we assume that we have a set of samples $$D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} $$ that are *i.i.d.* (independent and identically distributed, drawn with probability $$p(\pmb x \; \mid \; \omega_i, \; \pmb \theta_i) )$$.  
+Thus, we can **work with each class separately** and omit the class labels, so that we write the probability density as $$p(\pmb x \; \mid \; \pmb \theta)$$ 
 
-** Likelihood of $ \pmb \theta $ **
+**Likelihood of $$ \pmb \theta $$**
 
-Thus, the probability of observing $D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} $ is: 
-<br>
-<br>
-$p(D\; | \;  \pmb \theta\;) = p(\pmb x_1 \; | \; \pmb \theta\;)\; \cdot \; p(\pmb x_2 \; | \;\pmb \theta\;) \; \cdot \;...  \; p(\pmb x_n \; | \; \pmb \theta\;) = \prod_{k=1}^{n} \; p(\pmb x_k \pmb \; | \; \pmb \theta \;)$  
-<br>
-Where $p(D\; | \;  \pmb  \theta\;)$ is also called the ***likelihood of $\pmb\ \theta$***.
+Thus, the probability of observing $$D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} $^ is  
 
-We are given the information that $p([x_1,x_2]^t) \;∼ \; N(\pmb \mu,\pmb \Sigma) $ (remember that we dropped the class labels, since we are working with every class separately).
+$$
+\begin{equation}
+$p(D\; \mid \;  \pmb \theta\;) = p(\pmb x_1 \; \mid \; \pmb \theta\;)\; \cdot \; p(\pmb x_2 \; \mid \;\pmb \theta\;) \; \cdot \;...  \; p(\pmb x_n \; \mid \; \pmb \theta\;) = \prod_{k=1}^{n} \; p(\pmb x_k \pmb \; \mid \; \pmb \theta \;)
+\end{equation}
+$$  
+Where $$p(D\; \mid \;  \pmb  \theta\;)$$ is also called the ***likelihood of $$\pmb\ \theta$$***.
+
+We are given the information that $$p([x_1,x_2]^t) \;∼ \; N(\pmb \mu,\pmb \Sigma) $$ (remember that we dropped the class labels, since we are working with every class separately).
 
 And the mutlivariate normal density is given as:
-$\quad \quad p(\pmb x) = \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]$
+$$
+\begin{equation}
+\quad \quad p(\pmb x) = \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
+\end{equation}
+$$
 
 So that  
-$p(D\; | \;  \pmb \theta\;) = \prod_{k=1}^{n} \; p(\pmb x_k \pmb \; | \; \pmb \theta \;) =  \prod_{k=1}^{n} \; \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]$
+$$
+\begin{equation}
+p(D\; \mid \;  \pmb \theta\;) = \prod_{k=1}^{n} \; p(\pmb x_k \pmb \; \mid \; \pmb \theta \;) =  \prod_{k=1}^{n} \; \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
+\end{equation}
+$$
 
 and the log of the multivariate density
 
-$ l(\pmb\theta) =  \sum\limits_{k=1}^{n} - \frac{1}{2}(\pmb x - \pmb \mu)^t \pmb \Sigma^{-1} \; (\pmb x - \pmb \mu) - \frac{d}{2} \; ln \; 2\pi - \frac{1}{2} \;ln \; |\pmb\Sigma|$
+$$
+\begin{equation}
+l(\pmb\theta) =  \sum\limits_{k=1}^{n} - \frac{1}{2}(\pmb x - \pmb \mu)^t \pmb \Sigma^{-1} \; (\pmb x - \pmb \mu) - \frac{d}{2} \; ln \; 2\pi - \frac{1}{2} \;ln \; |\pmb\Sigma|
+\end{equation}
+$$
 
 ** Maximum Likelihood Estimate (MLE) **
 
-In order to obtain the MLE $\boldsymbol{\hat{\theta}}$, we maximize $l (\pmb  \theta)$, which can be done via differentiation:
+In order to obtain the MLE $$\boldsymbol{\hat{\theta}}$$, we maximize $$l (\pmb  \theta)$$, which can be done via differentiation:
 
 with 
-$\nabla_{\pmb \theta} \equiv \begin{bmatrix}  
+$$
+\begin{equation}
+\nabla_{\pmb \theta} \equiv \begin{bmatrix}  
 \frac{\partial \; }{\partial \; \theta_1} \\ 
 \frac{\partial \; }{\partial \; \theta_2}
 \end{bmatrix} = \begin{bmatrix} 
 \frac{\partial \; }{\partial \; \pmb \mu} \\ 
 \frac{\partial \; }{\partial \; \pmb \sigma}
-\end{bmatrix}$
+\end{bmatrix}
+\end{equation}
+$$
 
-$\nabla_{\pmb \theta} l = \sum\limits_{k=1}^n \nabla_{\pmb \theta} \;ln\; p(\pmb x| \pmb \theta) = 0 $
+$$
+\begin{equation}
+\nabla_{\pmb \theta} l = \sum\limits_{k=1}^n \nabla_{\pmb \theta} \;ln\; p(\pmb x| \pmb \theta) = 0 
+\end{equation}
+$$
 
 ** MLE of the mean **
 
 After doing the differentiation, we find that the MLE of the parameter $\pmb\mu$ is given by the equation:  
-${\hat{\pmb\mu}} = \frac{1}{n} \sum\limits_{k=1}^{n} \pmb x_k$
+$$
+\begin{equation}
+{\hat{\pmb\mu}} = \frac{1}{n} \sum\limits_{k=1}^{n} \pmb x_k
+\end{equation}
+$$
 
-As you can see, this is simply the mean of our dataset, so we can implement the code very easily and compare the estimate to the actual values for $\pmb \mu$.
+As you can see, this is simply the mean of our dataset, so we can implement the code very easily and compare the estimate to the actual values for $$\pmb \mu$$.
 
-** MLE of the covariance matrix $\pmb \Sigma$ **
+** MLE of the covariance matrix $$\pmb \Sigma$$ **
 
-Analog to $\pmb \mu$ we can find the equation for the $\pmb\Sigma$ via differentiation - okay the equations are a little bit more involved, but the approach is the same - so that we come to this equation:  
+Analog to $$\pmb \mu$$ we can find the equation for the $$\pmb\Sigma$$ via differentiation - okay the equations are a little bit more involved, but the approach is the same - so that we come to this equation:  
 
-${\hat{\pmb\Sigma}} = \frac{1}{n} \sum\limits_{k=1}^{n} (\pmb x_k - \hat{\mu})(\pmb x_k - \hat{\mu})^t$
+$$
+\begin{equation}
+{\hat{\pmb\Sigma}} = \frac{1}{n} \sum\limits_{k=1}^{n} (\pmb x_k - \hat{\mu})(\pmb x_k - \hat{\mu})^t
+\end{equation}
+$$
 
-which we will also implement in Python code, and then compare to the acutal values of ${\pmb\Sigma}$.
+which we will also implement in Python code, and then compare to the acutal values of $${\pmb\Sigma}$$.
 
 ** Classification using our estimated parameters **
 
-Using the estimated parameters $\pmb \mu_i$ and $\pmb \Sigma_i$, which we obtained via MLE, we calculate the error on the sample dataset again. 
+Using the estimated parameters $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which we obtained via MLE, we calculate the error on the sample dataset again. 
