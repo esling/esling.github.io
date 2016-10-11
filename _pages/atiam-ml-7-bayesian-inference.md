@@ -67,24 +67,32 @@ $$
 
 The idea of *maximum likelihood* will be to maximize this as the function of $$p$$ after given all of the $$x_i$$ data. This means that our estimator, $$\hat{p}$$, is a function of the observed $$x_i$$ data, and as such, is a random variable with its own distribution.
 
-** Defining the estimator **
+**Defining the estimator**
 
-Note that the mean of the estimator ($\mu$) is pretty close to the true value, but looks can be deceiving. The only way to know for sure is to check if the estimator is unbiased, namely, if
+The only way to know for sure that our estimator is correctly defined is to check if the estimator is unbiased, namely, if
 
 $$ \mathbb{E}(\hat{p}) = p $$
 
-Because this problem is simple, we can solve for this in general noting that since $x=0$ or $x=1$, the terms in the product of $\mathcal{L}$ above are either $p$, if $x_i=1$ or $1-p$ if $x_i=0$. This means that we can write
+**Exercise**
+<div markdown = "1">
+
+  1. Compute the *log-likelihood* $$J=\log(\mathcal{L}(p|\mathbf{x}))$$ of our given problem
+  2. Based on this, compute its derivative $$ \frac{dJ}{dp} $$
+  3. Solve it to find the estimator $$\hat{p}$$
+  4. Verify that this estimator is unbiased
+
+</div>
+
+**Solution**
+<div markdown = "1">
+
+Because this problem is simple, we can solve for this in general noting that since $$x=0$$ or $$x=1$$, the terms in the product of $$\mathcal{L}$$ above are either $$p$$, if $$x_i=1$$ or $$1-p$$ if $$x_i=0$$. This means that we can write
 
 $$ \mathcal{L}(p|\mathbf{x})= p^{\sum_{i=1}^n x_i}(1-p)^{n-\sum_{i=1}^n x_i} $$
 
 with the corresponding *log-likelihood* defined as
 
 $$ J=\log(\mathcal{L}(p|\mathbf{x})) =  \log(p)  \sum_{i=1}^n x_i +   \log(1-p) \left(n-\sum_{i=1}^n x_i\right)$$ 
-
-**Exercise**
-<div markdown = "1">
-  1
-</div>
 
 Taking the derivative of this gives:
 
@@ -133,6 +141,7 @@ $$ \sigma_\hat{p}^2 = \mathbb{E}\left(\hat{p}^2\right)- \mathbb{E}\left(\hat{p}\
 Note that the $n$ in the denominator means that the variance asymptotically goes to zero as $n$ increases (i.e. we consider more and more samples). This is good news also because it means that more and more coin flips leads to a better estimate of the underlying $p$.
 
 Unfortunately, this formula for the variance is practically useless because we have to know $p$ to compute it and $p$ is the parameter we are trying to estimate in the first place! But, looking at $ \sigma_\hat{p}^2 $, we can immediately notice that if $p=0$, then there is no estimator variance because the outcomes are guaranteed to be tails. Also, the maximum of this variance, for whatever $n$, happens at $p=1/2$. This is our worst case scenario and the only way to compensate is with more samples (i.e. larger $n$). 
+</div>
 
 All we have computed is the mean and variance of the estimator. In general, this is insufficient to characterize the underlying probability density of $\hat{p}$, except if we somehow knew that  $\hat{p}$ were normally distributed. This is where the powerful [*central limit theorem*](http://mathworld.wolfram.com/CentralLimitTheorem.html) comes in. The form of the estimator, which is just a mean estimator, implies that we can apply this theorem and conclude that  $\hat{p}$ is normally distributed. However, there's a wrinkle here: the theorem tells us that  $\hat{p}$ is asymptotically normal, it doesn't quantify how many samples $n$ we need to approach this asymptotic paradise. In our simulation this is no problem since we can generate as much data as we like, but in the real world, with a costly experiment, each sample may be precious. In the following, we won't apply this theorem and instead proceed analytically.
 
