@@ -147,7 +147,7 @@ This means that the esimator is unbiased. This is good news. We almost always wa
 
 $$ 
 \begin{equation}
-\mathbb{E}\left(\hat{p}^{2}\right) = \frac{1}{n^2} \mathbb{E}\left[\left(\sum_{i=1}^{n} x_{i} \right)^{2} \right]
+\mathbb{E}\left(\hat{p}^{2}\right) 
 \begin{equation}
 $$
 
@@ -325,7 +325,7 @@ $$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\
   1. Generate some data (sample from the multivariate Gaussians)
   2. Plot the class-dependent data
 
-</div>{: notice--info}
+</div>{: .notice--info}
 
 Here, our **objective function** is to maximize the discriminant function $$g_i(\pmb x)$$, which we define as the posterior probability to perform a **minimum-error classification** (Bayes classifier). 
 
@@ -352,7 +352,7 @@ So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\p
   4. Plot the confusion matrix
   5. Calculate the empirical error
 
-</div>{: notice--info}
+</div>{: .notice--info}
 
 #### 7.3 - Unknown parameters case
 
