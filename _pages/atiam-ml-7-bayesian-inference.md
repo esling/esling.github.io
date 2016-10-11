@@ -33,9 +33,7 @@ Two alternative interpretations of probability can be considered
   * **Frequentist** (the more *classical* approach), assumes that probability is the long-run frequency of events. For example, the *probability of plane accidents* is interpreted as the *long-term frequency of plane accidents*. This becomes harder to interpret when events have no long-term frequency of occurrences. Interestingly, in that case (eg. probability in an election, which happens only once) frequentists consider alternative realities and that across all these realities, the frequency of occurrences defines the probability. 
   * **Bayesian** interprets probability as measure of *believability in an event*. Therefore, a probability is measure of *belief*, or confidence, of an event occurring. Interestingly, this definition leaves room for conflicting beliefs between individuals, based on the different *information* they have about the world. Hence, bayesian inference is mostly based on updating your beliefs after considering new evidence, which differs from more traditional statistical inference by preserving *uncertainty*.
 
-To align with probability notation, we denote a belief about event $$A$$ as $$P\left(A\right)$$, called the *prior probability* of an event to occur. We denote the updated belief as $$ P\left( A \mid X \right) $$, interpreted as the probability of $$A$$ *given* the new evidence $$X$$, called the *posterior probability*. The prior beliefis not completely removed after seeing new evidence $X$, but we *re-weight the prior* to incorporate new evidence (i.e. we put more weight, or confidence, on some beliefs versus others). By introducing prior uncertainty about events, we admit that any guess we make can be wrong. However, with more and more instances of evidence, our prior belief is *washed out* by the new evidence. As we gather an *infinite* amount of evidence $$N \rightarrow \infty$$, the Bayesian results (often) align with frequentist results. Hence for small $$N$$, inference is *unstable*, where frequentist estimates have more variance and larger confidence intervals. However, by introducing a prior, and returning probabilities, we *preserve the uncertainty* that reflects the instability of statistical inference of a small $N$ dataset. 
-
-** Bayesian framework **
+To align with probability notation, we denote a belief about event $$A$$ as $$P\left(A\right)$$, called the *prior probability* of an event to occur. We denote the updated belief as $$ P\left( A \mid X \right) $$, interpreted as the probability of $$A$$ *given* the new evidence $$X$$, called the *posterior probability*. The prior beliefis not completely removed after seeing new evidence $$X$$, but we *re-weight the prior* to incorporate new evidence (i.e. we put more weight, or confidence, on some beliefs versus others). By introducing prior uncertainty about events, we admit that any guess we make can be wrong. However, with more and more instances of evidence, our prior belief is *washed out* by the new evidence. As we gather an *infinite* amount of evidence $$N \rightarrow \infty$$, the Bayesian results (often) align with frequentist results. Hence for small $$N$$, inference is *unstable*, where frequentist estimates have more variance and larger confidence intervals. However, by introducing a prior, and returning probabilities, we *preserve the uncertainty* that reflects the instability on a small $$N$$ dataset.  
 
 Updating the *prior belief* to obtain our *posterior belief* is done via the the Bayes' Theorem
 
@@ -45,27 +43,29 @@ $$
 \end{equation}
 $$
 
-We see that our posterior belief of event $$A$$ given the new evidence $$X$$ is proportional to ($$\propto$$) the *likelihood* of observing this particular evidence $$X$$ given the event $$A$$ multiplied by our prior belief in that event $$A$$.
+We see that our posterior belief of event $$A$$ given the new evidence $$X$$ is proportional to ($$\propto$$) the *likelihood* of observing this particular evidence $$X$$ given the event $$A$$ multiplied by our prior belief in that particular event $$A$$.
 
-** But what is $\lambda \;$? **
+#### 7.1 - Bayesian inference
 
-The parameter, $$\lambda$$ is usually the goal that motivates using statistical methods, as this parameter is usually hidden from us. We see only $$Z$$, and must go backwards to try and determine $$\lambda$$. The problem is difficult because there is no one-to-one mapping from $Z$ to $\lambda$. 
+Suppose we have coin and want to estimate the probability of heads ($$p$$) for it. The coin is Bernoulli distributed:
 
-Bayesian inference is concerned with *beliefs* about $\lambda$ Rather than try to guess $\lambda$ exactly, we only talk about what $\lambda$ is likely to be by assigning a probability distribution to $\lambda$.
+$$ 
+\begin{equation}
+\phi(x)= p^x (1-p)^{(1-x)} 
+\end{equation}
+$$
 
-#### 7.1 - Maximum likelihood
+where $$x$$ is the outcome, *1* for heads and *0* for tails. Based on $$n$$ *independent* flips, we have the likelihood:
 
-Suppose we have coin and want to estimate the probability of heads ($p$) for it. The coin is Bernoulli distributed:
+$$ 
+\begin{equation}
+\mathcal{L}(p|\mathbf{x})= \prod_{i=1}^n p^{ x_i }(1-p)^{1-x_i} 
+\end{equation}
+$$
 
-$$ \phi(x)= p^x (1-p)^{(1-x)} $$
+(the independent-trials assumption allows us to just substituted everything into $$ \phi(x)$$). 
 
-where $x$ is the outcome, *1* for heads and *0* for tails. The $n$ independent flips, we have the likelihood:
-
-$$ \mathcal{L}(p|\mathbf{x})= \prod_{i=1}^n p^{ x_i }(1-p)^{1-x_i} $$
-
-This is basically notation. We have just substituted everything into $ \phi(x)$ under the independent-trials assumption. 
-
-The idea of *maximum likelihood* is to maximize this as the function of $p$ after plugging in all of the $x_i$ data. This means that our estimator, $\hat{p}$ , is a function of the observed $x_i$ data, and as such, is a random variable with its own distribution.
+The idea of *maximum likelihood* will be to maximize this as the function of $$p$$ after given all of the $$x_i$$ data. This means that our estimator, $$\hat{p}$$, is a function of the observed $$x_i$$ data, and as such, is a random variable with its own distribution.
 
 ** Defining the estimator **
 
@@ -77,9 +77,14 @@ Because this problem is simple, we can solve for this in general noting that sin
 
 $$ \mathcal{L}(p|\mathbf{x})= p^{\sum_{i=1}^n x_i}(1-p)^{n-\sum_{i=1}^n x_i} $$
 
-with corresponding log as
+with the corresponding *log-likelihood* defined as
 
 $$ J=\log(\mathcal{L}(p|\mathbf{x})) =  \log(p)  \sum_{i=1}^n x_i +   \log(1-p) \left(n-\sum_{i=1}^n x_i\right)$$ 
+
+**Exercise**
+<div markdown = "1">
+  1
+</div>
 
 Taking the derivative of this gives:
 
