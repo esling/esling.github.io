@@ -186,59 +186,93 @@ $$
 \end{equation}
 $$
 
-Note that the $n$ in the denominator means that the variance asymptotically goes to zero as $n$ increases (i.e. we consider more and more samples). This is good news also because it means that more and more coin flips leads to a better estimate of the underlying $p$.
-
-Unfortunately, this formula for the variance is practically useless because we have to know $p$ to compute it and $p$ is the parameter we are trying to estimate in the first place! But, looking at $ \sigma_\hat{p}^2 $, we can immediately notice that if $p=0$, then there is no estimator variance because the outcomes are guaranteed to be tails. Also, the maximum of this variance, for whatever $n$, happens at $p=1/2$. This is our worst case scenario and the only way to compensate is with more samples (i.e. larger $n$). 
+Note that the $$n$$ in the denominator means that the variance asymptotically goes to zero as $$n$$ increases, leading to a better estimate of the underlying $$p$$. Unfortunately, this formula for the variance is practically useless because we have to know $$p$$ to compute it and $$p$$ is the parameter we are trying to estimate in the first place! But, looking at $$ \sigma_\hat{p}^2 $$, we can immediately notice that if $$p=0$$, then there is no estimator variance because the outcomes are guaranteed to be tails. Also, the maximum of this variance, for whatever $$n$$, happens at $$p=1/2$$. This is our worst case scenario and the only way to compensate is with more samples (i.e. larger $$n$$). 
 </div>{: .notice--success}  
 
-All we have computed is the mean and variance of the estimator. In general, this is insufficient to characterize the underlying probability density of $\hat{p}$, except if we somehow knew that  $\hat{p}$ were normally distributed. This is where the powerful [*central limit theorem*](http://mathworld.wolfram.com/CentralLimitTheorem.html) comes in. The form of the estimator, which is just a mean estimator, implies that we can apply this theorem and conclude that  $\hat{p}$ is normally distributed. However, there's a wrinkle here: the theorem tells us that  $\hat{p}$ is asymptotically normal, it doesn't quantify how many samples $n$ we need to approach this asymptotic paradise. In our simulation this is no problem since we can generate as much data as we like, but in the real world, with a costly experiment, each sample may be precious. In the following, we won't apply this theorem and instead proceed analytically.
 
 ** Full density for the estimator **
 
-To write out the full density for $\hat{p}$, we first have to ask what is the probability that the estimator will equal a specific value and the tally up all the ways that could happen with their corresponding probabilities. For example, what is the probability that
+In general, computing the mean and variance of the estimator is insufficient to characterize the underlying probability density of $$\hat{p}$$, except if we knew that $$\hat{p}$$ were normally distributed. This is where the [*central limit theorem*](http://mathworld.wolfram.com/CentralLimitTheorem.html). Indeed, the form of the estimator, implies that $$\hat{p}$$ is normally distributed, but only *asymptotically*, which doesn't quantify how many samples $$n$$ we need. Unfortunately, in the real world, each sample may be precious. Hence, to write out the full density for $$\hat{p}$$, we first have to ask what is the probability that the estimator will equal a specific value such as
 
-$$  \hat{p} = \frac{1}{n}\sum_{i=1}^n x_i  = 0 $$
+$$  
+\begin{equation}
+\hat{p} = \frac{1}{n}\sum_{i=1}^n x_i  = 0 
+\end{equation}
+$$
 
-This can only happen one way: when $x_i=0 \hspace{0.5em} \forall i$. The probability of this happening can be computed from the density
+This can only happen one way: when $$x_i=0 \forall i$$. The probability of this happening can be computed from the density
 
-$$ f(\mathbf{x},p)= \prod_{i=1}^n \left(p^{x_i} (1-p)^{1-x_i}  \right) $$
+$$ 
+\begin{equation}
+f(\mathbf{x},p)= \prod_{i=1}^n \left(p^{x_i} (1-p)^{1-x_i}  \right) 
+\end{equation}
+$$
 
-$$ f\left(\sum_{i=1}^n x_i  = 0,p\right)= \left(1-p\right)^n  $$
+$$ 
+\begin{equation}
+f\left(\sum_{i=1}^n x_i  = 0,p\right)= \left(1-p\right)^n  
+\end{equation}
+$$
 
-Likewise, if $\lbrace x_i \rbrace$ has one $i^{th}$  value equal to one, then
+Likewise, if $$\lbrace x_i \rbrace$$ has one $$i^{th}$$ value equal to one, then
 
-$$ f\left(\sum_{i=1}^n x_i  = 1,p\right)= n p \prod_{i=1}^{n-1} \left(1-p\right)$$
+$$ 
+\begin{equation}
+f\left(\sum_{i=1}^n x_i  = 1,p\right)= n p \prod_{i=1}^{n-1} \left(1-p\right)
+\end{equation}
+$$
 
-where the $n$ comes from the $n$ ways to pick one value equal to one from the $n$ elements $x_i$. Continuing this way, we can construct the entire density as
+where the $$n$$ comes from the $$n$$ ways to pick one value equal to one from the $$n$$ elements $$x_i$$. Continuing this way, we can construct the entire density as
 
-$$ f\left(\sum_{i=1}^n x_i  = k,p\right)= \binom{n}{k} p^k  (1-p)^{n-k}  $$
+$$
+\begin{equation}
+f\left(\sum_{i=1}^n x_i  = k,p\right)= \binom{n}{k} p^k  (1-p)^{n-k}  
+\end{equation}
+$$
 
-where the term on the left is the binomial coefficient of $n$ things taken $k$ at a time. This is the binomial distribution and it's not the density for $\hat{p}$, but rather for $n\hat{p}$. We'll leave this as-is because it's easier to work with below. We just have to remember to keep track of the $n$ factor.
+where the term on the left is the binomial coefficient of $$n$$ things taken $$k$$ at a time. This is the binomial distribution and it's not the density for $$\hat{p}$$, but rather for $$n\hat{p}$$. We'll leave this as-is because it's easier to work with below. We just have to remember to keep track of the $$n$$ factor.
 
-#### 7.2 - Classifying with MLE
+#### 7.2 - Gaussian classification
 
 Popular applications for Maximum Likelihood Estimates are the typical statistical pattern classification tasks, and in the past, I posted some [examples](https://github.com/rasbt/pattern_classification#param) using Bayes' classifiers for which the **probabilistic models and parameters were known**. In those cases, the design of the classifier was rather easy, however, in real applications, we are rarely given this information; this is where the Maximum Likelihood Estimate comes into play.
 
 However, the Maximum Likelihood Estimate still **requires partial knowledge** about the problem: We have to assume that the **model of the class conditional densities is known** (e.g., that the data follows typical Gaussian distribution). In contrast, non-parametric approaches like the Parzen-window technqiue do not require prior information about the distribution of the data (I will discuss this technique in more detail in a future article, the IPython notebook is already in preparation).  
 
-**To summarize the problem:** Using MLE, we want to estimate the values of the parameters of a given distribution for the class-conditional densities, for example, the *mean* and *variance* assuming that the class-conditional densities are *normal*  distributed (Gaussian) with $p(\pmb x \; | \; \omega_i) \sim N(\mu, \sigma^2)$.
+**To summarize the problem:** Using MLE, we want to estimate the values of the parameters of a given distribution for the class-conditional densities, for example, the *mean* and *variance* assuming that the class-conditional densities are *normal*  distributed (Gaussian) with 
+
+$$
+\begin{equation}
+p(\pmb x \; \mid \; \omega_i) \sim N(\mu, \sigma^2)
+\end{equation}
+$$
 
 #### 7.3 - Parameters known
 
-Imagine that we want to classify data consisting of two-dimensional patterns, $\pmb{x} = [x_1, x_2]^t$ that could belong to 1 out of 3 classes $\omega_1,\omega_2,\omega_3$. 
+Imagine that we want to classify data consisting of two-dimensional patterns, $$\pmb{x} = [x_1, x_2]^t$$ that could belong to 1 out of 3 classes $$\omega_1,\omega_2,\omega_3$$. 
 
 Let's assume the following information about the model and the parameters are known:
+continuous univariate normal (Gaussian) model for the class-conditional densities
 
-####model: continuous univariate normal (Gaussian) model for the class-conditional densities
 
+$$ 
+\begin{equation}
+p(\pmb x \mid \omega_j) \sim N(\pmb \mu \mid \Sigma) 
+\end{equation}
+$$
 
-$ p(\pmb x | \omega_j) \sim N(\pmb \mu|\Sigma) $
+$$
+\begin{equation}
+p(\pmb x \mid \omega_j) \sim \frac{1}{(2\pi)^{d/2} \; \mid \Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
+\end{equation}
+$$
 
-$ p(\pmb x | \omega_j) \sim \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]$
-
-$p([x_1, x_2]^t |\omega_1) ∼ N([0,0]^t,3I), \\
-p([x_1, x_2]^t |\omega_2) ∼ N([9,0]^t,3I), \\
-p([x_1, x_2]^t |\omega_3) ∼ N([6,6]^t,4I),$
+$$
+\begin{equation}
+p([x_1, x_2]^t \mid \omega_1) ∼ N([0,0]^t,3I), \\
+p([x_1, x_2]^t \mid \omega_2) ∼ N([9,0]^t,3I), \\
+p([x_1, x_2]^t \mid \omega_3) ∼ N([6,6]^t,4I),
+\end{equation}
+$$
 
 ** Means of the sample distributions for 2-dimensional features **
 
