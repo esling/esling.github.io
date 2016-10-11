@@ -325,7 +325,7 @@ $$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\
   1. Generate some data (sample from the multivariate Gaussians)
   2. Plot the class-dependent data
 
-</div>
+</div>{: notice--info}
 
 Here, our **objective function** is to maximize the discriminant function $$g_i(\pmb x)$$, which we define as the posterior probability to perform a **minimum-error classification** (Bayes classifier). 
 
@@ -352,7 +352,7 @@ So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\p
   4. Plot the confusion matrix
   5. Calculate the empirical error
 
-</div>
+</div>{: notice--info}
 
 #### 7.3 - Unknown parameters case
 
@@ -377,11 +377,11 @@ Thus, we can **work with each class separately** and omit the class labels, so t
 
 **Likelihood of $$ \pmb \theta $$**
 
-Thus, the probability of observing $$D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} $^ is  
+Thus, the probability of observing $$D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} $$ is  
 
 $$
 \begin{equation}
-$p(D\; \mid \;  \pmb \theta\;) = p(\pmb x_1 \; \mid \; \pmb \theta\;)\; \cdot \; p(\pmb x_2 \; \mid \;\pmb \theta\;) \; \cdot \;...  \; p(\pmb x_n \; \mid \; \pmb \theta\;) = \prod_{k=1}^{n} \; p(\pmb x_k \pmb \; \mid \; \pmb \theta \;)
+p(D\; \mid \;  \pmb \theta\;) = p(\pmb x_1 \; \mid \; \pmb \theta\;)\; \cdot \; p(\pmb x_2 \; \mid \;\pmb \theta\;) \; \cdot \;...  \; p(\pmb x_n \; \mid \; \pmb \theta\;) = \prod_{k=1}^{n} \; p(\pmb x_k \pmb \; \mid \; \pmb \theta \;)
 \end{equation}
 $$  
 Where $$p(D\; \mid \;  \pmb  \theta\;)$$ is also called the ***likelihood of $$\pmb\ \theta$$***.
@@ -435,7 +435,7 @@ $$
 
 ** MLE of the mean **
 
-After doing the differentiation, we find that the MLE of the parameter $\pmb\mu$ is given by the equation:  
+After doing the differentiation, we find that the MLE of the parameter $$\pmb\mu$$ is given by the equation:  
 $$
 \begin{equation}
 {\hat{\pmb\mu}} = \frac{1}{n} \sum\limits_{k=1}^{n} \pmb x_k
