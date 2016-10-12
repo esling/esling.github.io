@@ -119,7 +119,7 @@ $$
 \end{equation}
 $$
 
-This is our *estimator* for $p$. To check if this estimator is biased, we compute its expectation:
+This is our *estimator* for $$p$$. To check if this estimator is biased, we compute its expectation:
 
 $$ 
 \begin{equation}
@@ -178,7 +178,7 @@ p+(n-1)p^2
 \end{equation}
 $$
 
-So, the variance of the estimator, $\hat{p}$ is the following:
+So, the variance of the estimator, $$\hat{p}$$ is the following:
 
 $$ 
 \begin{equation}
@@ -190,7 +190,7 @@ Note that the $$n$$ in the denominator means that the variance asymptotically go
 </div>{: .notice--success}  
 
 
-** Full density for the estimator **
+**Full estimator density**
 
 In general, computing the mean and variance of the estimator is insufficient to characterize the underlying probability density of $$\hat{p}$$, except if we knew that $$\hat{p}$$ were normally distributed. This is where the [*central limit theorem*](http://mathworld.wolfram.com/CentralLimitTheorem.html). Indeed, the form of the estimator, implies that $$\hat{p}$$ is normally distributed, but only *asymptotically*, which doesn't quantify how many samples $$n$$ we need. Unfortunately, in the real world, each sample may be precious. Hence, to write out the full density for $$\hat{p}$$, we first have to ask what is the probability that the estimator will equal a specific value such as
 
@@ -200,7 +200,7 @@ $$
 \end{equation}
 $$
 
-This can only happen one way: when $$x_i=0 \forall i$$. The probability of this happening can be computed from the density
+This can only happen when $$x_i=0$$,  $$\forall i$$. The corresponding probability can be computed from the density
 
 $$ 
 \begin{equation}
@@ -234,11 +234,9 @@ where the term on the left is the binomial coefficient of $$n$$ things taken $$k
 
 #### 7.2 - Gaussian classification
 
-Popular applications for Maximum Likelihood Estimates are the typical statistical pattern classification tasks, and in the past, I posted some [examples](https://github.com/rasbt/pattern_classification#param) using Bayes' classifiers for which the **probabilistic models and parameters were known**. In those cases, the design of the classifier was rather easy, however, in real applications, we are rarely given this information; this is where the Maximum Likelihood Estimate comes into play.
+Maximum Likelihood Estimate (MLE) allows to perform typical statistical pattern classification tasks. In the cases where **probabilistic models and parameters are known**, the design of a Bayes' classifier is rather easy. However, in real applications, we are rarely given this information and this is where the MLE comes into play.
 
-However, the Maximum Likelihood Estimate still **requires partial knowledge** about the problem: We have to assume that the **model of the class conditional densities is known** (e.g., that the data follows typical Gaussian distribution). In contrast, non-parametric approaches like the Parzen-window technqiue do not require prior information about the distribution of the data (I will discuss this technique in more detail in a future article, the IPython notebook is already in preparation).  
-
-**To summarize the problem:** Using MLE, we want to estimate the values of the parameters of a given distribution for the class-conditional densities, for example, the *mean* and *variance* assuming that the class-conditional densities are *normal*  distributed (Gaussian) with 
+MLE still **requires partial knowledge** about the problem. We have to assume that the **model of the class conditional densities is known** (usually Gaussian distributions). Hence, Using MLE, we want to estimate the values of the parameters of a given distribution for the class-conditional densities, for example, the *mean* and *variance* assuming that the class-conditional densities are *normal*  distributed (Gaussian) with 
 
 $$
 \begin{equation}
@@ -248,52 +246,31 @@ $$
 
 #### 7.3 - Parameters known
 
-Imagine that we want to classify data consisting of two-dimensional patterns, $$\pmb{x} = [x_1, x_2]^t$$ that could belong to 1 out of 3 classes $$\omega_1,\omega_2,\omega_3$$. 
+Imagine that we want to classify data consisting of two-dimensional patterns, $$\pmb{x} = [x_1, x_2] \in \mathbb{R}^{2}$$ that could belong to 1 out of 3 classes $$\omega_1,\omega_2,\omega_3$$. 
 
-Let's assume the following information about the model and the parameters are known:
-continuous univariate normal (Gaussian) model for the class-conditional densities
+Let's assume the following information about the model where we use continuous univariate normal (Gaussian) model for the class-conditional densities
 
 
 $$ 
 \begin{equation}
-p(\pmb x \mid \omega_j) \sim N(\pmb \mu \mid \Sigma) 
+p(\pmb x \mid \omega_j) \sim N(\pmb \mu \mid \Sigma) = \frac{1}{(2\pi)^{d/2} \; \mid \Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
 \end{equation}
 $$
+
+Furthermore, we consider for this first problem that we know the distributions of the classes, ie. their mean and covariances.
 
 $$
 \begin{equation}
-p(\pmb x \mid \omega_j) \sim \frac{1}{(2\pi)^{d/2} \; \mid \Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
+p([x_1, x_2]^t \mid \omega_1) ∼ N([0,0],3I), \\
+p([x_1, x_2]^t \mid \omega_2) ∼ N([9,0],3I), \\
+p([x_1, x_2]^t \mid \omega_3) ∼ N([6,6],4I),
 \end{equation}
 $$
 
-$$
-\begin{equation}
-p([x_1, x_2]^t \mid \omega_1) ∼ N([0,0]^t,3I), \\
-p([x_1, x_2]^t \mid \omega_2) ∼ N([9,0]^t,3I), \\
-p([x_1, x_2]^t \mid \omega_3) ∼ N([6,6]^t,4I),
-\end{equation}
-$$
+Therefore, the means of the sample distributions for 2-dimensional features are defined as $$ \pmb{\mu}_{\,1} = \bigg[ 0 0 \bigg] $$,
+$$ \; \pmb{\mu}_{\,2} = \bigg[ 9 0 \bigg] $$, $$ \; \pmb{\mu}_{\,3} = \bigg[ 6 6 \bigg] $$
 
-** Means of the sample distributions for 2-dimensional features **
-
-$$
-\pmb{\mu}_{\,1} = \bigg[ 
-\begin{array}{c}
-0 \\
-0 \\
-\end{array} \bigg] $$,
-$$ \; \pmb{\mu}_{\,2} = \bigg[ 
-\begin{array}{c}
-9 \\
-0 \\
-\end{array} \bigg] $$,
-$$ \; \pmb{\mu}_{\,3} = \bigg[ 
-\begin{array}{c}
-6 \\
-6 \\
-\end{array} \bigg] $$
-
-** Covariance matrices for the statistically independend and identically distributed ('i.i.d') features **
+The **covariance matrices** for the statistically independent and identically distributed ('i.i.d') features
 
 $$ \Sigma_i = \bigg[ 
 \begin{array}{cc}
@@ -316,7 +293,8 @@ $$ \Sigma_i = \bigg[
 0 & 4 \\
 \end{array} \bigg] \\$$
 
-** Equal prior probabilities **
+Finally, we consider that all classes have an **equal prior probability**  
+
 $$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\omega_3\; \mid \; \pmb x) \; = \frac{1}{3}$$
 
 **Exercise**
