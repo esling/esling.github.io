@@ -94,7 +94,7 @@ As usual, it is easier and more stable use the `log` of the likelihood function.
 
 <div markdown="1">
 
-We denote $$\Theta=\left[\mu_{g_{1}},\mu_{g_{2}}\right]$$ as the set of parameters and $$x_{i}$$ the datapoints. The density function of $$z$$ and $$\Theta$$ can be written as the following:
+We denote $$\Theta=\left[\mu_{g_{1}},\mu_{g_{2}}\right]$$ as the set of parameters and $$x_{i}$$ the datapoints. The density function of $$z$$ and $$\Theta$$ can be written as the following
 
 $$ 
 \begin{equation}
@@ -102,7 +102,22 @@ $$
 \end{equation}
 $$
 
-For the expectation part we have to compute $$\mathbb{E}(z \mid \Theta)$$ but since $$z\in \lbrace 0,1 \rbrace$$, this simplifies easily
+For the expectation part we have to compute $$\mathbb{E}(z \mid \Theta)$$ 
+
+</div>{: .notice--blank}  
+
+**Exercise**
+<div markdown="1">
+
+  1. Compute the expression of the expectation $$\mathbb{E}(z \mid \Theta)$$ 
+  2. Implement a function that computes it given a set of parameters
+
+</div>{: .notice--info}  
+
+**Solution**
+<div markdown = "1">
+
+Since $$z\in \lbrace 0,1 \rbrace$$, the expression of $$\mathbb{E}(z \mid \Theta)$$  simplifies easily
 
 $$ 
 \begin{equation}
@@ -134,7 +149,7 @@ $$
 \end{equation}
 $$
 
-</div>{: .notice--blank}
+</div>{: .notice--success}
 
 **Maximization step**  
 
@@ -144,11 +159,26 @@ Now, given we we have this estimate for $$z_{i}$$,  $$\hat{z}_{i}=\mathbb{E(z \m
 
 $$ 
 \begin{equation}
-J= \log\prod_{i=1}^{n} \mathbb{P}(\hat{z}_{i},\Theta_{i}) = \sum_{i=1}^{n} \hat{z}_{i}\log \mathcal{N}_{g_{1}}(\Theta_{i}) +(1-\hat{z}_{i})\log \mathcal{N}_{g_{2}}(\Theta_i) +\log(1/2)  
+J= \log\prod_{i=1}^{n} \mathbb{P}(\hat{z}_{i},\Theta_{i}) \\ = \sum_{i=1}^{n} \hat{z}_{i}\log \mathcal{N}_{g_{1}}(\Theta_{i}) +(1-\hat{z}_{i})\log \mathcal{N}_{g_{2}}(\Theta_i) +\log(1/2)  
 \end{equation}
 $$
 
-by maximizing it using basic calculus. The trick is to remember that $$\hat{z}_{i}$$ is *fixed*, so we only have to maximize the $$\log$$ parts. This leads to
+by maximizing it using basic calculus. 
+
+</div>{: .notice--blank}  
+
+**Exercise**
+<div>
+
+  1. Derive the maximization of the log-likelihood
+  2. Implement a fonction that performs maximization on a set of data
+
+</div>{: .notice--info}
+
+**Solution**
+
+<div markdown="1">
+The trick is to remember that $$\hat{z}_{i}$$ is *fixed*, so we only have to maximize the $$\log$$ parts. This leads to
 
 $$ 
 \begin{equation}
@@ -164,21 +194,25 @@ $$
 \end{equation}
 $$
 
-Now, we finally have the *maximization* step ( above ) and the *expectation* step ($$\hat{z}_{i}$$) from earlier. We're ready to simulate the algorithm and plot its performance!
+</div>{: .notice--success}
 
-</div>{: .notice--blank}
-
-**Exercise**
 
 <div markdown = "1">
+Now that we have both the *maximization* step and the *expectation* step ($$\hat{z}_{i}$$), we can simulate the algorithm and compute the estimates for both $$\mu_{a}$$ and $$\mu_{b}$$.
+
+Expectation maximization is a powerful algorithm that is especially useful when it is difficult to de-couple the variables involved in a standard maximum likelihood estimation. Note that convergence to the "correct" maxima is not guaranteed, as we observed here. This is even more pronounced when there are more parameters to estimate (a much more detailed mathematical derivation is available [here](http://crow.ee.washington.edu/people/bulyko/papers/em.pdf)).
+
+</div>{: .notice--blank}  
+
+**Exercise**
+<div markdown = "1">
+
+  1. Fill the main loop of the EM algorithm
+  2. Plot the evolution of the values for both $$\mu_{a}$$ and $$\mu_{b}$$
+  3. Plot the corresponding incomplete likelihood function
+  4. Analyze the speed of convergence for the EM algorithm
+  5. Plot the error surface (in terms of parameters)
+  6. Test your algorithm for different initial values.
 
 </div>{: .notice--info}
 
-<div markdown = "1">
-The figure on the left shows the estimates for both $\mu_a$ and $\mu_b$ for each iteration and the figure on the right shows the corresponding incomplete likelihood function. The horizontal lines on the left-figure show the true values we are trying to estimate. Notice the EM algorithm converges very quickly, but because each group is equally likely to be chosen, the algorithm cannot distinguish one from the other. The code below constructs a error surface to see this effect. The incomplete likelihood function is monotone which tells us that we have not made a coding error. We're omitting the proof of this monotonicity.
-
-The figure shows the incomplete likelihood function that the algorithm is exploring. Note that the algorithm can get to the maximizer but since the surface has symmetric maxima, it has no way to pick between them and ultimately just picks the one that is closest to the starting point. This is because each group is equally likely to be chosen. I urge you to download this notebook and try different initial points and see where the maximizer winds up.
-
-Expectation maximization is a powerful algorithm that is especially useful when it is difficult to de-couple the variables involved in a standard maximum likelihood estimation. Note that convergence to the "correct" maxima is not guaranteed, as we observed here. This is even more pronounced when there are more parameters to estimate. There is a nice [applet](http://www.cs.cmu.edu/~alad/em/) you can use to investigate this effect and a much more detailed mathematical derivation [here](http://crow.ee.washington.edu/people/bulyko/papers/em.pdf).
-
-</div>{: .notice--blank}
