@@ -26,7 +26,7 @@ The corresponding slides cover
   
 # Tutorial 
 
-#### 5.0 - Bayesian framework
+### 7.0 - Bayesian framework
 
 Two alternative interpretations of probability can be considered  
 
@@ -45,7 +45,7 @@ $$
 
 We see that our posterior belief of event $$A$$ given the new evidence $$X$$ is proportional to ($$\propto$$) the *likelihood* of observing this particular evidence $$X$$ given the event $$A$$ multiplied by our prior belief in that particular event $$A$$.
 
-#### 7.1 - Bayesian inference
+### 7.1 - Bayesian inference
 
 Suppose we have coin and want to estimate the probability of heads ($$p$$) for it. The coin is Bernoulli distributed:
 
@@ -232,7 +232,7 @@ $$
 
 where the term on the left is the binomial coefficient of $$n$$ things taken $$k$$ at a time. This is the binomial distribution and it's not the density for $$\hat{p}$$, but rather for $$n\hat{p}$$. We'll leave this as-is because it's easier to work with below. We just have to remember to keep track of the $$n$$ factor.
 
-#### 7.2 - Gaussian classification
+### 7.2 - Gaussian classification
 
 Maximum Likelihood Estimate (MLE) allows to perform typical statistical pattern classification tasks. In the cases where **probabilistic models and parameters are known**, the design of a Bayes' classifier is rather easy. However, in real applications, we are rarely given this information and this is where the MLE comes into play.
 
@@ -244,7 +244,7 @@ p(\pmb x \; \mid \; \omega_i) \sim N(\mu, \sigma^2)
 \end{equation}
 $$
 
-#### 7.3 - Parameters known
+### 7.3 - Parameters known
 
 Imagine that we want to classify data consisting of two-dimensional patterns, $$\pmb{x} = [x_1, x_2] \in \mathbb{R}^{2}$$ that could belong to 1 out of 3 classes $$\omega_1,\omega_2,\omega_3$$. 
 
@@ -267,8 +267,13 @@ p([x_1, x_2]^t \mid \omega_3) ∼ N([6,6],4I),
 \end{equation}
 $$
 
-Therefore, the means of the sample distributions for 2-dimensional features are defined as $$ \pmb{\mu}_{\,1} = \bigg[ 0 0 \bigg] $$,
-$$ \; \pmb{\mu}_{\,2} = \bigg[ 9 0 \bigg] $$, $$ \; \pmb{\mu}_{\,3} = \bigg[ 6 6 \bigg] $$
+Therefore, the means of the sample distributions for 2-dimensional features are defined as  
+
+$$ 
+\begin{equation}
+\pmb{\mu}_{\,1} = \bigg[ 0 0 \bigg] \; \pmb{\mu}_{\,2} = \bigg[ 9,  0 \bigg] $$, $$ \; \pmb{\mu}_{\,3} = \bigg[ 6,  6 \bigg] 
+\end{equation}
+$$
 
 The **covariance matrices** for the statistically independent and identically distributed ('i.i.d') features
 
@@ -278,12 +283,12 @@ $$
 \begin{array}{cc}
 3 & 0\\
 0 & 3 \\
-\end{array} \bigg] \\
+\end{array} \bigg]
 \Sigma_2 = \bigg[ 
 \begin{array}{cc}
 3 & 0\\
 0 & 3 \\
-\end{array} \bigg] \\
+\end{array} \bigg]
 \Sigma_3 = \bigg[ 
 \begin{array}{cc}
 4 & 0\\
@@ -298,7 +303,7 @@ $$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\
 **Exercise**
 <div markdown = "1">
 
-  1. Generate some data (sample from the multivariate Gaussians)
+  1. Generate some data (samples from the multivariate Gaussians) following classes distributions
   2. Plot the class-dependent data
 
 </div>{: .notice--info}
@@ -331,26 +336,28 @@ So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\p
 
 </div>{: .notice--info}
 
-#### 7.3 - Unknown parameters case
+### 7.3 - Unknown parameters case
 
-**About the Maximum Likelihood Estimate (MLE)**
-
-In contrast to the first section, let us assume that we only know the number of parameters for the class conditional densities $$p (\; \pmb x \; \mid \; \omega_i)$$, and we want to use a Maximum Likelihood Estimation (MLE) to estimate the quantities of these parameters from the training data (*here:* our random sample data).
+In contrast to the previous case, let us assume that we only know the number of parameters for the class conditional densities $$p (\; \pmb x \; \mid \; \omega_i)$$, and we want to use a Maximum Likelihood Estimation (MLE) to estimate the quantities of these parameters from the training data.
 
 
-Given the information about the form of the model - the data is normal distributed - the 2 parameters to be estimated are $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which are summarized by the   
+Given the information about the our model (the data is normal distributed) the 2 parameters to be estimated for each class are $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which are summarized by the   
 parameter vector 
-$$\pmb \theta_i = \bigg[ \begin{array}{c}
+
+$$
+\begin{equation}
+\pmb \theta_i = \bigg[ \begin{array}{c}
 \ \theta_{i1} \\
 \ \theta_{i2} \\
 \end{array} \bigg]=
 \bigg[ \begin{array}{c}
 \pmb \mu_i \\
 \pmb \Sigma_i \\
-\end{array} \bigg]$$ 
+\end{array} \bigg]
+\end{equation}
+$$ 
 
-For the Maximum Likelihood Estimate (MLE), we assume that we have a set of samples $$D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} $$ that are *i.i.d.* (independent and identically distributed, drawn with probability $$p(\pmb x \; \mid \; \omega_i, \; \pmb \theta_i) )$$.  
-Thus, we can **work with each class separately** and omit the class labels, so that we write the probability density as $$p(\pmb x \; \mid \; \pmb \theta)$$ 
+For the Maximum Likelihood Estimate (MLE), we assume that we have a set of samples $$D = \left\{ \pmb x_1, \pmb x_2,..., \pmb x_n \right\} $$ that are *i.i.d.* (independent and identically distributed, drawn with probability $$p(\pmb x \; \mid \; \omega_i, \; \pmb \theta_i) )$$.  Thus, we can **work with each class separately** and omit the class labels, so that we write the probability density as $$p(\pmb x \; \mid \; \pmb \theta)$$ 
 
 **Likelihood of $$ \pmb \theta $$**
 
@@ -361,11 +368,11 @@ $$
 p(D\; \mid \;  \pmb \theta\;) = p(\pmb x_1 \; \mid \; \pmb \theta\;)\; \cdot \; p(\pmb x_2 \; \mid \;\pmb \theta\;) \; \cdot \;...  \; p(\pmb x_n \; \mid \; \pmb \theta\;) = \prod_{k=1}^{n} \; p(\pmb x_k \pmb \; \mid \; \pmb \theta \;)
 \end{equation}
 $$  
-Where $$p(D\; \mid \;  \pmb  \theta\;)$$ is also called the ***likelihood of $$\pmb\ \theta$$***.
 
-We are given the information that $$p([x_1,x_2]^t) \;∼ \; N(\pmb \mu,\pmb \Sigma) $$ (remember that we dropped the class labels, since we are working with every class separately).
+Where $$p(D\; \mid \;  \pmb  \theta\;)$$ is also called the ***likelihood of $$\pmb\ \theta$$***
 
-And the mutlivariate normal density is given as:
+We know that $$p([x_1,x_2]^t) \;∼ \; N(\pmb \mu,\pmb \Sigma) $$ (remember that we dropped the class labels, since we are working with every class separately). And the mutlivariate normal density is given as  
+
 $$
 \begin{equation}
 \quad \quad p(\pmb x) = \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
@@ -387,11 +394,8 @@ l(\pmb\theta) =  \sum\limits_{k=1}^{n} - \frac{1}{2}(\pmb x - \pmb \mu)^t \pmb \
 \end{equation}
 $$
 
-** Maximum Likelihood Estimate (MLE) **
+In order to obtain the MLE $$\boldsymbol{\hat{\theta}}$$, we maximize $$l (\pmb  \theta)$$, which can be done via differentiation  
 
-In order to obtain the MLE $$\boldsymbol{\hat{\theta}}$$, we maximize $$l (\pmb  \theta)$$, which can be done via differentiation:
-
-with 
 $$
 \begin{equation}
 \nabla_{\pmb \theta} \equiv \begin{bmatrix}  
@@ -408,11 +412,26 @@ $$
 \begin{equation}
 \nabla_{\pmb \theta} l = \sum\limits_{k=1}^n \nabla_{\pmb \theta} \;ln\; p(\pmb x| \pmb \theta) = 0 
 \end{equation}
-$$
+$$  
 
-** MLE of the mean **
+**Exercise**
+<div markdown = "1">
 
-After doing the differentiation, we find that the MLE of the parameter $$\pmb\mu$$ is given by the equation:  
+  1. Perform the differentiation for $$\frac{\partial \; \mathcal{L}}{\partial \; \pmb \mu}$$ to obtain the estimator of the mean $$\hat{\mu}$$
+  2. Perform the differentiation for $$\frac{\partial \; \mathcal{L}}{\partial \; \pmb \Sigma}$$ to obtain the estimator of the covariance matrix $$\hat{\Sigma}$$
+  3. Implement the two estimators as functions based on a set of data
+  4. Apply these estimators (MLE) in order to obtain estimated parameters
+  5. Re-compute the classification errors on the previous dataset
+
+</div>{: .notice--info}  
+
+**Solution**
+<div markdown = "1">
+
+**Estimator for the mean $$\hat{\mu}$$**
+
+After doing the differentiation, we find that the MLE of the parameter $$\pmb\mu$$ is given by the equation  
+
 $$
 \begin{equation}
 {\hat{\pmb\mu}} = \frac{1}{n} \sum\limits_{k=1}^{n} \pmb x_k
@@ -421,9 +440,9 @@ $$
 
 As you can see, this is simply the mean of our dataset, so we can implement the code very easily and compare the estimate to the actual values for $$\pmb \mu$$.
 
-** MLE of the covariance matrix $$\pmb \Sigma$$ **
+**Estimator the covariance matrix $$\pmb \Sigma$$**
 
-Analog to $$\pmb \mu$$ we can find the equation for the $$\pmb\Sigma$$ via differentiation - okay the equations are a little bit more involved, but the approach is the same - so that we come to this equation:  
+Analog to $$\pmb \mu$$ we can find the equation for the $$\pmb\Sigma$$ via differentiation so that we come to this equation:  
 
 $$
 \begin{equation}
@@ -431,8 +450,9 @@ $$
 \end{equation}
 $$
 
-which we will also implement in Python code, and then compare to the acutal values of $${\pmb\Sigma}$$.
+which we can also implement and then compare to the actual values of $${\pmb\Sigma}$$.
 
-** Classification using our estimated parameters **
+**Classification**
 
-Using the estimated parameters $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which we obtained via MLE, we calculate the error on the sample dataset again. 
+Using the estimated parameters $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which we obtained via MLE, we can simply compute the error on the sample dataset again.
+</div>{: .notice--success}
