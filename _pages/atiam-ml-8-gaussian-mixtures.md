@@ -25,10 +25,13 @@ The corresponding slides cover
   
 ## Tutorial 
 
-xpectation Maximization (EM) is a powerful technique for creating maximum likelihood estimators when the variables are difficult to separate. Here, we set up a Gaussian mixture experiment with two Gaussians and derive the corresponding estimators of their means using EM.
+<div markdown="1">
+Expectation Maximization (EM) is a powerful technique for creating maximum likelihood estimators when the variables are difficult to separate. Here, we set up a Gaussian mixture experiment with two Gaussians and derive the corresponding estimators of their means using EM.
+</div>{: .notice--blank}
 
 #### 8.1 - Measuring from Unseen Groups 
 
+<div markdown="1">
 Suppose we have a population with two distinct groups of individuals with different heights. If we randomly pick an individual from the population, we don't know which group the individual belongs to. The goal is to estimate the mean heights of the two distinct groups when we have an unlabeled distribution sampled from both groups.
 
 Both groups $$g_{1},g_{2}$$ are normally distributed, around two different means
@@ -67,6 +70,8 @@ $$
 
 We recall that the independent trials assumptions means that the joint probability is just the product of the individual probabilities. Usually, *maximum likelihood* allows to maximize this as the function of $$\mu_{g_{1}}$$ and $$\mu_{g_{2}}$$ based on all $$x_{i}$$. However, here we do not know which group we are measuring at each trial so we can not just estimate the parameters for each group separately.
 
+</div>{: .notice--blank}
+
 **Exercise**
 <div markdown = "1">
 
@@ -77,11 +82,17 @@ We recall that the independent trials assumptions means that the joint probabili
 
 #### 8.2 - Expectation maximization
 
+<div markdown="1">
+
 The key idea of expectation maximization is that we will pretend to know the hidden $$z$$ value and use a maximum likelihood estimate (this is the *maximization* part), by computing an *expectation* (guess) over the missing variable (in this case, $$z$$). 
 
 As usual, it is easier and more stable use the `log` of the likelihood function. It is useful to keep track of the *incomplete log-likelihood* ($$\log\mathcal{L}$$) since it can be proved that it is monotone increasing and provides a good way to identify coding errors.
 
+</div>{: .notice--blank}
+
 **Expectation step**  
+
+<div markdown="1">
 
 We denote $$\Theta=\left[\mu_{g_{1}},\mu_{g_{2}}\right]$$ as the set of parameters and $$x_{i}$$ the datapoints. The density function of $$z$$ and $$\Theta$$ can be written as the following:
 
@@ -123,9 +134,11 @@ $$
 \end{equation}
 $$
 
-and which is coded below.
+</div>{: .notice--blank}
 
 **Maximization step**  
+
+<div markdown="1">
 
 Now, given we we have this estimate for $$z_{i}$$,  $$\hat{z}_{i}=\mathbb{E(z \mid \Theta_{i})}$$, we can go back and compute the log likelihood estimate of
 
@@ -153,14 +166,19 @@ $$
 
 Now, we finally have the *maximization* step ( above ) and the *expectation* step ($$\hat{z}_{i}$$) from earlier. We're ready to simulate the algorithm and plot its performance!
 
+</div>{: .notice--blank}
+
+**Exercise**
+
+<div markdown = "1">
+
+</div>{: .notice--info}
+
+<div markdown = "1">
 The figure on the left shows the estimates for both $\mu_a$ and $\mu_b$ for each iteration and the figure on the right shows the corresponding incomplete likelihood function. The horizontal lines on the left-figure show the true values we are trying to estimate. Notice the EM algorithm converges very quickly, but because each group is equally likely to be chosen, the algorithm cannot distinguish one from the other. The code below constructs a error surface to see this effect. The incomplete likelihood function is monotone which tells us that we have not made a coding error. We're omitting the proof of this monotonicity.
 
 The figure shows the incomplete likelihood function that the algorithm is exploring. Note that the algorithm can get to the maximizer but since the surface has symmetric maxima, it has no way to pick between them and ultimately just picks the one that is closest to the starting point. This is because each group is equally likely to be chosen. I urge you to download this notebook and try different initial points and see where the maximizer winds up.
 
 Expectation maximization is a powerful algorithm that is especially useful when it is difficult to de-couple the variables involved in a standard maximum likelihood estimation. Note that convergence to the "correct" maxima is not guaranteed, as we observed here. This is even more pronounced when there are more parameters to estimate. There is a nice [applet](http://www.cs.cmu.edu/~alad/em/) you can use to investigate this effect and a much more detailed mathematical derivation [here](http://crow.ee.washington.edu/people/bulyko/papers/em.pdf).
 
-As usual, the IPython notebook corresponding to this post can be found [here](https://github.com/unpingco/Python-for-Signal-Processing/blob/master/Expectation_Maximization.ipynb). I urge you to try these calculations on your own. Try changing the sample size and making the choice between the two groups no longer equal to 1/2 (equally likely).  
-
-Note you will need at least `sympy` version 0.7.2 to run this notebook.
-
-Comments appreciated!
+</div>{: .notice--blank}
