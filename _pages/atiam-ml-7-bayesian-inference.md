@@ -271,7 +271,7 @@ Therefore, the means of the sample distributions for 2-dimensional features are 
 
 $$ 
 \begin{equation}
-\pmb{\mu}_{\,1} = \bigg[ 0 0 \bigg] \; \pmb{\mu}_{\,2} = \bigg[ 9,  0 \bigg] $$, $$ \; \pmb{\mu}_{\,3} = \bigg[ 6,  6 \bigg] 
+\pmb{\mu}_{\,1} = \bigg[ 0, 0 \bigg],  \; \pmb{\mu}_{\,2} = \bigg[ 9,  0 \bigg],  \; \pmb{\mu}_{\,3} = \bigg[ 6,  6 \bigg] 
 \end{equation}
 $$
 
@@ -283,12 +283,12 @@ $$
 \begin{array}{cc}
 3 & 0\\
 0 & 3 \\
-\end{array} \bigg]
+\end{array} \bigg], 
 \Sigma_2 = \bigg[ 
 \begin{array}{cc}
 3 & 0\\
 0 & 3 \\
-\end{array} \bigg]
+\end{array} \bigg], 
 \Sigma_3 = \bigg[ 
 \begin{array}{cc}
 4 & 0\\
