@@ -25,12 +25,9 @@ The corresponding slides cover
   
 # Tutorial 
 
-#### 9.0 - Introduction
+## 9.0 - Introduction
 
-<img src="pics/hmm-example.png" width="300px"/>
-<div align="center">*Figure 3: A Hidden Markov Model, resulting from connecting several of the Bayes Net above in a sequence*</div>
-
-Hidden Markov Models (HMMs) are used to model the changes over time (or another dimension), in which different elements might be connected. To capture this, we can include conditional probabilities, expressing how a random variable changes over time. In this model, we assume that each state depends only on the previous one, not all previous states, which is called the ***Markov property*** and can be written as
+Hidden Markov Models (HMMs) are used to model the changes over time (or another dimension) in which different elements might be connected. To capture this, we can include conditional probabilities, expressing how a random variable changes over time. In this model, we assume that each state depends only on the previous one, not all previous states, which is called the ***Markov property*** and can be written as
 
 $$
 \begin{equation}
