@@ -28,6 +28,8 @@ The corresponding slides cover
 
 ### 7.0 - Bayesian framework
 
+<div markdown = "1">
+
 Two alternative interpretations of probability can be considered  
 
   * **Frequentist** (the more *classical* approach), assumes that probability is the long-run frequency of events. For example, the *probability of plane accidents* is interpreted as the *long-term frequency of plane accidents*. This becomes harder to interpret when events have no long-term frequency of occurrences. Interestingly, in that case (eg. probability in an election, which happens only once) frequentists consider alternative realities and that across all these realities, the frequency of occurrences defines the probability. 
@@ -45,7 +47,11 @@ $$
 
 We see that our posterior belief of event $$A$$ given the new evidence $$X$$ is proportional to ($$\propto$$) the *likelihood* of observing this particular evidence $$X$$ given the event $$A$$ multiplied by our prior belief in that particular event $$A$$.
 
+</div>
+
 ### 7.1 - Bayesian inference
+
+<div markdown = "1">
 
 Suppose we have coin and want to estimate the probability of heads ($$p$$) for it. The coin is Bernoulli distributed:
 
@@ -72,6 +78,8 @@ The idea of *maximum likelihood* will be to maximize this as the function of $$p
 The only way to know for sure that our estimator is correctly defined is to check if the estimator is unbiased, namely, if
 
 $$ \mathbb{E}(\hat{p}) = p $$
+
+</div>
 
 **Exercise**
 <div markdown = "1">
@@ -189,6 +197,7 @@ $$
 Note that the $$n$$ in the denominator means that the variance asymptotically goes to zero as $$n$$ increases, leading to a better estimate of the underlying $$p$$. Unfortunately, this formula for the variance is practically useless because we have to know $$p$$ to compute it and $$p$$ is the parameter we are trying to estimate in the first place! But, looking at $$ \sigma_\hat{p}^2 $$, we can immediately notice that if $$p=0$$, then there is no estimator variance because the outcomes are guaranteed to be tails. Also, the maximum of this variance, for whatever $$n$$, happens at $$p=1/2$$. This is our worst case scenario and the only way to compensate is with more samples (i.e. larger $$n$$). 
 </div>{: .notice--success}  
 
+<div markdown = "1">
 
 **Full estimator density**
 
@@ -232,7 +241,11 @@ $$
 
 where the term on the left is the binomial coefficient of $$n$$ things taken $$k$$ at a time. This is the binomial distribution and it's not the density for $$\hat{p}$$, but rather for $$n\hat{p}$$. We'll leave this as-is because it's easier to work with below. We just have to remember to keep track of the $$n$$ factor.
 
+</div>
+
 ### 7.2 - Gaussian classification
+
+<div markdown = "1">
 
 Maximum Likelihood Estimate (MLE) allows to perform typical statistical pattern classification tasks. In the cases where **probabilistic models and parameters are known**, the design of a Bayes' classifier is rather easy. However, in real applications, we are rarely given this information and this is where the MLE comes into play.
 
@@ -244,7 +257,11 @@ p(\pmb x \; \mid \; \omega_i) \sim N(\mu, \sigma^2)
 \end{equation}
 $$
 
+</div>
+
 ### 7.3 - Parameters known
+
+<div markdown = "1">
 
 Imagine that we want to classify data consisting of two-dimensional patterns, $$\pmb{x} = [x_1, x_2] \in \mathbb{R}^{2}$$ that could belong to 1 out of 3 classes $$\omega_1,\omega_2,\omega_3$$. 
 
@@ -300,6 +317,8 @@ Finally, we consider that all classes have an **equal prior probability**
 
 $$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\omega_3\; \mid \; \pmb x) \; = \frac{1}{3}$$
 
+</div>
+
 **Exercise**
 <div markdown = "1">
 
@@ -307,6 +326,8 @@ $$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\
   2. Plot the class-dependent data
 
 </div>{: .notice--info}
+
+<div markdown = "1">
 
 Here, our **objective function** is to maximize the discriminant function $$g_i(\pmb x)$$, which we define as the posterior probability to perform a **minimum-error classification** (Bayes classifier). 
 
@@ -324,6 +345,7 @@ So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\p
  \end{equation}
  $$
  
+ </div>
  
 **Exercise**
 <div markdown = "1">
@@ -337,6 +359,8 @@ So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\p
 </div>{: .notice--info}
 
 ### 7.3 - Unknown parameters case
+
+<div markdown = "1">
 
 In contrast to the previous case, let us assume that we only know the number of parameters for the class conditional densities $$p (\; \pmb x \; \mid \; \omega_i)$$, and we want to use a Maximum Likelihood Estimation (MLE) to estimate the quantities of these parameters from the training data.
 
@@ -413,6 +437,8 @@ $$
 \nabla_{\pmb \theta} l = \sum\limits_{k=1}^n \nabla_{\pmb \theta} \;ln\; p(\pmb x| \pmb \theta) = 0 
 \end{equation}
 $$  
+
+</div>
 
 **Exercise**
 <div markdown = "1">
