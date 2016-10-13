@@ -272,11 +272,8 @@ $$ \; \pmb{\mu}_{\,2} = \bigg[ 9 0 \bigg] $$, $$ \; \pmb{\mu}_{\,3} = \bigg[ 6 6
 
 The **covariance matrices** for the statistically independent and identically distributed ('i.i.d') features
 
-$$ \Sigma_i = \bigg[ 
-\begin{array}{cc}
-\sigma_{11}^2 & \sigma_{12}^2\\
-\sigma_{21}^2 & \sigma_{22}^2 \\
-\end{array} \bigg] \\  
+$$ 
+\begin{array}{ccc}
 \Sigma_1 = \bigg[ 
 \begin{array}{cc}
 3 & 0\\
@@ -291,7 +288,8 @@ $$ \Sigma_i = \bigg[
 \begin{array}{cc}
 4 & 0\\
 0 & 4 \\
-\end{array} \bigg] \\$$
+\end{array} \bigg] 
+\end{array}$$
 
 Finally, we consider that all classes have an **equal prior probability**  
 
@@ -314,6 +312,7 @@ g_1(\pmb x) = P(\omega_1 \mid \; \pmb{x}), \quad  g_2(\pmb{x}) = P(\omega_2 \mid
 $$
 
 So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\pmb x)$$ is max., where  
+
  $$ 
  \begin{equation}
  \quad g_i(\pmb{x}) = \pmb{x}^{\,t} \bigg( - \frac{1}{2} \Sigma_i^{-1} \bigg) \pmb{x} + \bigg( \Sigma_i^{-1} \pmb{\mu}_{\,i}\bigg)^t \pmb x + \bigg( -\frac{1}{2} \pmb{\mu}_{\,i}^{\,t}  \Sigma_{i}^{-1} \pmb{\mu}_{\,i} -\frac{1}{2} ln(\left|\Sigma_i\right|)\bigg) 
