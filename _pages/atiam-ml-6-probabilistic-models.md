@@ -80,7 +80,7 @@ P\left(Z = k\right) =\frac{ \lambda^k e^{-\lambda} }{k!}, \; \; k \in \mathbb{N^
 \end{equation}
 $$
 
-$$\lambda \in \mathbb{R}$$ is a parameter of the distribution that controls its shape (usually termed the *intensity* of the Poisson distribution). By increasing $$\lambda$$, we add more probability to larger values. One can describe $\lambda$ as the *intensity* of the Poisson distribution. If a random variable $Z$ has a Poisson mass distribution, we denote it by
+$$\lambda \in \mathbb{R}$$ is a parameter of the distribution that controls its shape (usually termed the *intensity* of the Poisson distribution). By increasing $$\lambda$$, we add more probability to larger values. One can describe $$\lambda$$ as the *intensity* of the Poisson distribution. If a random variable $$Z$$ has a Poisson mass distribution, we denote it by
 
 $$
 \begin{equation}
@@ -92,7 +92,7 @@ One useful property of the Poisson distribution is that its expected value is eq
 
 $$E\large[ \;Z\; | \; \lambda \;\large] = \lambda $$
 
-Below, we plot the probability mass distribution for different $\lambda$ values.
+We will plot the probability mass distribution for different $$\lambda$$ values.
 
 **Continuous Case**
 A continuous random variable has a *probability density function*. An example of continuous random variable is a random variable with *exponential density*
@@ -103,26 +103,26 @@ f_Z(z | \lambda) = \lambda e^{-\lambda z }, \;\; z\ge 0
 \end{equation}
 $$
 
-When a random variable $Z$ has an exponential distribution with parameter $\lambda$, we say *$Z$ is exponential*
+When a random variable $$Z$$ has an exponential distribution with parameter $$\lambda$$, we say *$$Z$$ is exponential*
 
 $$Z \sim \text{Exp}(\lambda)$$
 
-Given a specific $\lambda$, the expected value of an exponential random variable is equal to the inverse of $\lambda$, that is:
+Given a specific $$\lambda$$, the expected value of an exponential random variable is equal to the inverse of $$\lambda$$, that is
 
 $$E[\; Z \;|\; \lambda \;] = \frac{1}{\lambda}$$
 
 </div>{: .notice--blank}
 
-** Exercise **
+**Exercise**
 
 <div markdown="1">
 
 1. Code the Poisson probability mass function
 2. Code the exponential probability density functions 
-3. Try these distributions with different $\lambda$ values. 
+3. Try these distributions with different $$\lambda$$ values. 
 4. How to generate a random variable that follows one of these distributions ?
 
-</div>
+</div>{: .notice--info}
 
 #### 6.1 - Graphical Models
 
