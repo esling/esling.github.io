@@ -33,6 +33,7 @@
   }
 
   p {
+    text-align: justify; /* override */
     &:last-child {
       margin-bottom: 0 !important; /* override*/
     }
