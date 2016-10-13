@@ -23,9 +23,11 @@ The corresponding slides cover
   - Genetic algorithms
   - Boosting  
 
-## Tutorial 
+# Tutorial 
 
-### 4.0 - The Adaboost algorithm
+## 5.0 - The Adaboost algorithm
+
+<div markdown = "1">
 
 We recall here quickly the principles of boosting. We consider a dataset, for which each datapoint $$ \mathbf{x} $$, we have assigned a target **label** $$ \mathbf{d} $$. We use the already labelled data as **training data** in order to perform learning. We will consider here **binary classifications**, meaning that the labels can only be one of two values.
 
@@ -50,13 +52,19 @@ We will be considering here, the Adaboost (**Adaptive Boosting**) algorithm, whi
 
 So in a nutshell: Adaboost takes a lot of weak classifiers, assigns them appropriate weights, to make a strong classifier.
 
-### 4.1 - Defining weak classifiers
+</div>{: .notice--blank}
+
+## 5.1 - Defining weak classifiers
+
+<div markdown = "1">
 
 We stated that a classifier can be defined by selecting a dimension and a threshold, its output being +1 or -1 depending on whether the input value is greater or smaller than the threshold. Also, we need to generate an error rate for weak classifiers, on the **weighted** dataset. We will define the function `weak_Classifier_error()` that takes a weak classifier, a labelled and weighted dataset as input, which outputs the error rate.
 
 We provide a set of datapoints  
 
-** Exercise **  
+</div>{: .notice--blank}
+
+**Exercise**  
 <div markdown = "1">
 
   1. Implement the `weakClassifier_error` function that computes the error of a weak classifier based on its threshold, target dimension and the *weighted* dataset of examples.
@@ -71,7 +79,9 @@ We provide a set of datapoints
 
 {% endhighlight %}
 
-### 4.2 - Main algorithm
+## 5.2 - Main algorithm
+
+<div markdown = "1">
 
 Now that we have basic definitions for the weak classifiers, we can take a look at the complete code for the Adaboost algorithm. We will rely on the following set of variables
 
@@ -107,7 +117,8 @@ w_{i}^{t+1}=\frac{w_{i}^{t}}{z}e^{-\alpha^{t}h^{t}\left(x\right)y\left(x\right)}
 \end{equation}
 $$
 
-Proving convergence is pretty difficult. But you must know that the adaboost algorithm is guaranteed to converge to a strong classifier with an arbitrarily good success rate, given enough iterations (and some other caveats). For some intuition into where that weird expression of alpha came from, refer to [this](http://research.microsoft.com/en-us/um/cambridge/events/aistats2003/proceedings/156.pdf) link.
+Proving convergence is pretty difficult. But you must know that the adaboost algorithm is guaranteed to converge to a strong classifier with an arbitrarily good success rate, given enough iterations (and some other caveats). For some intuition into where that weird expression of alpha came from, refer to [this link.](http://research.microsoft.com/en-us/um/cambridge/events/aistats2003/proceedings/156.pdf)
+</div>{: .notice--blank}
 
 **Exercise**
 <div markdown = "1">
@@ -119,6 +130,10 @@ Proving convergence is pretty difficult. But you must know that the adaboost alg
   
 </div>{: .notice--info} 
 
-### 4.3 - Audio application
+### 5.3 - Audio application
+
+<div markdown = "1">
 
 Before going further, we underline the fact that the concept of **boosting** itself is not limited to "threshold-based" classifiers. In fact, the more general idea of **ensembling** is based on constructing a stronger (classification, regression or otherwise) system, based on combining the output of several weaker systems.
+
+</div>{: .notice--blank}
