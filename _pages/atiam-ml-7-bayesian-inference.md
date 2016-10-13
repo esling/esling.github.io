@@ -79,7 +79,7 @@ The only way to know for sure that our estimator is correctly defined is to chec
 
 $$ \mathbb{E}(\hat{p}) = p $$
 
-</div>
+</div>{: .notice--blank}
 
 **Exercise**
 <div markdown = "1">
@@ -241,7 +241,7 @@ $$
 
 where the term on the left is the binomial coefficient of $$n$$ things taken $$k$$ at a time. This is the binomial distribution and it's not the density for $$\hat{p}$$, but rather for $$n\hat{p}$$. We'll leave this as-is because it's easier to work with below. We just have to remember to keep track of the $$n$$ factor.
 
-</div>
+</div>{: .notice--blank}
 
 ### 7.2 - Gaussian classification
 
@@ -257,7 +257,7 @@ p(\pmb x \; \mid \; \omega_i) \sim N(\mu, \sigma^2)
 \end{equation}
 $$
 
-</div>
+</div>{: .notice--blank}
 
 ### 7.3 - Parameters known
 
@@ -317,7 +317,7 @@ Finally, we consider that all classes have an **equal prior probability**
 
 $$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\omega_3\; \mid \; \pmb x) \; = \frac{1}{3}$$
 
-</div>
+</div>{: .notice--blank}
 
 **Exercise**
 <div markdown = "1">
@@ -345,7 +345,7 @@ So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\p
  \end{equation}
  $$
  
- </div>
+</div>{: .notice--blank}
  
 **Exercise**
 <div markdown = "1">
@@ -438,7 +438,7 @@ $$
 \end{equation}
 $$  
 
-</div>
+</div>{: .notice--blank}
 
 **Exercise**
 <div markdown = "1">
