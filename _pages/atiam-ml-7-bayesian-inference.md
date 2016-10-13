@@ -401,9 +401,10 @@ $$
 \begin{equation}
 \quad \quad p(\pmb x) = \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
 \end{equation}
-$$
+$$  
 
-So that  
+Therefore, we obtain  
+
 $$
 \begin{equation}
 p(D\; \mid \;  \pmb \theta\;) = \prod_{k=1}^{n} \; p(\pmb x_k \pmb \; \mid \; \pmb \theta \;) =  \prod_{k=1}^{n} \; \frac{1}{(2\pi)^{d/2} \; |\Sigma|^{1/2}} exp \bigg[ -\frac{1}{2}(\pmb x - \pmb \mu)^t \Sigma^{-1}(\pmb x - \pmb \mu) \bigg]
