@@ -47,7 +47,7 @@ $$
 
 We see that our posterior belief of event $$A$$ given the new evidence $$X$$ is proportional to ($$\propto$$) the *likelihood* of observing this particular evidence $$X$$ given the event $$A$$ multiplied by our prior belief in that particular event $$A$$.
 
-</div>
+</div>{: .notice--blank}
 
 ### 7.1 - Bayesian inference
 
