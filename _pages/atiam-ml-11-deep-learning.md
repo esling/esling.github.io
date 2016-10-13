@@ -23,6 +23,8 @@ The corresponding slides cover
   
 # Tutorial 
 
+<div markdown = "1">
+
 In this exercise, we will use the self-taught learning paradigm with a *sparse autoencoder* and (optionnaly in the supplementary exercice) *softmax classifier* to build both a classifier for spectral windows, but also an unsupervised audition system.  
 
 First, you will train your sparse autoencoder on an **unlabeled** training dataset of audio data (in this case, you can use all the datasets from the tutorials, and even add your own audio files), which will be represented as a set of concatenated spectral windows (to keep the temporal information. This should produce features that are similar to the current theory of *Spectro-Temporal Receptive Fields* (SRTF), which models neurons in the primary auditory cortex (A1).  
