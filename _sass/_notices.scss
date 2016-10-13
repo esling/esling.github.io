@@ -92,6 +92,12 @@
   @include notice($success-color);
 }
 
+/* Blank notice */
+
+.notice--blank {
+  @include notice(#fff);
+}
+
 /* Danger notice */
 
 .notice--danger {
