@@ -51,6 +51,8 @@ Of course, we want to estimate the future performance of a model as accurately a
 
 **Cross-validation and cherry picking**
 
+Cross-validation is a statistical technique to estimate the prediction error rate by splitting the data into training, cross-validation, and test datasets. A prediction model is obtained using the training set, and model parameters
+
 We will see in the following how to adress these problems and a few useful tricks to do so.
 
 </div>{: .notice--blank}
@@ -59,15 +61,42 @@ We will see in the following how to adress these problems and a few useful trick
 
 <div markdown = "1">
 
-**Principal Component Analysis (PCA)**
-A linear transformation technique that is commonly used to project a dataset (without utilizing class labels) onto a new feature space or feature subspace (for dimensionality reduction) where the new component axes are the directions that maximize the variance/spread of the data.
+**Principal Component Analysis (PCA)**  
 
-- [Implementing a Principal Component Analysis (PCA) in Python step by step](http://sebastianraschka.com/Articles/2014_pca_step_by_step.html)
+PCA is a linear transformation technique that is commonly used to project a dataset onto a new feature subspace (for dimensionality reduction) where the new axes are the directions that maximize the variance/spread of the data. The underlying idea is that by doing so, we can reduce the dimensions of the dataset with minimal loss of information.
+
+Listed below are the 6 general steps for performing a principal component analysis, which we will investigate in the following sections.
+
+1. Take a dataset consisting of $$d$$-dimensional samples $$\{x_{1}, x_{2}, \ldots, x_{m}\}$$, where $$x_{i} \in \mathbb{R}^{d}$$
+2. Compute the $$d$$-dimensional mean vector (means for every dimension of the whole dataset)
+3. Compute the scatter matrix (or covariance matrix) of the whole data set
+
+$$
+\begin{equation}
+\Sigma = \frac{1}{m} \sum_{i=1}^{m} (x_{i})(x_{i})^{T}
+\end{equation}
+$$
+
+4. Compute eigenvectors ($$\mathbf{e}_{1}, \mathbf{e}_{2}, \dots, \mathbf{e}_{d}$$) and corresponding eigenvalues ($$\mathbf{\lambda}_{1}, \mathbf{\lambda}_{2}, \dots, \mathbf{\lambda}_{d}$$)
+5. Sort the eigenvectors by decreasing eigenvalues and choose $$k$$ eigenvectors with the largest eigenvalues to form a $$d \times k$$ dimensional matrix $$\mathbf{W}$$ (where every column represents an eigenvector)
+6. Use this $$d \times k$$ eigenvector matrix to transform the samples onto the new subspace. This can be summarized by the mathematical equation: $$\mathbf{y}=\mathbf{W}^{T} \times \mathbf{x}$$ (where $$\mathbf{x}$$ is a $$d \times 1$$-dimensional vector representing one sample, and $$\mathbf{y}$$ is the transformed $$k \times 1$$-dimensional sample in the new subspace).
+
+</div>{: .notice--blank}
+
+**Exercise**
+<div markdown = "1">
+
+1. Implement the PCA algorithm
+2. Generate a 3-dimensional dataset following a multivariate Gaussian
+3. Evaluate the application of PCA to rotate this data
+4. Evaluate the dimensionality reduction by projection
+
+</div>{: .notice--info}
+
+<div markdown = "1">
 
 **Linear Discriminant Analysis (LDA)**
-A linear transformation technique (related to Principal Component Analysis) that is commonly used to project a dataset onto a new feature space or feature subspace, where the new component axes maximize the spread between multiple classes, or for classification of data.
-
-- [Linear Discriminant Analysis bit by bit](http://sebastianraschka.com/Articles/2014_python_lda.html)
+LDA is a linear transformation technique (related to PCA) that is also commonly used to project a dataset onto a new feature subspace. However, this approach is supervised as the new component axes are selected to maximize the spread between multiple classes. More information can be found on the corresponding [Wikipedia page](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
 
 </div>{: .notice--blank}
 
@@ -77,8 +106,6 @@ A linear transformation technique (related to Principal Component Analysis) that
 
 **Feature Scaling and Standardization**
 A data pre-processing step for re-scaling features from different measurements to match proportions of a standard normal distribution (unit variance centered at mean=0).
-
-- [About Feature Scaling and Normalization](http://sebastianraschka.com/Articles/2014_about_feature_scaling.html)
 
 The ***Sequential Fortward Selection (SFS)*** is one of the simplest and probably fastest *Feature Selection* algorithms.  
 Let's summarize its mechanics in words:  
