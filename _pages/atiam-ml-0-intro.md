@@ -25,13 +25,25 @@ The corresponding slides cover
   * Nearest-neighbors
 
 # Tutorial 
+
+<div markdown = "1">
+
 In this introduction, we will cover basic Music Information Retrieval (MIR) interactions, in which we process a dataset of sound files and try to observe the properties of their various temporal and spectral features. Hence, we will quickly review basic calculus required to perform further machine learning tasks.
 
-### 1.0 - Reference code
+</div>{: .notice--blank}
+
+## 0.0 - Reference code
+
+<div markdown = "1">
 
 Get the baseline code from this [zip file ![](../images/file.png)](../documents/atiam_ml_exercises.zip)
 
-### 1.1 - Datasets
+</div>{: .notice--blank}
+
+## 0.1 - Datasets
+
+<div markdown = "1">
+
 In order to do so, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)](https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151)
 
   * **Classification** - *MuscleFish* dataset
@@ -52,6 +64,7 @@ dataStruct.classes    % Vector of indexes assigning each file to a class
 dataStruct.classNames % Cell of class names
 {% endhighlight %}  
   
+</div>{: .notice--blank}
   
 **Exercise**  
 <div markdown="1">  
@@ -62,7 +75,9 @@ dataStruct.classNames % Cell of class names
 </div>{: .notice--info}  
 
 
-### 1.2 - Preprocessing
+## 0.2 - Preprocessing
+
+<div markdown = "1">
 
 We will rely on a set of spectral transforms that allow to obtain a more descriptive view over the audio information. As most of these is out of the scope of the machine learning course, we redirect you to a [signal processing course](https://ccrma.stanford.edu/~jos/sasp/) proposed by [Julius O. Smith](https://ccrma.stanford.edu/~jos/).  
 
@@ -77,7 +92,6 @@ The following functions to compute various types of transforms are given as part
 
 In order to perform the various computations, we provide the following function, which performs the different transforms on a complete dataset.  
 
-
 {% highlight Matlab %}
 function dataStruct = computeTransforms(dataStruct)
 % dataStruct   : Dataset structure with filenames
@@ -90,7 +104,8 @@ dataStruct.spectrumChroma    % Chroma vectors
 dataStruct.spectrumCepstrum  % Cepstrum
 dataStruct.spectrumConstantQ % Constant-Q transform
 {% endhighlight %}   
-  
+
+</div>{: .notice--blank}
 
 **Exercise**  
 <div markdown="1">  
@@ -106,7 +121,10 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 ;#;
 \\
 
-### 1.3 - Features
+## 0.3 - Features
+
+<div markdown = "1">
+
 As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing the following features in the `0c_Features` folder
 
   * `featureSpectralCentroid.m` - Spectral centroid
@@ -132,6 +150,7 @@ dataStruct.SpectralCentroidMean % Mean value of that feature
 dataStruct.SpectralCentroidStd  % Standard deviation
 {% endhighlight %}  
 
+</div>{: .notice--blank}
   
 **Exercise**
 
