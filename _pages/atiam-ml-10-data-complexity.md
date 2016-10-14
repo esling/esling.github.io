@@ -95,8 +95,13 @@ $$
 
 <div markdown = "1">
 
-**Linear Discriminant Analysis (LDA)**
+**Linear Discriminant Analysis (LDA)**  
+
 LDA is a linear transformation technique (related to PCA) that is also commonly used to project a dataset onto a new feature subspace. However, this approach is supervised as the new component axes are selected to maximize the spread between multiple classes. More information can be found on the corresponding [Wikipedia page](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
+
+**Pre-processing and whitening**  
+
+Usually, features are first **pre-processed and standardized** through *scaling*. This allow to obtain features with properties close to a normal distribution, easing the work of the learning algorithm. A data pre-processing step for re-scaling features from different measurements to match proportions of a standard normal distribution (unit variance centered at mean=0).
 
 </div>{: .notice--blank}
 
@@ -104,12 +109,8 @@ LDA is a linear transformation technique (related to PCA) that is also commonly 
 
 <div markdown = "1">
 
-**Feature Scaling and Standardization**
-A data pre-processing step for re-scaling features from different measurements to match proportions of a standard normal distribution (unit variance centered at mean=0).
-
-The ***Sequential Fortward Selection (SFS)*** is one of the simplest and probably fastest *Feature Selection* algorithms.  
-Let's summarize its mechanics in words:  
-***SFS*** starts with an empty feature subset and sequentially adds features from the whole input feature space to this subset until the subset reaches a desired (user-specified) size. For every iteration (= inclusion of a new feature), the whole feature subset is evaluated (expect for the features that are already included in the new subset). The evaluation is done by the so-called ***criterion function*** which assesses the feature that leads to the maximum performance improvement of the feature subset if it is included.  
+The ***Sequential Fortward Selection (SFS)*** is one of the simplest and probably fastest *feature selection* algorithms.  
+***SFS*** starts with an empty feature subset and sequentially adds features from the whole input feature space to this subset until the subset reaches a desired (user-specified) size. For every iteration (= inclusion of a new feature), the whole feature subset is evaluated (expect for the features that are already included in the new subset). The evaluation is done by the ***criterion function*** which assesses the feature that leads to the maximum performance improvement of the feature subset if it is included.  
 Note that included features are never removed, which is one of the biggest downsides of this algorithm.
 
 </div>{: .notice--blank}
@@ -118,39 +119,36 @@ Note that included features are never removed, which is one of the biggest downs
 
 <div markdown = "1">
 
+Overfitting is one of the major problem encountered in machine learning. As explained earlier, this effect comes from the fact that the models becomes too specialized in the *training* dataset. In order to better define this phenomenon, we introduce a few concepts.
+
 ***Bias***
+The *statistical* bias of an estimator $$\hat{\beta}$$ is the difference between its expected value $$E[\hat{\beta}]$$ and the true value of a parameter $$\beta$$ being estimated.
 
-When we use the term bias in this article, we refer to the *statistical* bias (in contrast to the bias in a machine learning system). In general terms, the bias of an estimator $$\hat{\beta}$$ is the difference between its expected value $$E[\hat{\beta}]$$ and the true value of a parameter $$\beta$$ being estimated.
+$$
+\begin{equation}
+Bias = E\big[\hat{\beta}\big] - \beta
+\end{equation}
+$$
 
-$$Bias = E\big[\hat{\beta}\big] - \beta$$
-
-So, if $$E\big[\hat{\beta}\big] - \beta = 0$$, then $$\hat{\beta}$$ is an unbiased estimator of $$\beta$$. More concretely, we compute the prediction bias as the difference between the expected prediction accuracy of our model and the true prediction accuracy. For example, if we compute the prediction accuracy on the training set, this would be an optimistically biased estimate of the absolute accuracy of our model since it would overestimate the true accuracy.
+So, if $$E\big[\hat{\beta}\big] - \beta = 0$$, then $$\hat{\beta}$$ is an unbiased estimator of $$\beta$$. We compute the prediction (generalization) bias as the difference between the expected prediction accuracy of our model and the true prediction accuracy. 
 
 ***Variance***
-
-The variance is simply the statistical variance of the estimator $$\hat{\beta}$$ and its expected value $$E[\hat{\beta}]$$
+The variance of the estimator $$\hat{\beta}$$ and its expected value $$E[\hat{\beta}]$$
 
 $$\text{Variance} = E\bigg[\big(\hat{\beta} - E[\hat{\beta}]\big)^2\bigg]$$
 
-The variance is a measure of the variability of our model’s predictions if we repeat the learning process multiple times with small fluctuations in the training set. The more sensitive the model-building process is towards these fluctuations, the higher the variance.
+The variance is a measure of the variability of the model predictions if we repeat the learning process multiple times with small fluctuations in the training set. The more sensitive the model is towards these fluctuations, the higher the variance.
 
-**Resubstitution Validation and the Holdout Method**
+Hence, the goal of generalization is to reduce both the *bias* and the *variance* of our models. To prevent overfitting, we will need to have a way of computing both these values for our models.
 
-The holdout method is inarguably the simplest model evaluation technique. We take our labeled dataset and split it into two parts: A training set and a test set. Then, we fit a model to the training data and predict the labels of the test set. And the fraction of correct predictions constitutes our estimate of the prediction accuracy — we withhold the known test labels during prediction, of course. We really don’t want to train and evaluate our model on the same training dataset (this is called *resubstitution evaluation*), since it would introduce a very optimistic bias due to overfitting. In other words, we can’t tell whether the model simply memorized the training data or not, or whether it generalizes well to new, unseen data. (On a side note, we can estimate this so called *optimism bias* as the difference between the training accuracy and the test accuracy.)   
+**Holdout**
 
-Typically, the splitting of a dataset into training and test sets is a simple process of *random subsampling*. We assume that all our data has been drawn from the same probability distribution (with respect to each class). And we randomly choose ~2/3 of these samples for our training set and ~1/3 of the samples for our test set. Notice the two problems here?
+The holdout method is the simplest model evaluation technique. We take our labeled dataset and split it into a *training* set and a *validation* set. Then, we fit a model to the *training* data and predict the labels of the *validation* set. Hence, the amount of errors on the validation set constitutes our estimate of the prediction accuracy. We can also estimate the *optimism bias* as the difference between the training and validation accuracies. Typically, the splitting of a dataset into training and test sets is a simple process of *random subsampling*. We assume that all our data has been drawn from the same probability distribution (with respect to each class).
 
 **Stratification**
 
-We have to keep in mind that our dataset represents a random sample drawn from a probability distribution; and we typically assume that this sample is representative of the true population -- more or less. Now, further subsampling without replacement alters the statistic (mean, proportion, and variance) of the sample. The degree to which subsampling without replacement affects the statistic of a sample is inversely proportional to the size of the sample.
+Our dataset represents a random sample drawn from a probability distribution and we typically assume that this sample is representative of the true population. By subsampling without replacement, we alter the statistic (mean, proportion, and variance) of the sample. For instance, if we have take a random portion of the set, this will lead to non-uniform class distributions. The problem becomes even worse if our dataset has a high class imbalance upfront. In the worst-case scenario, the test set may not contain any instance of a minority class at all. Thus, the common practice is to divide the dataset in a stratified fashion. *Stratification* simply means that we randomly split the dataset so that each class is correctly represented in the resulting subsets.
 
-Assuming that the *Iris* dataset is representative of the true population (for instance, assuming that flowers are distributed uniformly in nature), we just created two imbalanced datasets with non-uniform class distributions. The class ratio that the learning algorithm uses to learn the model is “38.0% / 28.0% / 34.0%”. Then, we evaluate a model on a dataset with a class ratio that is imbalanced in the “opposite” direction: “24.0% / 44.0% / 32.0%”. Unless our learning algorithm is completely insensitive to these small perturbations, this is certainly not ideal. The problem becomes even worse if our dataset has a high class imbalance upfront. In the worst-case scenario, the test set may not contain any instance of a minority class at all. Thus, the common practice is to divide the dataset in a stratified fashion. ***Stratification*** simply means that we randomly split the dataset so that each class is correctly represented in the resulting subsets — the training and the test set.
-
-Random subsampling in non-stratified fashion is usually not a big concern if we are working with relatively large and balanced datasets. However, in my opinion, stratified resampling is usually (only) beneficial in machine learning applications. Moreover, stratified sampling is incredibly easy to implement, and Ron Kohavi provides empirical evidence (Kohavi 1995) that stratification has a positive effect on the variance and bias of the estimate in k-fold cross-validation, a technique we will discuss later in this article.
-
-**What's Next**
-
-Since the whole article turned out to be quite lengthy, I decided to split it into multiple parts. In the following parts, we will talk about
 
 - Repeated holdout validation and the bootstrap method for modeling uncertainty in [Part II](http://sebastianraschka.com/blog/2016/model-evaluation-selection-part2.html)
 - *The holdout method for hyperparameter tuning* &mdash; splitting a dataset into three parts: a training, test, and validation set.  (Part III)
@@ -163,9 +161,21 @@ Since the whole article turned out to be quite lengthy, I decided to split it in
 
 <div markdown = "1">
 
-- ***Hyperparameters:*** Hyperparameters are the *tuning parameters* of a machine learning algorithm — for example, the regularization strength of an L2 penalty in the mean squared error cost function of linear regression, or a value for setting the maximum depth of a decision tree. In contrast, model parameters are the parameters that a learning algorithm fits to the training data -- the parameters of the model itself. For example, the weight coefficients (or slope) of a linear regression line and its bias (or y-axis intercept) term are *model parameters*.
+Most models usually contain **hyperparameters**, which are the *tuning parameters* of a machine learning algorithm (for instance, the number of neurons in one neural network layer or a value for setting the maximum depth of a decision tree). In contrast, model parameters are the parameters that a learning algorithm fits to the training data (the parameters of the model itself). In order to obtain the best possible model, these hyperparameters are tuned for the problem at hand. Several methods can be implemented towards this goal, usually termed *hyper-optimization*
+
+1. **Grid search** is based on defining a given set of values for each parameters and explore all combinations of these.
+2. **Gaussian processes** allow to perform a search on the hyperparameters based on the previous evaluations
+3. **Random search** simply considers a random draw of the parameters at each iteration
 
 </div>{: .notice--blank}
+
+**Exercise**
+<div markdown = "1">
+
+1. Implement the 3 methods of hyper-optimization
+2. Random search is actually extremely efficient, can you take a guess on why ?
+
+</div>
 
 ## 10.5 - Cross-validation
 
