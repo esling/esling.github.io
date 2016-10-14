@@ -181,46 +181,33 @@ Most models usually contain **hyperparameters**, which are the *tuning parameter
 
 <div markdown = "1">
 
-Cross-validation is a statistical technique to estimate the prediction error rate by splitting the data into training, cross-validation, and test datasets. A prediction model is obtained using the training set, and model parameters are optimized by the cross-validation set, while the test set is held primarily for empirical error estimation.  
-
-It is important to note that the test set should only be used once for evaluating the prediction error of a classifier after training it on the training dataset; repetitive evaluations of different models using the same test dataset would be prone to overfitting.  
-A common approach to compare and evaluate different pre-processing techniques and models is cross-validation. Here, we will use a variant called "k-fold cross-validation" in order to compare different preprocessing steps and demonstrate the usefulness of a `Pipeline`.
-
-In k-fold cross-validation, the original training dataset is split into *k* different subsets (the so-called "folds") where 1 fold is retained for testing the classifier and the other k-1 folds are used for training.
-
-E.g., if we'd choose k=4 (4 folds) the classifier will be trained on the remaining using 3 different training set subsets and evaluated on the 4th fold (the test fold). This procedure is then repeated 4 times until every fold has been used as the test set once so that we can eventually calculate the average error rate of our model from the error rate of every iteration, which gives us an idea of how wel
+Cross-validation allows to estimate the prediction error rate by splitting the data into training, cross-validation, and test datasets. A prediction model is obtained using the training set, and model parameters are optimized by the cross-validation set, while the test set is held primarily for empirical error estimation. A common approach to compare and evaluate different pre-processing techniques and models is cross-validation. In $$k$$-fold cross-validation, the original training dataset is split into $$k$$ different subsets (called *folds*) where $$1$$ fold is retained for testing the classifier and the other $$k-1$$ folds are used for training.
 
 Repeated Holdout Validation
 
 One way to obtain a more robust performance estimate that is less variant to how we split the data into training and test sets is to repeat the holdout method *k* times with different random seeds and compute the average performance over these *k* repetitions
 
-$$\text{ACC}_{avg} = \frac{1}{k} \sum^{k}_{j=1} {ACC_j},$$
+$$
+\begin{equation}
+\text{ACC}_{avg} = \frac{1}{k} \sum^{k}_{j=1} {ACC_j}
+\end{equation}
+$$
 
 where $$\text{ACC}_j$$ is the accuracy estimate of the *j*th test set of size *m*,
 
-$$\text{ACC}_j = 1 - \frac{1}{m} \sum_{i=1}^{m} L\big(\hat{y}_i, y_i \big). $$
+$$
+\begin{equation}
+\text{ACC}_j = 1 - \frac{1}{m} \sum_{i=1}^{m} \mathcal{L}\big(\hat{y}_i, y_i \big)
+\end{equation}
+$$
 
-This repeated holdout procedure, sometimes also called *Monte Carlo Cross-Validation*, provides with a better estimate of how well our model may perform on a random test set, and it can also give us an idea about our model's stability &mdash; how the model produced by a learning algorithm changes with different training set splits. The following figure shall demonstrate how repeated holdout validation may look like for different training-test split using the [Iris](https://archive.ics.uci.edu/ml/datasets/Iris) dataset to fit to 3-nearest neighbors classifiers.
+This repeated holdout procedure, sometimes also called *Monte Carlo Cross-Validation*, provides with a better estimate of how well our model may perform on a random test set (*bias*), and it can also give us an idea about our model stability (*variance*).
 
-![figure of repeated holdout with a 50-50 split on iris data](images/model-evaluation-selection-part2/model-eval-iris.png)
+Usually, we can see that the variance of our estimate increases as the size of the test set decreases. Second, we see a small increase in the pessimistic bias when we decrease the size of the training set.
 
-To produce the subplot on the left, I performed 50 stratified training/test splits with 75 samples in the test and training set each; a K-nearest neighbors model was fit to the training set and evaluated on the test set in each repetition. The average accuracy of these 50 50/50 splits was 95%. I followed the same procedure to produce the left subplot. Here, I repeatedly performed 90/10 splits, though, so that the test set consisted of only 15 samples. This time, the average accuracy over these 50 splits was 96%. Back to the plot above: It really demonstrates two of the points that we previously discussed. First, we see that the variance of our estimate increases as the size of the test set decreases. Second, we see a small increase in the pessimistic bias when we decrease the size of the training set &mdash; we withhold more training data in the 50/50 split, which may be the reason why the average performance over the 50 splits is slightly lower compared to the 90/10 splits.
+**Bootstrapping and empirical confidence intervals**
 
-In the next section, we look at an alternative method for evaluating a model's performance; we will talk about different flavors of the bootstrap method that are commonly used to infer the uncertainty of a performance estimate.
-
-
-
-## The Bootstrap Method and Empirical Confidence Intervals
-
-The previous examples of Monte Carlo Cross-Validation may have convinced us that repeated holdout validation could provide us with a more robust estimate of a model's performance on random test sets compared to an evaluation based on a single train/test split. In addition, the repeated holdout may give us an idea about the stability of our model. In this section, we will explore an alternative approach to model evaluation and calculate its uncertainty using the bootstrap method.
-
-Let's assume that we'd like to compute a confidence interval around our performance estimate to judge it's certainty &mdash; or uncertainty. How can we achieve this if our sample has been drawn from an unknown distribution? Maybe we could use the sample mean as a point estimate of the population mean, but how would we compute the variance or confidence intervals around the mean if its distribution is unknown? Sure, we could collect multiple, independent samples; this is a luxury we often don't have in real world applications, though. Now, the idea behind the bootstrap is to generate "new samples" by sampling from an empirical distribution. As a side note, the term "bootstrap" likely originated from the phrase "to pull oneself up by one's bootstraps:"
-
-> Circa 1900, to pull (oneself) up by (one's) bootstraps was used figuratively of an impossible task (Among the "practical questions" at the end of chapter one of Steele's "Popular Physics" schoolbook (1888) is, "30. Why can not a man lift himself by pulling up on his boot-straps?"). By 1916 its meaning expanded to include "better oneself by rigorous, unaided effort." The meaning "fixed sequence of instructions to load the operating system of a computer" (1953) is from the notion of the first-loaded program pulling itself, and the rest, up by the bootstrap.
-
-(Source: [Online Etymology Dictionary](http://www.etymonline.com/index.php?allowed_in_frame=0&search=bootstrap))
-
-The bootstrap method is a resampling technique for estimating a sampling distribution, and in the context of this article, we are particularly interested in estimating the uncertainty of our performance estimate &mdash; the prediction accuracy or error. The bootstrap method was introduced by Bradley Efron in 1979 (Efron, 1979). About 15 years later, Bradley Efron and Robert Tibshirani even devoted a whole book to the bootstrap, "An Introduction to the Bootstrap" (Efron and Tibshirani, 1994), which I recommend you to read if you are interested in more details on this topic. In brief, the idea of the bootstrap method is to generate *new* data from a population by repeated sampling from the original dataset *with replacement* &mdash; in contrast, the repeated holdout method can be understood as sampling *without* replacement. Walking through it step by step, the bootstrap method works like this:
+We would like to compute a confidence interval around our performance estimate to judge it's certainty or uncertainty. The idea behind the bootstrap is to generate "new samples" by sampling from an empirical distribution. The bootstrap method is a resampling technique for estimating a sampling distribution by generating *new* data from a population by repeated sampling from the original dataset *with replacement* in contrast, the repeated holdout method can be understood as sampling *without* replacement.
 
 1. We are given a dataset of size *n*.
 2. For *b* bootstrap rounds:
@@ -230,26 +217,9 @@ The bootstrap method is a resampling technique for estimating a sampling distrib
 
 $$ \text{ACC}_{boot} = \frac{1}{b} \sum_{j=1}^b \frac{1}{n} \sum_{i=1}^{n} \bigg( 1 - L\big(\hat{y}_i, y_i \big) \bigg).$$
 
-As we discussed previously, the resubstitution accuracy usually leads to an extremely optimistic bias, since a model can be overly sensible to noise in a dataset. Originally, the bootstrap method aims to determine the statistical properties of an estimator when the underlying distribution was unknown and additional samples are not available. So, in order to exploit this method for the evaluation of predictive models, such as hypotheses for classification and regression, we may prefer a slightly different approach to bootstrapping using the so-called *Leave-One-Out Bootstrap* (LOOB) technique. Here, we use *out-of-bag* samples as test sets for evaluation instead of evaluating the model on the training data. Out-of-bag samples are the unique sets of instances that are not used for model fitting as shown in the figure below.
+Originally, the bootstrap method aims to determine the statistical properties of an estimator when the underlying distribution was unknown and additional samples are not available. So, in order to exploit this method for the evaluation of predictive models, we can rely on *Leave-One-Out Bootstrap* (LOOB) technique. Here, we use *out-of-bag* samples as test sets for evaluation instead of evaluating the model on the training data.
 
-![bootstrap concept figure](images/model-evaluation-selection-part2/bootrap_concept.png)
-
-The figure above illustrates how three random bootstrap samples drawn from an exemplary ten-sample dataset ($$X_1, X_2, \dots X_{10}$$) and their out-of-bag sample for testing may look like. In practice, Bradley Efron and Robert Tibshirani recommend drawing 50 to 200 bootstrap samples as being sufficient for reliable estimates (Efron and Tibshirani, 1993).
-
-To take a step back, assuming we have a sample that has been drawn from a normal distribution $$N(\mu, \sigma^2)$$ with unknown mean $$\mu$$ and variance $$\sigma^2$$. It's probably been a while since we took Statistics I, but if there's one thing we surely remember, it's that we could use the sample mean $$\bar{x}$$ as a point estimate of $$\mu$$,
-
-$$\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i,$$
-
-and we could estimate the variance $$\sigma^2$$ as
-
-$$\text{VAR} = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2. $$
-
-Hence, we compute the standard deviation as $$\text{SD} = \sqrt{\text{VAR}},$$
-and we compute the standard error as
-
-$$\text{SE} = \frac{\text{SD}}{\sqrt{n}}.$$
-
-Using the standard error we can then compute a 95% confidence interval of the mean according to
+Assuming we have a sample that has been drawn from a normal distribution $$N(\mu, \sigma^2)$$ with unknown mean $$\mu$$ and variance $$\sigma^2$$. It's probably been a while since we took Statistics I, but if there's one thing we surely remember, it's that we could use the sample mean $$\bar{x}$$ as a point estimate of $$\mu$$, and we could estimate the variance $$\sigma^2$$ and standard deviation as $$\sigma$$. The standard error is given by $$\frac{\sigma}{\sqrt{n}}$$. Using the standard error we can then compute a 95% confidence interval of the mean according to
 
 $$\bar{x} \pm z \times \frac{\sigma}{\sqrt{n}}, $$
 
@@ -271,59 +241,17 @@ Finally, we can then compute the confidence interval around the mean estimate as
 
 $$\text{ACC}_{boot} \pm t \times \text{SE}_{boot}.$$
 
-Although the approach we outlined above seems intuitive, what can we do if our samples do *not* follow a normal distribution? A more robust, yet computationally straight-forward approach is the percentile method as described by B. Efron (Efron, 1981). Here, we pick our lower and upper confidence bounds as follows:
-
-- $$\text{ACC}_{lower} = \alpha_{1}th$$ percentile of the $$\text{ACC}_\text{boot}$$ distribution
-- $$\text{ACC}_{upper} = \alpha_{2}th$$ percentile of the $$\text{ACC}_{boot}$$ distribution,
-
-where $$\alpha_1 = \alpha$$ and $$\alpha_2 = 1 - \alpha$$, and $$\alpha$$ is our degree of confidence to compute the $$100 \times (1 - 2 \times \alpha)$$ confidence interval. For instance, to compute a 95% confidence interval, we pick $$\alpha = 0.025$$ to obtain the 2.5th and 97.5th percentiles of the *b* bootstrap samples distribution as our upper and lower confidence bounds.
-
-In practice, if our data is indeed (roughly) following a normal distribution, the "standard" confidence interval and percentile method typically agree as illustrated in the figure below.
-
-![Bootstraps and Confidence Intervals](images/model-evaluation-selection-part2/bootstrap-histo.png)
-
-In the left subplot, I applied the *Leave-One-Out Bootstrap* technique to evaluate 3-nearest neighbors models on Iris, and the right subplot shows the results of the same model evaluation approach on MNIST, using the same softmax algorithm that we discussed earlier.
-
-In 1983, Bradley Efron described the *.632 Estimate*, a further improvement to address the pessimistic bias of the bootstrap cross-validation approach described above (Efron, 1983). The pessimistic bias in the "classic" bootstrap method can be attributed to the fact that the bootstrap samples only contain approximately 63.2% of the unique samples from the original dataset. For instance, we can compute the probability that a given sample from a dataset of size *n* is *not* drawn as a bootstrap sample as
-
-$$P (\text{not chosen}) =  \bigg(1 - \frac{1}{n}\bigg)^n,$$
-
-which is asymptotically equivalent to $$\frac{1}{e} \approx 0.368$$ as $$ n \rightarrow \infty. $$
-
-Vice versa, we can then compute the probability that a sample *is* chosen as
-
-$$P (\text{chosen}) = 1 - \bigg(1 - \frac{1}{n}\bigg)^n \approx 0.632$$
-
-for reasonably large datasets, so that we'd select approximately $$0.632 \times n$$ uniques samples as bootstrap training sets and reserve $$ 0.368 \times n $$ out-of-bag samples for testing in each iteration.
-
-![bootstrap concept figure](images/model-evaluation-selection-part2/bootstrap_prob.png){: .center-image  .image-80 }
-
-
-Now, to address the bias that is due to this the sampling with replacement, Bradley Efron proposed the *.632 Estimate* that we mentioned earlier, which is computed via the following equation:
-
-$$\text{ACC}_{boot} = \frac{1}{b} \sum_{i=1}^b \big(0.632 \cdot \text{ACC}_{h, i} + 0.368 \cdot \text{ACC}_{r, i}\big), $$
-
-where $$\text{ACC}_{r, i}$$ is the resubstitution accuracy, and $$\text{ACC}_{h, i}$$ is the accuracy on the out-of-bag sample.
-
-Now, while the *.632 Boostrap* attempts to address the pessimistic bias of the estimate, an optimistic bias may occur with models that tend to overfit so that Bradley Efron and Robert Tibshirani proposed the *The .632+ Bootstrap Method* (Efron and Tibshirani, 1997). Instead of using a fixed "weight" $$\omega = 0.632 $$ in
-
-$$ACC_{\text{boot}} = \frac{1}{b} \sum_{i=1}^b \big(\omega \cdot \text{ACC}_{h, i} + (1-\omega) \cdot \text{ACC}_{r, i} \big), $$
-
-$$\omega$$ is based on the "*no-information error rate*," which we compute by fitting a model to a dataset that contains all possible combinations between samples $$x_{i '}$$ and target class labels $$y_i$$ &mdash; we pretend that the observations and class labels are independent. For instance, we compute the *no-information error rate* $$\gamma $$ as follows:
-
-$$\gamma = \frac{1}{n^2} \sum_{i=1}^{n} \sum_{i '=1}^{n} L(y_{i}, f(x_{i '})), $$
-
-where $$f(\cdot)$$ is the hypothesis or classification rule and $$f(x_{i'})$$ to predict a class label $$\hat{y}_{i'}$$.
-
-Then, we define $$\omega$$ as
-
-$$ \omega = \frac{0.632}{1 - 0.368 \times R},$$
-
-where *R* is the *relative overfitting rate*
-
-$$R = \frac{(-1) \times (\text{ACC}_{h, i} - \text{ACC}_{r, i})}{\gamma - (1 -\text{ACC}_{h, i})}.$$
-
 </div>{: .notice--blank}
+
+**Exercise**  
+
+<div markdown = "1">
+
+1. Implement the repeated k-fold cross-validation procedure
+2. Implement the computation of the confidence intervals
+3. Evaluate the variance of classification algorithms
+
+</div>
 
 ## 10.6 - GPU Computing
 
