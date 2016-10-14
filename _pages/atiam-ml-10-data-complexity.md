@@ -29,6 +29,8 @@ The corresponding slides cover
 
 <div markdown = "1">
 
+**Curse of dimensionality**
+
 One of the biggest challenges of designing a good classifier for solving a ***Statistical Pattern Classification*** problem is to estimate the underlying parameters to fit the model - given that the forms of the underlying probability distributions are known. The larger the number of parameters becomes, the more difficult it naturally is to estimate those parameters accurately (***Curse of Dimensionality***) from a limited number of training samples.  
 
 In order to avoid the ***Curse of Dimensionality***, pattern classification is often accompanied by ***Dimensionality Reduction***, which also has the nice side-effect of increasing the computational performance.
@@ -41,6 +43,18 @@ The goal is to select a "sufficiently reduced" subset from the feature space $D$
 
 F. Ferri, P. Pudil, M. Hatef, and J. Kittler investigated the performance of different ***Sequential Selection Algorithms*** for  ***Feature Selection*** on different scales and reported their results in a nice research article: *"[Comparative Study of Techniques for Large Scale Feature Selection](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=02CB16CB1C28EA6CB57E212861CFB180?doi=10.1.1.24.4369&rep=rep1&type=pdf)," Pattern Recognition in Practice IV, E. Gelsema and L. Kanal, eds., pp. 403-413. Elsevier Science B.V., 1994.*  
 Choosing an "appropriate" algorithm really depends on the problem - the size and desired recognition rate and computational performance. Thus, I want to encourage you to take (at least) a brief look at their paper and the results they obtained from experimenting with different problems feature space dimensions.
+
+**Model generalization**
+
+Fitting a model to our training data is one thing, but how do we know that it generalizes well to unseen data? How do we know that it doesn’t simply memorize the data we fed it and fails to make good predictions on future samples, samples that it hasn't seen before? And how do we select a good model in the first place?
+
+Let us summarize the main points why we evaluate the predictive performance of a model:
+
+1. We want to estimate the generalization accuracy, the predictive performance of our model on future (unseen) data.
+2. We want to increase the predictive performance by tweaking the learning algorithm and selecting the best performing model from a given hypothesis space.
+3. We want to identify the machine learning algorithm that is best-suited for the problem at hand; thus, we want to compare different algorithms, selecting the best-performing one as well as the best performing model from the algorithm's hypothesis space.
+
+Of course, we want to estimate the future performance of a model as accurately as possible. However, if there’s one key take-away message from this article, it is that biased performance estimates are perfectly okay in model selection and algorithm selection if the bias affects all models equally. If we rank different models or algorithms against each other in order to select the best-performing one, we only need to know the "relative" performance. For example, if all our performance estimates are pessimistically biased, and we underestimate their performances by 10%, it wouldn’t affect the ranking order.
 
 </div>{: .notice--blank}
 
@@ -78,7 +92,35 @@ Note that included features are never removed, which is one of the biggest downs
 
 ## 10.3 - Overfitting
 
-## 10.4 - Cross-validation
+<div markdown = "1">
+
+***Bias***
+
+When we use the term bias in this article, we refer to the *statistical* bias (in contrast to the bias in a machine learning system). In general terms, the bias of an estimator $$\hat{\beta}$$ is the difference between its expected value $$E[\hat{\beta}]$$ and the true value of a parameter $$\beta$$ being estimated.
+
+$$Bias = E\big[\hat{\beta}\big] - \beta$$
+
+So, if $$E\big[\hat{\beta}\big] - \beta = 0$$, then $$\hat{\beta}$$ is an unbiased estimator of $$\beta$$. More concretely, we compute the prediction bias as the difference between the expected prediction accuracy of our model and the true prediction accuracy. For example, if we compute the prediction accuracy on the training set, this would be an optimistically biased estimate of the absolute accuracy of our model since it would overestimate the true accuracy.
+
+***Variance***
+
+The variance is simply the statistical variance of the estimator $$\hat{\beta}$$ and its expected value $$E[\hat{\beta}]$$
+
+$$\text{Variance} = E\bigg[\big(\hat{\beta} - E[\hat{\beta}]\big)^2\bigg]$$
+
+The variance is a measure of the variability of our model’s predictions if we repeat the learning process multiple times with small fluctuations in the training set. The more sensitive the model-building process is towards these fluctuations, the higher the variance.
+
+</div>{: .notice--blank}
+
+## 10.4 - Model selection
+
+<div markdown = "1">
+
+- ***Hyperparameters:*** Hyperparameters are the *tuning parameters* of a machine learning algorithm — for example, the regularization strength of an L2 penalty in the mean squared error cost function of linear regression, or a value for setting the maximum depth of a decision tree. In contrast, model parameters are the parameters that a learning algorithm fits to the training data -- the parameters of the model itself. For example, the weight coefficients (or slope) of a linear regression line and its bias (or y-axis intercept) term are *model parameters*.
+
+</div>{: .notice--blank}
+
+## 10.5 - Cross-validation
 
 <div markdown = "1">
 
@@ -93,6 +135,10 @@ E.g., if we'd choose k=4 (4 folds) the classifier will be trained on the remaini
 
 </div>{: .notice--blank}
 
-## 10.5 - GPU Computing
+## 10.6 - GPU Computing
+
+<div markdown = "1">
+
+</div>{: .notice--blank}
 
 # References
