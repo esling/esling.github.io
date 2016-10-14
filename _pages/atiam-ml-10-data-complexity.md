@@ -29,32 +29,29 @@ The corresponding slides cover
 
 <div markdown = "1">
 
+Choosing an "appropriate" machine learning algorithm depends on the problem, the size and desired recognition rate and computational performance. However, all algorithms fall prey to the same secular problems.
+
+1. The curse of dimensionality
+2. Poor generalization due to overfitting
+3. Cross-validation and cherry picking
+
 **Curse of dimensionality**
 
-One of the biggest challenges of designing a good classifier for solving a ***Statistical Pattern Classification*** problem is to estimate the underlying parameters to fit the model - given that the forms of the underlying probability distributions are known. The larger the number of parameters becomes, the more difficult it naturally is to estimate those parameters accurately (***Curse of Dimensionality***) from a limited number of training samples.  
+One of the biggest challenges for solving machine learning problem is to estimate the underlying parameters to fit the model. Obviously, the larger the number of parameters becomes, the more difficult it is to estimate those parameters accurately from a limited number of training samples, a problem known as the ***curse of dimensionality***. In order to avoid it, learning algorithms are often accompanied by ***dimensionality reduction*** techniques. Common approaches are projection-based, such as ***Principal Component Analysis (PCA)*** (unsupervised) or ***Linear Discriminant (LDA)*** (supervised). It shall be noted though that regularization in classification models such as Logistic Regression, Support Vector Machines, or Neural Networks is to be preferred over using dimensionality reduction to avoid overfitting. An alternative to these approaches is the ***feature selection***. In these, the goal is to reduce the feature space $$D = {x_1, x_2, x_n}$$ to a subset of features $$D - n$$ in order to improve both the *accuracy* and *computational performance* of the algorithms.  The goal is to select a "sufficiently reduced" subset from the feature space $$D$$ "without significantly reducing" the performance of the classifier. In the process of choosing an "optimal" feature subset of size $$k$$, a ***criterion Function*** allows to assess the ***recognition rate*** of the classifier.
 
-In order to avoid the ***Curse of Dimensionality***, pattern classification is often accompanied by ***Dimensionality Reduction***, which also has the nice side-effect of increasing the computational performance.
-Common techniques are projection-based, such as ***Principal Component Analysis (PCA)*** (unsupervised) or ***Linear Discriminant (LDA)*** (supervised). It shall be noted though that regularization in classification models such as Logistic Regression, Support Vector Machines, or Neural Networks is to be preferred over using dimensionality reduction to avoid overfitting. However, dimensionality reduction is still a useful data compression technique to increase computational efficiency and data storage problems.
+**Model generalization and overfitting**
 
-An alternative to a projection-based dimensionality reduction approach is the so-called ***Feature Selection***, and in this article, we will take a look at some of the established algorithms to tackle this combinatorial search problem. Note that those algorithms are considered as "subpoptimal" in contrast to an ***exhaustive search***, which is often computationally not feasible, though.
+Usually, fitting a model to the training data can be iterated up to a perfect score, but interestingly this usually will lead to a model that performs very poorly on unseen data. In these case, the model is said to **generalize poorly** because of **overfitting**. A simple intuition for this effect is that the model becomes *too specialized* for the training data, and might simply memorize the data we fed it and fails to make good predictions on future samples that it hasn't seen before. However, the goal of machine learning is to provide models that are good at predicting unseen data. Hence, we have to evaluate the predictive performance of our model mainly for
 
-Therefore, the goal of the presented ***sequential selection algorithms*** is to reduce the feature space $D = {x_1, x_2, x_n}$ to a subset of features $D - n$ in order to improve or optimize the **computational performance** of the classifier and avoid the ***Curse of Dimensionality***.  
-The goal is to select a "sufficiently reduced" subset from the feature space $D$ "without significantly reducing" the performance of the classifier. In the process of choosing an "optimal" feature subset of size $k$, a so-called ***Criterion Function***, which typically, simply, and intuitively assesses the ***recognition rate*** of the classifier.
+1. Estimating the *generalization accuracy* (predictive performance of our model on unseen data).
+2. Increasing the predictive performance by selecting the best performing model from a given hypothesis space.
+3. Identifying the algorithm that is best-suited for the problem at hand
 
-F. Ferri, P. Pudil, M. Hatef, and J. Kittler investigated the performance of different ***Sequential Selection Algorithms*** for  ***Feature Selection*** on different scales and reported their results in a nice research article: *"[Comparative Study of Techniques for Large Scale Feature Selection](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=02CB16CB1C28EA6CB57E212861CFB180?doi=10.1.1.24.4369&rep=rep1&type=pdf)," Pattern Recognition in Practice IV, E. Gelsema and L. Kanal, eds., pp. 403-413. Elsevier Science B.V., 1994.*  
-Choosing an "appropriate" algorithm really depends on the problem - the size and desired recognition rate and computational performance. Thus, I want to encourage you to take (at least) a brief look at their paper and the results they obtained from experimenting with different problems feature space dimensions.
+Of course, we want to estimate the future performance of a model as accurately as possible. However, biased performance estimates are perfectly okay in model selection and algorithm selection if the bias affects all models equally. If we rank different models or algorithms against each other in order to select the best-performing one, we only need to know the "relative" performance.
 
-**Model generalization**
+**Cross-validation and cherry picking**
 
-Fitting a model to our training data is one thing, but how do we know that it generalizes well to unseen data? How do we know that it doesn’t simply memorize the data we fed it and fails to make good predictions on future samples, samples that it hasn't seen before? And how do we select a good model in the first place?
-
-Let us summarize the main points why we evaluate the predictive performance of a model:
-
-1. We want to estimate the generalization accuracy, the predictive performance of our model on future (unseen) data.
-2. We want to increase the predictive performance by tweaking the learning algorithm and selecting the best performing model from a given hypothesis space.
-3. We want to identify the machine learning algorithm that is best-suited for the problem at hand; thus, we want to compare different algorithms, selecting the best-performing one as well as the best performing model from the algorithm's hypothesis space.
-
-Of course, we want to estimate the future performance of a model as accurately as possible. However, if there’s one key take-away message from this article, it is that biased performance estimates are perfectly okay in model selection and algorithm selection if the bias affects all models equally. If we rank different models or algorithms against each other in order to select the best-performing one, we only need to know the "relative" performance. For example, if all our performance estimates are pessimistically biased, and we underestimate their performances by 10%, it wouldn’t affect the ranking order.
+We will see in the following how to adress these problems and a few useful tricks to do so.
 
 </div>{: .notice--blank}
 
