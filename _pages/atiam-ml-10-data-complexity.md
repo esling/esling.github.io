@@ -175,7 +175,7 @@ Most models usually contain **hyperparameters**, which are the *tuning parameter
 1. Implement the 3 methods of hyper-optimization
 2. Random search is actually extremely efficient, can you take a guess on why ?
 
-</div>
+</div>{: .notice--info}
 
 ## 10.5 - Cross-validation
 
@@ -183,7 +183,7 @@ Most models usually contain **hyperparameters**, which are the *tuning parameter
 
 Cross-validation allows to estimate the prediction error rate by splitting the data into training, cross-validation, and test datasets. A prediction model is obtained using the training set, and model parameters are optimized by the cross-validation set, while the test set is held primarily for empirical error estimation. A common approach to compare and evaluate different pre-processing techniques and models is cross-validation. In $$k$$-fold cross-validation, the original training dataset is split into $$k$$ different subsets (called *folds*) where $$1$$ fold is retained for testing the classifier and the other $$k-1$$ folds are used for training.
 
-Repeated Holdout Validation
+**Repeated Holdout Validation**
 
 One way to obtain a more robust performance estimate that is less variant to how we split the data into training and test sets is to repeat the holdout method *k* times with different random seeds and compute the average performance over these *k* repetitions
 
@@ -251,7 +251,7 @@ $$\text{ACC}_{boot} \pm t \times \text{SE}_{boot}.$$
 2. Implement the computation of the confidence intervals
 3. Evaluate the variance of classification algorithms
 
-</div>
+</div>{: .notice--info}
 
 ## 10.6 - GPU Computing
 
