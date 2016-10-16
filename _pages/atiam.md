@@ -14,25 +14,41 @@ This page contains the slides and assignments for parts of the musical informati
   * [Distributed musical informatics](/atiam-distributed/)
   * [Musical machine learning](/atiam-ml/)
 
-===== Musical machine learning =====
+## Musical machine learning
 
-The [[esling:atiam-ml.html|main page]] for musical machine learning can be found [[esling:atiam-ml.html|here]], but this provides a quick summary of the program.
+The [main page](/atiam-ml/) for musical machine learning can be found [here](/atiam-ml), but this provides a quick summary of the program.
 
-==== Math revisions ====
+### Slides
 
-  * Linear algebra [[http://see.stanford.edu/materials/aimlcs229/cs229-linalg.pdf|revision slides]] from [[http://ai.stanford.edu/~ang/|Andrew Ng]]
-  * Probability [[http://see.stanford.edu/materials/aimlcs229/cs229-prob.pdf|revision slides]] from [[http://ai.stanford.edu/~ang/|Andrew Ng]]
-  * Statistics [[http://math.arizona.edu/~faris/stat.pdf|course notes]] from [[http://math.arizona.edu/~faris/|William Faris]]
-  * Sampling [[http://homepages.inf.ed.ac.uk/imurray2/pub/07thesis/murray_thesis_2007.pdf|pages 20 to 31]] from [[http://homepages.inf.ed.ac.uk/imurray2/|Iain Murray]]
-  * Matrix calculus in the [[http://web.mit.edu/~wingated/www/stuff_i_use/matrix_cookbook.pdf|Matrix Cookbook]]
-==== Slides ====
-  * Music machine learning (supervised to unsupervised)\\
-[[https://dl.dropboxusercontent.com/u/24122451/ML.Cours.1.summary.pdf| Slides 1]]
-  - Introduction to Artificial Intelligence
-  - Neural Networks, Support Vector Machines
-  - Clustering and K-Means
-  * Probability theory, Bayesian inference and Hidden Markov Models\\
-[[https://dl.dropboxusercontent.com/u/24122451/ML.Cours.2.summary.pdf| Slides 2 (part 1)]]\\
-[[https://dl.dropboxusercontent.com/u/24122451/ML.Cours.2.summary.b.pdf| Slides 2 (part 2)]]
-  * Complex data models and deep learning\\
-[[https://dl.dropboxusercontent.com/u/24122451/ML.Cours.3.summary.pdf| Slides 3]]
+
+**[![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) [![](../images/html.png)](../atiam-ml-0-intro/) [![](../images/html.png)](../atiam-ml-1-nearest-neighbors/) Introduction**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.2.Neural.networks.pdf) [![](../images/html.png)](../atiam-ml-2-neural-networks/) Neural Networks**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.3.Support.Vector.Machines.pdf) [![](../images/html.png)](../atiam-ml-3-support-vector-machines/) Support Vector Machines**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.4.Clustering.pdf) [![](../images/html.png)](../atiam-ml-4-clustering/) Unsupervised clustering**
+
+**[![](../images/pdf.png)](../documents/MML.Lesson.5.Boosting.pdf) [![](../images/html.png)](../atiam-ml-5-boosting/) Meta-heuristics**  
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.6.Probabilistic.Models.pdf) [![](../images/html.png)](../atiam-ml-6-probabilistic-models/) Probabilistic models**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.7.Bayesian.Inference.pdf) [![](../images/html.png)](../atiam-ml-7-bayesian-inference/) Bayesian inference**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.8.Gaussian.Mixture.Models.pdf) [![](../images/html.png)](../atiam-ml-8-gaussian-mixtures/) Gaussian Mixture Models**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.9.Hidden.Markov.Models.pdf) [![](../images/html.png)](../atiam-ml-9-markov-models/) Hidden Markov Models**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.10.Data.Complexity.pdf) [![](../images/html.png)](../atiam-ml-10-data-complexity/) Data complexity and GPU computing**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.11.Deep.Learning.pdf) [![](../images/html.png)](../atiam-ml-11-deep-learning/) Deep learning**
+  
+**[![](../images/pdf.png)](../documents/MML.Lesson.11.Deep.Learning.pdf) [![](../images/html.png)](../atiam-ml-12-going-further/) Going further**
+
+### Math revisions
+
+  * Linear algebra [revision slides](http://see.stanford.edu/materials/aimlcs229/cs229-linalg.pdf) from [Andrew Ng](http://ai.stanford.edu/~ang/)
+  * Probability [revision slides](http://see.stanford.edu/materials/aimlcs229/cs229-prob.pdf) from [Andrew Ng]()
+  * Statistics [course notes](http://math.arizona.edu/~faris/stat.pdf) from [William Faris](http://math.arizona.edu/~faris/)
+  * Sampling [pages 20 to 31](http://homepages.inf.ed.ac.uk/imurray2/pub/07thesis/murray_thesis_2007.pdf) from [Iain Murray](http://homepages.inf.ed.ac.uk/imurray2/)
+  * Matrix calculus in the [Matrix Cookbook](http://web.mit.edu/~wingated/www/stuff_i_use/matrix_cookbook.pdf)
