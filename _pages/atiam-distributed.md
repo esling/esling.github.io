@@ -16,6 +16,7 @@ sidebar:
 [![](../images/pdf.png) Slides](../documents/esling:generic.6.osc.pdf)
 
 *Supporting information*:
+
   * Official [OSC website](http://opensoundcontrol.org)
   * List of [implementations](http://opensoundcontrol.org/implementations)
 
@@ -23,5 +24,6 @@ sidebar:
 [![](../images/pdf.png) Slides](../documents/esling:generic.6b.concurrence.pdf)
 
 *Suggested reading*:
+
   - Official [OpenMP implementation](http://openmp.org/wp/)
   - Description of [MATLAB Parallel](http://www.mathworks.com/products/parallel-computing/)
