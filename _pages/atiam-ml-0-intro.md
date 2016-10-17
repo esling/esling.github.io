@@ -101,11 +101,11 @@ dataStruct.classNames % Cell of class names
 
 <div markdown = "1">
 **Expected output** 
+<input type="button" onclick="demoShow('basic1');" value="Reveal" />
 <script type="text/javascript"> 
     function demoShow(anID)
-    { $(anID).show() }
+    {document.getElementById(anID).style.display="block";}
 </script>
-<input type="text" onclick="demoShow('basic1')"> Reveal </a>
 <div id="basic1" style="visibility:hidden">
 {% highlight matlab %}
   altotrombone 	: 13.
