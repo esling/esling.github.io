@@ -12,7 +12,7 @@ sidebar:
 
 # Nearest neighbors
 
-The present tutorials corresponds to the same first lesson and follows the introductory developments performed in the [previous tutorial](/atiam-ml-0-intro/). Based on the features computed, we will implement a simple querying and classification system based on [Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
+The present tutorials corresponds to the same first lesson and follows the introductory developments performed in the [previous tutorial](/atiam-ml-0-intro/). Based on the features computed, we will implement a simple *querying* and *classification* system based on [Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
 
 # Reference slides
 
@@ -25,14 +25,27 @@ The corresponding slides cover
 
 # Tutorial 
 
-In this tutorial, we will cover the simplest querying and classification algorithms derived from the k-Nearest Neighbor method. The idea is to find the closest neighbor to a point by assessing its multi-dimensional distance to the rest of the dataset.  
+<div markdown = "1">
+
+In this tutorial, we will cover the simplest querying and classification algorithms derived from the *$$k$$-Nearest Neighbor* method. The idea is to find the closest neighbor to a point by assessing its multi-dimensional distance to the rest of the dataset. Hence given a set of elements $$e_{i}$$, $$i\in\left[1,N\right]$$ and their corresponding features $$f_{i,k}\in\mathbb{R}^{n}$$ (which denotes the $$n$$-dimensional $$k^{th}$$ feature of the $$i^{th}$$ element), we need to compute a distance measure $$\mathcal{D}\left(f_{i,k},f_{j,k}\right)$$ between the elements of the dataset. This distance will express the dissimilarity between two features. For the first two questions of the tutorial, we will simply consider that the dissimilarity between features is expressed by their Euclidean $$(l_{2})$$ distance.
 
 $$
 \begin{equation}
+\mathcal{D}\left(f_{i,k},f_{j,k}\right)=\sqrt{\sum_{n}\left(f_{i,k}^{n}-f_{j,k}^{n}\right)^{2}}
 \end{equation}
 $$
 
-By looking at the previously given definitions, start by thinking about the following questions.  
+Given these distances, we can then compute the nearest neighbor of a particular element by selecting
+
+$$
+\begin{equation}
+NN\left(e_{i}\right)=\underset{j\neq i}{argmin}\left(\frac{1}{K}\sum_{k=1}^{K}\left(\mathcal{D}\left(f_{i,k},f_{j,k}\right)\right)\right)
+\end{equation}
+$$
+
+By looking at these given definitions, start by thinking about the following questions.  
+
+</div>{: .notice--blank}
 
 **Questions**  
 <div markdown="1"> 
@@ -43,9 +56,13 @@ By looking at the previously given definitions, start by thinking about the foll
 
 </div>{: .notice--info}  
 
-### 2.1 - Querying 
+## 1.1 - Querying 
+
+<div markdown = "1">
 
 In a first step, we can use the nearest-neighbor method to devise a very simple *querying* system. This type of method is typically used in many systems such as *Query By Humming (QBH)* softwares (similar to [Shazam](http://www.shazam.com/)). As previously, we provide a baseline code in the main script. This allows to create a $$ N x f $$ distance matrix `dataMatrix` corresponding to the features of the $$ N $$ elements of the datasets. We selected here only the *SpectralCentroidMean, SpectralFlatnessMean* and *SpectralSkewnessMean* features.
+
+</div>{: .notice--blank}
 
 **Exercise**  
 <div markdown="1">
@@ -62,9 +79,9 @@ In a first step, we can use the nearest-neighbor method to devise a very simple 
 
 {{:esling:aml_p2_query1.jpg?nolink&400 |}}{{:esling:aml_p2_query2.jpg?nolink&400 |}}
 
+## 1.2 - Classification
 
-### 2.2 - Classification
-
+<div markdown = "1">
 For the second part of this tutorial, we will rely on the same technique (computing the distance of a selected point to the rest of the dataset) in a classification framework. The overarching idea behind kNN classification is that elements from a same class should have similar properties in the *feature space*. Hence, the closest feature to those of an element should be from elements of its right class. These types of approaches are usually termed as *distance-based* classification methods.
 
 {% highlight Matlab %}
@@ -82,7 +99,8 @@ function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normaliz
 % - probas      : an array that contains the classification probabilities for each class
 % - winnerClass : the label of the winner class
 {% endhighlight %}  
-  
+
+</div>{: .notice--blank}
   
 **Exercise**  
 <div markdown="1">
@@ -98,7 +116,9 @@ function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normaliz
 {{:esling:aml_p2_class.jpg?nolink&800 |}}
 
 
-### 2.3 - Evaluation
+## 1.3 - Evaluation
+
+<div markdown = "1">
 
 When proposing new algorithms for machine learning problems, the fundamental aspects of corresponding research lies in correctly evaluating their performances. Depending on the application, method proposed, dataset and even the nature of corresponding data, a plethora of evaluation measures can be used. We highly recommend the following articles for those interested in future work around machine learning, so that you develop your critical mind and do not limit yourself to narrow evaluations (by relying on statistical tests) and also that you avoid **cherry picking**  
 
@@ -115,3 +135,5 @@ However, for the scope of this tutorial, we will stick to the typical measures t
   * The **F1 measure** is defined as the ratio between the geometric and harmonic means between the precision and recall measures.
 
 You can implement these measures by simply completing the starter code. If you have doubts about the implementation of these measures, you can check the corresponding [Wikipedia article](https://en.wikipedia.org/wiki/Precision_and_recall)
+
+</div>{: .notice--blank}
