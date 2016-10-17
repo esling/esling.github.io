@@ -103,9 +103,9 @@ dataStruct.classNames % Cell of class names
 **Expected output** 
 <script type="text/javascript"> 
     function demoShow(anID)
-    { document.getElementsById(anID).style.visibility="visible"; }
+    { $(anID).show() }
 </script>
-<a href="javascript:demoShow('basic1')"> Reveal </a>
+<input type="text" onclick="demoShow('basic1')"> Reveal </a>
 <div id="basic1" style="visibility:hidden">
 {% highlight matlab %}
   altotrombone 	: 13.
