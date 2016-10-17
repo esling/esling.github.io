@@ -34,7 +34,7 @@ Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduct
 
 <div markdown = "1">
 
-In this introduction, we will cover basic Music Information Retrieval (MIR) interactions, in which we process a dataset of sound files and try to observe the properties of their various temporal and spectral features. Hence, we will quickly review basic calculus required to perform further machine learning tasks.
+In this introduction, we will cover basic Music Information Retrieval (MIR) interactions, in which we process a dataset of sound files and try to observe the properties of their various temporal and spectral features. Hence, we will quickly review basic calculus required to perform further machine learning tasks. This tutorial is also intended to review basic Matlab coding and plotting operations.
 
 </div>{: .notice--blank}
 
