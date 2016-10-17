@@ -101,8 +101,9 @@ dataStruct.classNames % Cell of class names
 </div>{: .notice--info}
 
 <div markdown = "1">
-**Expected output** [<button class="basic1"> Reveal </button>]
-<div class="button1">
+**Expected output** 
+<button class="button1"> Reveal </button>
+<span class="basic1">
 {% highlight matlab %}
   altotrombone 	: 13.
        animals 	: 9.
@@ -122,7 +123,7 @@ dataStruct.classNames % Cell of class names
          water 	: 7.
          total 	: 410.
 {% endhighlight %}
-</div>
+</span>
 </div>{: .notice--blank}
 
 ## 0.2 - Preprocessing
