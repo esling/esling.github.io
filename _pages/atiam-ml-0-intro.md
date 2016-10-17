@@ -209,7 +209,9 @@ dataStruct.SpectralCentroidStd  % Standard deviation
 
 **Expected output**
 
-![](../images/atiam-ml/00_0.3_speech.svg) ![](../images/atiam-ml/00_0.3_telephone.svg)  
-![](../images/atiam-ml/00_0.4_view1.svg) ![](../images/atiam-ml/00_0.4_view2.svg)  
+*Question 0.3.2*  
+<img src="../images/atiam-ml/00_0.3_speech.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.3_telephone.svg" height="350" width="350"/>  
+*Question 0.3.4*  
+<img src="../images/atiam-ml/00_0.4_view1.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.4_view2.svg" height="350" width="350"/>
 
 </div>{: .notice--blank}
