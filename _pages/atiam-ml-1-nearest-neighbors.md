@@ -19,6 +19,7 @@ The present tutorials corresponds to the same first lesson and follows the intro
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
 
 The corresponding slides cover
+
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
