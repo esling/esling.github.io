@@ -77,14 +77,14 @@ dataStruct.classNames % Cell of class names
 </div>{: .notice--blank}
   
 <div markdown="1">  
-**Exercise**  
+**_Exercise_**  
 
   1. Launch the import procedure  and check the corresponding structure
   2. Code a count function that prints the name and number of examples for each classes 
 
-</div>{: .notice--info}  
+</div>{: .notice--info}
 
-**Expected output**  
+<div markdown = "1">**Expected output**</div>{: .notice--blank}
 <div markdown="1">  
 {% highlight matlab %}
   altotrombone 	: 13.
