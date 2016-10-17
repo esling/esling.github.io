@@ -91,12 +91,12 @@ We will rely on a set of spectral transforms that allow to obtain a more descrip
 
 The following functions to compute various types of transforms are given as part of the basic package, in the `0b_Preprocessing` folder  
 
-  * `stft.m`       - [Short-term Fourier transform](https://en.wikipedia.org/wiki/Short-time_Fourier_transform)
-  * `fft2barkmx.m` - [Bark scale](https://en.wikipedia.org/wiki/Bark_scale) transform
-  * `fft2melmx.m`  - [Mel scale](https://en.wikipedia.org/wiki/Mel_scale) transform
-  * `fft2chromamx` - [Chromas vector](https://en.wikipedia.org/wiki/Harmonic_pitch_class_profiles)
-  * `spec2cep.m`   - [Cepstrum](https://en.wikipedia.org/wiki/Cepstrum) transform
-  * `cqt.m`        - [Constant-Q](https://en.wikipedia.org/wiki/Constant_Q_transform) transform
+  |`stft.m`       |[Short-term Fourier transform](https://en.wikipedia.org/wiki/Short-time_Fourier_transform)|
+  |`fft2barkmx.m` |[Bark scale](https://en.wikipedia.org/wiki/Bark_scale) transform|
+  |`fft2melmx.m`  |[Mel scale](https://en.wikipedia.org/wiki/Mel_scale) transform|
+  |`fft2chromamx` |[Chromas vector](https://en.wikipedia.org/wiki/Harmonic_pitch_class_profiles)|
+  |`spec2cep.m`   |[Cepstrum](https://en.wikipedia.org/wiki/Cepstrum) transform|
+  |`cqt.m`        |[Constant-Q](https://en.wikipedia.org/wiki/Constant_Q_transform) transform|
 
 In order to perform the various computations, we provide the following function, which performs the different transforms on a complete dataset.  
 
