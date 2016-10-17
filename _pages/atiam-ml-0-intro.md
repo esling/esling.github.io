@@ -106,7 +106,7 @@ dataStruct.classNames % Cell of class names
          water 	: 7.
          total 	: 410.
 {% endhighlight %}
-</div>{: .notice--success}
+</div>{: .notice--blank}
 
 ## 0.2 - Preprocessing
 
@@ -157,7 +157,7 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 
 ![](../images/atiam-ml/00_0.2_bells.svg) ![](../images/atiam-ml/00_0.2_speech.svg)
 
-</div>{: .notice--success}
+</div>{: .notice--blank}
 
 ## 0.3 - Features
 
