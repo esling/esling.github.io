@@ -12,7 +12,7 @@ sidebar:
 
 # Neural networks
 
-The present tutorials covers the implementation of neural networks.
+The present tutorials covers the implementation of neural networks, starting with a single neuron and then going up to a multilayer perceptron applied to audio classification.
 
 # Reference slides
 
@@ -26,9 +26,11 @@ The corresponding slides cover
 
 # Tutorial 
 
+<div markdown = "1">
+
 In this tutorial, we will cover a more advanced classification algorithm through the use of neural networks. The tutorial starts by performing a simple single neuron discrimination of two random distributions. Then, we will study the typical XOR problem by using a more advanced 2-layer perceptron. Finally, we generalize the use of neural networks in order to perform classification on our set of audio files.
 
-To simplify your work, we provide the following set of functions that you should find in the *2_Neural_Networks* folder
+To simplify your work, we provide the following set of functions that you should find in the *02_Neural_Networks* folder
 
   * `plot3view.m` - Allows to plot a 3-dimensional view of data points
   * `plotBoundary.m` - Plots the decision boundary of a single neuron with 2-dimensional inputs
@@ -40,8 +42,11 @@ To simplify your work, we provide the following set of functions that you should
   * `xorAns.dat` - Class values for the XOR problem
   * `xorPats.dat` - Point values for the XOR problem
 
+</div>{: .notice--blank}
 
-### 3.1 - Single neuron
+## 2.1 - Single neuron
+
+<div markdown = "1">
 
 For the first parts of the tutorial, we will perform the simplest classification model possible in a neural network setting, a single neuron. We briefly recall here that; given an input vector $$ \mathbf{x} \in \mathbb{R}^{n} $$, a single neuron computes the function  
 
@@ -52,7 +57,7 @@ y=\sigma\left(\sum_{i = 1}^{n}w_{i}.x_{i} + b\right)
 \end{equation}
 $$
 
-with $$ \mathbf{w} \in \mathbb{R}^{n} $$ a weight matrix, $$ b $$ a bias and $$ \sigma\left(\right) $$ an *activation function*. Therefore, if we consider the *threshold* activation function ($$ \sigma_0\left(x\right)=1 $$ if $$ x \geq 0$$), a single neuron simply performs an *affine transform* and then a *linear* discrimination of the space. In order to learn, we have to adjust the weights and know "how much wrong we are". To do so, we consider that we know the desired output $$ d $$ of a system for a given example $$ \mathbf{x} $$ (eg. a predicted value for a regression system, a class value for a classification system). Therefore, we define the loss function $$ \mathcal{L}_{\mathcal{D}} $$ over a whole dataset as
+with $$ \mathbf{w} \in \mathbb{R}^{n} $$ a weight vector, $$ b $$ a bias and $$ \sigma\left(\right) $$ an *activation function*. Therefore, if we consider the *threshold* activation function ($$ \sigma_0\left(x\right)=1 $$ if $$ x \geq 0$$), a single neuron simply performs an *affine transform* and then a *linear* discrimination of the space. Geometrically, a single neuron computes an hyperplane that separates the space. In order to learn, we have to adjust the weights and know "how much wrong we are". To do so, we consider that we know the desired output $$ d $$ of a system for a given example $$ \mathbf{x} $$ (eg. a predicted value for a regression system, a class value for a classification system). Therefore, we define the loss function $$ \mathcal{L}_{\mathcal{D}} $$ over a whole dataset as
 
 $$
 \begin{equation}
@@ -87,6 +92,8 @@ desired       % classes of the patterns
 inputs        % 3 x n final matrix of inputs (accounting for bias)
 weights       % 3 x 1 vector of neuron weights
 {% endhighlight %}  
+
+</div>{: .notice--blank}
   
 **Exercise**  
 <div markdown="1">  
@@ -104,7 +111,10 @@ weights       % 3 x 1 vector of neuron weights
 {{:esling:aml_p3_linear1.jpg?nolink&400 |}}{{:esling:aml_p3_linear2.jpg?nolink&400 |}}
 ;#;
 
-### 3.2 - 2-layer XOR problem
+## 2.2 - 2-layer XOR problem
+
+<div markdown = "1">
+
 In most cases, classification problems are far from being linear. Therefore, we need more advanced methods to be able to compute non-linear class boundaries. The advantage of neural networks is that the same principle can be applied in a *layer-wise* fashion. This allows to further discriminate the space in sub-regions (as seen in the course). We will try to implement the 2-layer *perceptron* that can provide a solution to the infamous XOR problem. The idea is now to have the output of the first neurons to be connected to a set of other neurons. Therefore, if we take back our previous formulation, we will have
 
 
@@ -157,6 +167,8 @@ weights2          % 2nd layer weights
 TSS_Limit         % Sum-squared error limit
 {% endhighlight %}   
 
+</div>{: .notice--blank}
+
 **Exercise**  
 <div markdown="1">  
 
@@ -175,8 +187,12 @@ TSS_Limit         % Sum-squared error limit
 ;#;
 
 ### 3.3 - 3-layer audio classification
+
+<div markdown = "1">
+
 We now return to our original classification problem and will try to perform neural network learning on a set of audio files. The data structure will be the same as the one used for parts 1 and 2. As discussed during the courses, even though a 2-layer neural network can provide non-linear boundaries, it can not perform "holes" inside those regions. In order to obtain an improved classification, we will now rely on a 3-layer neural network. The modification to the code of section 3.2 should be minimal, as the back-propagation will be similar for the new layer as one of the two others. We do not develop the math here as it is simply a re-application of the previous rules.
 
+</div>{: .notice--blank}
 
 **Exercise**  
 <div markdown="1">  
