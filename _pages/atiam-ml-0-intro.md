@@ -20,6 +20,7 @@ function () {
   $(elem).prop("src", function(){ return $(this).data("src"); });
 });}
 hideToggle(".button1", ".basic1"); $(".basic1").hide();
+});
 </script>
 
 {% include toc %}
