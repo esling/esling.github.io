@@ -101,8 +101,12 @@ dataStruct.classNames % Cell of class names
 
 <div markdown = "1">
 **Expected output** 
-<a href="javascript.void(0)" class="button1"> Reveal </a>
-<div class="basic1">
+<script type="text/javascript"> 
+    function demoShow()
+    { document.getElementsById("test").style.visibility="visible"; }
+</script>
+<a href="javascript.void(0)" onclick="demoShow();"> Reveal </a>
+<div id="basic1" visibility="hidden">
 {% highlight matlab %}
   altotrombone 	: 13.
        animals 	: 9.
