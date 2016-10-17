@@ -149,10 +149,13 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 
 </div>{: .notice--info}
 
-;#;
-{{:esling:aml_p1_altotrombone.jpg?nolink&400 |}}{{:esling:aml_p1_speech.jpg?nolink&400 |}}
-;#;
-\\
+<div markdown = "1">
+
+**Expected output**
+
+![](../images/atiam-ml/00_0.2_bells.svg) ![](../images/atiam-ml/00_0.2_speech.svg)
+
+</div>{: .notice--success}
 
 ## 0.3 - Features
 
