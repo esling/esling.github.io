@@ -155,7 +155,7 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 
 **Expected output**
 
-![](../images/atiam-ml/00_0.2_bells.svg) ![](../images/atiam-ml/00_0.2_speech.svg)
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="256" width="256"/> <img src="../images/atiam-ml/00_0.2_speech.svg)" height="256" width="256"/>
 
 </div>{: .notice--blank}
 
