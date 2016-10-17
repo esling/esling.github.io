@@ -52,14 +52,16 @@ Get the baseline MATLAB code for all tutorials from this [zip file ![](../images
 
 <div markdown = "1">
 
-In order to do so, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)](https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151)
+In order to test our algorithms on audio and music data, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)](https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151)
 
-  |**Classification**|*MuscleFish* dataset|
-  |**Music-speech**|*MIREX Recognition* set|
+  |**Type**|**Origin**|
+  |-------:|:---------|
+  |**Classification**|[*MuscleFish*](http://knight.cis.temple.edu/~vasilis/Courses/CIS750/Papers/muscle_fish.pdf) dataset|
+  |**Music-speech**|[*MIREX Recognition*](http://www.music-ir.org/mirex/wiki/2015:Music/Speech_Classification_and_Detection) set|
   |**Source separation**|*SMC Mirum* dataset|
   |**Speech recognition**|*CMU Arctic* dataset|
 
-For the first parts of the tutorial, we will mostly use the classification dataset only. In order to facilitate the interactions, we provide the function `importDataset` that allows to import different audio datasets
+For the first parts of the tutorial, we will mostly rely solely the classification dataset. In order to facilitate the interactions, we provide the function `importDataset` that will allow to import all audio datasets along the tutorials.
 
 {% highlight Matlab %}
 function dataStruct = importDataset(classPath, type)
@@ -82,6 +84,29 @@ dataStruct.classNames % Cell of class names
 
 </div>{: .notice--info}  
 
+
+<div markdown="1">  
+**Expected output**  
+
+  altotrombone 	: 13.
+       animals 	: 9.
+         bells 	: 7.
+    cellobowed 	: 47.
+        crowds 	: 4.
+      laughter 	: 7.
+      machines 	: 11.
+          oboe 	: 32.
+    percussion 	: 99.
+ speech.female 	: 35.
+   speech.male 	: 17.
+     telephone 	: 17.
+  tubularbells 	: 20.
+   violinbowed 	: 45.
+    violinpizz 	: 40.
+         water 	: 7.
+         total 	: 410.
+         
+</div>{: .notice--success}
 
 ## 0.2 - Preprocessing
 
