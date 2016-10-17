@@ -115,8 +115,9 @@ dataStruct.classNames % Cell of class names
 We will rely on a set of spectral transforms that allow to obtain a more descriptive view over the audio information. As most of these is out of the scope of the machine learning course, we redirect you to a [signal processing course](https://ccrma.stanford.edu/~jos/sasp/) proposed by [Julius O. Smith](https://ccrma.stanford.edu/~jos/).  
 
 The following functions to compute various types of transforms are given as part of the basic package, in the `00_Preprocessing` folder  
+
   |**File**|*Transform*|
-  |-------:|:---------|
+  |-------:|:----------|
   |`stft.m`       |[Short-term Fourier transform](https://en.wikipedia.org/wiki/Short-time_Fourier_transform)|
   |`fft2barkmx.m` |[Bark scale](https://en.wikipedia.org/wiki/Bark_scale) transform|
   |`fft2melmx.m`  |[Mel scale](https://en.wikipedia.org/wiki/Mel_scale) transform|
