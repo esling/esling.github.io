@@ -12,9 +12,15 @@ sidebar:
 
 # Introduction
 
-The present tutorials covers coding exercices designed to implement the core notions seen in the machine learning lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercices here target these techniques specifically applied to musical or audio data.
+<div markdown = "1">
+
+The present tutorials are designed to implement the core notions seen in [machine learning](/atiam-ml) lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercises here will introduce the basic mecanisms behind these technics and then, we will target specific applications to musical or audio data.
+
+</div>{: .notice--blank}
 
 # Reference slides
+
+<div markdown = "1">
 
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf)
 
@@ -23,6 +29,8 @@ The corresponding slides cover
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
+  
+</div>{: .notice--blank}
 
 # Tutorial 
 
