@@ -24,8 +24,6 @@ The present tutorials are designed to implement the core notions seen in [machin
 
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf)
 
-The corresponding slides cover
-
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
@@ -44,7 +42,9 @@ In this introduction, we will cover basic Music Information Retrieval (MIR) inte
 
 <div markdown = "1">
 
-Get the baseline code from this [zip file ![](../images/file.png)](../documents/atiam_ml_exercises.zip)
+Along the tutorials, we provide a reference code for each section. This code contains helper functions that will alleviate you from the burden of data import and other sideline implementations. You will find designated spaces in each file to develop your solutions. The code is in MATLAB and relies heavily on the concept of [code sections](https://fr.mathworks.com/help/matlab/matlab_prog/run-sections-of-programs.html) which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand.
+
+Get the baseline MATLAB code for all tutorials from this [zip file ![](../images/file.png)](../documents/atiam_ml_exercises.zip)
 
 </div>{: .notice--blank}
 
