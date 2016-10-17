@@ -100,7 +100,7 @@ dataStruct.classNames % Cell of class names
 </div>{: .notice--info}
 
 <div markdown = "1">
-**Expected output** [<a href ="#" class="button1"> Reveal </a>]
+**Expected output** [<a href ="javascript:void(0)" class="button1"> Reveal </a>]
 <div class="basic1">
 {% highlight matlab %}
   altotrombone 	: 13.
