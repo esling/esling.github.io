@@ -58,8 +58,8 @@ In order to test our algorithms on audio and music data, we will work with sever
   |-------:|:---------|
   |**Classification**|[*MuscleFish*](http://knight.cis.temple.edu/~vasilis/Courses/CIS750/Papers/muscle_fish.pdf) dataset|
   |**Music-speech**|[*MIREX Recognition*](http://www.music-ir.org/mirex/wiki/2015:Music/Speech_Classification_and_Detection) set|
-  |**Source separation**|*SMC Mirum* dataset|
-  |**Speech recognition**|*CMU Arctic* dataset|
+  |**Source separation**|[*SMC Mirum*](http://smc.inesctec.pt/research/data-2/) dataset|
+  |**Speech recognition**|[*CMU Arctic*](http://festvox.org/cmu_arctic/) dataset|
 
 For the first parts of the tutorial, we will mostly rely solely the classification dataset. In order to facilitate the interactions, we provide the function `importDataset` that will allow to import all audio datasets along the tutorials.
 
