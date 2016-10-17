@@ -61,7 +61,7 @@ In order to test our algorithms on audio and music data, we will work with sever
   |**Source separation**|[*SMC Mirum*](http://smc.inesctec.pt/research/data-2/) dataset|
   |**Speech recognition**|[*CMU Arctic*](http://festvox.org/cmu_arctic/) dataset|
 
-For the first parts of the tutorial, we will mostly rely solely the classification dataset. In order to facilitate the interactions, we provide the function `importDataset` that will allow to import all audio datasets along the tutorials.
+For the first parts of the tutorial, we will mostly rely solely on the classification dataset. In order to facilitate the interactions, we provide the function `importDataset` that will allow to import all audio datasets along the tutorials.
 
 {% highlight Matlab %}
 function dataStruct = importDataset(classPath, type)
@@ -112,7 +112,7 @@ dataStruct.classNames % Cell of class names
 
 <div markdown = "1">
 
-We will rely on a set of spectral transforms that allow to obtain a more descriptive view over the audio information. As most of these is out of the scope of the machine learning course, we redirect you to a [signal processing course](https://ccrma.stanford.edu/~jos/sasp/) proposed by [Julius O. Smith](https://ccrma.stanford.edu/~jos/).  
+We will rely on a set of spectral transforms that allow to obtain a more descriptive view over the audio information. As most of these are out of the scope of the machine learning course, we redirect you to a [signal processing course](https://ccrma.stanford.edu/~jos/sasp/) proposed by [Julius O. Smith](https://ccrma.stanford.edu/~jos/).  
 
 The following functions to compute various types of transforms are given as part of the basic package, in the `00_Preprocessing` folder  
 
@@ -163,20 +163,22 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 
 <div markdown = "1">
 
-As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing the following features in the `0c_Features` folder
+As you might have noted from the previous exercice, most spectral transforms have a very high dimensionality, and might not be suited to exhibit the relevant structure of different classes. To that end, we provide a set of functions for computing several spectral features in the `00_Features` folder, we redirect interested readers to this [exhaustive article](http://recherche.ircam.fr/anasyn/peeters/ARTICLES/Peeters_2003_cuidadoaudiofeatures.pdf) on spectral features computation.
 
-  * `featureSpectralCentroid.m` - Spectral centroid
-  * `featureSpectralCrest.m` - Spectral crest
-  * `featureSpectralDecrease.m` - Spectral decrease
-  * `featureSpectralFlatness.m` - Spectral flatness
-  * `featureSpectralKurtosis.m` - Spectral kurtosis
-  * `featureSpectralRolloff.m` - Spectral rolloff
-  * `featureSpectralSkewness.m` - Spectral skewness
-  * `featureSpectralSlope.m` - Spectral slope
-  * `featureSpectralSpread.m` - Spectral spread
-  * `featureMFCC.m` - Mel-Frequency Cepstral Coefficients (MFCC)
+  |**File**|*Transform*|
+  |-------:|:----------|
+  |`featureSpectralCentroid.m`|Spectral centroid|
+  |`featureSpectralCrest.m`|Spectral crest|
+  |`featureSpectralDecrease.m`|Spectral decrease|
+  |`featureSpectralFlatness.m`|Spectral flatness|
+  |`featureSpectralKurtosis.m`|Spectral kurtosis|
+  |`featureSpectralRolloff.m`|Spectral rolloff|
+  |`featureSpectralSkewness.m`|Spectral skewness|
+  |`featureSpectralSlope.m`|Spectral slope|
+  |`featureSpectralSpread.m`|Spectral spread|
+  |`featureMFCC.m`|Mel-Frequency Cepstral Coefficients (MFCC)|
 
-Once again, we provide a function to perform the computation of different features on a complete set. Note that for each feature, we compute the temporal evolution in a vector along with the mean and standard deviation of each feature. We only detail the resulting data structure for a single feature.  
+Once again, we provide a function to perform the computation of different features on a complete set. Note that for each feature, we compute the temporal evolution in a vector along with the mean and standard deviation of each feature. We only detail the resulting data structure for a single feature (`SpectralCentroid`).  
 
 {% highlight Matlab %}
 function dataStruct = computeFeatures(dataStruct)
