@@ -8,7 +8,7 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
-<script language="JavaScript" type="text/javascript" src="jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 $(window).load(function(){
 function hideToggle(button, elem) {
