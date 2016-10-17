@@ -19,7 +19,7 @@ function () {
 function () {
   $(elem).show();
 });}
-hideToggle(".button1", ".basic1"); $(".basic1").hide(); $(".basic1").hide();
+hideToggle(".button1", ".basic1"); $(".button1").show();  $(".basic1").hide(); $(".basic1").hide();
 });
 </script>
 
