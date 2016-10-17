@@ -204,9 +204,12 @@ dataStruct.SpectralCentroidStd  % Standard deviation
 
 </div>{: .notice--info}
 
-;#;
-{{:esling:aml_p1b_bells.jpg?nolink&400 |}}{{:esling:aml_p1b_speech.jpg?nolink&400 |}}\\
-{{:esling:aml_p1c_scatter1.jpg?nolink&400 |}}{{:esling:aml_p1c_scatter2.jpg?nolink&400 |}}
-;#;
-\\
-  
+
+<div markdown = "1">
+
+**Expected output**
+
+![](../images/atiam-ml/00_0.3_speech.svg) ![](../images/atiam-ml/00_0.3_telephone.svg)  
+![](../images/atiam-ml/00_0.4_view1.svg) ![](../images/atiam-ml/00_0.4_view2.svg)  
+
+</div>{: .notice--blank}
