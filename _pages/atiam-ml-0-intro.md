@@ -8,6 +8,21 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script language="JavaScript" type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+function hideToggle(button, elem) {
+$(button).toggle(
+function () {
+  $(elem).hide();
+},
+function () {
+  $(elem).show();
+  $(elem).prop("src", function(){ return $(this).data("src"); });
+});}
+hideToggle(".button1", ".basic1"); $(".basic1").hide();
+</script>
+
 {% include toc %}
 
 # Introduction
@@ -86,8 +101,7 @@ dataStruct.classNames % Cell of class names
 
 <div markdown = "1">
 **Expected output**
-</div>{: .notice--blank}
-<div markdown="1">  
+<div class="basic1">
 {% highlight matlab %}
   altotrombone 	: 13.
        animals 	: 9.
@@ -107,6 +121,7 @@ dataStruct.classNames % Cell of class names
          water 	: 7.
          total 	: 410.
 {% endhighlight %}
+</div>
 </div>{: .notice--blank}
 
 ## 0.2 - Preprocessing
