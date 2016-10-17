@@ -18,7 +18,6 @@ function () {
 },
 function () {
   $(elem).show();
-  $(elem).prop("src", function(){ return $(this).data("src"); });
 });}
 hideToggle(".button1", ".basic1"); $(".basic1").hide();
 });
@@ -103,7 +102,7 @@ dataStruct.classNames % Cell of class names
 <div markdown = "1">
 **Expected output** 
 <button class="button1"> Reveal </button>
-<span class="basic1">
+<div class="basic1">
 {% highlight matlab %}
   altotrombone 	: 13.
        animals 	: 9.
@@ -123,7 +122,7 @@ dataStruct.classNames % Cell of class names
          water 	: 7.
          total 	: 410.
 {% endhighlight %}
-</span>
+</div>
 </div>{: .notice--blank}
 
 ## 0.2 - Preprocessing
