@@ -54,10 +54,10 @@ Get the baseline code from this [zip file ![](../images/file.png)](../documents/
 
 In order to do so, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)](https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151)
 
-  |**Classification**|*MuscleFish* dataset|
-  |**Music-speech**|*MIREX Recognition* set|
-  |**Source separation**|*SMC Mirum* dataset|
-  |**Speech recognition**|*CMU Arctic* dataset|
+  **Classification**|*MuscleFish* dataset
+  **Music-speech**|*MIREX Recognition* set
+  **Source separation**|*SMC Mirum* dataset
+  **Speech recognition**|*CMU Arctic* dataset
 
 For the first parts of the tutorial, we will mostly use the classification dataset only. In order to facilitate the interactions, we provide the function `importDataset` that allows to import different audio datasets
 
