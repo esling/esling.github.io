@@ -9,19 +9,6 @@ sidebar:
 ---
 
 <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript">
-$(window).load(function(){
-function hideToggle(button, elem) {
-$(button).toggle(
-function () {
-  $(elem).hide();
-},
-function () {
-  $(elem).show();
-});}
-hideToggle(".button1", ".basic1"); $(".button1").show();  $(".basic1").hide(); $(".basic1").hide();
-});
-</script>
 
 {% include toc %}
 
@@ -105,8 +92,18 @@ dataStruct.classNames % Cell of class names
     function demoShow(anID)
     {$(anID).show();}
 </script>
-<input type="button" onclick="demoShow('basic1');" value="Reveal" />
-<div id="basic1">
+<a href="#" class="abuttons" data-divid="div1">Reveal</a>
+
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow").siblings().hide("slow");
+    });
+    $("div1").hide();
+});
+</script>
+<div id="div1">
 {% highlight matlab %}
   altotrombone 	: 13.
        animals 	: 9.
