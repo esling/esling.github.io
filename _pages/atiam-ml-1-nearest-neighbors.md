@@ -84,8 +84,8 @@ The same observation holds for the way we decided to "merge" the different dista
 <div markdown="1"> 
 **Questions**  
 
-  1. What problems can arise from audio features?
-  2. Based on the nearest neighbor selection, what constraints are implicitly made on the distances?
+  1. What problems can arise from $$n$$-dimensional audio features?
+  2. Based on the selection equation, what constraints are implicitly made on the distances?
   3. Does the Euclidean distance seems like a sound way to measure the similarity between temporal features?
 
 </div>{: .notice--info}  
@@ -94,21 +94,22 @@ The same observation holds for the way we decided to "merge" the different dista
 
 <div markdown = "1">
 
-In a first step, we can use the nearest-neighbor method to devise a very simple *querying* system. This type of method is typically used in many systems such as *Query By Humming (QBH)* softwares (similar to [Shazam](http://www.shazam.com/)). As previously, we provide a baseline code in the main script. This allows to create a $$ N x f $$ distance matrix `dataMatrix` corresponding to the features of the $$ N $$ elements of the datasets. We selected here only the *SpectralCentroidMean, SpectralFlatnessMean* and *SpectralSkewnessMean* features.
+First, we can use the nearest-neighbor idea to devise a very simple *querying* system. This type of method is typically used in many systems such as *Query By Humming (QBH)* softwares (similar to [Shazam](http://www.shazam.com/)). As previously, we provide a baseline code in the main script. First, we create a $$ N x f $$ distance matrix `dataMatrix` corresponding to the features of the $$ N $$ elements of the datasets. We selected here only the *SpectralCentroidMean, SpectralFlatnessMean* and *SpectralSkewnessMean* features. Then, after your code is filled, the `dist` matrix should contain the mean distances (eventually, for various types of distances), which will then be sorted to the `nnIDs` vector allowing to select the nearest neighbors.
 
 </div>{: .notice--blank}
 
 <div markdown="1">
 **Exercise**  
 
-  1. Complete the code to compute the set of distances between a random element and the rest of the dataset.
+  1. Compute the set of distances between a random element and the rest of the dataset.
   2. Complete the plotting code in order to plot the element and its 10 nearest neighbors.
   3. Check that you obtain plots similar to those displayed below.
-  5. Implement the $$l_{p}$$, *Cosine* and *correlation* distances
-  4. Try the same piece of code by varying the distances and the `usedFeatures`.
-  5. What can you tell about the discriminative power of features?
-  6. (Optional) Extend your code to include temporal features
-  7. (Optional) Extend your code to a fully functional *Query-By-Example* (QBE) system.
+  4. Implement the $$l_{p}$$, *Cosine* and *correlation* distances
+  5. Try the same piece of code by varying the distances and the `usedFeatures`.
+  6. What can you tell about the discriminative power of features?
+  7. What other steps should we perform on the features?
+  8. (Optional) Extend your code to include temporal features
+  9. (Optional) Extend your code to a fully functional *Query-By-Example* (QBE) system.
 
 </div>{: .notice--info}  
 
