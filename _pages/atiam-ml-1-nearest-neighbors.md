@@ -190,13 +190,13 @@ In the `knnClassify` function, we store in `testFeatures` the vector of features
 
 <div markdown = "1">
 
-When proposing new algorithms for machine learning problems, the fundamental aspects of corresponding research lies in correctly evaluating their performances. Depending on the application, method proposed, dataset and even the nature of corresponding data, a plethora of evaluation measures can be used. We highly recommend the following articles for those interested in future work around machine learning, so that you develop your critical mind and do not limit yourself to narrow evaluations (by relying on statistical tests) and also that you avoid **cherry picking**  
+When proposing machine learning algorithms, the fundamental aspects lies in correctly evaluating their performances. Depending on the application, methods, dataset and even the nature of corresponding data, a plethora of evaluation measures can be used. We highly recommend the following articles for those interested in machine learning, so that you develop your critical mind and do not limit yourself to narrow evaluations (by relying on statistical tests) and also that you avoid **cherry picking**  
 
-  * Demšar, J. (2006).   Statistical comparisons of classifiers over multiple data sets.   The Journal of Machine Learning Research, 7, 1-30.   [PDF Link ![](../images/pdf.png)](http://machinelearning.wustl.edu/mlpapers/paper_files/Demsar06.pdf)  
-  * Sturm, B. L. (2013).   Classification accuracy is not enough.   Journal of Intelligent Information Systems, 41(3), 371-406. [PDF Link ![](../images/pdf.png)](http://vbn.aau.dk/files/70797941/Sturm20121030.pdf)  
-  * Keogh, E., & Kasetty, S. (2003).   On the need for time series data mining benchmarks: a survey and empirical demonstration.   Data Mining and knowledge discovery, 7(4), 349-371. [PDF Link ![](../images/pdf.png)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2240&rep=rep1&type=pdf)  
+  * Demšar, J. (2006).   *Statistical comparisons of classifiers over multiple data sets.*   The Journal of Machine Learning Research, 7, 1-30.   [PDF![](../images/pdf.png)](http://machinelearning.wustl.edu/mlpapers/paper_files/Demsar06.pdf)  
+  * Sturm, B. L. (2013).   *Classification accuracy is not enough.*   Journal of Intelligent Information Systems, **41**(3), 371-406. [PDF![](../images/pdf.png)](http://vbn.aau.dk/files/70797941/Sturm20121030.pdf)  
+  * Keogh, E., & Kasetty, S. (2003).   *On the need for time series data mining benchmarks: a survey and empirical demonstration.*   Data Mining and knowledge discovery, **7**(4), 349-371. [PDF![](../images/pdf.png)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.2240&rep=rep1&type=pdf)  
 
-However, for the scope of this tutorial, we will stick to the typical measures that are minimally required to evaluate your classifier. Overall, the most important aspects of evaluation lies in different ways of comparing the *real labels* (ground truth) to the *assigned labels* (picked by the classifier).
+However, for the scope of this tutorial, we will limit ourselves to typical measures minimally required to evaluate your classifier. Overall, the most important aspects of evaluation lies in different ways of comparing the *real labels* (ground truth) to the *assigned labels* (picked by the classifier).
 
   * The **confusion matrix** is computed simply by counting the occurences in which a particular instance of a real label (row) is classified to an assigned label (column). This code is already provided in the starter code, and all the following measures can be derived directly from it.
   * The **overall accuracy** is computed as the ratio of correctly classified examples divided by the complete number of examples.
@@ -211,10 +211,10 @@ You can implement these measures by simply completing the starter code. If you h
 <div markdown="1">
 **Exercise**  
 
-  1. Update the `knnClassify` code to perform the k-NN classification function
-  2. Run the algorithms for both 1-NN and 5-NN evaluation
-  3. Plot the different confusion matrix to visually check the accuracies (you should obtain the values displayed in the following figure).
-  4. Perform the same classification with various K and features to evaluate the properties and qualities of different parametrizations.
-  5. (Optional) Automatize the evaluation of various configurations.
+  1. Implement the *accuracy*, *recall*, *precision* and *F1 measure*
+  2. Evaluate the previous algorithms with your new measures.
+  3. Perform an automatization of the previous evaluations.
+  4. Run the automatic evaluation for different K, distances and features.
+  5. Plot the corresponding results for comparison
 
 </div>{: .notice--info} 
