@@ -178,4 +178,4 @@ You can implement these measures by simply completing the starter code. If you h
   4. Perform the same classification with various K and features to evaluate the properties and qualities of different parametrizations.
   5. (Optional) Automatize the evaluation of various configurations.
 
-</div>>{: .notice--info} 
+</div>{: .notice--info} 
