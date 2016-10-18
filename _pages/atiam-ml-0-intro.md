@@ -88,19 +88,16 @@ dataStruct.classNames % Cell of class names
 
 <div markdown = "1">
 **Expected output** 
-<script type="text/javascript"> 
-    function demoShow(anID)
-    {$(anID).show();}
-</script>
+
 <a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>
 
 <script>
 $(document).ready(function(){
     $(".abuttons").click(function () {
         var idname= $(this).data('divid');
-        $("#"+idname).show("slow").siblings().hide("slow");
+        $("#"+idname).show("slow");
     });
-    $("div1").hide();
+    $("#div1").hide();
 });
 </script>
 <div id="div1">
