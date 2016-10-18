@@ -92,7 +92,7 @@ dataStruct.classNames % Cell of class names
     function demoShow(anID)
     {$(anID).show();}
 </script>
-<a href="#" class="abuttons" data-divid="div1">Reveal</a>
+<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>
 
 <script>
 $(document).ready(function(){
