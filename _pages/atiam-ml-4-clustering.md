@@ -40,6 +40,8 @@ Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.4.Clusterin
   - K-Means and k-medoids
   - Hierarchical clustering  
 
+</div>{: .notice--blank}
+
 # Tutorial 
 
 <div markdown = "1">
