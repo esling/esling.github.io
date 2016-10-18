@@ -16,6 +16,8 @@ $(document).ready(function(){
         $("#"+idname).show("slow");
     });
     $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
 });
 </script>
 
@@ -224,7 +226,7 @@ dataStruct.SpectralCentroidStd  % Standard deviation
 
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div3">Reveal</a>]
 
-<div id="div3">
+<div id="div3" markdown = "1">
 *Question 0.3.2*  
 <img src="../images/atiam-ml/00_0.3_speech.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.3_telephone.svg" height="350" width="350"/>  
 *Question 0.3.4*  
