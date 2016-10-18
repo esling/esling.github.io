@@ -31,7 +31,7 @@ The present tutorials corresponds to the same first lesson and follows the intro
 # Reference slides
 
 <div markdown = "1">
-Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
+Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf)
 
   * Introduction to artificial intelligence
   * Properties of machine learning
