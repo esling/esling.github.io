@@ -43,11 +43,11 @@ Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduct
 
 <div markdown = "1">
 
-In this tutorial, we will cover the simplest querying and classification algorithm, namely the *$$k$$-Nearest Neighbor* method. The idea is for a given (usually *unknown*) element, to find its closest neighbor(s), based on the distances between this element and the known dataset for a given set of features. Formally, given a set of elements $$e_{i}$$, $$i\in\left[1,N\right]$$ and their corresponding features $$\mathbf{f_{i,k}}\in\mathbb{R}^{n}$$ (which denotes the $$k^{th}$$ feature of the $$i^{th}$$ element, which can be $$n$$-dimensional), we will need to compute a distance measure $$\mathcal{D}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)$$ between the features of elements of the dataset. This distance will express the dissimilarity between two features. For the first two questions of the tutorial, we will simply consider that the dissimilarity between features is expressed by their Euclidean $$(l_{2})$$ distance.
+In this tutorial, we will cover the simplest querying and classification algorithm, namely the *$$k$$-Nearest Neighbor* method. The idea is for a given (usually *unknown*) element, to find its closest neighbor(s), based on the distances between this element and the known dataset for a given set of features. Formally, given a set of elements $$e_{i}$$, $$i\in\left[1,N\right]$$ and their corresponding features $$\mathbf{f_{i,m}}\in\mathbb{R}^{d}$$ (which denotes the $$m^{th}$$ feature of the $$i^{th}$$ element, which can be $$d$$-dimensional), we will need to compute a distance measure $$\mathcal{D}\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)$$ between the features of elements of the dataset. This distance will express the dissimilarity between two features. For the first two questions of the tutorial, we will simply consider that the dissimilarity between features is expressed by their Euclidean $$(l_{2})$$ distance.
 
 $$
 \begin{equation}
-\mathcal{D}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=\sqrt{\sum_{d=1}^{n}\left(f_{i,k}^{d}-f_{j,k}^{d}\right)^{2}}
+\mathcal{D}\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)=\sqrt{\sum_{d=1}^{D}\left(f_{i,m}^{d}-f_{j,m}^{d}\right)^{2}}
 \end{equation}
 $$
 
@@ -55,26 +55,26 @@ Given distances for each feature, we need to *merge* these various dissimilariti
 
 $$
 \begin{equation}
-NN\left(e_{i}\right)=\underset{j\neq i}{argmin}\left(\frac{1}{K}\sum_{k=1}^{K}\left(\mathcal{D}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)\right)\right)
+kNN\left(e_{i}\right)=\overset{\underset{j\neq i}{argmin}}{k}\left(\frac{1}{M}\sum_{m=1}^{M}\left(\mathcal{D}\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)\right)\right)
 \end{equation}
 $$
 
 Of course, based on the types of features, different distance measures can be used, such as any of the $$l_{p}$$ distances (a generalization of the Euclidean distance)
 
 $$
-l_{p}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=\sqrt[p]{\sum_{d=1}^{n}\left|f_{i,k}^{d}-f_{j,k}^{d}\right|^{p}}
+l_{p}\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)=\sqrt[p]{\sum_{d=1}^{D}\left|f_{i,m}^{d}-f_{j,m}^{d}\right|^{p}}
 $$
 
 the *Cosine* distance
 
 $$
-cosine\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=1-\frac{\mathbf{f_{i,k}}\cdot\mathbf{f_{j,k}}}{\left\Vert \mathbf{f_{i,k}}\right\Vert \left\Vert \mathbf{f_{j,k}}\right\Vert }=1-\frac{\sum_{d=1}^{n}f_{i,k}^{d}f_{j,k}^{d}}{\sum_{d=1}^{n}\left(f_{i,k}^{d}\right)^{2}\sum_{d=1}^{n}\left(f_{j,k}^{d}\right)^{2}}
+cosine\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)=1-\frac{\mathbf{f_{i,m}}\cdot\mathbf{f_{j,m}}}{\left\Vert \mathbf{f_{i,m}}\right\Vert \left\Vert \mathbf{f_{j,m}}\right\Vert }=1-\frac{\sum_{d=1}^{D}f_{i,m}^{d}f_{j,m}^{d}}{\sum_{d=1}^{D}\left(f_{i,m}^{d}\right)^{2}\sum_{d=1}^{D}\left(f_{j,m}^{d}\right)^{2}}
 $$
 
 or the *correlation* distance.
 
 $$
-correlation\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=1-\frac{\mathbf{\left(f_{i,k}-\mu_{\mathbf{f_{i,k}}}\right)}\cdot\left(\mathbf{f_{j,k}}-\mu_{\mathbf{f_{j,k}}}\right)}{\left\Vert \mathbf{f_{i,k}-\mu_{\mathbf{f_{i,k}}}}\right\Vert \left\Vert \mathbf{f_{j,k}}-\mu_{\mathbf{f_{j,k}}}\right\Vert }
+correlation\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)=1-\frac{\mathbf{\left(f_{i,m}-\mu_{\mathbf{f_{i,m}}}\right)}\cdot\left(\mathbf{f_{j,m}}-\mu_{\mathbf{f_{j,m}}}\right)}{\left\Vert \mathbf{f_{i,m}-\mu_{\mathbf{f_{i,m}}}}\right\Vert \left\Vert \mathbf{f_{j,m}}-\mu_{\mathbf{f_{j,m}}}\right\Vert }
 $$
 
 The same observation holds for the way we decided to "merge" the different distances. By looking at these given definitions, start by thinking about the following questions.  
@@ -94,7 +94,7 @@ The same observation holds for the way we decided to "merge" the different dista
 
 <div markdown = "1">
 
-First, we can use the nearest-neighbor idea to devise a very simple *querying* system. This type of method is typically used in many systems such as *Query By Humming (QBH)* softwares (similar to [Shazam](http://www.shazam.com/)). As previously, we provide a baseline code in the main script. First, we create a $$ N x f $$ distance matrix `dataMatrix` corresponding to the features of the $$ N $$ elements of the datasets. We selected here only the *SpectralCentroidMean, SpectralFlatnessMean* and *SpectralSkewnessMean* features. Then, after your code is filled, the `dist` matrix should contain the mean distances (eventually, for various types of distances), which will then be sorted to the `nnIDs` vector allowing to select the nearest neighbors.
+First, we can use the nearest-neighbor idea to devise a very simple *querying* system. This type of method is typically used in many systems such as *Query By Humming (QBH)* softwares (similar to [Shazam](http://www.shazam.com/)). As previously, we provide a baseline code in the main script. First, we create a $$ N x M $$ distance matrix `dataMatrix` corresponding to the $$M$$ features of the $$ N $$ elements of the datasets. We selected here only the *SpectralCentroidMean, SpectralFlatnessMean* and *SpectralSkewnessMean* features. Then, after your code is filled, the `dist` matrix should contain the mean distances (eventually, for various types of distances), which will then be sorted to the `nnIDs` vector allowing to select the nearest neighbors.
 
 </div>{: .notice--blank}
 
