@@ -152,7 +152,7 @@ kNN_{\mathcal{C}_{t}}\left(e_{i}\right)=\overset{k}{\underset{j\in\mathcal{C}_{t
 \end{equation}
 $$
 
-Then, in order to consider the distances as probabilities, we compute for each class the mean distance of its $$k$$
+Then, in order to consider the distances as probabilities, we compute for each class the mean distance of its $$k$$ nearest neighbors and normalize these distances across classes
 
 $$
 p_{\mathcal{C}_{t}}\left(e_{i}\right)=\frac{1}{k}\sum_{j=1}^{k}kNN_{\mathcal{C}_{t}}\left(e_{i}\right)
