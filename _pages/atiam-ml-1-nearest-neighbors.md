@@ -55,7 +55,7 @@ Given distances for each feature, we need to *merge* these various dissimilariti
 
 $$
 \begin{equation}
-kNN\left(e_{i}\right)=\overset{\underset{j\neq i}{argmin}}{k}\left(\frac{1}{M}\sum_{m=1}^{M}\left(\mathcal{D}\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)\right)\right)
+kNN\left(e_{i}\right)=\overset{k}{\underset{j\neq i}{argmin}}\left(\frac{1}{M}\sum_{m=1}^{M}\left(\mathcal{D}\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)\right)\right)
 \end{equation}
 $$
 
@@ -148,7 +148,8 @@ The algorithm will globally look quite similar to the previous one. However, thi
 
 $$
 \begin{equation}
-NN_{\mathcal{C}_{t}}\left(e_{i}\right)=\underset{j\in\mathcal{C}_{t} \wedge j \neq i}{argmin}\left(\frac{1}{K}\sum_{k=1}^{K}\left(\mathcal{D}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)\right)\right)
+\begin{equation}
+kNN_{\mathcal{C}_{t}}\left(e_{i}\right)=\overset{k}{\underset{j\in\mathcal{C}_{t} \wedge j\neq i}{argmin}}\left(\frac{1}{M}\sum_{m=1}^{M}\left(\mathcal{D}\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)\right)\right)
 \end{equation}
 $$
 
