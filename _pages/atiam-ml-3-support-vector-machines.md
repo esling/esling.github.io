@@ -8,35 +8,64 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
 {% include toc %}
 
 # Support vector machines
 
+<div markdown = "1">
+
 The present tutorials covers the implementation of Support Vector Machines (SVM) and the notions of kernels.
+
+</div>{: .notice--blank}
 
 # Reference slides
 
-Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.3.Support.Vector.Machines.pdf)
+<div markdown = "1">
 
-The corresponding slides cover
+Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.3.Support.Vector.Machines.pdf)
 
   - Support Vector Machines
   - Properties of kernels 
 
+</div>{: .notice--blank}
+
 # Tutorial 
+
+<div markdown = "1">
 
 In this tutorial, we will cover a more advanced classification algorithm through the use of *Support Vector Machines* (SVMs). The goal is to gain an intuition of how SVMs works and how to use *Gaussian kernel* with SVMs to find out the decision boundary. The implementation proposed here follows the *Sequential Minimal Optimization* (SMO) algorithm for training support vector machines. You can find the full details on the mathematics involved in the following [paper link](http://cs229.stanford.edu/materials/smo.pdf).
 
 Once again, to simplify your work, we provide the following set of functions that you should find in the *3_Support_Vector_Machines* folder
 
-  * `example1.mat` - Example data for a quasi-linear problem
-  * `example2.mat` - Example data for a non-linear but well-defined problem
-  * `example3.mat` - Example data for a slightly non-linear problem with outliers
-  * `plotData.m` - Allows to plot the set of data points
-  * `visualizeBoundary.m` - Plots a non-linear decision boundary from a SVM model
-  * `visualizeBoundaryLinear.m` - Plots a linear decision boundary
 
-### 4.1 - Linear classification
+  |**File**|*Explanation*|
+  |-------:|:------------|
+  |`example1.mat`|Example data for a quasi-linear problem|
+  |`example2.mat`|Example data for a non-linear but well-defined problem|
+  |`example3.mat`|Example data for a slightly non-linear problem with outliers|
+  |`plotData.m`|Allows to plot the set of data points|
+  |`visualizeBoundary.m`|Plots a non-linear decision boundary from a SVM model|
+  |`visualizeBoundaryLinear.m`|Plots a linear decision boundary|
+
+</div>{: .notice--blank}
+
+## 3.1 - Linear classification
+
+<div markdown = "1">
 
 We briefly recall here that the goal of SVMs is that given a set of input vectors $$ \mathbf{x} $$ separated in two classes ($$ \mathbf{x}^{+} $$ and $$ \mathbf{x}^{-} $$, we would like to find the *optimal boundary* (separating line) between the two classes. To do so, we want to find the separation that gives the *maximal margin* between the two sets. Hence, let us first try to find a solution to the following problem
 
@@ -90,6 +119,8 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
 % maxIter : number of iterations over the dataset before the algorithm stops.
 {% endhighlight %}  
 
+</div>{: .notice--blank}
+
 **Exercise**  
 <div markdown="1">  
 
@@ -99,11 +130,17 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
 
 </div>{: .notice--info}  
 
-;#;
-{{:esling:aml_p4_linear_data.jpg?nolink&400 |}}{{:esling:aml_p4_linear_bounds.jpg?nolink&400 |}}
-;#;
+<div markdown = "1">
 
-### 4.2 - Gaussian kernel
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
+
+<div id="div1">
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
+
+## 3.2 - Gaussian kernel
 
 **Exercise**  
 <div markdown="1">  
@@ -113,8 +150,13 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
   3. Once again, display the decision boundary at each iteration of the algorithm.
 
 </div>{: .notice--info}  
-\\
 
-;#;
-{{:esling:aml_p4_gaussian_data.jpg?nolink&400 |}}{{:esling:aml_p4_gaussian_bounds.jpg?nolink&400 |}}
-;#;
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
+
+<div id="div2">
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
