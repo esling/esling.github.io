@@ -8,21 +8,35 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
 {% include toc %}
 
 # Nearest neighbors
 
+<div markdown = "1">
 The present tutorials corresponds to the same first lesson and follows the introductory developments performed in the [previous tutorial](/atiam-ml-0-intro/). Based on the features computed, we will implement a simple *querying* and *classification* system based on [Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
+</div>{: .notice--blank}
 
 # Reference slides
 
+<div markdown = "1">
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) Slides
-
-The corresponding slides cover
 
   * Introduction to artificial intelligence
   * Properties of machine learning
   * Nearest-neighbors
+</div>{: .notice--blank}
 
 # Tutorial 
 
@@ -48,8 +62,8 @@ By looking at these given definitions, start by thinking about the following que
 
 </div>{: .notice--blank}
 
-**Questions**  
 <div markdown="1"> 
+**Questions**  
 
   1. We considered that features were n-dimensional, but what problems can arise from audio features?
   2. If we consider the equation of nearest neighbor, what constraints are implicitly made on the distances?
@@ -65,8 +79,8 @@ In a first step, we can use the nearest-neighbor method to devise a very simple 
 
 </div>{: .notice--blank}
 
-**Exercise**  
 <div markdown="1">
+**Exercise**  
 
   1. Complete the code to compute the set of distances between a random element and the rest of the dataset.
   2. Complete the plotting code in order to plot the element and its 10 nearest neighbors.
@@ -78,7 +92,15 @@ In a first step, we can use the nearest-neighbor method to devise a very simple 
 
 </div>{: .notice--info}  
 
-{{:esling:aml_p2_query1.jpg?nolink&400 |}}{{:esling:aml_p2_query2.jpg?nolink&400 |}}
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
+
+<div id="div2">
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
 
 ## 1.2 - Classification
 
@@ -103,8 +125,8 @@ function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normaliz
 
 </div>{: .notice--blank}
   
-**Exercise**  
 <div markdown="1">
+**Exercise**  
 
   1. Update the `knnClassify` code to perform the k-NN classification function
   2. Run the algorithms for both 1-NN and 5-NN evaluation
@@ -114,8 +136,15 @@ function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normaliz
 
 </div>>{: .notice--info} 
 
-{{:esling:aml_p2_class.jpg?nolink&800 |}}
+<div markdown = "1">
 
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
+
+<div id="div2">
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
 
 ## 1.3 - Evaluation
 
@@ -138,3 +167,14 @@ However, for the scope of this tutorial, we will stick to the typical measures t
 You can implement these measures by simply completing the starter code. If you have doubts about the implementation of these measures, you can check the corresponding [Wikipedia article](https://en.wikipedia.org/wiki/Precision_and_recall)
 
 </div>{: .notice--blank}
+
+<div markdown="1">
+**Exercise**  
+
+  1. Update the `knnClassify` code to perform the k-NN classification function
+  2. Run the algorithms for both 1-NN and 5-NN evaluation
+  3. Plot the different confusion matrix to visually check the accuracies (you should obtain the values displayed in the following figure).
+  4. Perform the same classification with various K and features to evaluate the properties and qualities of different parametrizations.
+  5. (Optional) Automatize the evaluation of various configurations.
+
+</div>>{: .notice--info} 
