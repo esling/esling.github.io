@@ -148,7 +148,6 @@ The algorithm will globally look quite similar to the previous one. However, thi
 
 $$
 \begin{equation}
-\begin{equation}
 kNN_{\mathcal{C}_{t}}\left(e_{i}\right)=\overset{k}{\underset{j\in\mathcal{C}_{t} \wedge j\neq i}{argmin}}\left(\frac{1}{M}\sum_{m=1}^{M}\left(\mathcal{D}\left(\mathbf{f_{i,m}},\mathbf{f_{j,m}}\right)\right)\right)
 \end{equation}
 $$
@@ -156,7 +155,7 @@ $$
 Then, in order to consider the distances as probabilities, we compute for each class the mean distance of its $$k$$
 
 $$
-p_{\mathcal{C}_{t}}\left(e_{i}\right)=\frac{1}{k}\sum{j=1}^{k}NN_{\mathcal{C}_{t}}\left(e_{i}\right)
+p_{\mathcal{C}_{t}}\left(e_{i}\right)=\frac{1}{k}\sum_{j=1}^{k}kNN_{\mathcal{C}_{t}}\left(e_{i}\right)
 $$
 
 In the `knnClassify` function, we store in `testFeatures` the vector of features from the element we are trying to classify, and construct a cell of features for each class in the `classFeats` cell.
