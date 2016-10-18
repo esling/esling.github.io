@@ -137,7 +137,7 @@ function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normaliz
 % - dataStruct  : the data structure
 % - testSample  : the input sample id to be classified
 % - k           : the k (number of neighbors) parameter
-% - distType    : use L1 instead of L2 distance (optional)
+% - distType    : type of distance ['Euclidean', 'Manhattan', 'Cosine'] (optional)
 % - normalize   : use class priors to weight results (optional)
 % Returns :
 % - probas      : an array that contains the classification probabilities for each class
