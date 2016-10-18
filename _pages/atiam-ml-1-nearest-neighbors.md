@@ -26,7 +26,7 @@ $(document).ready(function(){
 # Nearest neighbors
 
 <div markdown = "1">
-The present tutorials corresponds to the same first lesson and follows the introductory developments performed in the [previous tutorial](/atiam-ml-0-intro/). Based on the features computed, we will implement a simple *querying* and *classification* system based on [Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
+This tutorials corresponds to the same slides following the introductory developments performed in the [previous tutorial](/atiam-ml-0-intro/). Based on the features computed, we will implement a simple *querying* and *classification* system based on [Nearest Neighbors](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm).
 </div>{: .notice--blank}
 
 # Reference slides
@@ -43,15 +43,15 @@ Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduct
 
 <div markdown = "1">
 
-In this tutorial, we will cover the simplest querying and classification algorithms derived from the *$$k$$-Nearest Neighbor* method. The idea is to find the closest neighbor to a point by assessing its multi-dimensional distance to the rest of the dataset. Hence given a set of elements $$e_{i}$$, $$i\in\left[1,N\right]$$ and their corresponding features $$f_{i,k}\in\mathbb{R}^{n}$$ (which denotes the $$n$$-dimensional $$k^{th}$$ feature of the $$i^{th}$$ element), we need to compute a distance measure $$\mathcal{D}\left(f_{i,k},f_{j,k}\right)$$ between the elements of the dataset. This distance will express the dissimilarity between two features. For the first two questions of the tutorial, we will simply consider that the dissimilarity between features is expressed by their Euclidean $$(l_{2})$$ distance.
+In this tutorial, we will cover the simplest querying and classification algorithm, namely the *$$k$$-Nearest Neighbor* method. The idea is for a given (usually *unknown*) element, to find its closest neighbor(s), based on the distances between this element and the known dataset for a given set of features. Formally, given a set of elements $$e_{i}$$, $$i\in\left[1,N\right]$$ and their corresponding features $$\mathbf{f_{i,k}}\in\mathbb{R}^{n}$$ (which denotes the $$k^{th}$$ feature of the $$i^{th}$$ element, which can be $$n$$-dimensional), we will need to compute a distance measure $$\mathcal{D}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)$$ between the features of elements of the dataset. This distance will express the dissimilarity between two features. For the first two questions of the tutorial, we will simply consider that the dissimilarity between features is expressed by their Euclidean $$(l_{2})$$ distance.
 
 $$
 \begin{equation}
-\mathcal{D}\left(f_{i,k},f_{j,k}\right)=\sqrt{\sum_{n}\left(f_{i,k}^{n}-f_{j,k}^{n}\right)^{2}}
+\mathcal{D}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=\sqrt{\sum_{d=1}^{n}\left(f_{i,k}^{d}-f_{j,k}^{d}\right)^{2}}
 \end{equation}
 $$
 
-Given these distances, we can then compute the nearest neighbor of a particular element by selecting
+Given distances for each feature, we need to *merge* these various dissimilarities and then select the nearest neighbor of a particular element by computing
 
 $$
 \begin{equation}
@@ -59,15 +59,29 @@ NN\left(e_{i}\right)=\underset{j\neq i}{argmin}\left(\frac{1}{K}\sum_{k=1}^{K}\l
 \end{equation}
 $$
 
-By looking at these given definitions, start by thinking about the following questions.  
+Of course, based on the types of features, different distance measures can be used, such as any of the $$l_{p}$$ distances (a generalization of the Euclidean distance), the *Cosine* distance or the *correlation* distance.
+
+$$
+l_{p}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=\sqrt[p]{\sum_{d=1}^{n}\left|f_{i,k}^{d}-f_{j,k}^{d}\right|^{p}}
+$$
+
+$$
+cosine\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=1-\frac{\mathbf{f_{i,k}}\cdot\mathbf{f_{j,k}}}{\left\Vert \mathbf{f_{i,k}}\right\Vert \left\Vert \mathbf{f_{j,k}}\right\Vert }=1-\frac{\sum_{d=1}^{n}f_{i,k}^{d}f_{j,k}^{d}}{\sum_{d=1}^{n}\left(f_{i,k}^{d}\right)^{2}\sum_{d=1}^{n}\left(f_{j,k}^{d}\right)^{2}}
+$$
+
+$$
+correlation\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=1-\frac{\mathbf{\left(f_{i,k}-\mu_{\mathbf{f_{i,k}}}\right)}\cdot\left(\mathbf{f_{j,k}}-\mu_{\mathbf{f_{j,k}}}\right)}{\left\Vert \mathbf{f_{i,k}-\mu_{\mathbf{f_{i,k}}}}\right\Vert \left\Vert \mathbf{f_{j,k}}-\mu_{\mathbf{f_{j,k}}}\right\Vert }
+$$
+
+The same observation holds for the way we decided to "merge" the different distances. By looking at these given definitions, start by thinking about the following questions.  
 
 </div>{: .notice--blank}
 
 <div markdown="1"> 
 **Questions**  
 
-  1. We considered that features were n-dimensional, but what problems can arise from audio features?
-  2. If we consider the equation of nearest neighbor, what constraints are implicitly made on the distances?
+  1. What problems can arise from audio features?
+  2. Based on the nearest neighbor selection, what constraints are implicitly made on the distances?
   3. Does the Euclidean distance seems like a sound way to measure the similarity between temporal features?
 
 </div>{: .notice--info}  
@@ -86,7 +100,8 @@ In a first step, we can use the nearest-neighbor method to devise a very simple 
   1. Complete the code to compute the set of distances between a random element and the rest of the dataset.
   2. Complete the plotting code in order to plot the element and its 10 nearest neighbors.
   3. Check that you obtain plots similar to those displayed below.
-  4. Try the same piece of code by varying the `usedFeatures` list
+  5. Implement the $$l_{p}$$, *Cosine* and *correlation* distances
+  4. Try the same piece of code by varying the distances and the `usedFeatures`.
   5. What can you tell about the discriminative power of features?
   6. (Optional) Extend your code to include temporal features
   7. (Optional) Extend your code to a fully functional *Query-By-Example* (QBE) system.
