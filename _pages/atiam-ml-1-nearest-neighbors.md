@@ -55,19 +55,23 @@ Given distances for each feature, we need to *merge* these various dissimilariti
 
 $$
 \begin{equation}
-NN\left(e_{i}\right)=\underset{j\neq i}{argmin}\left(\frac{1}{K}\sum_{k=1}^{K}\left(\mathcal{D}\left(f_{i,k},f_{j,k}\right)\right)\right)
+NN\left(e_{i}\right)=\underset{j\neq i}{argmin}\left(\frac{1}{K}\sum_{k=1}^{K}\left(\mathcal{D}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)\right)\right)
 \end{equation}
 $$
 
-Of course, based on the types of features, different distance measures can be used, such as any of the $$l_{p}$$ distances (a generalization of the Euclidean distance), the *Cosine* distance or the *correlation* distance.
+Of course, based on the types of features, different distance measures can be used, such as any of the $$l_{p}$$ distances (a generalization of the Euclidean distance)
 
 $$
 l_{p}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=\sqrt[p]{\sum_{d=1}^{n}\left|f_{i,k}^{d}-f_{j,k}^{d}\right|^{p}}
 $$
 
+the *Cosine* distance
+
 $$
 cosine\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=1-\frac{\mathbf{f_{i,k}}\cdot\mathbf{f_{j,k}}}{\left\Vert \mathbf{f_{i,k}}\right\Vert \left\Vert \mathbf{f_{j,k}}\right\Vert }=1-\frac{\sum_{d=1}^{n}f_{i,k}^{d}f_{j,k}^{d}}{\sum_{d=1}^{n}\left(f_{i,k}^{d}\right)^{2}\sum_{d=1}^{n}\left(f_{j,k}^{d}\right)^{2}}
 $$
+
+or the *correlation* distance.
 
 $$
 correlation\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)=1-\frac{\mathbf{\left(f_{i,k}-\mu_{\mathbf{f_{i,k}}}\right)}\cdot\left(\mathbf{f_{j,k}}-\mu_{\mathbf{f_{j,k}}}\right)}{\left\Vert \mathbf{f_{i,k}-\mu_{\mathbf{f_{i,k}}}}\right\Vert \left\Vert \mathbf{f_{j,k}}-\mu_{\mathbf{f_{j,k}}}\right\Vert }
