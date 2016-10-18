@@ -98,7 +98,7 @@ In a first step, we can use the nearest-neighbor method to devise a very simple 
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
 
 <div id="div1">
-<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+<img src="../images/atiam-ml/01_1.1_percussion.svg" height="350" width="350"/> <img src="../images/atiam-ml/01_1.1_violinbowed.svg" height="350" width="350"/>
 </div>
 
 </div>{: .notice--blank}
