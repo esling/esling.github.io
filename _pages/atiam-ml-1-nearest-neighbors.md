@@ -162,7 +162,7 @@ function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normaliz
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
 
 <div id="div2">
-<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+<img src="../images/atiam-ml/01_1.2_confusion.svg" height="350" width="700"/>
 </div>
 
 </div>{: .notice--blank}
