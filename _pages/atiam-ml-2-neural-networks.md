@@ -8,21 +8,40 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
 {% include toc %}
 
 # Neural networks
 
+<div markdown = "1">
+
 The present tutorials covers the implementation of neural networks, starting with a single neuron and then going up to a multilayer perceptron applied to audio classification.
+
+</div>{: .notice--blank}
 
 # Reference slides
 
-Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.2.Neural.networks.pdf)
+<div markdown = "1">
 
-The corresponding slides cover
+Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.2.Neural.networks.pdf)
 
   - The artificial neuron
   - Neural networks
   - Architecture zoo  
+  
+</div>{: .notice--blank}
 
 # Tutorial 
 
@@ -30,17 +49,19 @@ The corresponding slides cover
 
 In this tutorial, we will cover a more advanced classification algorithm through the use of neural networks. The tutorial starts by performing a simple single neuron discrimination of two random distributions. Then, we will study the typical XOR problem by using a more advanced 2-layer perceptron. Finally, we generalize the use of neural networks in order to perform classification on our set of audio files.
 
-To simplify your work, we provide the following set of functions that you should find in the *02_Neural_Networks* folder
+To simplify your work, we provide the following set of functions that you should find in the `02_Neural_Networks` folder
 
-  * `plot3view.m` - Allows to plot a 3-dimensional view of data points
-  * `plotBoundary.m` - Plots the decision boundary of a single neuron with 2-dimensional inputs
-  * `plotBoundarySurface.m` - Plots the decision surface of a single neuron with 3-dimensional inputs
-  * `plotBpBoundary.m` - Plots multiple decision boundaries for a set of hidden units
-  * `plotBpPats.m` - Plots input patterns for back-propagation
-  * `plotPats.m` - Plots input patterns for single neuron problems
-  * `plotPats3D.m` - Plots 3-dimensional input patterns for single neuron problems
-  * `xorAns.dat` - Class values for the XOR problem
-  * `xorPats.dat` - Point values for the XOR problem
+  |**File**|*Explanation*|
+  |-------:|:---------|
+  |`plot3view.m`|Allows to plot a 3-dimensional view of data points|
+  |`plotBoundary.m`|Plots the decision boundary of a single neuron with 2-dimensional inputs|
+  |`plotBoundarySurface.m`|Plots the decision surface of a single neuron with 3-dimensional inputs|
+  |`plotBpBoundary.m`|Plots multiple decision boundaries for a set of hidden units|
+  |`plotBpPats.m`|Plots input patterns for back-propagation|
+  |`plotPats.m`|Plots input patterns for single neuron problems|
+  |`plotPats3D.m`|Plots 3-dimensional input patterns for single neuron problems|
+  |`xorAns.dat`|Class values for the XOR problem|
+  |`xorPats.dat`|Point values for the XOR problem|
 
 </div>{: .notice--blank}
 
@@ -95,8 +116,8 @@ weights       % 3 x 1 vector of neuron weights
 
 </div>{: .notice--blank}
   
+<div markdown="1">
 **Exercise**  
-<div markdown="1">  
 
   1. Update the neuron update loop so that it computes its error (forward propagate and compare to desired)
   2. Update the neuron update loop to perform learning of its weights (based on back-propagation)
@@ -107,9 +128,15 @@ weights       % 3 x 1 vector of neuron weights
 
 </div>{: .notice--info}  
 
-;#;
-{{:esling:aml_p3_linear1.jpg?nolink&400 |}}{{:esling:aml_p3_linear2.jpg?nolink&400 |}}
-;#;
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
+
+<div id="div1">
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
 
 ## 2.2 - 2-layer XOR problem
 
@@ -169,8 +196,8 @@ TSS_Limit         % Sum-squared error limit
 
 </div>{: .notice--blank}
 
-**Exercise**  
 <div markdown="1">  
+**Exercise**  
 
   1. Update the forward propagation and error computation (compared to desired).
   2. Update the back-propagation part to learn the weights of both layers.
@@ -182,9 +209,16 @@ TSS_Limit         % Sum-squared error limit
 
 </div>{: .notice--info}
 
-;#;
-{{:esling:aml_p3_xor1.jpg?nolink&400 |}}{{:esling:aml_p3_xor2.jpg?nolink&400 |}}
-;#;
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
+
+<div id="div2">
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
+
 
 ### 3.3 - 3-layer audio classification
 
@@ -194,8 +228,8 @@ We now return to our original classification problem and will try to perform neu
 
 </div>{: .notice--blank}
 
-**Exercise**  
 <div markdown="1">  
+**Exercise**
 
   1. Based on the previous neural network, upgrade the code to a 3-layer neural network
   2. Use the provided code to perform classification on a pre-defined set of features
@@ -205,3 +239,12 @@ We now return to our original classification problem and will try to perform neu
 
 </div>{: .notice--info}
 
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div3">Reveal</a>]
+
+<div id="div3">
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
