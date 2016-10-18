@@ -9,6 +9,15 @@ sidebar:
 ---
 
 <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+});
+</script>
 
 {% include toc %}
 
@@ -87,19 +96,8 @@ dataStruct.classNames % Cell of class names
 </div>{: .notice--info}
 
 <div markdown = "1">
-**Expected output** 
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]  
 
-<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>
-
-<script>
-$(document).ready(function(){
-    $(".abuttons").click(function () {
-        var idname= $(this).data('divid');
-        $("#"+idname).show("slow");
-    });
-    $("#div1").hide();
-});
-</script>
 <div id="div1">
 {% highlight matlab %}
   altotrombone 	: 13.
@@ -168,9 +166,11 @@ dataStruct.spectrumConstantQ % Constant-Q transform
 
 <div markdown = "1">
 
-**Expected output**
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
 
+<div id="div2">
 <img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
 
 </div>{: .notice--blank}
 
@@ -222,11 +222,13 @@ dataStruct.SpectralCentroidStd  % Standard deviation
 
 <div markdown = "1">
 
-**Expected output**
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div3">Reveal</a>]
 
+<div id="div3">
 *Question 0.3.2*  
 <img src="../images/atiam-ml/00_0.3_speech.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.3_telephone.svg" height="350" width="350"/>  
 *Question 0.3.4*  
 <img src="../images/atiam-ml/00_0.4_view1.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.4_view2.svg" height="350" width="350"/>
+</div>
 
 </div>{: .notice--blank}
