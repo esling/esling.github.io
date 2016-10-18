@@ -47,7 +47,7 @@ Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.2.Neural.ne
 
 <div markdown = "1">
 
-In this tutorial, we will cover a more advanced classification algorithm through the use of neural networks. The tutorial starts by performing a simple single neuron discrimination of two random distributions. Then, we will study the typical XOR problem by using a more advanced 2-layer perceptron. Finally, we generalize the use of neural networks in order to perform classification on our set of audio files.
+In this tutorial, we will cover a more advanced classification algorithm through the use of *neural networks*. The tutorial starts by performing a simple **single neuron** discrimination of two random distributions. Then, we will study the typical **XOR problem** by using a more advanced 2-layer **perceptron**. Finally, we generalize the use of neural networks in order to perform classification on a given set of audio files.
 
 To simplify your work, we provide the following set of functions that you should find in the `02_Neural_Networks` folder
 
@@ -133,7 +133,7 @@ weights       % 3 x 1 vector of neuron weights
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
 
 <div id="div1">
-<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+<img src="../images/atiam-ml/02_2.1_single_1.svg" height="350" width="350"/> <img src="../images/atiam-ml/02_2.1_single_2.svg" height="350" width="350"/>
 </div>
 
 </div>{: .notice--blank}
