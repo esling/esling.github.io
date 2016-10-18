@@ -8,6 +8,7 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".abuttons").click(function () {
