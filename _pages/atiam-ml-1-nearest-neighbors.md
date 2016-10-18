@@ -126,7 +126,7 @@ First, we can use the nearest-neighbor idea to devise a very simple *querying* s
 ## 1.2 - Classification
 
 <div markdown = "1">
-For the second part of this tutorial, we will rely on the same technique (computing the distance of a selected point to the rest of the dataset) in a classification framework. The overarching idea behind kNN classification is that elements from a same class should have similar properties in the *feature space*. Hence, the closest feature to those of an element should be from elements of its right class. These types of approaches are usually termed as *distance-based* classification methods.
+For the second part of this tutorial, we will rely on the same technique (computing the distance of a selected point to the rest of the dataset) in a *classification* framework. The overarching idea behind $$k$$-NN classification is that elements from a same class should have similar properties in the *feature space*. Hence, the closest feature to those of an element should be from elements of its right class. These types of approaches are usually termed as *distance-based* classification methods. The skeleton for this algorithm is provided in the `01_Nearest_Neighbors/knnClassify.m` function.
 
 {% highlight Matlab %}
 function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normalize, useL1dist);
@@ -137,21 +137,40 @@ function [probas, winnerClass] = knnClassify(dataStruct, testSample, k, normaliz
 % - dataStruct  : the data structure
 % - testSample  : the input sample id to be classified
 % - k           : the k (number of neighbors) parameter
-% - normalize   : use class priors to weight results
-% - useL1dist   : use L1 instead of L2 distance
+% - distType    : use L1 instead of L2 distance (optional)
+% - normalize   : use class priors to weight results (optional)
 % Returns :
 % - probas      : an array that contains the classification probabilities for each class
 % - winnerClass : the label of the winner class
 {% endhighlight %}  
+
+The algorithm will globally look quite similar to the previous one. However, this time we will compute the $$k$$ Nearest Neighbors *for each of the classes separately*, which will allow to consider the resulting distance vectors as probabilities. Hence, we will compute for the set of classes $$\mathcal{C}_{t}$$ the vector of distances, and select the $$k$$ closest elements per class.
+
+$$
+\begin{equation}
+NN_{\mathcal{C}_{t}}\left(e_{i}\right)=\underset{j\in\mathcal{C}_{t} \wedge j \neq i}{argmin}\left(\frac{1}{K}\sum_{k=1}^{K}\left(\mathcal{D}\left(\mathbf{f_{i,k}},\mathbf{f_{j,k}}\right)\right)\right)
+\end{equation}
+$$
+
+Then, in order to consider the distances as probabilities, we compute for each class the mean distance of its $$k$$
+
+$$
+p_{\mathcal{C}_{t}}\left(e_{i}\right)=\frac{1}{k}\sum{j=1}^{k}NN_{\mathcal{C}_{t}}\left(e_{i}\right)
+$$
+
+In the `knnClassify` function, we store in `testFeatures` the vector of features from the element we are trying to classify, and construct a cell of features for each class in the `classFeats` cell.
 
 </div>{: .notice--blank}
   
 <div markdown="1">
 **Exercise**  
 
-  1. Update the `knnClassify` code to perform the k-NN classification function
+  1. Update the `knnClassify` code to perform the basic k-NN classification function
   2. Run the algorithms for both 1-NN and 5-NN evaluation
   3. Plot the different confusion matrix to visually check the accuracies (you should obtain the values displayed in the following figure).
+  4. Extend the code to take various distances into account (argument `distType`)
+  5. What is the use of "class weighting" (argument `normalize`)?
+  6. Implement the class weighting system and evaluate its effect
   4. Perform the same classification with various K and features to evaluate the properties and qualities of different parametrizations.
   5. (Optional) Automatize the evaluation of various configurations.
 
