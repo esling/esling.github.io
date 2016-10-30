@@ -1,3 +1,28 @@
+---
+layout: single
+permalink: /teaching-java/
+author_profile: false
+share: true
+comments: true
+sidebar:
+  nav: "teaching"
+---
+
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
+{% include toc %}
+
 ===== LE380 : Programmation Java, Androïd et Web réactif. =====
 
 ==== Fichiers disponibles ====
