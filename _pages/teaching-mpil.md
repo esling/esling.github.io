@@ -1,3 +1,28 @@
+---
+layout: single
+permalink: /teaching-mpil/
+author_profile: false
+share: true
+comments: true
+sidebar:
+  nav: "teaching"
+---
+
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
+{% include toc %}
+
 ===== Projet LI332 - MPIL (2013/2014) =====
 
 Cette page contient les informations et fichier relatifs au 2ème projet de LI332 (MPIL) pour l'année 2013-2014.
