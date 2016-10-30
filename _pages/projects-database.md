@@ -1,3 +1,28 @@
+---
+layout: single
+permalink: /projects-database/
+author_profile: false
+share: true
+comments: true
+sidebar:
+  nav: "teaching-atiam-ml"
+---
+
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
+{% include toc %}
+
 # Intelligent database
 
 Seeking sound samples in a massive database can be a very tedious and painstaking task. Even when meta-informations are available, querying results may remain far from the mental representation of timbre expected by the user. This problem has seen a flourishing literature regarding melodic and sound databases. However, to the best of our knowledge, the same kind of high-level control and querying possibilities has never been proposed for sound samples. This may come from the fact that sound samples does not offer the same kind of high-level information extraction as songs (for example melody, lyrics, ...).  We thus worked on the development of the first intelligent sound sample database. We first proposed a scheme where sound can be retrieved simply by drawing the temporal shape of spectral descriptors. Then we addressed two completely novel ways of intuitive querying. First, by optimizing simultaneously the temporal evolution of multiple spectral properties //MultiObjective Spectral Evolution Query// (MOSEQ). Second, simply by performing a vocal imitation of the sound sample with //Query by Vocal Imitation// (QVI).
