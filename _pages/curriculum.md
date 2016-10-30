@@ -442,3 +442,235 @@ Reviewing activities and jury
 00.00.0000 2011 International Computer Music Conference (ICMC 2011)
 
 00.00.0000 2010 Journées Jeunes Chercheurs en Acoustique Audition et Signal (JJCAAS 2010)
+
+In the past years, I have also taken responsibility and are still the main supervisor or co-supervisor of several teaching units, for which I produced teaching materials:
+
+00.00.0000 LE380 Java L2 - Mobile platforms object-oriented development
+
+00.00.0000 M2003 Concurrent and reactive programming
+
+00.00.0000 NI407 Music Machine Learning (in musical informatics)
+
+
+
+Non-teaching charges
+
+Aside from my teaching activities, I am currently supervising two PhDs and two Masters student. I also authored and co-authored 10 journal papers over the past 3 years. I am the main supervisor for both the orchestration research axis in IRCAM laboratory and also the main supervisor of an international funding research project with McGill University and Haute Ecole de Musique de Geneve. 
+
+
+
+International mobility help
+
+Regarding international mobility, I try to engage as much as possible so that my PhD student can all perform at least a part of their research in an international laboratory. My first PhD (Pierre Talbot) is currently performing an invited research at the National Institute of Informatics (NII) in Tokyo, Japan, thanks to an international funding that we set up. I am also actively setting up a collaboration with McGill University to facilitate the student exchange program with IRCAM.
+
+
+
+Professionnal insertion
+
+I am an active teacher for the professional insertion course given at IRCAM for the ATIAM Masters. In that framework, I am giving two main courses
+
+• Scientific publication (3 hours) is a lesson given in english in order to provide students with the basis of both scientific publication and different aspects of research workflows.
+
+• Scientific carreer (3 hours) is a lesson centered on the different aspects of a carreer in academia. Students are sensitized to different ways to apply for a PhD and what is implied along a scientific career.
+
+
+
+Innovative pedagogy actions
+
+Music machine learning
+
+The new trends in computing place an increasing emphasis on machine learning (ML) techniques. However, these aspects were not taught inside the ATIAM Master prior to my arrival. I decided to develop a teaching centered on various ML algorithms, applied to musical information. I created both the lesson plan and materials. I also developed an extensive tutorial, which can be seen as a series of missing code exercices targeted at understanding the fundamental notion and equations in each technique. 
+
+Students targeted: Master 2 research students
+
+Competences targeted: Optimization, Data mining, Machine Learning
+
+Technologies used: Matlab, Torch and CUDA
+
+Dates: 2014-2016
+
+Team involved: Musical representation (IRCAM)
+
+Slides and tutorial available at http://repmus.ircam.fr/esling/atiam-ml.html.
+
+Concurrent and reactive programming
+
+This unit that has been recently created in the STL Master at UPMC, was mainly coordinated and created by Carlos Agon, but I took an active part in the creation of all aspects and projects related to reactive programming. Hence, thanks to a collaboration set up with ESTEREL Technologies, we obtained academic licences for the students, so that they can learn a widespread language used by multiple avionics, electricity and transport companies. I also bought several drones, so that this year the project will be to program an autonomous drone to perform a topographic map of a room. 
+
+Students targeted: Master 2 professional students
+
+Competences targeted: Reactive programming, avionics
+
+Technologies used: ESTEREL, SCADE
+
+Dates: 2014-2016
+
+Team involved: Science et Technologie du Language (STL, UPMC)
+
+Project and details are available at https://www-master.ufr-info-p6.jussieu.fr/2015/PPC.
+
+Java L2 - Mobile platforms object-oriented development
+
+This unit is given as part of an industrial training bachelor at UPMC. I took the main coordination and organization of this unit, by recreating the whole schedule and corresponding materials. As students chose this formation in order to find a job in the industry, I focused my teaching on applications that are currently well-seeked . Therefore, even though theoretical aspects are given, all applications are targeted at both Web development and mobile (Android and iOS) platforms. In that formation, I am also an active tutor for 2 students each year, by following their evolution inside their companies and meeting with their industrial directors. 
+
+Students targeted: Licence 3 professional students
+
+Competences targeted: Web development, Mobile applications, Object-oriented
+
+Technologies used: Java, Android SDK, OpenGL
+
+Dates: 2014-2016
+
+Team involved: Multimedia and Web
+
+Current slides and description are available at http://repmus.ircam.fr/esling/java.html.
+
+Other teaching units
+
+In multiple teaching units, notably MPIL (LI332) and PC2R (MI019), I proposed to devise innovative projects for applying the newly acquired coding skills of students to projects with musical applications. I believe that projects with an increased interest to its endeavor will drive students to work out of passion rather than obligation.
+
+Administrative activities
+
+00.00.0000 2014 Creation of the new teaching plan - Master 2 ATIAM - UPMC
+
+00.00.0000 2014 Creation of a new teaching unit - Music Machine Learning, Master 2 ATIAM - UPMC
+
+00.00.0000 2014 Creation of a new teaching unit - Java L2 - Mobile platforms object-oriented development - UPMC
+
+00.00.0000 2014 Creation of the new teaching plan - Master 1 STL - UPMC
+
+
+
+Jury participations
+
+00.00.0000 2015 Mid-PhD Jury - Xavier Renard (Lip6, Arcelor mittal) - UPMC, ParisMultivariate time series classification for industrial monitoring.
+
+00.00.0000 2014 Jury de stage de Master 2 - IRCAM (ATIAM 2014)
+
+00.00.0000 2014 Associate professor selection comity (CdS) N°4259Poste de maître de conférence à l’UPMC (Poste n°4259, Section 27 UPMC)
+
+00.00.0000 2013 Jury de stage de Master 2 - IRCAM (ATIAM 2013)
+
+00.00.0000 2012 Jury de stage de Master 2 - IRCAM (ATIAM 2012)
+
+
+
+Pedagogy responsabilities
+
+Teaching unit director
+
+Java L3 - Mobile platforms object-oriented development (LE380)
+
+2013/2014, 2014/2015, 2015/2016
+
+Professionnal licence
+
+Multimédia et Web
+
+~30 students / year
+
+40h/year
+
+Teaching unit co-director
+
+Concurrent and reactive programming (MI003)
+
+2014/2015, 2015/2016
+
+Master 2
+
+Sciences et Technologies du Language (STL)
+
+~20 students / year
+
+12h/year
+
+Teaching unit co-director
+
+Music Machine Learning (in musical informatics)
+
+2014/2015, 2015/2016
+
+Master 2
+
+ATIAM (IRCAM)
+
+~25 students / year
+
+20h/year
+
+Pedagogy team meetings and organisation
+
+Master 2 ATIAM (IRCAM)
+
+2013/2014, 2014/2015, 2015/2016
+
+Pedagogy team meetings and organisation
+
+Master 2 STL (UPMC)
+
+2013/2014, 2014/2015, 2015/2016
+
+
+
+Supervision
+
+00.00.0000 2015 PhD supervision 3 years - Léopold Crestel - “Real-time generation of orchestral works through deep temporal learning”.
+
+00.00.0000 2014 PhD supervision 3 years - Pierre Talbot - “Non-deterministic Temporal Constraint Calculus for big musical data”.
+
+00.00.0000 2015 Master 2 supervision 6 months - Léopold Crestel - “Real-time orchestral generation through deep temporal learning”.
+
+00.00.0000 2014 Master 2 supervision 6 months - Pierre Talbot - “Compiler for Non-deterministic Temporal Constraint Calculus”.
+
+00.00.0000 2014 Master 2 supervision 6 months - Henri NG - “Automatic knowledge inference from multivariate time series for musical orchestration”
+
+00.00.0000 2014 Master 2 supervision 6 months - Marion PILTE “Orchestral pieces generation through constraints networks”
+
+00.00.0000 2013 Engineer supervision 1 year - Antoine Bouchereau - “Computer-Aided Orchestration software”.
+
+00.00.0000 2012 Master 2 supervision 6 months - Maria MARONNE - “Non-Markovianity in temporal processes for orchestration”
+
+00.00.0000 2012 Master 2 supervision 6 months - Evangelia KOLIOPOULOU - “Analyseis and classification of sound morphology”
+
+00.00.0000 2011 Engineer supervision 6 months - Jordan GERBER - “Multiobjective techniques for sound retrieval”
+
+00.00.0000 2010 Bachelor supervision 3 months - Pierre LECOMTE - “Perceptual effects of sound mixtures”
+
+
+
+Reviewing activities and jury
+
+00.00.0000 2014 Data Mining and Knowledge Discovery (DMKD) journal
+
+00.00.0000 2013 IEEE Acoustics, Speech, and Signal Processing (ICASSP 2013)
+
+00.00.0000 2012 Jury de stage de Master 2 - IRCAM (ATIAM 2012)
+
+00.00.0000 2012 Mathematics and Computation in Music (MCM 2012)
+
+00.00.0000 2011 International Computer Music Conference (ICMC 2011)
+
+00.00.0000 2010 Journées Jeunes Chercheurs en Acoustique Audition et Signal (JJCAAS 2010)
+
+
+
+Administrative activities
+
+00.00.0000 2014 International partnership - IRCAM and McGill University on computer-assisted orchestration
+
+00.00.0000 2014 Co-direction et organisation of mensual conference MaMuX at IRCAM - 10 meetings per year with notable participation of Shihab Shamma and John Weardey
+
+00.00.0000 2014 Creation of the new teaching plan - Master 2 ATIAM - UPMC
+
+00.00.0000 2014 Creation of the new teaching plan - Master 1 STL - UPMC
+
+00.00.0000 2014 Associate professor selection comity (CdS) N°4259 - Poste de maître de conférence à l’UPMC (Poste n°4259, Section 27 UPMC)
+
+00.00.0000 2012 Creation and direction of the Orchestration Workgroup - IRCAM, Paris
+
+00.00.0000 2013 Funding project CoInf - Metagenomics (Geneve, Switzerland)
+
+00.00.0000 2011 Organisation of conference MCM 2011
+
+00.00.0000 2010 Organisation of conference JJCAAS 2010
