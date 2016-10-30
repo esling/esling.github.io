@@ -106,3 +106,42 @@ if it’s rather first authorship, last authorship, conference proceedings etc.
  You can comment on your publications. E.g., if you are from a domain where peer reviewing is not
 widely used, you can briefly explain this. This can be helpful for cross-disciplinary researchers who
 will be assessed by evaluators from two completely different scientific domains. 
+
+Scientific excellence is the sole criterion, subject of evaluation is the pair (principal investigator).
+
+Competitive candidate must have shown potential for research independence and evidence of maturity.  
+At least one important publication without the participation of their PhD supervisor.
+
+Promising track record of early achievements appropriate to their research field and career stage, including significant publications (as main author) in major multidisciplinary scientific journals, or in the leading journals of their field. They may also demonstrate a record  of invited presentations in well-established international conferences, granted patents, awards, prizes etc
+
+In the Track record the applicant PI should list:
+1. Up to five publications in major journals, conferences proceedings and/or monographs of their respective research fields, highlighting those without the  presence as  co-author of their PhD supervisor, and the number of citations (excluding self-citations) they have attracted (if applicable);  
+2. Research monographs and any translations thereof (if applicable);  
+3. Granted patent(s) (if applicable);  
+4. Invited presentations to peer-reviewed conferences and/or international advanced schools (if applicable);  
+5. Prizes/ Awards / Academy memberships (if applicable).
+
+CV analysis:  
+
+  * Publications without the PhD Supervisor VS Total number of publications
+No researchers with zero publications without the PhD Supervisor  
+Considering the CVs investigated on average the publications without the PhD Supervisor are 59,4%
+More than half of researchers have more than 20 publications without their PhD supervisor
+
+  * International Mobility
+18/19 PIs have at least one important international experience 
+In 2 cases with few experiences abroad, lots of mobility within the country of origin and huge participation in international events  
+The minimum stay (1 case) is 2 months
+Experiences are mainly long periods (more than one year) 
+
+  * Examples of Prizes and Awards  
+
+Evaluation type A :
+
+* Several publications are single-authored showing research independence and creativity.
+* Important research mobility
+* The track record involves many publications in high end journals and the  citations are very good and promising considering age of the applicant. Also number of invited talks and supervision of students are above average and guarantee a high degree of scientific independence of the application
+* World-leading expert in his field with several important research achievements of wide impact in the community. He is a main player of his field.
+* His  achievements  and  publications  are  truly ground-breaking. Number of citations of his papers exceeds 2000 and his h-index is 27,  which is truly impressive at the PI's career stage. The papers demonstrate his independent and creative thinking and his capability to go  significantly beyond the present state of the art.
+* The PI is an  exceptionally innovative and active young scientist, holding a permanent position at a leading university. The list of tasks with a significant leading role is long demonstrating the PI’s ability to lead scientific project in an international environment. Also the list of presentations at international conferences, workshops and seminars proves the confidence he enjoys from collaborators
+* The PI is an outstanding young scientist who already at a young age has made a strong impact evidenced by publishing a review in his field of research, and has become a very important reference in this field. He has publications in high-impact journals and has achieved extremely high citations and a very high Hirsch index. He has strong international collaborations with the most important groups. He has already established his independence through building a reasonable group of post-docs and PhD students under his supervision. He has teaching experience through lecturing at the various departments and institutes where he spent extended periods. He has also contributed to public outreach. He has been (co-)organiser of several workshops and conferences and has been invited to give review talks at many international conferences. 
