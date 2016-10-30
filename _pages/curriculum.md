@@ -54,6 +54,7 @@ Name of Faculty/ Department/ Centre, Name of University/ Institution/ Country
 Across my different academic positions, I gave a wide panel of teaching in informatics and mathematics over at different levels. All these teachings are summarized in table [tab:Résumé-des-volumes]. I have been participating to all organization meetings for both the Master 2 ATIAM from IRCAM and the Master 1 STL from UPMC.
 
 | Year | Level | Name | UE | Nb | CM | TD | TP | Volume |
+|:----:|:-----:|:-----|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 | 2015 | M2 | Paradigme prog. concurrente | NI407 | 12 | 12 | - | - | 12 |
 | 2015 | M2 | Insertion pro. (IP) | NI001 | 25 | 4.5 | - | - | 4.5 |
 | 2015 | M2 | Music Machine Learning | MX130 | 25 | 15 | - | 6 | 21 |
