@@ -20,4 +20,4 @@ I am currently an associate professor and research in data mining and artificial
 Associate professor - University Paris 6 - UPMC  
 PhD - Acoustics, Signal Processing and Informatics  
 IRCAM - CNRS UMR 9912  
-Music Representations  
+*Music Representations* team  
