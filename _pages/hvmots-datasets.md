@@ -1,10 +1,35 @@
-======= HV-MOTS Large scale study =======
+---
+layout: single
+permalink: /hvmots-datasets/
+author_profile: false
+share: true
+comments: true
+sidebar:
+  nav: "research"
+---
 
-This is the supporting webpage for the HV-MOTS classification paradigm study. We provide in this page detailed informations about the results of HyperVolume-MultiObjective Time Series (HV-MOTS) classification scheme. More informations about the MOTS paradigm can be found in the article and on a related page which presents the [[esling/mots.html|MultiObjective Time Series]] approach. 
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
 
-====== Introduction ======
+{% include toc %}
 
-  * [[esling/hvmots-datasets.html#complete-datasets|Complete datasets]] : All the datasets used in our study are available for download so that our experiments are fully reproducible. These datasets are available either as raw files or Matlab (.MAT) features files. The MAT files contains an organized structure of the results from our analysis workflow. Corresponding references and weblink are also provided for each dataset.
+# Multivariate time series
+
+This is the supporting webpage for the HV-MOTS classification paradigm study. We provide in this page detailed informations about the results of HyperVolume-MultiObjective Time Series (HV-MOTS) classification scheme. More informations about the MOTS paradigm can be found in the article and on a related page which presents the [MultiObjective Time Series](/projects-mots/) approach. 
+
+# Introduction
+
+  * [Complete datasets](/hvmots-datasets/#datasets) : All the datasets used in our study are available for download so that our experiments are fully reproducible. These datasets are available either as raw files or Matlab (.MAT) features files. The MAT files contains an organized structure of the results from our analysis workflow. Corresponding references and weblink are also provided for each dataset.
 
   * [[esling/hvmots-datasets.html#classification-results|Classification results]] : This section provides extended classification results with detailed dataset-specific analysis. [[esling/hvmots-datasets.html#general-results|General results]]  exhibit the various classification accuracies for each dataset and the [[esling/hvmots-datasets.html#features-combinations|features combinations]] provide an extended list of best features set for each level of analysis.
 
@@ -12,11 +37,9 @@ This is the supporting webpage for the HV-MOTS classification paradigm study. We
 
   * [[esling/hvmots-datasets.html#features-analysis|Features analysis]] provide an extended list of feature-by-feature discriminative power. We have only listed here the features which were selected after bi-objective combinations, ie. the feature which were used from three to more objectives classification (half of the complete feature set).
 
-====== Complete Datasets ======
+# Datasets
 
-This section contains the downloadable archives of both datasets used in the paper. For each dataset, two archives are available. The first contains the original sound files. The second contains the results of the spectral analysis module in Matlab (.MAT) format. The features file contains a structure named ''data'' which contains the ''name'', ''class'', ''sampleID'' and ''features'' structure. The ''features'' structure contains every descriptor listed in the paper in matrix format ''(nbDimensions x nbTimePoints)''. The corresponding descriptor are the raw values obtained from IRCAMDescriptor.
-
-;#;
+This section contains the downloadable archives of both datasets used in the paper. For each dataset, two archives are available. The first contains the original sound files. The second contains the results of the spectral analysis module in Matlab (.MAT) format. The features file contains a structure named `data` which contains the `name`, `class`, `sampleID` and `features` structure. The `features` structure contains every descriptor listed in the paper in matrix format `(nbDimensions x nbTimePoints)`. The corresponding descriptor are the raw values obtained from IRCAMDescriptor.
 
 ^Datasets		^Description		^Feats	^Class	^Samples	^
 |Arabic digit		|Spoken arabic digits	|13	|10	|8800		|
@@ -132,54 +155,9 @@ This section contains the downloadable archives of both datasets used in the pap
 |  [[http://www.google.com|Download features]] 	|||||
 |  [[http://www.google.com|Original webpage]] 	|||||
 
-;#;
-====== Classification results ======
+## Dataset specifications
 
-===== Summary =====
-
-^Datasets 		^1-NN	^5-NN	^NC	^SVM	^MOTS	^NP-M.	^HV-M.	^
-|[[esling/hvmots-datasets.html#arabic-digit|Arabic digit]]		|99.54	|99.26	|83.37	|99.31	|99.61	|99.52	|99.88	|
-|[[esling/hvmots-datasets.html#artificial-characters|Artificial characters]]	|99.98	|99.98	|96.40	|99.98	|100.0	|99.98	|100.0	|
-|[[esling/hvmots-datasets.html#australian-signs|Australian signs]]	|71.52	|70.23	|65.85	|72.33	|72.35	|69.23	|84.36	|
-|[[esling/hvmots-datasets.html#australian-signs-hq|Australian signs (HQ)]]	|84.64	|82.46	|70.25	|85.22	|64.44	|76.14	|91.31	|
-|[[esling/hvmots-datasets.html#bciIII-03a-graz|BciIII-03a-Graz]]	|34.17	|33.21	|25.12	|33.81	|33.93	|32.62	|35.59	|
-|[[esling/hvmots-datasets.html#bciIV-01-berlin|BciIV-01-Berlin]]	|57.29	|56.93	|52.14	|56.54	|56.92	|56.43	|57.50	|
-|[[esling/hvmots-datasets.html#bciIV-03-freiburg|BciIV-03-Freiburg]]	|33.40	|33.19	|32.76	|33.40	|36.40	|34.04	|36.62	|
-|[[esling/hvmots-datasets.html#biomag-2010|Biomag-2010]]		|67.12	|68.36	|71.12	|73.42	|72.24	|69.62	|73.42	|
-|[[esling/hvmots-datasets.html#challenge-2011|Challenge-2011]]		|90.58	|92.19	|88.38	|92.69	|90.58	|90.08	|91.98	|
-|[[esling/hvmots-datasets.html#character-trajectories|Character-trajectories]]	|99.23	|98.67	|89.68	|99.22	|98.11	|99.16	|99.23	|
-|[[esling/hvmots-datasets.html#dachstein|Dachstein]]		|97.42	|97.13	|89.67	|98.28	|98.13	|98.13	|98.57	|
-|[[esling/hvmots-datasets.html#eeg-alcoholism|Eeg-alcoholism]]		|79.55	|81.36	|80.00	|80.06	|82.27	|79.55	|83.18	|
-|[[esling/hvmots-datasets.html#forte|Forte-2]]		|82.64	|80.17	|74.38	|82.45	|81.54	|82.64	|83.47	|
-|[[esling/hvmots-datasets.html#forte|Forte-6]]		|71.90	|70.25	|62.81	|71.56	|71.90	|71.90	|73.55	|
-|[[esling/hvmots-datasets.html#gaitpdb|Gaitpdb]]		|89.87	|83.01	|73.20	|87.24	|77.78	|76.14	|89.87	|
-|[[esling/hvmots-datasets.html#handwritten|Handwritten]]		|90.67	|82.34	|78.12	|84.72	|81.23	|80.32	|92.17	|
-|[[esling/hvmots-datasets.html#ionosphere|Ionosphere]]		|94.20	|92.31	|88.89	|93.12	|89.17	|90.88	|94.59	|
-|[[esling/hvmots-datasets.html#japanese-vowels|Japanese-vowels]]	|94.21	|95.00	|88.91	|94.77	|90.78	|92.03	|97.19	|
-|[[esling/hvmots-datasets.html#libras|Libras]]			|84.44	|77.78	|55.00	|83.79	|79.72	|75.56	|91.39	|
-|[[esling/hvmots-datasets.html#pen-chars-35|Pen-chars-35]]		|54.32	|52.18	|27.94	|54.12	|51.44	|49.59	|54.91	|
-|[[esling/hvmots-datasets.html#pen-chars-97|Pen-chars-97]]		|47.69	|45.95	|20.66	|46.80	|50.52	|47.69	|56.80	|
-|[[esling/hvmots-datasets.html#person-activity|Person activity]]	|89.35	|88.72	|71.80	|89.31	|85.09	|80.95	|91.60	|
-|[[esling/hvmots-datasets.html#physical-action|Physical action]]	|95.00	|92.50	|90.00	|94.50	|92.50	|92.50	|93.75	|
-|[[esling/hvmots-datasets.html#psychophysics|Psychophysics]]		|75.32	|77.27	|70.13	|75.03	|72.08	|74.03	|80.52	|
-|[[esling/hvmots-datasets.html#ptbdb|Ptbdb-1]]		|98.77	|96.73	|52.73	|98.66	|97.34	|96.84	|99.12	|
-|[[esling/hvmots-datasets.html#ptbdb|Ptbdb-2]]		|96.19	|93.23	|46.50	|95.29	|92.73	|91.12	|97.58	|
-|[[esling/hvmots-datasets.html#ptbdb|Ptbdb-5]]		|91.19	|87.54	|42.15	|90.00	|87.23	|83.31	|93.73	|
-|[[esling/hvmots-datasets.html#robot-failures|Robot failures-1]]	|96.59	|96.59	|76.13	|96.16	|92.04	|89.77	|97.73	|
-|[[esling/hvmots-datasets.html#robot-failures|Robot failures-2]]	|78.72	|76.59	|72.34	|76.49	|76.59	|82.97	|78.72	|
-|[[esling/hvmots-datasets.html#robot-failures|Robot failures-3]]	|86.97	|86.17	|71.17	|86.36	|85.83	|83.99	|91.49	|
-|[[esling/hvmots-datasets.html#robot-failures|Robot failures-4]]	|94.87	|95.72	|74.36	|95.26	|98.29	|88.03	|98.29	|
-|[[esling/hvmots-datasets.html#robot-failures|Robot failures-5]]	|77.44	|76.89	|62.80	|76.93	|75.00	|71.95	|79.88	|
-|[[esling/hvmots-datasets.html#slpdb|Slpdb]]			|77.86	|81.18	|72.78	|79.81	|79.09	|74.71	|79.56	|
-|[[esling/hvmots-datasets.html#sonar|Sonar]]			|86.54	|85.10	|70.67	|86.35	|86.54	|87.02	|88.94	|
-|[[esling/hvmots-datasets.html#synemp|Synemp]]			|91.15	|87.35	|80.82	|90.24	|85.28	|76.23	|92.28	|
-|[[esling/hvmots-datasets.html#vfdb|Vfdb]]			|60.64	|63.18	|43.58	|63.05	|56.08	|48.47	|58.62	|
-|[[esling/hvmots-datasets.html#vicon-physical|Vicon physical]]		|97.00	|95.50	|89.00	|96.50	|94.00	|94.00	|96.00	|
-|[[esling/hvmots-datasets.html#wall-robot|Wall-robot-4]]		|96.55	|96.55	|50.02	|97.31	|97.31	|97.31	|97.36	|
-|[[esling/hvmots-datasets.html#wall-robot|Wall-robot-24]]	|91.92	|90.76	|41.60	|91.23	|91.46	|91.42	|92.47	|
-===== Dataset specific =====
-
-==== Arabic-digit ====
+##### Arabic-digit
 
 //Spoken digit recognition//
 This dataset contains the recordings of 10 spoken arabic digit by 88 speakers. Each digit is repeated 10 times for each speaker The data comes from 44 males and 44 females native Arabic speakers. Sound files have been analyzed to obtain 13 Mel-Frequency Cepstrum Coefficients (MFCCs) time series.
@@ -191,11 +169,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is ext
 
 Results A Vector Quantization (VQ) with a Maximum Weight Spanning Tree (MWST) leads to a final mean classification accuracy of 93.12% over every classes with single classes results varying from 85.55% to 99.00%
 
-{{:esling:anova_arabic-digit.jpg?nolink&300 |}} {{:esling:hsd_arabic-digit.jpg?nolink&300 |}} 
-{{:esling:critical_arabic-digit.jpg?nolink&300 |}} 
-{{:esling:time_arabic-digit.jpg?nolink&300 |}} {{:esling:warp_arabic-digit.pdf?nolink&300 |}}
-
-==== Artificial characters ==== 
+##### Artificial characters
 
 //Character recognition//
 This dataset has been artificially generated by using first order theory to describe the structure of ten capital letters of English alphabet. Each instance is described by a set of segments which imitate the way an automatic program would segment an image.
@@ -210,12 +184,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results A Genetic Algorithm coupled with an histogram local optimization leads to a recognition rate of 98.68%
 
-
-{{:esling:anova_artificial-characters.jpg?nolink&300 |}} {{:esling:hsd_artificial-characters.jpg?nolink&300 |}} 
-{{:esling:critical_artificial-characters.jpg?nolink&300 |}} 
-{{:esling:time_artificial-characters.jpg?nolink&300 |}} {{:esling:warp_artificial-characters.pdf?nolink&300 |}}
-
-==== Australian-signs ==== 
+##### Australian-signs
 
 //Sign recognition//
 This dataset consists of samples of Auslan (Australian Sign Language) signs that were recorded with multiple sensors on a powered glove. Examples of 95 signs were collected from five signers with a total of 6650 sign samples
@@ -861,6 +830,51 @@ Results The results exhibit a classification accuracy of 95.58% if using a Polyn
 {{:esling:anova_wall-robot-4.jpg?nolink&300 |}} {{:esling:hsd_wall-robot-4.jpg?nolink&300 |}} 
 {{:esling:critical_wall-robot-4.jpg?nolink&300 |}} 
 {{:esling:time_wall-robot-4.jpg?nolink&300 |}} {{:esling:warp_wall-robot-4.pdf?nolink&300 |}}
+
+====== Classification results ======
+
+===== Summary =====
+
+^Datasets 		^1-NN	^5-NN	^NC	^SVM	^MOTS	^NP-M.	^HV-M.	^
+|[[esling/hvmots-datasets.html#arabic-digit|Arabic digit]]		|99.54	|99.26	|83.37	|99.31	|99.61	|99.52	|99.88	|
+|[[esling/hvmots-datasets.html#artificial-characters|Artificial characters]]	|99.98	|99.98	|96.40	|99.98	|100.0	|99.98	|100.0	|
+|[[esling/hvmots-datasets.html#australian-signs|Australian signs]]	|71.52	|70.23	|65.85	|72.33	|72.35	|69.23	|84.36	|
+|[[esling/hvmots-datasets.html#australian-signs-hq|Australian signs (HQ)]]	|84.64	|82.46	|70.25	|85.22	|64.44	|76.14	|91.31	|
+|[[esling/hvmots-datasets.html#bciIII-03a-graz|BciIII-03a-Graz]]	|34.17	|33.21	|25.12	|33.81	|33.93	|32.62	|35.59	|
+|[[esling/hvmots-datasets.html#bciIV-01-berlin|BciIV-01-Berlin]]	|57.29	|56.93	|52.14	|56.54	|56.92	|56.43	|57.50	|
+|[[esling/hvmots-datasets.html#bciIV-03-freiburg|BciIV-03-Freiburg]]	|33.40	|33.19	|32.76	|33.40	|36.40	|34.04	|36.62	|
+|[[esling/hvmots-datasets.html#biomag-2010|Biomag-2010]]		|67.12	|68.36	|71.12	|73.42	|72.24	|69.62	|73.42	|
+|[[esling/hvmots-datasets.html#challenge-2011|Challenge-2011]]		|90.58	|92.19	|88.38	|92.69	|90.58	|90.08	|91.98	|
+|[[esling/hvmots-datasets.html#character-trajectories|Character-trajectories]]	|99.23	|98.67	|89.68	|99.22	|98.11	|99.16	|99.23	|
+|[[esling/hvmots-datasets.html#dachstein|Dachstein]]		|97.42	|97.13	|89.67	|98.28	|98.13	|98.13	|98.57	|
+|[[esling/hvmots-datasets.html#eeg-alcoholism|Eeg-alcoholism]]		|79.55	|81.36	|80.00	|80.06	|82.27	|79.55	|83.18	|
+|[[esling/hvmots-datasets.html#forte|Forte-2]]		|82.64	|80.17	|74.38	|82.45	|81.54	|82.64	|83.47	|
+|[[esling/hvmots-datasets.html#forte|Forte-6]]		|71.90	|70.25	|62.81	|71.56	|71.90	|71.90	|73.55	|
+|[[esling/hvmots-datasets.html#gaitpdb|Gaitpdb]]		|89.87	|83.01	|73.20	|87.24	|77.78	|76.14	|89.87	|
+|[[esling/hvmots-datasets.html#handwritten|Handwritten]]		|90.67	|82.34	|78.12	|84.72	|81.23	|80.32	|92.17	|
+|[[esling/hvmots-datasets.html#ionosphere|Ionosphere]]		|94.20	|92.31	|88.89	|93.12	|89.17	|90.88	|94.59	|
+|[[esling/hvmots-datasets.html#japanese-vowels|Japanese-vowels]]	|94.21	|95.00	|88.91	|94.77	|90.78	|92.03	|97.19	|
+|[[esling/hvmots-datasets.html#libras|Libras]]			|84.44	|77.78	|55.00	|83.79	|79.72	|75.56	|91.39	|
+|[[esling/hvmots-datasets.html#pen-chars-35|Pen-chars-35]]		|54.32	|52.18	|27.94	|54.12	|51.44	|49.59	|54.91	|
+|[[esling/hvmots-datasets.html#pen-chars-97|Pen-chars-97]]		|47.69	|45.95	|20.66	|46.80	|50.52	|47.69	|56.80	|
+|[[esling/hvmots-datasets.html#person-activity|Person activity]]	|89.35	|88.72	|71.80	|89.31	|85.09	|80.95	|91.60	|
+|[[esling/hvmots-datasets.html#physical-action|Physical action]]	|95.00	|92.50	|90.00	|94.50	|92.50	|92.50	|93.75	|
+|[[esling/hvmots-datasets.html#psychophysics|Psychophysics]]		|75.32	|77.27	|70.13	|75.03	|72.08	|74.03	|80.52	|
+|[[esling/hvmots-datasets.html#ptbdb|Ptbdb-1]]		|98.77	|96.73	|52.73	|98.66	|97.34	|96.84	|99.12	|
+|[[esling/hvmots-datasets.html#ptbdb|Ptbdb-2]]		|96.19	|93.23	|46.50	|95.29	|92.73	|91.12	|97.58	|
+|[[esling/hvmots-datasets.html#ptbdb|Ptbdb-5]]		|91.19	|87.54	|42.15	|90.00	|87.23	|83.31	|93.73	|
+|[[esling/hvmots-datasets.html#robot-failures|Robot failures-1]]	|96.59	|96.59	|76.13	|96.16	|92.04	|89.77	|97.73	|
+|[[esling/hvmots-datasets.html#robot-failures|Robot failures-2]]	|78.72	|76.59	|72.34	|76.49	|76.59	|82.97	|78.72	|
+|[[esling/hvmots-datasets.html#robot-failures|Robot failures-3]]	|86.97	|86.17	|71.17	|86.36	|85.83	|83.99	|91.49	|
+|[[esling/hvmots-datasets.html#robot-failures|Robot failures-4]]	|94.87	|95.72	|74.36	|95.26	|98.29	|88.03	|98.29	|
+|[[esling/hvmots-datasets.html#robot-failures|Robot failures-5]]	|77.44	|76.89	|62.80	|76.93	|75.00	|71.95	|79.88	|
+|[[esling/hvmots-datasets.html#slpdb|Slpdb]]			|77.86	|81.18	|72.78	|79.81	|79.09	|74.71	|79.56	|
+|[[esling/hvmots-datasets.html#sonar|Sonar]]			|86.54	|85.10	|70.67	|86.35	|86.54	|87.02	|88.94	|
+|[[esling/hvmots-datasets.html#synemp|Synemp]]			|91.15	|87.35	|80.82	|90.24	|85.28	|76.23	|92.28	|
+|[[esling/hvmots-datasets.html#vfdb|Vfdb]]			|60.64	|63.18	|43.58	|63.05	|56.08	|48.47	|58.62	|
+|[[esling/hvmots-datasets.html#vicon-physical|Vicon physical]]		|97.00	|95.50	|89.00	|96.50	|94.00	|94.00	|96.00	|
+|[[esling/hvmots-datasets.html#wall-robot|Wall-robot-4]]		|96.55	|96.55	|50.02	|97.31	|97.31	|97.31	|97.36	|
+|[[esling/hvmots-datasets.html#wall-robot|Wall-robot-24]]	|91.92	|90.76	|41.60	|91.23	|91.46	|91.42	|92.47	|
 
 ====== Statistical significance ======
 
