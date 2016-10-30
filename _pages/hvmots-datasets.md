@@ -199,11 +199,7 @@ Source This dataset is part of the UCI dataset repository [frankasuncion2010] an
 
 Results For the low quality set (Nintendo Power-glove), best results are obtained by a Hidden Markov Model (HMM) classifier with 71.2% classification accuracy [kadous2002temporal]
 
-{{:esling:anova_australian-signs.jpg?nolink&300 |}} {{:esling:hsd_australian-signs.jpg?nolink&300 |}} 
-{{:esling:critical_australian-signs.jpg?nolink&300 |}} 
-{{:esling:time_australian-signs.jpg?nolink&300 |}} {{:esling:warp_australian-signs.pdf?nolink&300 |}}
-
-==== Australian-signs-hq ==== 
+##### Australian-signs-hq
 
 //Sign recognition//
 This dataset is a highest quality version of the Australian-signs dataset. However, recordings were made with a single signer. It contains 27 examples of each of the same 95 signs for a total of 2565 signs collected from a native signer using high quality position trackers on both hands.
@@ -216,11 +212,7 @@ Articles This dataset is part of the UCI dataset repository [frankasuncion2010] 
 
 Results For this dataset, best results are obtained by the Naive Segmentation based on TClass algorithm with a 94.5% accuracy [kadous2002temporal].
 
-{{:esling:anova_australian-signs-hq.jpg?nolink&300 |}} {{:esling:hsd_australian-signs-hq.jpg?nolink&300 |}} 
-{{:esling:critical_australian-signs-hq.jpg?nolink&300 |}} 
-{{:esling:time_australian-signs-hq.jpg?nolink&300 |}} {{:esling:warp_australian-signs-hq.pdf?nolink&300 |}}
-
-==== BciIII-03a-graz ==== 
+##### BciIII-03a-graz
 
 //Brain-Computer Interface//
 Summary This dataset is composed of EEG recordings of cued motor imagery with 4 classes (left hand, right hand, foot, tongue) from 3 subjects (ranging from quite good to fair performance). Performance is measured using the kappa-coefficient.
@@ -237,11 +229,7 @@ Source This dataset is part of the 2003 BCI Competition 2003 [blankertz2004bci].
 
 Results A multi-class CSP based on Fisher ratios obtained a kappa coefficient of 0.7926.
 
-{{:esling:anova_bciIII-03a-graz.jpg?nolink&300 |}} {{:esling:hsd_bciIII-03a-graz.jpg?nolink&300 |}} 
-{{:esling:critical_bciIII-03a-graz.jpg?nolink&300 |}} 
-{{:esling:time_bciIII-03a-graz.jpg?nolink&300 |}} {{:esling:warp_bciIII-03a-graz.pdf?nolink&300 |}}
-
-==== BciIV-01-berlin ==== 
+##### BciIV-01-berlin
 
 //Brain-Computer Interface//
 Motor imagery for an uncued EEG classifier application (for hand and foot); evaluation data is a continuous EEG which also contains periods of idle state 
@@ -258,11 +246,7 @@ Source This dataset is part of the BCI Competition IV [blankertz2007non]. The pe
 
 Results The output of the competition shows that a clustering procedure applied on a Principal Components Analysis (PCA) allows to obtain a MSE of 0.382.
 
-{{:esling:anova_bciIV-01-berlin.jpg?nolink&300 |}} {{:esling:hsd_bciIV-01-berlin.jpg?nolink&300 |}} 
-{{:esling:critical_bciIV-01-berlin.jpg?nolink&300 |}} 
-{{:esling:time_bciIV-01-berlin.jpg?nolink&300 |}} {{:esling:warp_bciIV-01-berlin.pdf?nolink&300 |}}
-
-==== BciIV-03-Freiburg ==== 
+##### BciIV-03-Freiburg
 
 //Brain-Computer Interface//
 Hand movement directions in MEG. The data set contains directionally modulated low-frequency MEG activity that was recorded while subjects performed wrist movements in four different directions. 
@@ -283,7 +267,7 @@ Results The final obtained accuracy is 46.9% over the 2 subjects with 59.5% for 
 {{:esling:critical_bciIV-03-freiburg.jpg?nolink&300 |}} 
 {{:esling:time_bciIV-03-freiburg.jpg?nolink&300 |}} {{:esling:warp_bciIV-03-freiburg.pdf?nolink&300 |}}
 
-==== Biomag-2010 ==== 
+##### Biomag-2010
 
 //EEG analysis//
 The goal of this dataset is to detect whether subjects are attending to the left or right visual field on each trial based on the MagnetoEncephaloGram (MEG) of the subjects. 
@@ -298,11 +282,7 @@ Source This dataset is described in [van2009attention]
 
 Results The results reported in [van2009attention] shows that a Support Vector Machine (SVM) algorithm provide an accuracy of up to 69% correctly classified trials.
 
-{{:esling:anova_biomag-2010.jpg?nolink&300 |}} {{:esling:hsd_biomag-2010.jpg?nolink&300 |}} 
-{{:esling:critical_biomag-2010.jpg?nolink&300 |}} 
-{{:esling:time_biomag-2010.jpg?nolink&300 |}} {{:esling:warp_biomag-2010.pdf?nolink&300 |}}
-
-==== Challenge-2011 ==== 
+##### Challenge-2011
 
 //Cardiology//
 This dataset is composed of 12-lead ECG recordings, with the aim of providing useful feedback on the quality of the ECG signals by classifying them depending on their quality (from poor to excellent).
@@ -323,7 +303,7 @@ Results The challenge was intended to see the selectivity and specificity of alg
 {{:esling:critical_challenge-2011.jpg?nolink&300 |}} 
 {{:esling:time_challenge-2011.jpg?nolink&300 |}} {{:esling:warp_challenge-2011.pdf?nolink&300 |}}
 
-==== Character-trajectories ==== 
+##### Character-trajectories 
 
 //Character recognition//
 This dataset is composed of labelled samples of pen tip trajectories recorded for individual characters writing. All samples are from the same writer, for the purposes of primitive extraction. Only characters with a single pen-down segment were considered
@@ -340,11 +320,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results Reported classification accuracy of 87% in [zafar2006recognition] and 93.67% in [perina2009new] using a Gaussian Mixture Model (GMM) with a Hidden Markov Model (HMM).
 
-{{:esling:anova_character-trajectories.jpg?nolink&300 |}} {{:esling:hsd_character-trajectories.jpg?nolink&300 |}} 
-{{:esling:critical_character-trajectories.jpg?nolink&300 |}} 
-{{:esling:time_character-trajectories.jpg?nolink&300 |}} {{:esling:warp_character-trajectories.pdf?nolink&300 |}}
-
-==== Dachstein ==== 
+##### Dachstein
 
 //High altitude medicine//
 Each instance represents EEG and ECG data for one cardiac cycle that were acquired at 900 m and at 2700m altitude. The subject performed a reaction time task. The data shows the influence of the loss of oxygen on event-related desynchronization (ERD) and event-related synchronization (ERS) and heart rate variability.
@@ -362,11 +338,7 @@ Source This dataset is described in [guger2005effects] where analysis is perform
 
 Results - No classification accuracy reported -
 
-{{:esling:anova_dachstein.jpg?nolink&300 |}} {{:esling:hsd_dachstein.jpg?nolink&300 |}} 
-{{:esling:critical_dachstein.jpg?nolink&300 |}} 
-{{:esling:time_dachstein.jpg?nolink&300 |}} {{:esling:warp_dachstein.pdf?nolink&300 |}}
-
-==== EEG-alcoholism ==== 
+##### EEG-alcoholism
 
 //Medical analysis//
 This data comes from a large study to examine EEG correlates of genetic predisposition to alcoholism. It contains measurements from 64 electrodes placed on subject's scalps.
@@ -383,11 +355,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results The results provided in [zhong2002hmms] show that a Multivariate HMM allows a classification accuracy of 90.5%. However, this result is obtained with only 10 pre-selected measurements. The true classification accuracy is 78.5%
 
-{{:esling:anova_eeg-alcoholism.jpg?nolink&300 |}} {{:esling:hsd_eeg-alcoholism.jpg?nolink&300 |}} 
-{{:esling:critical_eeg-alcoholism.jpg?nolink&300 |}} 
-{{:esling:time_eeg-alcoholism.jpg?nolink&300 |}} {{:esling:warp_eeg-alcoholism.pdf?nolink&300 |}}
-
-==== Forte ==== 
+##### Forte
 
 //Climatology// (lightning prediction)
 This dataset is split into three different problems depending on the number of classes they contain. Each dataset is aimed at predicting the type of lightning observed through recordings of the power density.
@@ -404,19 +372,11 @@ Forte-2
 
 Classes 2-class problem where distinction should be made between cloud-to-ground and intra-cloud lightning.
 
-{{:esling:anova_forte-2.jpg?nolink&300 |}} {{:esling:hsd_forte-2.jpg?nolink&300 |}} 
-{{:esling:critical_forte-2.jpg?nolink&300 |}} 
-{{:esling:time_forte-2.jpg?nolink&300 |}} {{:esling:warp_forte-2.pdf?nolink&300 |}}
-
 Forte-6
 
 Classes 6-class problem where distinction should be made between CG (Positive-Initial Return Stroke), SR (Subsequent Negative Return Stroke), IR (Negative Initial Return Stroke), I (Impulsive Event), I2 (Impulsive Event Pair) and KM (Gradual Intra-Cloud Stroke) lightning events
 
-{{:esling:anova_forte-6.jpg?nolink&300 |}} {{:esling:hsd_forte-6.jpg?nolink&300 |}} 
-{{:esling:critical_forte-6.jpg?nolink&300 |}} 
-{{:esling:time_forte-6.jpg?nolink&300 |}} {{:esling:warp_forte-6.pdf?nolink&300 |}}
-
-==== Gaitpdb ==== 
+##### Gaitpdb
 
 //Medical analysis//
 Summary This database contains measures of gait from patients with idiopathic Parkinson Disease (PD) (mean age: 66.3 years; 63% men), and healthy control subject (mean age: 66.3 years; 55% men). A disturbed gait is a common, debilitating symptom of PD; patients with severe gait disturbances are prone to falls and may lose their functional independence. The database includes the vertical ground reaction force records of subjects as they walked at their usual, self-selected pace for approximately 2 minutes on level ground. 
@@ -433,11 +393,7 @@ Source This dataset is part of the PhysioBank database [goldberger2000physiobank
 
 Results Results introduced in [lee2012parkinson] shows that Neural Network with weighted fuzzy membership functions on Wavelet Transform coefficients allow to obtain a 77.33% classification accuracy.
 
-{{:esling:anova_gaitpdb.jpg?nolink&300 |}} {{:esling:hsd_gaitpdb.jpg?nolink&300 |}} 
-{{:esling:critical_gaitpdb.jpg?nolink&300 |}} 
-{{:esling:time_gaitpdb.jpg?nolink&300 |}} {{:esling:warp_gaitpdb.pdf?nolink&300 |}}
-
-==== Handwritten ==== 
+##### Handwritten
 
 //Character recognition//
 This dataset contains 8235 online handwritten assamese characters. The “online” process involves capturing the data in real-time while the characters are written on a digitizing tablet with an electronic pen. This dataset was collected from 45 writers, each of which contributed 183 recordings
@@ -452,11 +408,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010]
 
 Results A classification accuracy of 92% with HMM to 96% with SVM is reported but only for digits (so only a 10-classes problem)
 
-{{:esling:anova_handwritten.jpg?nolink&300 |}} {{:esling:hsd_handwritten.jpg?nolink&300 |}} 
-{{:esling:critical_handwritten.jpg?nolink&300 |}} 
-{{:esling:time_handwritten.jpg?nolink&300 |}} {{:esling:warp_handwritten.pdf?nolink&300 |}}
-
-==== Ionosphere ==== 
+##### Ionosphere
 
 //Radar analysis//
 This dataset was collected by a radar system in Goose Bay, Labrador. The targets were free electrons in the ionosphere. "Good" radar returns are those showing evidence of some type of structure in the ionosphere. "Bad" returns are those that do not; their signals pass through the ionosphere. 
@@ -473,11 +425,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results The best results is a 94.2 % classification accuracy reported in [eggermont2004genetic] using a Genetic Programming (GP) approach.
 
-{{:esling:anova_ionosphere.jpg?nolink&300 |}} {{:esling:hsd_ionosphere.jpg?nolink&300 |}} 
-{{:esling:critical_ionosphere.jpg?nolink&300 |}} 
-{{:esling:time_ionosphere.jpg?nolink&300 |}} {{:esling:warp_ionosphere.pdf?nolink&300 |}}
-
-==== Japanese-vowels ==== 
+##### Japanese-vowels
 
 //Speaker identification//
 This dataset covers the topic of speaker identification for nine male speakers which uttered two Japanese vowels successively.
@@ -494,11 +442,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results The proposed classifier exhibits a classification accuracy of 94.1%, while a 5-state continuous Hidden Markov Model attained up to 96.2%
 
-{{:esling:anova_japanese-vowels.jpg?nolink&300 |}} {{:esling:hsd_japanese-vowels.jpg?nolink&300 |}} 
-{{:esling:critical_japanese-vowels.jpg?nolink&300 |}} 
-{{:esling:time_japanese-vowels.jpg?nolink&300 |}} {{:esling:warp_japanese-vowels.pdf?nolink&300 |}}
-
-==== Libras ==== 
+##### Libras
 
 //Movement recognition//
 The dataset contains 15 classes of 24 instances each. Each class represents to a hand movement type in LIBRAS (oficial brazilian signal language). 
@@ -515,11 +459,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010], described
 
 Results An evolving Spiking Neural Network (eSNN) allows to obtain a 88.59% classification accuracy.
 
-{{:esling:anova_libras.jpg?nolink&300 |}} {{:esling:hsd_libras.jpg?nolink&300 |}} 
-{{:esling:critical_libras.jpg?nolink&300 |}} 
-{{:esling:time_libras.jpg?nolink&300 |}} {{:esling:warp_libras.pdf?nolink&300 |}}
-
-==== Pen-chars-35 ==== 
+##### Pen-chars-35
 
 //Character recognition//
 This dataset is composed of upper and lowercase characters, digits, and other spanich characters, for a total of 62 different characters collected from 11 different writers which performed 2 repetitions.
@@ -534,11 +474,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results Classification accuracy is shown to be up to 89.15% if using a DTW matching algorithm on segment-based representation with a NN-rule.
 
-{{:esling:anova_pen-chars-35.jpg?nolink&300 |}} {{:esling:hsd_pen-chars-35.jpg?nolink&300 |}} 
-{{:esling:critical_pen-chars-35.jpg?nolink&300 |}} 
-{{:esling:time_pen-chars-35.jpg?nolink&300 |}} {{:esling:warp_pen-chars-35.pdf?nolink&300 |}}
-
-==== Pen-chars-97 ==== 
+##### Pen-chars-97
 
 //Character recognition//
 This dataset is composed of ASCII and non-ASCII characters which amount to a total of 97 different characters collected from 60 different writers which performed 2 repetitions.
@@ -553,12 +489,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results Classification accuracy is presented in [castro2009improving] of 91.8% classification accuracy if using a template matching algorithm with a NN-rule however this results is only for a restricted set of 62 characters.
 
-
-{{:esling:anova_pen-chars-97.jpg?nolink&300 |}} {{:esling:hsd_pen-chars-97.jpg?nolink&300 |}} 
-{{:esling:critical_pen-chars-97.jpg?nolink&300 |}} 
-{{:esling:time_pen-chars-97.jpg?nolink&300 |}} {{:esling:warp_pen-chars-97.pdf?nolink&300 |}}
-
-==== Person-activity ==== 
+##### Person-activity
 
 //Movement analysis//
 People used for recording of the data were wearing four tags (ankle left, ankle right, belt and chest). Each instance is a localization data for one of the tags. The goal of this dataset was to dect falls only but we also test the accuracy in classifying all movement classes.
@@ -573,11 +504,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results Classification accuracy is shown to be 72% for machine learning agents, 88% for expert-knowledge agents and 91.3% for meta-prediction agents. However, this results are for detecting falls only.
 
-{{:esling:anova_person-activity.jpg?nolink&300 |}} {{:esling:hsd_person-activity.jpg?nolink&300 |}} 
-{{:esling:critical_person-activity.jpg?nolink&300 |}} 
-{{:esling:time_person-activity.jpg?nolink&300 |}} {{:esling:warp_person-activity.pdf?nolink&300 |}}
-
-==== Physical-action ==== 
+##### Physical-action
 
 //Movement analysis//
 
@@ -595,11 +522,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010]
 
 Results A Genetic Programming (GP) algorithm allows to obtain 73.3% classification accuracy [theodoridis2007action]. However these results are for six of the actions only.
 
-{{:esling:anova_physical-action.jpg?nolink&300 |}} {{:esling:hsd_physical-action.jpg?nolink&300 |}} 
-{{:esling:critical_physical-action.jpg?nolink&300 |}} 
-{{:esling:time_physical-action.jpg?nolink&300 |}} {{:esling:warp_physical-action.pdf?nolink&300 |}}
-
-==== Ptbdb ==== 
+##### Ptbdb
 
 //Cardiology//
 The ECGs were collected from healthy volunteers and patients with different heart diseases 
@@ -620,30 +543,15 @@ Ptdb-1
 
 Technical This dataset contains single heart beats for classification
 
-
-{{:esling:anova_ptdb-1.jpg?nolink&300 |}} {{:esling:hsd_ptdb-1.jpg?nolink&300 |}} 
-{{:esling:critical_ptdb-1.jpg?nolink&300 |}} 
-{{:esling:time_ptdb-1.jpg?nolink&300 |}} {{:esling:warp_ptdb-1.pdf?nolink&300 |}}
-
 Ptdb-2
 
 Technical This dataset contains two heart beats in each instance
-
-
-{{:esling:anova_ptdb-2.jpg?nolink&300 |}} {{:esling:hsd_ptdb-2.jpg?nolink&300 |}} 
-{{:esling:critical_ptdb-2.jpg?nolink&300 |}} 
-{{:esling:time_ptdb-2.jpg?nolink&300 |}} {{:esling:warp_ptdb-2.pdf?nolink&300 |}}
 
 Ptdb-5
 
 Technical This dataset contains five heart beats in each instance
 
-
-{{:esling:anova_ptdb-5.jpg?nolink&300 |}} {{:esling:hsd_ptdb-5.jpg?nolink&300 |}} 
-{{:esling:critical_ptdb-5.jpg?nolink&300 |}} 
-{{:esling:time_ptdb-5.jpg?nolink&300 |}} {{:esling:warp_ptdb-5.pdf?nolink&300 |}}
-
-==== Robot-failures ==== 
+##### Robot-failures
 
 //Robotics//
 This dataset contains force and torque measurements on a robot after failure detection. Each failure is characterized by 15 force/torque samples collected at regular time intervals
@@ -664,20 +572,11 @@ Classes Failures in approach to grasp position 24% normal - 19% collision - 18% 
 
 Samples 88
 
-{{:esling:anova_robot-failures-lp1.jpg?nolink&300 |}} {{:esling:hsd_robot-failures-lp1.jpg?nolink&300 |}} 
-{{:esling:critical_robot-failures-lp1.jpg?nolink&300 |}} 
-{{:esling:time_robot-failures-lp1.jpg?nolink&300 |}} {{:esling:warp_robot-failures-lp1.pdf?nolink&300 |}}
-
 Robot-failures-lp2
 
 Classes Failures in transfer of a part43% normal - 13% front collision - 15% back collision - 11% collision to the right - 19% collision to the left
 
 Samples 47
-
-
-{{:esling:anova_robot-failures-lp2.jpg?nolink&300 |}} {{:esling:hsd_robot-failures-lp2.jpg?nolink&300 |}} 
-{{:esling:critical_robot-failures-lp2.jpg?nolink&300 |}} 
-{{:esling:time_robot-failures-lp2.jpg?nolink&300 |}} {{:esling:warp_robot-failures-lp2.pdf?nolink&300 |}}
 
 Robot-failures-lp3
 
@@ -685,20 +584,11 @@ Classes Position of part after a transfer failure 43% normal - 19% slightly move
 
 Samples 47
 
-
-{{:esling:anova_robot-failures-lp3.jpg?nolink&300 |}} {{:esling:hsd_robot-failures-lp3.jpg?nolink&300 |}} 
-{{:esling:critical_robot-failures-lp3.jpg?nolink&300 |}} 
-{{:esling:time_robot-failures-lp3.jpg?nolink&300 |}} {{:esling:warp_robot-failures-lp3.pdf?nolink&300 |}}
-
 Robot-failures-lp4
 
 Classes Failures in approach to ungrasp position 21% normal - 62% collision - 18% obstruction
 
 Samples 117
-
-{{:esling:anova_robot-failures-lp4.jpg?nolink&300 |}} {{:esling:hsd_robot-failures-lp4.jpg?nolink&300 |}} 
-{{:esling:critical_robot-failures-lp4.jpg?nolink&300 |}} 
-{{:esling:time_robot-failures-lp4.jpg?nolink&300 |}} {{:esling:warp_robot-failures-lp4.pdf?nolink&300 |}}
 
 Robot-failures-lp5
 
@@ -706,11 +596,7 @@ Classes Failures in motion with part 27% normal - 16% bottom collision - 13% bot
 
 Samples 164
 
-{{:esling:anova_robot-failures-lp5.jpg?nolink&300 |}} {{:esling:hsd_robot-failures-lp5.jpg?nolink&300 |}} 
-{{:esling:critical_robot-failures-lp5.jpg?nolink&300 |}} 
-{{:esling:time_robot-failures-lp5.jpg?nolink&300 |}} {{:esling:warp_robot-failures-lp5.pdf?nolink&300 |}}
-
-==== Slpdb ==== 
+##### Slpdb
 
 //Sleep apnea analysis//
 The MIT-BIH Polysomnographic Database is a collection of recordings of multiple physiologic signals during sleep. Subjects were monitored in Boston's Beth Israel Hospital Sleep Laboratory for evaluation of chronic obstructive sleep apnea syndrome, and to test the effects of constant positive airway pressure (CPAP), a standard therapeutic intervention that usually prevents or substantially reduces airway obstruction in these subjects.
@@ -727,11 +613,7 @@ Source This dataset is part of the PhysioBank database [goldberger2000physiobank
 
 Results Between 83.24% to 88.97% classification accuracy [bsoul2010real] using a Multi-Scale Support Vector Classifier (MS-SVM)
 
-{{:esling:anova_slpdb.jpg?nolink&300 |}} {{:esling:hsd_slpdb.jpg?nolink&300 |}} 
-{{:esling:critical_slpdb.jpg?nolink&300 |}} 
-{{:esling:time_slpdb.jpg?nolink&300 |}} {{:esling:warp_slpdb.pdf?nolink&300 |}}
-
-==== Sonar ==== 
+##### Sonar
 
 //Sonar analysis//
 This dataset contains the patterns of sonar signals bouncing off either a metal cylinder or rocks. In both case, the angles and conditions varies. The goal is to correctly identify the metal cylinder returns.
@@ -746,11 +628,7 @@ Source TThis dataset is part of the UCI repository [frankasuncion2010] and is de
 
 Results The results reports a 76% classification accuracy by using a Minimum Message Length (MML) Oblique Tree.
 
-{{:esling:anova_sonar.jpg?nolink&300 |}} {{:esling:hsd_sonar.jpg?nolink&300 |}} 
-{{:esling:critical_sonar.jpg?nolink&300 |}} 
-{{:esling:time_sonar.jpg?nolink&300 |}} {{:esling:warp_sonar.pdf?nolink&300 |}}
-
-==== Synemp ==== 
+##### Synemp
 
 //Climatology// (lightning prediction)
 Summary The classification tasks are aimed at studying varying speed of leading edge for different classes of lightning
@@ -765,11 +643,7 @@ Source This dataset is described in [syn-lightning-emp-05].
 
 Results - No classification results reported -
 
-{{:esling:anova_synemp.jpg?nolink&300 |}} {{:esling:hsd_synemp.jpg?nolink&300 |}} 
-{{:esling:critical_synemp.jpg?nolink&300 |}} 
-{{:esling:time_synemp.jpg?nolink&300 |}} {{:esling:warp_synemp.pdf?nolink&300 |}}
-
-==== Vfdb ==== 
+##### Vfdb 
 
 //Cardiology//
 This database includes 22 half-hour ECG recordings of subjects who experienced episodes of sustained ventricular tachycardia, ventricular flutter, and ventricular fibrillation.
@@ -784,11 +658,7 @@ Source This dataset is part of the PhysioBank database [goldberger2000physiobank
 
 Results A band-pass digital filtration and ECG peak detection algorithm allows to obtain a 91.5% classification algorithm in [krasteva2005assessment].
 
-{{:esling:anova_vfdb.jpg?nolink&300 |}} {{:esling:hsd_vfdb.jpg?nolink&300 |}} 
-{{:esling:critical_vfdb.jpg?nolink&300 |}} 
-{{:esling:time_vfdb.jpg?nolink&300 |}} {{:esling:warp_vfdb.pdf?nolink&300 |}}
-
-==== Vicon-physical ==== 
+##### Vicon-physical
 
 //Physiological analysis//
 This dataset includes 10 normal and 10 aggressive physical actions based on various human activities. The data have been collected by 10 subjects using the Vicon 3D tracker.
@@ -805,11 +675,7 @@ Results 95.4% classification accuracy is reported using a Dynamic Neural Network
 
 Classes 2-class problem between aggressive and normal actions
 
-{{:esling:anova_vicon-physical.jpg?nolink&300 |}} {{:esling:hsd_vicon-physical.jpg?nolink&300 |}} 
-{{:esling:critical_vicon-physical.jpg?nolink&300 |}} 
-{{:esling:time_vicon-physical.jpg?nolink&300 |}} {{:esling:warp_vicon-physical.pdf?nolink&300 |}}
-
-==== Wall-robot ==== 
+##### Wall-robot
 
 //Robotics//
 This dataset contains ultrasound readings for a wall-following task for robotic navigations.
@@ -826,12 +692,7 @@ Source This dataset is part of the UCI repository [frankasuncion2010] and is des
 
 Results The results exhibit a classification accuracy of 95.58% if using a Polynomial kernel SVM.
 
-
-{{:esling:anova_wall-robot-4.jpg?nolink&300 |}} {{:esling:hsd_wall-robot-4.jpg?nolink&300 |}} 
-{{:esling:critical_wall-robot-4.jpg?nolink&300 |}} 
-{{:esling:time_wall-robot-4.jpg?nolink&300 |}} {{:esling:warp_wall-robot-4.pdf?nolink&300 |}}
-
-====== Classification results ======
+## Classification results
 
 ===== Summary =====
 
