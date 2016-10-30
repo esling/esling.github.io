@@ -1,53 +1,101 @@
-Section b: Curriculum Vitae (max. 2 pages)
-[The template below is provided only for guidance. It may be modified as necessary and appropriate.]
-PERSONAL INFORMATION
-Family name, First name:
-Researcher unique identifier(s) (such as ORCID, Research ID, etc. ...):
-Date of birth:
-Nationality:
-URL for web site:
- EDUCATION
+# Curriculum Vitae
+
+Philippe Esling  
+c/o IRCAM  
+1, Place Igor Stravinsky  
+F-75004 Paris, France  
+
+14/09/1984  
+French  
+
+*Associate professor* - University Paris 6 - UPMC  
+PhD - Acoustics, Signal Processing and Informatics  
+IRCAM - CNRS UMR 9912  
+*Music Representations* team  
+http://esling.github.io  
+
+# Short version
+
+## Education
 199? PhD
 Name of Faculty/ Department, Name of University/ Institution, Country
 Name of PhD Supervisor
+Awarded on 10/12/2012
 199? Master
 Name of Faculty/ Department, Name of University/ Institution, Country
 
- CURRENT POSITION(S)
+## Current position
 201? – Current Position
 Name of Faculty/ Department, Name of University/ Institution/ Country
 200? – Current Position
 Name of Faculty/ Department, Name of University/ Institution/ Country
 
- PREVIOUS POSITIONS
+## Previous positions
 200? – 200? Position held
 Name of Faculty/ Department, Name of University/ Institution/ Country
 200? – 200? Position held
 Name of Faculty/ Department, Name of University/ Institution/ Country
- FELLOWSHIPS
+
+## Awards
+
+## Fellowships
 200? – 200? Scholarship, Name of Faculty/ Department/Centre, Name of University/ Institution/
 Country
 199? – 199? Scholarship, Name of Faculty/ Department/Centre, Name of University/ Institution/
 Country
- SUPERVISION OF GRADUATE STUDENTS AND POSTDOCTORAL FELLOWS
+
+## Supervision of graduate and post-doctoral students
 200? – 200? Number of Postdocs/ PhD/ Master Students
 Name of Faculty/ Department/ Centre, Name of University/ Institution/ Country
- TEACHING ACTIVITIES (if applicable)
+
+## Teaching activities
 200? – Teaching position – Topic, Name of University/ Institution/ Country
 200? – 200? Teaching position – Topic, Name of University/ Institution/ Country 
-Example, not to complete
-Applicant's last name Part B1 ACRONYM
-4
- ORGANISATION OF SCIENTIFIC MEETINGS (if applicable)
+Across my different academic positions, I gave a wide panel of teaching in informatics and mathematics over at different levels. All these teachings are summarized in table [tab:Résumé-des-volumes]. I have been participating to all organization meetings for both the Master 2 ATIAM from IRCAM and the Master 1 STL from UPMC.
+
+| Year | Level | Name | UE | Nb | CM | TD | TP | Volume |
+| 2015 | M2 | Paradigme prog. concurrente | NI407 | 12 | 12 | - | - | 12 |
+| 2015 | M2 | Insertion pro. (IP) | NI001 | 25 | 4.5 | - | - | 4.5 |
+| 2015 | M2 | Music Machine Learning | MX130 | 25 | 15 | - | 6 | 21 |
+| 2015 | M1 | Projet Androide | MI042 | 3 | - | 9 | - | 9 |
+| 2015 | M1 | Programmation répartie | MI019 | 29 | - | 20 | 20 | 40 |
+| 2015 | L3 | Modèle de program. (MPIL) | LI332 | 27 | - | 20 | 20 | 40 |
+| 2015 | L3 | Program. Java 2 | LE380 | 16 | 21 | 14 | - | 35 |
+| 2014 | M2 | Paradigme prog. concurrente | NI407 | 15 | 4.5 | - | - | 4.5 |
+| 2014 | M2 | Insertion pro. (IP) | NI001 | 15 | 4.5 | - | - | 4.5 |
+| 2014 | M1 | Data mining (DMKM) | MX130 | 5 | - | 15 | - | 15 |
+| 2014 | M1 | Projet STL | MI042 | 3 | - | 9 | - | 9 |
+| 2014 | M1 | Program. concurrente | MI019 | 29 | - | 20 | 20 | 40 |
+| 2014 | L3 | Modèle de program. | LI332 | 27 | - | 20 | 20 | 40 |
+| 2014 | L3 | Program. Java 2 | LE380 | 16 | 21 | 14 | - | 35 |
+| 2014 | L1 | Program. récursive | LI101 | 31 | - | - | 21 | 21 |
+| 2012 | M2 | Publication scientifique | IP | 22 | 4.5 | - | - | 4.5 |
+| 2011 | L1 | Scheme | LI101 | 63 | - | 45 | 30 | 75 |
+| 2011 | L2 | Projet Robotique | LI260 | 21 | - | 30 | 20 | 50 |
+| 2011 | L1 | Puce au web | LI105 | 23 | - | - | 21 | 21 |
+| 2009 | LX | Programmation | LXTI | 19 | - | 22.5 | 15 | 37.5 |
+| 2009 | LX | Projet électronique | LE01 | 19 | - | 22.5 | 15 | 37.5 |
+| Total | 87 | 261 | 208 | 556 |
+
+In the past years, I have also taken responsibility and are still the main supervisor or co-supervisor of several teaching units, for which I produced teaching materials:
+
+LE380 Java L2 - Mobile platforms object-oriented development  
+M2003 Concurrent and reactive programming  
+NI407 Music Machine Learning (in musical informatics)  
+
+
+## Organisation of scientific meetings
 201? Please specify your role and the name of event / Country
 200? Please specify type of event / number of participants / Country
- INSTITUTIONAL RESPONSIBILITIES (if applicable)
+
+## Institutional responsibilities
 201? – Faculty member, Name of University/ Institution/ Country
 201? – 201? Graduate Student Advisor, Name of University/ Institution/ Country
 200? – 200? Member of the Faculty Committee, Name of University/ Institution/ Country
 200? – 200? Organiser of the Internal Seminar, Name of University/ Institution/ Country
 200? – 200? Member of a Committee; role, Name of University/ Institution/ Country
- COMMISSIONS OF TRUST (if applicable)
+
+## Commissions of trust
 201? – Scientific Advisory Board, Name of University/ Institution/ Country
 201? – Review Board, Name of University/ Institution/ Country
 201? – Review panel member, Name of University/ Institution/ Country
@@ -56,56 +104,38 @@ Applicant's last name Part B1 ACRONYM
 200? – Reviewer, Name of University/ Institution/ Country
 200? – Scientific Evaluation, Name of University/ Institution/ Country
 200? – Evaluator, Name of University/ Institution/ Country
- MEMBERSHIPS OF SCIENTIFIC SOCIETIES (if applicable)
+
+## Memberships of scientific societies
 201? – Member, Research Network “Name of Research Network”
 200? – Associated Member, Name of Faculty/ Department/Centre, Name of University/
 Institution/ Country
 200? – Funding Member, Name of Faculty/ Department/Centre, Name of University/ Institution/
 Country
- MAJOR COLLABORATIONS (if applicable)
+
+## Major collaborations
 Name of collaborators, Topic, Name of Faculty/ Department/Centre, Name of University/
 Institution/ Country
 
- CAREER BREAKS (if applicable)
-Exact dates Please indicate the reason and the duration in months. 
-
- This section is a classical CV.
- Mention the exact date of your PhD award (the date on your diploma).
- Which sub-headers are best to describe yourself and your achievements? E.g.,
-• Education
-• Professional Experience
-• Awards
-• Teaching and Supervision Activities
-• Key Publications
- Use indexes, summaries...
- The competition is high. The evaluators should see your excellence at once! Sell yourself, without
-bluffing.
- Report on any significant career breaks. Peer reviewers will take it into consideration during the
-assessment of the quality of the PI and his/her career progression.
+## Funded projects
  Mention a distinct funding ID, which shows how much you are able to raise and manage funding.
-Use Euro. The funding ID will not count towards page limits. It must follow the table format
-indicated in the Part B1 template:
+Use Euro. The funding ID will not count towards page limits. It must follow the table format indicated in the Part B1 template:
  On-going Grants
-Project Title Funding Source Amount (€) Period Role of the PI Relation to current
-ERC proposal
- Grant applications
-Project Title Funding Source Amount (€) Period Role of the PI Relation to current
-ERC proposal
- Describe clearly any scientific overlap between your ERC application and the current research grant
-or on-going grant application.
-Applicant's last name Part B1 ACRONYM
-5
-Section c: Early achievements track-record (max 2 pages)
+Project Title Funding Source Amount (€) Period Role of the PI Relation to current ERC proposal
+
+## Key Publications
+ Use indexes, summaries...
+ The competition is high. The evaluators should see your excellence at once! Sell yourself, without bluffing.
+ Describe clearly any scientific overlap between your ERC application and the current research grant or on-going grant application.
+
+## Early achievements track-record
  List your activities as stated in the Information for Applicants p. 24.
- Don’t forget to list 5 representative publications and highlight those without the presence of your
-PhD supervisor (minimum 1).
- Choose the achievements that are highly valuated in YOUR domain. It depends a lot on the domain
-if it’s rather first authorship, last authorship, conference proceedings etc.
+
+### Most representative publications
+ Don’t forget to list 5 representative publications and highlight those without the presence of your PhD supervisor (minimum 1).
+ Choose the achievements that are highly valuated in YOUR domain. It depends a lot on the domain if it’s rather first authorship, last authorship, conference proceedings etc.
  The publications are the part the evaluators seem to be most interested in.
  No repetition from the CV necessary. Don’t give the same information twice.
- You can comment on your publications. E.g., if you are from a domain where peer reviewing is not
-widely used, you can briefly explain this. This can be helpful for cross-disciplinary researchers who
-will be assessed by evaluators from two completely different scientific domains. 
+ You can comment on your publications. 
 
 Scientific excellence is the sole criterion, subject of evaluation is the pair (principal investigator).
 
@@ -146,24 +176,8 @@ Evaluation type A :
 * The PI is an  exceptionally innovative and active young scientist, holding a permanent position at a leading university. The list of tasks with a significant leading role is long demonstrating the PI’s ability to lead scientific project in an international environment. Also the list of presentations at international conferences, workshops and seminars proves the confidence he enjoys from collaborators
 * The PI is an outstanding young scientist who already at a young age has made a strong impact evidenced by publishing a review in his field of research, and has become a very important reference in this field. He has publications in high-impact journals and has achieved extremely high citations and a very high Hirsch index. He has strong international collaborations with the most important groups. He has already established his independence through building a reasonable group of post-docs and PhD students under his supervision. He has teaching experience through lecturing at the various departments and institutes where he spent extended periods. He has also contributed to public outreach. He has been (co-)organiser of several workshops and conferences and has been invited to give review talks at many international conferences. 
 
-Chapter 1 Teaching activities
-
-
 
 Teachings
-
-Across my different academic positions, I gave a wide panel of teaching in informatics and mathematics over at different levels. All these teachings are summarized in table [tab:Résumé-des-volumes]. I have been participating to all organization meetings for both the Master 2 ATIAM from IRCAM and the Master 1 STL from UPMC.
-
-
-
-In the past years, I have also taken responsibility and are still the main supervisor or co-supervisor of several teaching units, for which I produced teaching materials:
-
-00.00.0000 LE380 Java L2 - Mobile platforms object-oriented development
-
-00.00.0000 M2003 Concurrent and reactive programming
-
-00.00.0000 NI407 Music Machine Learning (in musical informatics)
-
 
 
 
