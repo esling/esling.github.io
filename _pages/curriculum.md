@@ -145,3 +145,300 @@ Evaluation type A :
 * His  achievements  and  publications  are  truly ground-breaking. Number of citations of his papers exceeds 2000 and his h-index is 27,  which is truly impressive at the PI's career stage. The papers demonstrate his independent and creative thinking and his capability to go  significantly beyond the present state of the art.
 * The PI is an  exceptionally innovative and active young scientist, holding a permanent position at a leading university. The list of tasks with a significant leading role is long demonstrating the PI’s ability to lead scientific project in an international environment. Also the list of presentations at international conferences, workshops and seminars proves the confidence he enjoys from collaborators
 * The PI is an outstanding young scientist who already at a young age has made a strong impact evidenced by publishing a review in his field of research, and has become a very important reference in this field. He has publications in high-impact journals and has achieved extremely high citations and a very high Hirsch index. He has strong international collaborations with the most important groups. He has already established his independence through building a reasonable group of post-docs and PhD students under his supervision. He has teaching experience through lecturing at the various departments and institutes where he spent extended periods. He has also contributed to public outreach. He has been (co-)organiser of several workshops and conferences and has been invited to give review talks at many international conferences. 
+
+Chapter 1 Teaching activities
+
+
+
+Teachings
+
+Across my different academic positions, I gave a wide panel of teaching in informatics and mathematics over at different levels. All these teachings are summarized in table [tab:Résumé-des-volumes]. I have been participating to all organization meetings for both the Master 2 ATIAM from IRCAM and the Master 1 STL from UPMC.
+
+
+
+In the past years, I have also taken responsibility and are still the main supervisor or co-supervisor of several teaching units, for which I produced teaching materials:
+
+00.00.0000 LE380 Java L2 - Mobile platforms object-oriented development
+
+00.00.0000 M2003 Concurrent and reactive programming
+
+00.00.0000 NI407 Music Machine Learning (in musical informatics)
+
+
+
+
+Innovative pedagogy actions
+
+Music machine learning
+
+The new trends in computing place an increasing emphasis on machine learning (ML) techniques. However, these aspects were not taught inside the ATIAM Master prior to my arrival. I decided to develop a teaching centered on various ML algorithms, applied to musical information. I created both the lesson plan and materials. I also developed an extensive tutorial, which can be seen as a series of missing code exercices targeted at understanding the fundamental notion and equations in each technique. Slides and tutorial available at http://repmus.ircam.fr/esling/atiam-ml.html.
+
+Concurrent and reactive programming
+
+This unit that has been recently created in the STL Master at UPMC, was mainly coordinated and created by Carlos Agon, but I took an active part in the creation of all aspects and projects related to reactive programming. Hence, thanks to a collaboration set up with ESTEREL Technologies, we obtained academic licences for the students, so that they can learn a widespread language used by multiple avionics, electricity and transport companies. I also bought several drones, so that this year the project will be to program an autonomous drone to perform a topographic map of a room. Project and details are available at https://www-master.ufr-info-p6.jussieu.fr/2015/PPC.
+
+Java L2 - Mobile platforms object-oriented development
+
+This unit is given as part of an industrial training bachelor at UPMC. I took the main coordination and organization of this unit, by recreating the whole schedule and corresponding materials. As students chose this formation in order to find a job in the industry, I focused my teaching on applications that are currently well-seeked . Therefore, even though theoretical aspects are given, all applications are targeted at both Web development and mobile (Android and iOS) platforms. Current slides and description are available at http://repmus.ircam.fr/esling/java.html.
+
+Other teaching units
+
+In multiple teaching units, notably MPIL (LI332) and PC2R (MI019), I proposed to devise innovative projects for applying the newly acquired coding skills of students to projects with musical applications. I believe that projects with an increased interest to its endeavor will drive students to work out of passion rather than obligation.
+
+Administrative activities
+
+00.00.0000 2014 Creation of the new teaching plan - Master 2 ATIAM - UPMC
+
+00.00.0000 2014 Creation of a new teaching unit - Music Machine Learning, Master 2 ATIAM - UPMC
+
+00.00.0000 2014 Creation of a new teaching unit - Java L2 - Mobile platforms object-oriented development - UPMC
+
+00.00.0000 2014 Creation of the new teaching plan - Master 1 STL - UPMC
+
+
+
+Jury participations
+
+00.00.0000 2015 Mid-PhD Jury - Xavier Renard (Lip6, Arcelor mittal) - UPMC, ParisMultivariate time series classification for industrial monitoring.
+
+00.00.0000 2014 Jury de stage de Master 2 - IRCAM (ATIAM 2014)
+
+00.00.0000 2014 Associate professor selection comity (CdS) N°4259Poste de maître de conférence à l’UPMC (Poste n°4259, Section 27 UPMC)
+
+00.00.0000 2013 Jury de stage de Master 2 - IRCAM (ATIAM 2013)
+
+00.00.0000 2012 Jury de stage de Master 2 - IRCAM (ATIAM 2012)
+
+Chapter 1 Philippe Esling - Curriculum Vitae
+
+
+
+Identity     Philippe ESLING
+
+      Born in Metz (France) 
+
+     on 14/09/1984
+
+Adress     41 rue de Chateaudun
+
+     F-94200 Ivry-Sur-Seine
+
+Contact     (+33) 6 32 58 91 08
+
+     esling@ircam.fr
+
+Academic background\addcontentsline{toc}{section}{1.1 \hspace{2mm} Education}
+
+00.00.0000 2013-... Associate Professor at Université Pierre et Marie Curie (UPMC) - Current situationResponsable de l'axe de recherche Orchestration à l'IRCAM
+
+00.00.0000 2013 Post-Doctorate Fellow at Université de GenèvePost-doctorat en métagénomique et analyse de diversité des séquences génétiques
+
+00.00.0000 2009-12 Doctorate at IRCAM and Université Pierre & Marie CurieDoctorate in signal processing and musical informatics - Mention Très Honorable.
+
+00.00.0000 2008-09 Institut de Recherche et Coordination Acoustique / Musique (IRCAM)Masters in acoustics, signal processing and musical informatics - Mention Très Bien.
+
+00.00.0000 2007-08 Université Pierre et Marie Curie, paris 6Masters in distributed systems and applications - Mention Très Bien, 1st in year.
+
+00.00.0000 2005-07 Université Pierre et Marie Curie, paris 6Bachelors in informatics and mathematics - Mention Très Bien. 1st in year
+
+
+
+International mobility
+
+00.00.0000 2015 McGill University, Montreal, Canada - Invited researcher for 2 months
+
+00.00.0000 2012 McGILL University, Montreal, Canada - Invited PhD for 3 months
+
+00.00.0000 2011 JFLI, Todai University, Tokyo, Japan - Invited PhD for 6 months
+
+
+
+Awards
+
+
+
+00.00.0000 2013 1st Prize for best PhD from the General Council - University PhD prize for thesis on computer-assisted orchestration and multiobjective time series matching
+
+00.00.0000 2010 AFIM Young Researcher Award 2010 - Research prize for the intelligent time series query system
+
+
+
+Originality of research and major results
+
+Automatic computational orchestration
+
+Since taking position at IRCAM on September 2013, I am responsible for directing and coordinating the research axis on musical orchestration. In this context, I worked towards the development of innovative algorithms and interfaces for computer-aided orchestration, by developing new heuristic approaches for approximating orchestral targets and complex temporal articulations. This work led to the first computer-aided orchestration software called Orchids in November 2014. This software is the first to provide a way to recreate any sound with a musical orchestra, and is sold through the IRCAM Forum, with a worldwide community of several thousands of users.
+
+Creative artificial intelligence
+
+Since 2014, I have been working . By using ideas derived from deep neural network learning, the goal is to provide new ways to understand the creative processes underlying musical orchestration. Together with a PhD student, we developped the first prototype of a software able to produce a musical orchestration from a simple piano input, in real-time. 
+
+Multiobjective time series matching
+
+I pursued theoretical researches on time series (ACM Computing Surveys, 2012) that subsequently raised a question yet to be challenged in the scientific literature. I introduced the idea to assess the similarity of multiple decorrelated temporal evolutions through a flexible multiobjective framework, called Multi-Objective Time Series (MOTS) matching. The idea of this paradigm is to take into account the multidimensional aspects of all elements studied based on multiple temporal structures. Thus, the similarity of different temporal forms is studied jointly without mixing the different measures of distance, addressing any research problem centered on temporal analysis by providing multidimensional similarities for temporal forms. These paradigms of innovative data mining have been extended to classification problems and also achieved excellent results in bio-monitoring, cardiology, robotic, climatology.
+
+Environmental monitoring through DNA
+
+The analysis of bio-diversity through Next-Generation Sequencing (NGS) to monitor the environmental state through DNA communities in the deep sea. However, the characteristics of NGS datasets produce hundreds of millions of DNA sequences. I developed analysis algorithms to include the temporal evolution of biological diversity through treatment of massive sequencing of several billion ancient DNA sequences. My work resulted in the publication of numerous studies in journals with high impact factor, but also the advent of two first-of-kind computer software for parameter-free clustering used by several teams of molecular biologists. The development of these software continues to this day due to the interest of the scientific community for them.
+
+00.00.0000 
+
+
+
+Coordination of research projects
+
+00.00.0000 2015 Main coordinator - International partnership ANR-SSHRCIRCAM and McGill University on computer-assisted orchestration
+
+00.00.0000 2013 Funding project CoInf - Metagenomics (Geneve, Switzerland)High-throughput DNA Sequencer
+
+
+
+Research responsabilities
+
+00.00.0000 2013-16 Direction of the Orchestration research axis at IRCAM
+
+00.00.0000 2014 Co-Direction of 2 PhDs at IRCAMPierre Talbot, Leopold Crestel
+
+00.00.0000 2012 Creation and direction of the Orchestration Workgroup - IRCAM, Paris
+
+
+
+Administrative responsabilities
+
+
+
+00.00.0000 2015 Creation of the new teaching plan - Master 2 ATIAM - UPMC
+
+00.00.0000 2014 Creation of a pedagogic unit - Music Machine Learning, ATIAM - UPMC
+
+00.00.0000 2014 Creation of the new teaching plan - Master 1 STL - UPMC
+
+
+
+Jury participations
+
+00.00.0000 2015 Mid-PhD Jury - Xavier Renard (Lip6, Arcelor mittal) - UPMC, ParisMultivariate time series classification for industrial monitoring.
+
+00.00.0000 2014 Jury de stage de Master 2 - IRCAM (ATIAM 2014)
+
+00.00.0000 2014 Associate professor selection comity (CdS) N°4259Poste de maître de conférence à l’UPMC (Poste n°4259, Section 27 UPMC)
+
+00.00.0000 2013 Jury de stage de Master 2 - IRCAM (ATIAM 2013)
+
+00.00.0000 2012 Jury de stage de Master 2 - IRCAM (ATIAM 2012)
+
+
+
+Conference organisation
+
+00.00.0000 2015 Organisation of IRCAM Workshop at SMC 2016, Darmstadt, Germany
+
+00.00.0000 2014 Co-direction And organisation of mensual conference MaMuX at IRCAM, Paris10 meetings per year with notable participation of Shihab Shamma and John Weardey
+
+00.00.0000 2014 Co-organisation of conference Eukaryotic-omics, UNIGE, Geneva
+
+00.00.0000 2011 Organisation of conference MCM 2011, IRCAM, Paris
+
+00.00.0000 2010 Organisation of conference JJCAAS 2010, IRCAM, Paris
+
+
+
+Industrial relationships
+
+00.00.0000 2015 Collaboration with ID-Gene, Geneva, SwitzerlandEnvironmental monitoring through NGS Sequencing.
+
+00.00.0000 2011 Collaboration with INFRAL, Strasbourg, FranceHeart diseases detection
+
+00.00.0000 2011 Collaboration with Native Instruments, Berlin, GermanyAudio databases mining
+
+
+
+Refereed contributions
+
+
+
+International Journals
+
+00.00.0000 2015 JA Visco, L Apothéloz-Perret-Gentil, A Cordonier, Esling P., L Pillet, “Environmental monitoring: inferring the diatom index from Next-Generation Sequencing data”, Environmental science & technology 49 (13), 7597-7605. IF: 5.330
+
+00.00.0000 2015 J Pawlowski, F Lejzerowicz, Esling P., L Apotheloz-Perret-Gentil, “Inferring biotic indices from metabarcoding data: promises and challenges”, Genome 58 (5), 265-265 2015. IF: 13.852
+
+00.00.0000 2015 Esling P., Lejzerowics F. & Pawlowski J. “High-throughput accuracy for multiplex amplicon sequencing” Nucleic Acid Research, (2014), Accepted with minor revisions. IF: 8.055
+
+00.00.0000 2014 Pawlowski, J., Esling, P. Lejzerowicz, F., Cedhagen, T., & Wilding, T. A. “Environmental monitoring through protist NGS metabarcoding: assessing the impact of fish farming on benthic foraminifera communities”. Molecular ecology resources. (2014). In press. IF: 7.432
+
+00.00.0000 2014 Lejzerowicz, F., Esling, P., & Pawlowski, J. (2014). “Patchiness of deep-sea benthic Foraminifera across the Southern Ocean: insights from high-throughput DNA sequencing.” Deep Sea Research Part II: Topical Studies in Oceanography, 108, 17-26. IF: 2.654
+
+00.00.0000 2014 Pawlowski, J., Lejzerowicz, F., & Esling, P.. Next-Generation Environmental Diversity Surveys of Foraminifera: Preparing the Future. The Biological Bulletin, 227(2), 93-106. IF:2.234 
+
+00.00.0000 2014 Pawłowska, J., Lejzerowicz, F., Esling, P., Szczuciński, W., Zajączkowski, M., & Pawlowski, J. “Ancient DNA sheds new light on the Svalbard foraminiferal fossil record of the last millennium.” Geobiology. (2014). In press. IF: 3.042
+
+00.00.0000 2013 Lejzerowicz F., Esling P., Majewski W., Szczuciński W., Decelle J., Obadia C., Martinez Arbizu P., Pawlowski J., “Ancient DNA complements microfossil record in deep-sea subsurface sediments”, Biology Letters, 9(4). IF: 3.348 
+
+00.00.0000 2013 Esling P. Agon C., “Multiobjective time series matching and classification” IEEE Transactions on Speech Audio and Language Processing, vol. 21, no. 10, pp. 2057--2072. IF: 1.675
+
+00.00.0000 2013 Hackbarth B., Schnell N. Esling P., Schwarz D. “Composing Morphology: Concatenative Synthesis as an Intuitive Medium for Prescribing Sound in Time”, Contemporary Music Review, vol.32, no. 1.
+
+00.00.0000 2012 Esling P., Agon C. "Time series data mining", ACM Computing Surveys, vol. 45, no. 1., IF: 4.543
+
+00.00.0000 2011 Lecroq B., Lejzerowicz F., Esling P., Pawlowski J. "Ultra-deep sequencing of foraminiferal microbarcodes unveils hidden richness in deep-sea sediments", Proceedings of the National Academy of Science, vol. 108, no. 32, 2011. IF: 9.737
+
+International conferences with review comitee
+
+00.00.0000 2014 Esling, P. « Infering musical relationship networks from various similarity aspects » International Computer Music Conference (2014).
+
+00.00.0000 2011 Esling P. Agon C. "Composition of Sound Mixtures with Spectral Maquettes", Proceedings of the International Computer Music Conference, New York, USA, 2011.
+
+00.00.0000 2010 Esling P. Agon C. “Composer les mélanges sonores avec les maquettes spectrales”, Actes des 10emes Journées d'Informatique Musicale, pp. 5-15, Rennes, France, 2010
+
+00.00.0000 2010 Esling P. Agon C. "Dynamic Musical Orchestration using Genetic Algorithms", International conference on Evolutionary Algorithms (EvoStar 2010), Istanbul, Turkey, 2010.
+
+Book chapters
+
+00.00.0000 2010 Esling P., Carpentier G., Agon C. "Dynamic Musical Orchestration using a Spectro-Temporal Description of Musical Instruments", LNCS, vol. 6025, EvoApplications Part II, 2010.
+
+
+
+Non-refereed contributions
+
+Invited speaker conference
+
+00.00.0000 2011 Esling P. “From signal to symbolism”, Presentation at IRCAM - Agora, Paris, France 2011
+
+00.00.0000 2011 Esling P. “Abstract and Temporal Orchestration with Computers”, Presentation at CHROMA Conference, New York, USA, 2011
+
+National conferences
+
+00.00.0000 2014 Esling P. Agon C. « Représenter l’information musicale multivariée », Journées de la complexité d’information, Lille (2014).
+
+00.00.0000 2014 Esling P. Agon C. « Orchestration musicale et analyse des séries temporelles », Journées de mathématiques et musique, Lille (2014). 
+
+00.00.0000 2012 Esling P. "Multiobjective time series matching", Presentation at McGill - Montréal, Canada, 2012
+
+00.00.0000 2010 Esling P. “De l'orchestration temporelle par ordinateur”, Presentation at IRCAM, Paris, France 2010
+
+00.00.0000 2010 Esling P. Agon Carlos "Time series analysis, sound mixtures and orchestration", Presentation in CNRS JFLI, Tokyo University, 2010.
+
+00.00.0000 2009 Esling P., Agon C. “Orchestration et mixtures sonores”, Journées Jeunes Chercheurs en Acoustique Audition et Signal, Marseille, 2009.
+
+
+
+Creative outputs
+
+00.00.0000 2011 Tokyo Wonder Site experimental music festival 2011 - Official selection
+
+
+
+Reviewing activities and jury
+
+00.00.0000 2015 Plos One Journal
+
+00.00.0000 2014 Data Mining and Knowledge Discovery (DMKD) journal
+
+00.00.0000 2013 IEEE Acoustics, Speech, and Signal Processing (ICASSP 2013)
+
+00.00.0000 2012 Mathematics and Computation in Music (MCM 2012)
+
+00.00.0000 2011 International Computer Music Conference (ICMC 2011)
+
+00.00.0000 2010 Journées Jeunes Chercheurs en Acoustique Audition et Signal (JJCAAS 2010)
