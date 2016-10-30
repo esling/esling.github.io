@@ -5,7 +5,7 @@ author_profile: false
 share: true
 comments: true
 sidebar:
-  nav: "teaching-atiam-ml"
+  nav: "research"
 ---
 
 <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
