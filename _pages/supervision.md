@@ -12,38 +12,38 @@ sidebar:
 
 <div markdown = "1">
 
-Axel Chemla - PhD - Milan - 2016
+Axel Chemla - PhD - Milan - 2016  
 *Generation of embedding spaces from audio signals*
 
-Léopold Crestel - PhD - EDITE - 2015
+Léopold Crestel - PhD - EDITE - 2015  
 *Real-time generation of orchestral works through deep temporal learning*.
 
-Pierre Talbot - PhD - EDITE - 2014
+Pierre Talbot - PhD - EDITE - 2014  
 *Non-deterministic Temporal Constraint Calculus (NTCC) for big musical data*
 
 </div>{: .notice--blank}
 
 # Masters internships
 
-Theis Bazin - Master 2 ATIAM - EDITE - 2016
+Theis Bazin - Master 2 ATIAM - EDITE - 2016  
 *Learning prediction in an automatic improvisation framework*
 
-Emmanuel Pariente - Master 2 ATIAM - EDITE - 2016
+Emmanuel Pariente - Master 2 ATIAM - EDITE - 2016  
 *Data augmentations and embedding spaces for musical orchestration*
 
-Léopold Crestel - Master 2 ATIAM - EDITE
+Léopold Crestel - Master 2 ATIAM - EDITE  
 *Learning variable time granularities through deep boltzmann machines*
 
-Alice Cohen-Adria - Master 1 Androide - UPMC
+Alice Cohen-Adria - Master 1 Androide - UPMC  
 *Auto-encoders for Time Series Classification (TSC)*
 
-Pierre Talbot - Master 2 STL - EDITE
+Pierre Talbot - Master 2 STL - EDITE  
 *A compiler for Non-deterministic Temporal Constraint Calculus (NTCC)*
 
-Henri NG - Master 2 STL - EDITE
+Henri NG - Master 2 STL - EDITE  
 *Automatic knowledge inference from multivariate time series for musical orchestration*
 
-Marion Pilte - Master 1 - Polytechnique
+Marion Pilte - Master 1 - Polytechnique  
 *Orchestral pieces generation through constraints networks*
 
 Encadrement à 100%
