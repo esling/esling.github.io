@@ -18,6 +18,9 @@ $(document).ready(function(){
     $("#div1").hide();
     $("#div2").hide();
     $("#div3").hide();
+    $("#divq1").hide();
+    $("#divq2").hide();
+    $("#divq3").hide();
 });
 </script>
 
@@ -94,6 +97,20 @@ $$
 \end{equation}
 $$ 
 
+<div markdown="1">
+**Exercise**  
+
+  1. Perform the derivatives of the output given a single neuron
+  2. Perform the derivatives for the bias as well
+
+</div>{: .notice--info}  
+
+<div markdown = "1">
+
+**Solution** [<a href="javascript:void(0)" class="abuttons" data-divid="divq1">Reveal</a>]
+
+<div id="divq1">
+
 Given that we have simply an $$ L_2 $$ (Euclidean) error criterion on a single neuron for the time being, the update of the weights for a single example $$ x $$, with desired output $$ d $$ can be simply computed by 
 
 $$
@@ -103,7 +120,22 @@ w_{j}^{t+1}=w_{j}^{t}+\eta.\left(d-y\right).x_{j}
 \end{equation}
 $$
 
-with $$ \eta $$ the *learning rate* parameter (which controls the size of the update steps). We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that a single neuron is enough to solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
+with $$ \eta $$ the *learning rate* parameter (which controls the size of the update steps). 
+
+Similarly, for the bias, we simply have to compute  
+
+$$
+\begin{equation}
+b^{t+1}=b^{t}+\eta.\left(d-y\right)
+\label{eq4}
+\end{equation}
+$$
+
+</div>
+
+</div>{: .notice--success}
+
+We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that a single neuron is enough to solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
 
 {% highlight Matlab %}
 patterns      % 2 x n matrix of random points
