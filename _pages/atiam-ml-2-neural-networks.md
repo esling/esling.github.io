@@ -125,7 +125,7 @@ Similarly, for the bias, we simply have to compute
 $$
 \begin{equation}
 b^{t+1}=b^{t}+\eta.\left(d-y\right)
-\label{eq4}
+\label{eq5}
 \end{equation}
 $$
 
