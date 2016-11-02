@@ -251,11 +251,13 @@ TSS_Limit         % Sum-squared error limit
 
   1. Update the forward propagation and error computation (compared to desired).
   2. Update the back-propagation part to learn the weights of both layers.
-  3. Run the complete learning procedure, which should produce a result similar to that displayed below.
+  3. Run the learning, which should produce a result similar to that displayed below.
   4. Perform multiple re-runs of the learning procedure (re-launching with different initializations)
   5. What observations can you make on the learning process?
   6. What happens if you initialize all weights to zeros?
   7. (Optional) Implement the *sparsity* constraint in your neural network.
+  7. (Optional) Implement the *weight decay* constraint in your network.
+  7. (Optional) Add the *momentum* to the learning procedure.
 
 </div>{: .notice--info}
 
