@@ -288,6 +288,7 @@ $$
 where the parameter $$\lambda$$ controls the relative importance of the two terms.
 
 3. *Momentum* in learning
+
 Usually, in complex problems, the gradient can be very noisy and, therefore, the learning might oscillate widely. In order to reduce this problem, we can *smooth* the different gradient updates by retaining the values of the gradient at each iteration and then performing an update based on the latest gradient $$\delta_{i}^{t}$$ and the gradient at the previous iteration $$\delta_{i}^{t-1}$$. Therefore, a gradient update is applied as
 
 $$
