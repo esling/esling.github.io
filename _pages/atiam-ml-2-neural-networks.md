@@ -183,13 +183,27 @@ y_{2}=\sigma\left(\sum_{i = 1}^{n}w_{i}.y_{1}^{i} + b\right)
 \end{equation}
 $$  
 
-Finally, we will rely on the same loss $$\mathcal{L_{D}}$$ as in the previous exercise, but the outputs used are $$y_2$$ instead of $$y$$. 
+Finally, we will rely on the same loss $$\mathcal{L_{D}}$$ as in the previous exercise, but the outputs used are $$y_2$$ instead of $$y$$. As in the previous case, we now need to compute the derivatives of the weights and biases for several layers . However, you should see that some form of generalization might be possible for any number of layer.  
 
-Therefore, in order to *propagate* the derivatives, we can simply use the chain rule
+</div>{: .notice--blank}
+
+<div markdown="1">
+**Exercise**  
+
+  1. Perform the derivatives for the last layer specifically
+  2. Define a generalized derivative for any previous layer
+
+</div>{: .notice--info}  
+
+**Solution** [<a href="javascript:void(0)" class="abuttons" data-divid="divq2">Reveal</a>]
+
+<div id="divq2" markdown = "1">
+
+In order to *propagate* the derivatives, we can simply rely on the chain rule
 
 $$
 \begin{equation}
-\frac{\delta\mathcal{P}}{\delta w_{1}}=\frac{\delta\mathcal{P}}{\delta y_{2}}.\frac{\delta y_{2}}{\delta w_{1}}
+\frac{\delta\mathcal{L_D}}{\delta w_{1}}=\frac{\delta\mathcal{L_D}}{\delta y_{2}}.\frac{\delta y_{2}}{\delta w_{1}}
 \label{eq7}
 \end{equation}
 $$  
@@ -198,7 +212,7 @@ Therefore, we can compute the derivative for the last layer as
 
 $$
 \begin{equation}
-\delta_{i}^{L}=g'\left(h_{i}^{L}\right)\left[\delta_{i}^{u}-y_{i}^{L}\right]
+\delta_{i}^{L}=\sigma'\left(y_{i}^{L}\right)\left[\delta_{i}^{u}-y_{i}^{L}\right]
 \label{eq8}
 \end{equation}
 $$  
@@ -207,11 +221,14 @@ And for any previous layer, we rely on the development of the chain rule giving
 
 $$
 \begin{equation}
-\delta_{i}^{l}=g'\left(h_{i}^{l}\right)\sum_{j}w_{ij}^{l+1}\delta_{j}^{l+1}\mbox{ }l\in\left[1\ldots L-1\right]
+\delta_{i}^{l}=\sigma'\left(y_{i}^{l}\right)\sum_{j}w_{ij}^{l+1}\delta_{j}^{l+1}\mbox{ }l\in\left[1\ldots L-1\right]
 \label{eq9}
 \end{equation}
 $$  
 
+</div>{: .notice--success}
+
+<div markdown = "1">
 We provide the prototypical set of XOR values in the `xorPat.mat` along with their class values in `xorAns.mat`. The variables that will be used by your code are the following.
 
 
