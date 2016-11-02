@@ -275,8 +275,6 @@ TSS_Limit         % Sum-squared error limit
 
 **Optional questions**
 
-1. *Sparsity* constraint
-
 2. *Weight decay* constraint
 
 As nothing constrains the weights in the network, we can note that usually all weights vector given a multiplicative factor might be equivalent, which can stall the learning (and lead to exploding weights). The *weight decay* allows to regularize the learning by penalizing weights with a too wide amplitude. The idea is to add this constraint as a term to the final loss (which leads to an indirect "pressure" on the learning process. Therefore, the final loss will be defined as
@@ -287,7 +285,18 @@ $$
 \end{equation}
 $$
 
+where the parameter $$\lambda$$ controls the relative importance of the two terms.
+
 3. *Momentum* in learning
+Usually, in complex problems, the gradient can be very noisy and, therefore, the learning might oscillate widely. In order to reduce this problem, we can *smooth* the different gradient updates by retaining the values of the gradient at each iteration and then performing an update based on the latest gradient $$\delta_{i}^{t}$$ and the gradient at the previous iteration $$\delta_{i}^{t-1}$$. Therefore, a gradient update is applied as
+
+$$
+\begin{equation}
+\delta_{final}^{t} = \delta_{i}^{t} + m.\delta_{i}^{t-1}
+\end{equation}
+$$
+
+with $$m$$ the momentum parameter, which control the amount of gradient smoothing.
 
 </div>{: .notice--blank}
 
