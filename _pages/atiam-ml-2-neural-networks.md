@@ -97,6 +97,8 @@ $$
 \end{equation}
 $$ 
 
+</div>{: .notice--blank}
+
 <div markdown="1">
 **Exercise**  
 
@@ -130,6 +132,8 @@ b^{t+1}=b^{t}+\eta.\left(d-y\right)
 $$
 
 </div>{: .notice--success}
+
+<div markdown = "1">
 
 We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that a single neuron is enough to solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
 
