@@ -56,10 +56,8 @@ To simplify your work, we provide the following set of functions that you should
   |`plot3view.m`|Allows to plot a 3-dimensional view of data points|
   |`plotBoundary.m`|Plots the decision boundary of a single neuron with 2-dimensional inputs|
   |`plotBoundarySurface.m`|Plots the decision surface of a single neuron with 3-dimensional inputs|
-  |`plotBpBoundary.m`|Plots multiple decision boundaries for a set of hidden units|
-  |`plotBpPats.m`|Plots input patterns for back-propagation|
-  |`plotPats.m`|Plots input patterns for single neuron problems|
-  |`plotPats3D.m`|Plots 3-dimensional input patterns for single neuron problems|
+  |`plotPatterns.m`|Plots input patterns (bi-dimensionnal)|
+  |`plotPatterns3D.m`|Plots 3-dimensional input patterns|
   |`xorAns.dat`|Class values for the XOR problem|
   |`xorPats.dat`|Point values for the XOR problem|
 
@@ -214,13 +212,12 @@ TSS_Limit         % Sum-squared error limit
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
 
 <div id="div2">
-<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+<img src="../images/atiam-ml/02_2.2_xor_1.svg" height="350" width="350"/> <img src="../images/atiam-ml/02_2.2_xor_2.svg" height="350" width="350"/>
 </div>
 
 </div>{: .notice--blank}
 
-
-### 3.3 - 3-layer audio classification
+### 2.3 - 3-layer audio classification
 
 <div markdown = "1">
 
