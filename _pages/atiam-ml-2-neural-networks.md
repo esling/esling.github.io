@@ -300,7 +300,7 @@ with $$m$$ the momentum parameter, which control the amount of gradient smoothin
 
 </div>{: .notice--blank}
 
-### 2.3 - 3-layer audio classification
+## 2.3 - 3-layer audio classification
 
 <div markdown = "1">
 
