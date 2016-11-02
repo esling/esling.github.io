@@ -271,6 +271,26 @@ TSS_Limit         % Sum-squared error limit
 
 </div>{: .notice--blank}
 
+<div markdown = "1">
+
+**Optional questions**
+
+1. *Sparsity* constraint
+
+2. *Weight decay* constraint
+
+As nothing constrains the weights in the network, we can note that usually all weights vector given a multiplicative factor might be equivalent, which can stall the learning (and lead to exploding weights). The *weight decay* allows to regularize the learning by penalizing weights with a too wide amplitude. The idea is to add this constraint as a term to the final loss (which leads to an indirect "pressure" on the learning process. Therefore, the final loss will be defined as
+
+$$
+\begin{equation}
+\mathcal{L}_final=\mathcal{L_D} + \lambda \sum_{l} \sum_{i} \sum_{j} \left( W_{ij}^{l} \right)^{2}
+\end{equation}
+$$
+
+3. *Momentum* in learning
+
+</div>{: .notice--blank}
+
 ### 2.3 - 3-layer audio classification
 
 <div markdown = "1">
