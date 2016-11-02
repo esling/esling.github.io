@@ -105,8 +105,6 @@ $$
 
 </div>{: .notice--info}  
 
-<div markdown = "1">
-
 **Solution** [<a href="javascript:void(0)" class="abuttons" data-divid="divq1">Reveal</a>]
 
 <div id="divq1" markdown = "1">
@@ -130,8 +128,6 @@ b^{t+1}=b^{t}+\eta.\left(d-y\right)
 \label{eq4}
 \end{equation}
 $$
-
-</div>
 
 </div>{: .notice--success}
 
