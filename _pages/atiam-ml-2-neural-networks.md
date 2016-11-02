@@ -109,7 +109,7 @@ $$
 
 **Solution** [<a href="javascript:void(0)" class="abuttons" data-divid="divq1">Reveal</a>]
 
-<div id="divq1">
+<div id="divq1" markdown = "1">
 
 Given that we have simply an $ L_2 $ (Euclidean) error criterion on a single neuron for the time being, the update of the weights for a single example $$ x $$, with desired output $$ d $$ can be simply computed by 
 
