@@ -1,74 +1,50 @@
-Chapter 1 Encadrement et formation par la recherche
+---
+layout: single
+permalink: /supervision/
+author_profile: false
+share: true
+comments: true
+sidebar:
+  nav: "research"
+---
 
-Doctorat
+# Ongoing PhD
 
-Léopold Crestel
+<div markdown = "1">
 
-Doctorat (1ère année) - EDITE
+Axel Chemla - PhD - Milan - 2016
+*Generation of embedding spaces from audio signals*
 
-“Real-time generation of orchestral works through deep temporal learning”.
+Léopold Crestel - PhD - EDITE - 2015
+*Real-time generation of orchestral works through deep temporal learning*.
 
-Encadrement à 90% avec Florent Jacquemard (10%)
+Pierre Talbot - PhD - EDITE - 2014
+*Non-deterministic Temporal Constraint Calculus (NTCC) for big musical data*
 
-01/09/2015 - ...
+</div>{: .notice--blank}
 
-Pierre Talbot
+# Masters internships
 
-Doctorat (2ème année) - EDITE
+Theis Bazin - Master 2 ATIAM - EDITE - 2016
+*Learning prediction in an automatic improvisation framework*
 
-“Non-deterministic Temporal Constraint Calculus (NTCC) for big musical data”.
+Emmanuel Pariente - Master 2 ATIAM - EDITE - 2016
+*Data augmentations and embedding spaces for musical orchestration*
 
-Encadrement à 50% avec Carlos Agon (50%)
+Léopold Crestel - Master 2 ATIAM - EDITE
+*Learning variable time granularities through deep boltzmann machines*
 
-01/09/2014 - ...
+Alice Cohen-Adria - Master 1 Androide - UPMC
+*Auto-encoders for Time Series Classification (TSC)*
 
-Master
+Pierre Talbot - Master 2 STL - EDITE
+*A compiler for Non-deterministic Temporal Constraint Calculus (NTCC)*
 
-Léopold Crestel
+Henri NG - Master 2 STL - EDITE
+*Automatic knowledge inference from multivariate time series for musical orchestration*
 
-Master 2 ATIAM - EDITE
-
-“Learning variable time granularities through deep boltzmann machines”.
-
-Encadrement à 100%
-
-01/02/2015 - 31/07/2015
-
-Alice Cohen-Adria
-
-Master 1 Androide - UPMC
-
-“Auto-encoders for Time Series Classification (TSC)”.
-
-Encadrement à 100%
-
-01/03/2015 - 31/05/2015
-
-Pierre Talbot
-
-Master 2 STL - EDITE
-
-“A compiler for Non-deterministic Temporal Constraint Calculus (NTCC)”.
-
-Encadrement à 50% avec Carlos Agon (50%)
-
-01/02/2014 - 31/07/2014
-
-Henri NG
-
-Master 2 STL - EDITE
-
-“Automatic knowledge inference from multivariate time series for musical orchestration”.
-
-Encadrement à 100%
-
-01/02/2014 - 31/07/2014
-
-Marion Pilte
-
-Master 1 - Polytechnique
-
-“Orchestral pieces generation through constraints networks”.
+Marion Pilte - Master 1 - Polytechnique
+*Orchestral pieces generation through constraints networks*
 
 Encadrement à 100%
 
