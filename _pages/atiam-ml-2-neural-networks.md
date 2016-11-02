@@ -310,7 +310,23 @@ Finally, we will attack a complete audio classification problem and try to perfo
 However, up until now, we only performed *binary classification* problems, but this time we need to obtain a decision rule for multiple classes. Therefore, we cannot rely on simply computing the distance between desired patterns and the obtained binary value. The idea here is to rely on the *softmax regression*, by considering classes as a vector of probabilities. The desired answers will therefore be considered as a set of *probabilities*, where the desired class is $$1$$ and the others are $$0$$ (called *one-hot* representation). Then, the cost function will rely on the softmax formulation
 
 $$
+\begin{equation}
 \mathcal{L_D}(\theta) = - \frac{1}{m} \left[ \sum_{i=1}^{m} \sum_{j=1}^{k} 1\left\{y^{(i)} = j\right\} \log \frac{e^{\theta_{j}^{T} x^{(i)}}}{\sum_{l=1}^{k} e^{ \theta_{l}^{T} x^{(i)} }}  \right]
+\end{equation}
+$$
+
+Therefore, we compute the output of the softmax by taking 
+$$
+\begin{equation}
+p(y^{(i)} = j | x^{(i)}; \theta) = \frac{e^{\theta_{j}^{T} x^{(i)}}}{\sum_{l=1}^{k} e^{ \theta_{l}^{T} x^{(i)}} }
+\end{equation}
+$$
+
+By taking derivatives, we can show that the gradient of the softmax layer is
+$$
+\begin{equation}
+\nabla_{\theta_j} \mathcal{L_D}(\theta) = - \frac{1}{m} \sum_{i=1}^{m}{ \left[ x^{(i)} \left( 1\{ y^{(i)} = j\}  - p(y^{(i)} = j | x^{(i)}; \theta) \right) \right]
+\end{equation}
 $$
 
 </div>{: .notice--blank}
@@ -319,10 +335,11 @@ $$
 **Exercise**
 
   1. Based on the previous neural network, upgrade the code to a 3-layer neural network
+  2. Implement the *softmax regression* on top of your 3-layer network
   2. Use the provided code to perform classification on a pre-defined set of features
   3. As previously, change the set of features to assess their different accuracies
   4. Evaluate the neural network accuracy for all features combinations
-  5. (Optional) Implement the *sparsity* constraint in your neural network.
+  5. (Optional) Perform a visualization of the learning process.
 
 </div>{: .notice--info}
 
