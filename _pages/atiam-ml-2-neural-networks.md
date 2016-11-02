@@ -173,13 +173,13 @@ bias          % 1 x 1 vector of bias
 
 <div markdown = "1">
 
-In most cases, classification problems are far from being linear. Therefore, we need more advanced methods to be able to compute non-linear class boundaries. The advantage of neural networks is that the same principle can be applied in a *layer-wise* fashion. This allows to further discriminate the space in sub-regions (as seen in the course). We will try to implement the 2-layer *perceptron* that can provide a solution to the infamous XOR problem. The idea is now to have the output of the first neurons to be connected to a set of other neurons. Therefore, if we take back our previous formulation, we will have
+In most cases, classification problems are far from being linear. Therefore, we need more advanced methods to be able to compute non-linear class boundaries. The advantage of neural networks is that the same principle can be applied in a *layer-wise* fashion. This allows to further discriminate the space in sub-regions (as seen in the course). We will try to implement the 2-layer *perceptron* that can provide a solution to the infamous XOR problem. The idea is now to have the output of the first neurons to be connected to a set of other neurons. Therefore, if we take back our previous formulation, we have the same output for the first neuron(s) $$y$$, that we will now term as $$y_{1}$$. Then, we feed these outputs to a second layer of neurons, which gives
 
 
 $$
 \begin{equation}
 y_{2}=\sigma\left(\sum_{i = 1}^{n}w_{i}.y_{1}^{i} + b\right)
-\label{eq5}
+\label{eq6}
 \end{equation}
 $$  
 
@@ -188,7 +188,7 @@ Therefore, in order to *propagate* the derivatives, we can simply use the chain 
 $$
 \begin{equation}
 \frac{\delta\mathcal{P}}{\delta w_{1}}=\frac{\delta\mathcal{P}}{\delta y_{2}}.\frac{\delta y_{2}}{\delta w_{1}}
-\label{eq6}
+\label{eq7}
 \end{equation}
 $$  
 
@@ -197,7 +197,7 @@ Therefore, we can compute the derivative for the last layer as
 $$
 \begin{equation}
 \delta_{i}^{L}=g'\left(h_{i}^{L}\right)\left[\delta_{i}^{u}-y_{i}^{L}\right]
-\label{eq7}
+\label{eq8}
 \end{equation}
 $$  
 
@@ -206,7 +206,7 @@ And for any previous layer, we rely on the development of the chain rule giving
 $$
 \begin{equation}
 \delta_{i}^{l}=g'\left(h_{i}^{l}\right)\sum_{j}w_{ij}^{l+1}\delta_{j}^{l+1}\mbox{ }l\in\left[1\ldots L-1\right]
-\label{eq8}
+\label{eq9}
 \end{equation}
 $$  
 
