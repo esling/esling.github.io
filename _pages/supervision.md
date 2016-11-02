@@ -8,6 +8,8 @@ sidebar:
   nav: "research"
 ---
 
+{% include toc %}
+
 # Ongoing PhD
 
 <div markdown = "1">
