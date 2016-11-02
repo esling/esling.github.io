@@ -138,10 +138,10 @@ $$
 We will start by training a single neuron to learn how to perform this discrimination with a linear problem (so that a single neuron is enough to solve it). To produce such classes of problems, we provide a script that draw a set of random 2-dimensional points, then choose a random line in this space that will act as the linear frontier between 2 classes (hence defining a linear 2-class problem). The variables that will be used by your code are the following.  
 
 {% highlight Matlab %}
-patterns      % 2 x n matrix of random points
 desired       % classes of the patterns 
-inputs        % 3 x n final matrix of inputs (accounting for bias)
-weights       % 3 x 1 vector of neuron weights
+inputs        % 2 x n final matrix of random input patterns
+weights       % 2 x 1 vector of neuron weights
+bias          % 1 x 1 vector of bias
 {% endhighlight %}  
 
 </div>{: .notice--blank}
@@ -149,12 +149,13 @@ weights       % 3 x 1 vector of neuron weights
 <div markdown="1">
 **Exercise**  
 
-  1. Update the neuron update loop so that it computes its error (forward propagate and compare to desired)
-  2. Update the neuron update loop to perform learning of its weights (based on back-propagation)
-  3. Run the complete learning procedure, which should produce a result similar to that displayed below.
+  1. Update the loop so that it computes the forward propagation error
+  2. Update the loop to perform learning (based on back-propagation)
+  3. Run the learning procedure, which should produce a result similar to the display below.
   4. Perform multiple re-runs of the learning procedure (re-launching produces different datasets)
   5. What observations can you make on the learning process?
   6. (Optional) Change the input patterns, and confirm your observations.
+  6. (Optional) Incorporate the bias in the weights to obtain a **vectorized** code.
 
 </div>{: .notice--info}  
 
