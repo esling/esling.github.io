@@ -336,10 +336,11 @@ $$
 
   1. Based on the previous neural network, upgrade the code to a 3-layer neural network
   2. Implement the *softmax regression* on top of your 3-layer network
-  2. Use the provided code to perform classification on a pre-defined set of features
-  3. As previously, change the set of features to assess their different accuracies
-  4. Evaluate the neural network accuracy for all features combinations
-  5. (Optional) Perform a visualization of the learning process.
+  3. Use the provided code to perform classification on a pre-defined set of features
+  4. As previously, change the set of features to assess their different accuracies
+  5. Evaluate the neural network accuracy for all features combinations
+  6. What happens if the learning rate is too large ? What is this phenomenon ?
+  7. (Optional) Perform a more advanced visualization of the learning process.
 
 </div>{: .notice--info}
 
@@ -348,7 +349,7 @@ $$
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div3">Reveal</a>]
 
 <div id="div3">
-<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+<img src="../images/atiam-ml/02_2.3_audio_1.svg" height="350" width="350"/> <img src="../images/atiam-ml/02_2.3_audio_2.svg" height="350" width="350"/>
 </div>
 
 </div>{: .notice--blank}
