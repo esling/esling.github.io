@@ -183,6 +183,8 @@ y_{2}=\sigma\left(\sum_{i = 1}^{n}w_{i}.y_{1}^{i} + b\right)
 \end{equation}
 $$  
 
+Finally, we will rely on the same loss $$\mathcal{L_{D}}$$ as in the previous exercise, but the outputs used are $$y_2$$ instead of $$y$$. 
+
 Therefore, in order to *propagate* the derivatives, we can simply use the chain rule
 
 $$
