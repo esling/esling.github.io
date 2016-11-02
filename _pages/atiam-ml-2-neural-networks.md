@@ -231,7 +231,6 @@ $$
 <div markdown = "1">
 We provide the prototypical set of XOR values in the `xorPat.mat` along with their class values in `xorAns.mat`. The variables that will be used by your code are the following.
 
-
 {% highlight Matlab %}
 patterns          % 2 x n matrix of random points
 desired           % classes of the patterns 
@@ -327,7 +326,7 @@ By taking derivatives, we can show that the gradient of the softmax layer is
 
 $$
 \begin{equation}
-\nabla_{\theta_{j}} \mathcal{L_D}(\theta) = - \frac{1}{m} \sum_{i=1}^{m}{ \left[ x^{(i)} \left( 1\{ y^{(i)} = j\}  - p(y^{(i)} = j | x^{(i)}; \theta) \right) \right]
+\nabla_{\theta_{j}} \mathcal{L_D}(\theta) = - \frac{1}{m} \sum_{i=1}^{m}{ \left[ x^{(i)} \left( 1\{ y^{(i)} = j\}  - p(y^{(i)} = j \mid x^{(i)}, \theta) \right) \right]
 \end{equation}
 $$
 
