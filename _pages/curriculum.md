@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /atiam-ml-0-intro/
+permalink: /curriculum/
 author_profile: true
 share: true
 comments: true
