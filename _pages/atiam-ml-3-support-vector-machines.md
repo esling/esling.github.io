@@ -135,7 +135,11 @@ w\left(\alpha\right)=\sum_{i}\alpha_{i}-\frac{1}{2}\sum_{i}\sum_{j}y_{i}y_{j}\al
 \end{equation}
 $$
 
-with $$0\leq \alpha_{i} \leq C$$ and $$\sum_{i=1}^{m}{\alpha_{i} y_{i}} = 0$$.
+with $$0\leq \alpha_{i} \leq C$$ and $$\sum_{i=1}^{m}{\alpha_{i} y_{i}} = 0$$. $$C$$ is a chosen *regularization hyper-parameter*. To ease your work, we will implement only a simplified version of the SMO algorithm which is mainly focused on the optimization aspects. The SMO algorithm selects two $$\alpha$$ parameters, $$\alpha_{i}$$ and $$\alpha_{j}$$ and optimizes the objective value jointly for both these $$\alpha_{i,j}$$. Finally it adjusts the $$b$$ parameter based on the new $$\alpha_{i,j}$$. This process is repeated until the $$\alpha_{i,j}$$ converge.
+
+**Selecting $$\alpha$$.** The full SMO algorithm use heuristics to choose which $$\alpha_{i}$$ and $$\alpha_{j}$$ to optimize (which greatly increase the convergence speed. However, for this simplified version, we will simply iterate on all $$\alpha_{i},i=1,\cdots ,m$$ and select a random $$\alpha_{j}$$, to perform the joint optimization of $$\alpha_{i}$$ and $$\alpha_{j}$$
+
+**Optimizing $$\alpha_{i}$$ and $$\alpha_{j}$$.** To jointly optimize the value, we first find bounds $$L$$ and $$H$$ such that $$L\leq \alpha_{j} \leq H$$ holds to satisfy the constraint of the original problem $$0\leq \alpha_{i} \leq C$$
 
 $$
 \begin{array}{ccc}
@@ -144,9 +148,13 @@ if\mbox{ }y_{i}=y_{j}, & L=max\left(0,\alpha_{i}+\alpha_{j}-C\right), & H=min\le
 \end{array}
 $$
 
+Now we want to find $$\alpha_{j}$$ so as to maximize the objective function. It can be shown (as in the original paper) that the optimal $$\alpha_{j}$$ is given by
+
 $$
 \alpha_{j}=\alpha_{j}-\frac{y_{j}\left(E_{i}-E_{j}\right)}{\eta}
 $$
+
+where
 
 $$
 \begin{array}{ccc}
@@ -154,6 +162,8 @@ E_{k} & = & f\left(x_{k}\right)-y_{k}\\
 \eta & = & 2\left\langle x_{i},x_{j}\right\rangle -\left\langle x_{i},x_{i}\right\rangle -\left\langle x_{j},x_{j}\right\rangle 
 \end{array}
 $$
+
+$$E_{k}$$ defines the error between the prediction of the SVM on the example $$k$$ and its desired label. When computing $$\eta$$, we can also replace the inner product by a kernel function $$K$$. Finally, we clip the value of $$\alpha_{j}$$ to lie within the selected bounds.
 
 $$
 \alpha_{j}=\begin{cases}
@@ -163,15 +173,14 @@ L & if\mbox{ }\alpha_{j}<L
 \end{cases}
 $$
 
-$$
-\alpha_{i}=\alpha_{i}+y_{i}y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)
-$$
+Now that we have solved $$\alpha_{j}$$, we can update the value for $$\alpha_{i}$$ through
 
 $$
-b_{1}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{i}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{i},x_{j}\right\rangle   
-
-b_{2}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{j}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{j},x_{j}\right\rangle 
+\alpha_{i}^{t}=\alpha_{i}^{t-1}+y_{i}y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)
 $$
+
+
+**Computing threshold $$b$$.** Finally, we can compute the threshold $$b$$ to satisfy the original constraints by selecting
 
 $$
 b=\begin{cases}
@@ -179,6 +188,14 @@ b_{1} & if\mbox{ }0<\alpha_{i}<C\\
 b_{2} & if\mbox{ }0<\alpha_{j}<C\\
 \left(b_{1}+b_{2}\right)/2 & otherwise
 \end{cases}
+$$
+
+where
+
+$$
+b_{1}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{i}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{i},x_{j}\right\rangle   
+
+b_{2}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{j}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{j},x_{j}\right\rangle 
 $$
 
 For the first part of this tutorial, we will compute the main iterations of the algorithm (minimization of the objective function), while relying on a *linear* kernel. This implies that we will only be able to perform linear discrimination. However, remember that the formulation of the SVMs provide an *optimal* and (gloriously) *convex* answer to this problem.
