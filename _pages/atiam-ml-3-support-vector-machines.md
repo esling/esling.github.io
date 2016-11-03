@@ -136,7 +136,50 @@ w\left(\alpha\right)=\sum_{i}\alpha_{i}-\frac{1}{2}\sum_{i}\sum_{j}y_{i}y_{j}\al
 $$
 
 with $$0\leq \alpha_{i} \leq C$$ and $$\sum_{i=1}^{m}{\alpha_{i} y_{i}} = 0$$.
- 
+
+$$
+\begin{array}{ccc}
+if\mbox{ }y_{i}\neq y_{j}, & L=max\left(0,\alpha_{j}-\alpha_{i}\right), & H=min\left(C,C+\alpha_{j}-\alpha_{i}\right)\\
+if\mbox{ }y_{i}=y_{j}, & L=max\left(0,\alpha_{i}+\alpha_{j}-C\right), & H=min\left(C,\alpha_{i}+\alpha_{j}\right)
+\end{array}
+$$
+
+$$
+\alpha_{j}=\alpha_{j}-\frac{y_{j}\left(E_{i}-E_{j}\right)}{\eta}
+$$
+
+$$
+\begin{array}{ccc}
+E_{k} & = & f\left(x_{k}\right)-y_{k}\\
+\eta & = & 2\left\langle x_{i},x_{j}\right\rangle -\left\langle x_{i},x_{i}\right\rangle -\left\langle x_{j},x_{j}\right\rangle 
+\end{array}
+$$
+
+$$
+\alpha_{j}=\begin{cases}
+H & if\mbox{ }\alpha_{j}>H\\
+\alpha_{j} & if\mbox{ }L\leq\alpha_{j}\leq H\\
+L & if\mbox{ }\alpha_{j}<L
+\end{cases}
+$$
+
+$$
+\alpha_{i}=\alpha_{i}+y_{i}y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)
+$$
+
+$$
+b_{1}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{i}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{i},x_{j}\right\rangle 
+b_{2}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{j}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{j},x_{j}\right\rangle 
+$$
+
+$$
+b=\begin{cases}
+b_{1} & if\mbox{ }0<\alpha_{i}<C\\
+b_{2} & if\mbox{ }0<\alpha_{j}<C\\
+\left(b_{1}+b_{2}\right)/2 & otherwise
+\end{cases}
+$$
+
 For the first part of this tutorial, we will compute the main iterations of the algorithm (minimization of the objective function), while relying on a *linear* kernel. This implies that we will only be able to perform linear discrimination. However, remember that the formulation of the SVMs provide an *optimal* and (gloriously) *convex* answer to this problem.
 
 {% highlight Matlab %}
