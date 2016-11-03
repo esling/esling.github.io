@@ -119,8 +119,8 @@ The complete model and all of its corresponding parameters are summarized in the
 
 {% highlight Matlab %}
 model = struct;
-model.X;            % Values of input data
-model.y;            % Classes labels
+model.X;            % Values of _support vectors_ in input data
+model.y;            % Classes labels of _support vectors_
 model.kernel;       % Type of kernel
 model.b;            % Value of threshold
 model.alphas;       % Value of alphas
@@ -239,7 +239,7 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
 
 <div id="div1">
-<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+<img src="../images/atiam-ml/03_3.1_svm_patterns.svg" height="350" width="350"/> <img src="../images/atiam-ml/03_3.1_svm_linear.svg" height="350" width="350"/>
 </div>
 
 </div>{: .notice--blank}
@@ -273,7 +273,7 @@ As seen in the slides, the underlying idea is that instead of trying to solve a 
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
 
 <div id="div2">
-<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+<img src="../images/atiam-ml/03_3.2_svm_patterns.svg" height="350" width="350"/> <img src="../images/atiam-ml/03_3.2_svm_gaussian.svg" height="350" width="350"/>
 </div>
 
 </div>{: .notice--blank}
