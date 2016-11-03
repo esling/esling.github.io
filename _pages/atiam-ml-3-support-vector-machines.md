@@ -102,7 +102,6 @@ Therefore, solving the set of equations amounts to find the maximal margin betwe
 $$
 \begin{equation}
 f\left(x\right)=\sum_{i=1}^{m}\alpha_{i}y_{i}\left\langle \phi\left(x_{i}\right),\phi\left(x\right)\right\rangle +b
-\label{eq3}
 \end{equation}
 $$
 
