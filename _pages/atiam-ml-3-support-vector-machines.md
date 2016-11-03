@@ -47,9 +47,9 @@ Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.3.Support.V
 
 <div markdown = "1">
 
-In this tutorial, we will cover a more advanced classification algorithm through the use of *Support Vector Machines* (SVMs). The goal is to gain an intuition of how SVMs works and how to use *Gaussian kernel* with SVMs to find out the decision boundary. The implementation proposed here follows the *Sequential Minimal Optimization* (SMO) algorithm for training support vector machines. You can find the full details on the mathematics involved in the following [paper link](http://cs229.stanford.edu/materials/smo.pdf).
+In this tutorial, we will cover a more advanced classification algorithm through the use of *Support Vector Machines* (SVMs). The goal is to gain an intuition of how SVMs works and how to use *Gaussian kernel* with SVMs to find out the decision boundary. The implementation proposed here follows a simplified version of the *Sequential Minimal Optimization* (SMO) algorithm for training support vector machines, which is detailed in the following [paper](http://cs229.stanford.edu/materials/smo.pdf). The complete SMO algorithm can then be quite easily implemented following the [full paper](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-98-14.pdf).
 
-Once again, to simplify your work, we provide the following set of functions that you should find in the *3_Support_Vector_Machines* folder
+Once again, to simplify your work, we provide the following set of functions that you should find in the `03_Support_Vector_Machines` folder
 
 
   |**File**|*Explanation*|
@@ -97,7 +97,24 @@ $$
 \end{equation}
 $$
 
-Therefore, solving the set of equations amounts to find the maximal margin between the support vectors (as they *support* classification).
+Therefore, solving the set of equations amounts to find the maximal margin between the support vectors (as they *support* classification). As seen in the slides, we know that this problem can also be expressed as  
+
+$$
+\begin{equation}
+f\left(x\right)=\sum_{i=1}^{m}\alpha_{i}y_{i}\left\langle \phi\left(x_{i}\right),\phi\left(x\right)\right\rangle +b
+\label{eq3}
+\end{equation}
+$$
+
+Where we can introduce a kernel $$K\left(x_{i},x\right)=\phi\left(x_{i}\right)\cdot\phi\left(x\right)$$ in the equation in order to solve non-linear optimization problems. Specifically, we will try to maximize the *dual formulation* problem expressed as
+
+$$
+\begin{equation}
+w\left(\alpha\right)=\sum_{i}\alpha_{i}-\frac{1}{2}\sum_{i}\sum_{j}y_{i}y_{j}\alpha_{i}\alpha_{j}\left\langle \phi\left(x_{i}\right),\phi\left(x_{j}\right)\right\rangle 
+\end{equation}
+$$
+
+with $$0\leq \alpha_{i} \leq C$$ and $$\sum_{i=1}^{m}{\alpha_{i} y_{i}} = 0$$.
  
 For the first part of this tutorial, we will compute the main iterations of the algorithm (minimization of the objective function), while relying on a *linear* kernel. This implies that we will only be able to perform linear discrimination. However, remember that the formulation of the SVMs provide an *optimal* and (gloriously) *convex* answer to this problem.
 
