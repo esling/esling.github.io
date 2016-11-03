@@ -125,8 +125,8 @@ function pred = svmPredict(model, X)
 
 </div>{: .notice--info}  
 
+**Learning phase**
 <div markdown = "1">
-
 In order to perform learning, we will try to maximize the *dual formulation* problem expressed as
 
 $$
@@ -172,6 +172,11 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
 
 ## 3.2 - Gaussian kernel
 
+The Gaussian kernel allows to perform the optimization of non-linear classification problems. It is defined as
+$$
+K\left(x,y\right)=exp\left(\nicefrac{-\left\Vert x-y\right\Vert ^{2}}{\left(2\sigma^{2}\right)}\right)
+$$
+
 **Exercise**  
 <div markdown="1">  
 
@@ -190,3 +195,19 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
 </div>
 
 </div>{: .notice--blank}
+
+## 3.3 - Supplementary kernels
+
+**Polynomial kernel**
+$$
+K\left(x,y\right)=\left(x^{T}y+1\right)^{d}
+$$
+
+**Tanh kernel**
+$$
+K\left(x,y\right)=tanh\left(kx^{T}y+\Theta\right)
+$$
+
+## 3.4 - Audio application
+
+As seen in the previous tutorial, we have considered only a *binary classification* problem (where elements can only belong to one of two classes). This simplifies the work as we simply need to separate the space between two types of points. However, in real-world problems, we usually want to solve *multi-class* problems with any given number of classes. For this tutorial, we will rely on a simple trick which is to consider that a $$n$$-class problem can simply be restated as $$n$$ different binary classification problems. The underlying idea is that each class defines a binary classifier which tells us if a given element is part of this class, or belongs to *any of the other* classes.
