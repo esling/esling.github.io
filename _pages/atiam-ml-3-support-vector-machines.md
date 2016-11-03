@@ -172,16 +172,18 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
 
 ## 3.2 - Gaussian kernel
 
-The Gaussian kernel allows to perform the optimization of non-linear classification problems. It is defined as
+The Gaussian kernel (also called *Radial Basis Function (RBF)* kernel) allows to perform the optimization of non-linear classification problems. It is defined as  
+
 $$
-K\left(x,y\right)=exp\left(\nicefrac{-\left\Vert x-y\right\Vert ^{2}}{\left(2\sigma^{2}\right)}\right)
+K\left(x,y\right)=exp\left(\frac{-\left\Vert x-y\right\Vert ^{2}}{\left(2\sigma^{2}\right)}\right)
 $$
 
 **Exercise**  
 <div markdown="1">  
 
-  1. Update your `svmTrain` code to be able to rely on a Gaussian (RBF) kernel instead of a linear one.
-  2. Run your `svmTrain` function on the `example2.mat` (non-linear) dataset, you should obtain the result displayed below.
+  1. Update the `svmPredict` code to be able to rely on a Gaussian kernel.
+  2. Update the `svmTrain` code to be able to rely on a Gaussian kernel.
+  2. Run the `svmTrain` function on the `example2.mat` (non-linear) dataset to obtain the result displayed below.
   3. Once again, display the decision boundary at each iteration of the algorithm.
 
 </div>{: .notice--info}  
@@ -199,11 +201,13 @@ $$
 ## 3.3 - Supplementary kernels
 
 **Polynomial kernel**
+
 $$
 K\left(x,y\right)=\left(x^{T}y+1\right)^{d}
 $$
 
 **Tanh kernel**
+
 $$
 K\left(x,y\right)=tanh\left(kx^{T}y+\Theta\right)
 $$
