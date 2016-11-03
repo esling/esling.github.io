@@ -194,7 +194,8 @@ where
 
 $$
 b_{1}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{i}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{i},x_{j}\right\rangle   
-
+$$
+$$
 b_{2}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{j}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{j},x_{j}\right\rangle 
 $$
 
