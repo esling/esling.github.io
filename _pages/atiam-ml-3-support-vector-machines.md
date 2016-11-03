@@ -115,6 +115,18 @@ function pred = svmPredict(model, X)
 % pred    : m x 1 column vector of class predictions ({0, 1} values).
 {% endhighlight %}  
 
+The complete model and all of its corresponding parameters are summarized in the `model` structure defined as
+
+{% highlight Matlab %}
+model = struct;
+model.X;            % Values of input data
+model.y;            % Classes labels
+model.kernel;       % Type of kernel
+model.b;            % Value of threshold
+model.alphas;       % Value of alphas
+model.w;            % Value of vectors
+{% endhighlight %}  
+
 </div>{: .notice--blank}
 
 **Exercise**  
