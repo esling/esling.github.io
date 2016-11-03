@@ -168,7 +168,8 @@ $$
 $$
 
 $$
-b_{1}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{i}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{i},x_{j}\right\rangle 
+b_{1}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{i}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{i},x_{j}\right\rangle   
+
 b_{2}=b-E_{i}-y_{i}\left(\alpha_{i}^{(t-1)}-\alpha_{i}\right)\left\langle x_{i},x_{j}\right\rangle -y_{j}\left(\alpha_{j}^{(t-1)}-\alpha_{j}\right)\left\langle x_{j},x_{j}\right\rangle 
 $$
 
@@ -223,6 +224,8 @@ $$
 K\left(x,y\right)=exp\left(\frac{-\left\Vert x-y\right\Vert ^{2}}{\left(2\sigma^{2}\right)}\right)
 $$
 
+As seen in the slides, the underlying idea is that instead of trying to solve a non-linear separation problem in a given space, we might first transform the space into a target space in which the problem is linearly separable. Therefore, we transform the space through a kernel (which is directly expressed in the minimization problem) and solve the linear separation problem in the target space. Given the starter code and the previous exercise, you should be able to directly plug this kernel inside the `svmTrain` and `svmPredict` functions.
+
 </div>{: .notice--blank}
 
 **Exercise**  
@@ -249,13 +252,15 @@ $$
 
 <div markdown = "1">
 
-**Polynomial kernel**
+Now that you have mastered the concept of kernels and updated your code to include the Gaussian kernel, you can augment your classifier and optimizaton problem to include several different kernels as those proposed afterwards.
+
+**Polynomial kernel.** Intuitively, the polynomial kernel looks not only at the given features of input samples to determine their similarity, but also combinations of these. 
 
 $$
 K\left(x,y\right)=\left(x^{T}y+1\right)^{d}
 $$
 
-**Tanh kernel**
+**Sigmoid (tanh) kernel.** This kernel takes two parameters: $$a$$ and $$r$$. For $$a > 0$$, we can view $$a$$ as a scaling parameter of the input data, and $$r$$ as a shifting parameter that controls the threshold of mapping. For $$a < 0$$, the dot-product of the input data is not only scaled but reversed.
 
 $$
 K\left(x,y\right)=tanh\left(kx^{T}y+\Theta\right)
