@@ -105,7 +105,29 @@ f\left(x\right)=\sum_{i=1}^{m}\alpha_{i}y_{i}\left\langle \phi\left(x_{i}\right)
 \end{equation}
 $$
 
-Where we can introduce a kernel $$K\left(x_{i},x\right)=\phi\left(x_{i}\right)\cdot\phi\left(x\right)$$ in the equation in order to solve non-linear optimization problems. Specifically, we will try to maximize the *dual formulation* problem expressed as
+Where we can introduce a kernel $$K\left(x_{i},x\right)=\phi\left(x_{i}\right)\cdot\phi\left(x\right)$$ in the equation in order to solve non-linear optimization problems. We can use this formulation to perform the *predictions* of the algorithm and in the first part of this tutorial, we will only conider the *linear* kernel $$K\left(x_{i},x\right)=x_{i}\cdot x$$. Computing the predictions should be performed in the `svmPredict` function
+
+{% highlight Matlab %}
+function pred = svmPredict(model, X)
+% Returns a vector of predictions using a trained SVM model (svmTrain). 
+% X       : m x n matrix where each example is a row. 
+% model   : svm model returned from svmTrain.
+% pred    : m x 1 column vector of class predictions ({0, 1} values).
+{% endhighlight %}  
+
+</div>{: .notice--blank}
+
+**Exercise**  
+<div markdown="1">  
+
+  1. Update the `svmPredict` code to compute the SVM prediction (only with a linear kernel).
+  2. Run the predictions on random initializations of the models
+
+</div>{: .notice--info}  
+
+<div markdown = "1">
+
+In order to perform learning, we will try to maximize the *dual formulation* problem expressed as
 
 $$
 \begin{equation}
@@ -116,14 +138,6 @@ $$
 with $$0\leq \alpha_{i} \leq C$$ and $$\sum_{i=1}^{m}{\alpha_{i} y_{i}} = 0$$.
  
 For the first part of this tutorial, we will compute the main iterations of the algorithm (minimization of the objective function), while relying on a *linear* kernel. This implies that we will only be able to perform linear discrimination. However, remember that the formulation of the SVMs provide an *optimal* and (gloriously) *convex* answer to this problem.
-
-{% highlight Matlab %}
-function pred = svmPredict(model, X)
-% Returns a vector of predictions using a trained SVM model (svmTrain). 
-% X       : m x n matrix where each example is a row. 
-% model   : svm model returned from svmTrain.
-% pred    : m x 1 column vector of class predictions ({0, 1} values).
-{% endhighlight %}  
 
 {% highlight Matlab %}
 function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
@@ -141,8 +155,8 @@ function [model] = svmTrain(X, Y, C, kernelFunction, tol, maxIter)
 <div markdown="1">  
 
   1. Update the `svmTrain` code to perform the training of a SVM with linear kernel.
-  2. Run your `svmTrain` function on the `example1.mat` (linear) dataset, you should obtain the result displayed below.
-  3. Update the overall framework to display the decision boundary at each iteration of the algorithm.
+  2. Run your `svmTrain` function on the `example1.mat` (linear) dataset to obtain the result displayed below.
+  3. Update the framework to display the decision boundary at each iteration of the algorithm.
 
 </div>{: .notice--info}  
 
