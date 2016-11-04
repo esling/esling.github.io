@@ -12,9 +12,15 @@ sidebar:
 
 # Meta-heuristics
 
-The present tutorials covers .
+<div markdown = "1">
+
+The present tutorials covers the use of different *meta-heuristics*. We will focus on the use of *boosting* by performing an implementation of the Adaboost algorithm. The tutorial does not cover the implementation of *genetic algorithms*, but interested students can find some nice [online tutorials](https://www.tutorialspoint.com/genetic_algorithms/index.htm).
+
+</div>{: .notice--blank}
 
 # Reference slides
+
+<div markdown = "1">
 
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.5.Boosting.pdf)
 
@@ -23,9 +29,11 @@ The corresponding slides cover
   - Genetic algorithms
   - Boosting  
 
+</div>{: .notice--blank}
+
 # Tutorial 
 
-## 5.0 - The Adaboost algorithm
+## 5.0 - Adaboost algorithm
 
 <div markdown = "1">
 
@@ -54,7 +62,7 @@ So in a nutshell: Adaboost takes a lot of weak classifiers, assigns them appropr
 
 </div>{: .notice--blank}
 
-## 5.1 - Defining weak classifiers
+## 5.1 - Weak classifiers
 
 <div markdown = "1">
 
