@@ -96,6 +96,12 @@ We provide a set of datapoints
 
 </div>{: .notice--info} 
 
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
+
+<div id="div1">
+<img src="../images/atiam-ml/05_5.1_weak_1.svg" height="350" width="350"/> <img src="../images/atiam-ml/05_5.1_weak_2.svg" height="350" width="350"/>
+</div>
+
 {% highlight Matlab %}
 
 {% endhighlight %}
@@ -149,6 +155,12 @@ Proving convergence is pretty difficult. But you must know that the adaboost alg
   3. Plot the different steps of classification in the input space
   
 </div>{: .notice--info} 
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
+
+<div id="div2">
+<img src="../images/atiam-ml/05_5.2_boost_1.svg" height="350" width="350"/> <img src="../images/atiam-ml/05_5.2_boost_2.svg" height="350" width="350"/>
+</div>
 
 ### 5.3 - Audio application
 
