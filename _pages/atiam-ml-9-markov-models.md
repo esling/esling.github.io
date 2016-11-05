@@ -202,9 +202,12 @@ We used the forward algorithm to get the probability of arriving at node $$(i,j)
 
 </div>{: .notice--info}
 
+<div markdown = "1">
 **The M Step**
 
 Computing alphas and betas and collecting the fractional counts for all free parameter transitions over all examples is the ***E step***. This, as the name suggests, is one half of Forward-Backward EM. The ***M step*** is comparatively trivial: after having gone through all the data, we just normalize our fractional counts to get probabilities back (remember, probabilities are just normalized counts).
+
+</div>{: .notice--blank}
 
 **Exercise**
 <div markdown = "1">
@@ -212,9 +215,23 @@ Computing alphas and betas and collecting the fractional counts for all free par
   1. Implement the complete algorithm
   2. Run it on the set of sequences to obtain the model parameters
 
-</div>
+</div>{: .notice--info}
 
 ## 9.3 - Audio applications
+
+<div markdown = "1">
+
+In order to 
+
+</div>{: .notice--blank}
+
+**Exercise**
+<div markdown = "1">
+
+  1. Apply the previous algorithms to the audio dataset 
+  2. Evaluate the accuracy of the obtained model
+
+</div>{: .notice--info}
 
 ## 9.4 - Advanced Topics
 
@@ -233,24 +250,3 @@ We have earlier seen the idea of adding pseudo-counts to the fractional counts, 
 In the M-step, the elements of the shape parameter vector are added as pseudo-counts to the matching fractional counts, and the result is passed through a ***Digamma function*** and finally exponentiated. To normalize, we add the sum of all elements in the shape vector to our denominator and again run it though Digamma and exponentiation. This is like a softer version of smoothing with pseudo-counts, where we have separate counts for each parameter.
 
 </div>{: .notice--blank}
-
-## References
-
-If you want to read the original, go for [Dempster/Laird/Rubin (1977)](#refDempster).
-[Rabiner/Juang (1986)](#refRabiner) is a general overview over ***parameter estimation***, but very math-heavy. [Manning/Schütze (2000)](#refMS) has a chapter on EM, based on clustering, but with an eye on other NLP applications.
-One of the most famous implementations for NLP is the tagging paper by [Merialdo (1994)](refMerialdo),
-which also gives you a good idea about the various parameters you can set.
-
-If you want to know more about the ***Forward-Backward*** procedure of calculating alphas and betas,
-check out Jason Eisner’s tutorial ([Eisner, 2002](#refEisner)), including a spreadsheet with the changing values.
-The second edition of the AI handbook ([Russell/Norvig, 2003, 724 – 733](refRN)) has a comprehensive
-section about EM.
-
-Kevin Knight has written a very compelling ***introduction*** ([Knight, 2009a](#refKnightA)). It is mainly about
-Bayesian Inference, but explains EM very nicely. You might also want to check out his tutorials
-for Carmel ([Knight, 2009b](#refKnightB)), a software that helps you implement graphical models as automata and
-train them with EM. Also, the workbook for MT ([Knight, 1999](#refKnightMT)) contains a useful section on EM.
-
-[Vaswani/Pauls/Chiang 2010](#refVaswani) show how using ***L$_0$ normalization*** can lead to smaller models and a L0
-sparser distribution, which improves language related tasks a lot, because it creates a more Zipfian normalization
-distribution (see [Hovy et al. 2011](#refHovy) for another application).
