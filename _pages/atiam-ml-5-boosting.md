@@ -170,7 +170,7 @@ Before going further, we underline the fact that the concept of **boosting** its
 
 One of the interesting properties of the boosting algorithm that we have seen in the previous exercise is that it can give you a set of thresholds on each of the input dimensions that are fed to the system and therefore a direct view over the properties of a given class. The idea is that we can print out (after the learning loop) what are the sets of classifiers that have been selected (which property and at which threshold).
 
-However, you should have notice (as was the case for the [Support Vector Machines tutorial](/atiam-ml-3-support-vector-machines/)) that these types of classifiers are inherently limited to *binary classification*, therefore we are 
+However, you should have notice (as was the case for the [Support Vector Machines tutorial](/atiam-ml-3-support-vector-machines/)) that these types of classifiers are inherently limited to *binary classification*. Therefore, we need to find a way to transform a multi-class problem into multiple binary classification problems. Oppositely to the last tutorial (in which we implemented *one-to-many* classification), we are going to implement the *one-to-one* solution. This time, instead of constructing $$n$$ classifiers, we will construct $$n \left( n - 1 \right) / 2$$ classifiers, with each deciding the binary classification between two given classes.
 
 </div>{: .notice--blank}
 
