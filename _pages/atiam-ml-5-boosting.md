@@ -132,9 +132,8 @@ Proving convergence is pretty difficult. But you must know that the adaboost alg
 <div markdown = "1">
 
   1. Fill the main steps of the boosting loop 
-  2. Plot the evolution the error rate across 
+  2. Plot the evolution of the error rate across iterations
   3. Plot the different steps of classification in the input space
-  4. Show the combination of weak classifiers
   
 </div>{: .notice--info} 
 
@@ -142,6 +141,21 @@ Proving convergence is pretty difficult. But you must know that the adaboost alg
 
 <div markdown = "1">
 
-Before going further, we underline the fact that the concept of **boosting** itself is not limited to "threshold-based" classifiers. In fact, the more general idea of **ensembling** is based on constructing a stronger (classification, regression or otherwise) system, based on combining the output of several weaker systems.
+Before going further, we underline the fact that the concept of **boosting** itself is not limited to "threshold-based" classifiers. In fact, the more general idea of **ensembling** is based on constructing a stronger (classification, regression or otherwise) system, based on combining the output of several weaker systems.  
+
+One of the interesting properties of the boosting algorithm that we have seen in the previous exercise is that it can give you a set of thresholds on each of the input dimensions that are fed to the system and therefore a direct view over the properties of a given class. The idea is that we can print out (after the learning loop) what are the sets of classifiers that have been selected (which property and at which threshold).
+
+However, you should have notice (as was the case for the [Support Vector Machines tutorial](/atiam-ml-3-support-vector-machines/)) that these types of classifiers are inherently limited to *binary classification*, therefore we are 
 
 </div>{: .notice--blank}
+
+**Exercise**
+<div markdown = "1">
+
+  1. Generate $$n$$ *one-to-one* different binary classification problems.
+  2. Fill the main boosting loop and perform classification
+  3. Plot the evolution of the error rate across iterations
+  4. Print the descriptive dimensions and threshold selected for each class.
+  
+</div>{: .notice--info} 
+
