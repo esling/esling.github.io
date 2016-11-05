@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-The present tutorials covers the notions of clustering through the k-Means algorithm.
+The present tutorials covers the notions of clustering. First, we will use existing implementations of hierarchical clustering to understand how any grouping of points can be considered as a clustering. Then, we will implement a simple algorithm for clustering data into a fixed number of groups, namely the *k-Means* algorithm. The goal here is to familiarize with the notions of unsupervised learning. Finally, we will apply both of these algorithms in order to perform a task of *audio summary generation*.
 
 </div>{: .notice--blank}
 
@@ -45,15 +45,56 @@ Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.4.Clusterin
 # Tutorial 
 
 <div markdown = "1">
-In this part, we will use the principles of clustering to perform *spectral grouping*. The idea is to automatically discover the structure inside a spectrogram by using the simplest algorithm of clustering (k-Means algorithm). Hence, even though the results might be slightly drafty, it can give you a good sense of how to automatically uncover structure in an unsupervised way.  
+In this part, we will use the principles of clustering to perform *unsupervised learning*. First, we will perform hierarchical The idea is to automatically discover the structure inside a spectrogram by using the simplest algorithm of clustering (k-Means algorithm). Hence, even though the results might be slightly drafty, it can give you a good sense of how to automatically uncover structure in an unsupervised way.  
 </div>{: .notice--blank}
 
-## 4.1 K-Means algorithms 
+## 4.1 Hierarchical audio thumbnailing
+
+<div markdown = "1">
+To start off the tutorial with a neat and sexy application, we will perform a simple shot at the problem of *audio structure discovery* and *audio thumbnailing*. The idea is to try to automatically infer the structure of a piece of music from its inner similarities in an *unsupervised way*. As you can see, this is a perfect
+
+We briefly recall here that the principle of *hierarchical agglomerative clustering* is to start with a singleton cluster, and clusters are iteratively merged until one single cluster remains. This results in a "cluster tree," which is also called dendrogram. The opposite approach (starting with one cluster and divide into clusters until only singleton clusters remain) is called *divisive hierarchical clustering*. The algorithm can be summarized via the following pseudocode
+
+1: Compute a distance or similarity matrix.
+2: Each data point is represented as a singleton cluster.
+3: Repeat
+4:      Merge two closest clusters (e.g., based on distance between most similar or dissimilar members).
+5:      Update the distance (or similarity) matrix.
+6: Until one single cluster remains.
+
+As the algorithm is very easy to implement, we will learn how to apply it on more complex problems. The idea here is to use a *smoothed version* (time-wise) of audio tracks and try to find the *structure* of this music in an unsupervised way. Therefore, we will try to find similarities. To do so, rely on the Matlab documentation for the `cluster` and `linkage` function to find a way to perform hierarchical clustering on the set of spectrogram windows.
+
+</div>{: .notice--blank}
+
+**Exercise**  
+<div markdown="1">  
+
+  1. Update the loop to perform hierarchical clustering.
+  2. Evaluate different distances and tracks to see the effects.
+  3. Implement your **own distance function** between spectrograms.
+  4. Find a way to plug your distance matrix inside the clustering.
+  
+</div>{: .notice--info}  
+
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
+
+<div id="div1">
+<img src="../images/atiam-ml/04_4.1_hierarchical_1.svg" height="350" width="350"/> <img src="../images/atiam-ml/04_4.1_hierarchical_2.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
+
+## 4.2 K-Means algorithms 
 
 <div markdown = "1">
 First to perform the implementation of the K-Means algorithm, the following exercises will rely on a first synthetic dataset (linearly separated Gaussian distributions generated similarly to the SVM exercises). Hence, we will create a data set from two Gaussian distributions in a two-dimensional space.  
 
-Then, to evaluate the limitations of the K-Means algorithm, we will generate a dataset of two circle distributions. We briefly recall here that the most basic way to perform data clustering is to first start with a random guess of the cluster centroids and then alternate between assigning the data points to different clusters and then updating the centroids of corresponding clusters.  
+Then, to evaluate the limitations of the K-Means algorithm, we will generate a dataset of two circle distributions. We briefly recall here that the most basic way to perform data clustering is to first start with a random guess of the cluster centroids and then alternate between assigning the data points to different clusters and then updating the centroids of corresponding clusters.
+
+
+
 </div>{: .notice--blank}
   
 **Exercise**  
@@ -67,12 +108,17 @@ Then, to evaluate the limitations of the K-Means algorithm, we will generate a d
   
 </div>{: .notice--info}  
 
+<div markdown = "1">
 
-;#;
-{{:esling:aml_p5_cluster2.jpg?nolink&400 |}}{{:esling:aml_p5_cluster6.jpg?nolink&400 |}}
-;#;
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
 
-## 4.2 Descriptors and grouping
+<div id="div2">
+<img src="../images/atiam-ml/04_4.2_kMeans_1.svg" height="350" width="350"/> <img src="../images/atiam-ml/04_4.2_kMeans_2.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
+
+## 4.3 Descriptors and grouping
 
 <div markdown = "1">
 We will now try to rely on the clustering functions that we just devised to perform an unsupervised grouping of a dataset of audio files. We already provided the code to perform this task, however the tuning is still to be made.  
@@ -90,7 +136,7 @@ We will now try to rely on the clustering functions that we just devised to perf
 </div>{: .notice--info}  
 
 
-## 4.3 - Spectral Grouping
+## 4.4 Audio thumbnailing
 
 <div markdown = "1">
 In this section, we will rely on the previously implemented kMeans algorithm to perform a spectral clustering and observe the obtained clusterings.  By completing the code yourself, try to perform a binarization followed by a clustering of spectrograms in order to group spectral components together.  
