@@ -58,9 +58,9 @@ We briefly recall here that the principle of *hierarchical agglomerative cluster
 **1**: Compute a distance or similarity matrix.  
 **2**: Each data point is represented as a singleton cluster.  
 **3**: Repeat  
-**4**:    Merge two closest clusters (e.g., based on distance between most similar or dissimilar members).  
-**5**:    Update the distance (or similarity) matrix.
-**6**: Until one single cluster remains.
+**4**:      Merge two closest clusters (e.g., based on distance between most similar or dissimilar members).  
+**5**:      Update the distance (or similarity) matrix.  
+**6**: Until one single cluster remains.  
 
 As the algorithm is very easy to implement, we will learn how to apply it on more complex problems. The idea here is to use a *smoothed version* (time-wise) of audio tracks and try to find the *structure* of this music in an unsupervised way. Therefore, we will try to find similarities. To do so, rely on the Matlab documentation for the `cluster` and `linkage` function to find a way to perform hierarchical clustering on the set of spectrogram windows.
 
@@ -143,10 +143,12 @@ The algorithm has converged when the assignments no longer change. Since both st
 
 </div>{: .notice--blank}
 
-## 4.3 Descriptors and grouping
+## 4.3 Audio descriptors clustering
 
 <div markdown = "1">
-We will now try to rely on the clustering functions that we just devised to perform an unsupervised grouping of a dataset of audio files. We already provided the code to perform this task, however the tuning is still to be made.  
+
+We will now use the kMeans clustering functions that we just devised to perform an unsupervised grouping of a dataset of audio files. We already provided the code to perform this task, however this provides an opportunity to evaluate the effect of different clustering parameters on the quality of the grouping.  
+
 </div>{: .notice--blank}
 
 **Exercise**  
@@ -164,5 +166,17 @@ We will now try to rely on the clustering functions that we just devised to perf
 ## 4.4 Audio thumbnailing
 
 <div markdown = "1">
-In this section, we will rely on the previously implemented kMeans algorithm to perform a spectral clustering and observe the obtained clusterings.  By completing the code yourself, try to perform a binarization followed by a clustering of spectrograms in order to group spectral components together.  
+In this section, we will rely on the k-means algorithm to perform the same task as the first exercise. Therefore, you simply need to adapt the code of the first section in order to rely on the k-means rather than the hierarchical clustering.
+
 </div>{: .notice--blank}
+
+**Exercise**  
+<div markdown="1">  
+
+  - Check that your ''kmeanspp'' function works on spectral features with 2 clusters.
+  - Using the spread function, display the results of clustering for different numbers
+  - How to devise a function to compute the overall quality of the clustering ?
+  - Devise an algorithm to automatically adapt the number of clusters.
+  - Compare results for different number of clusters
+
+</div>{: .notice--info}  
