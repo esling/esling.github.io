@@ -56,7 +56,7 @@ Then, we will extract these learned features from the **labeled** dataset of aud
 
 </div>{: notice--blank}
 
-### 8.1 - Sparse Auto-Encoders (SAE)
+## 8.1 - Sparse Auto-Encoders
 
 <div markdown = "1">
 
@@ -82,7 +82,7 @@ We will use the unlabeled data (any audio files) to train a sparse autoencoder. 
 
 Specifically, in this exercise you will implement a sparse autoencoder, trained with 4 consecutive spectral distributions (FFT, Mel, Bark or Cepstrum) using the L-BFGS optimization algorithm (this algorithm is provided in the `minFunc` subdirectory, which is a 3rd party CCA software implementing L-BFGS).
 
-#### Inputs
+**Inputs**
 
 The first step is to generate a training set. To get a single training example $$x$$, we need to compute the spectral transform from a sound and then subsample a set of a given number of consecutive spectral frames. This will allow the network to learn from the complete spectro-temporal information. However, the sampled parts will need to be converted into vectors.
 
@@ -129,7 +129,7 @@ In order to test the validity of your implementation, you can use the method of 
 </div>{: .notice--info}  
 
 
-## 8.2 - Training the SAE and visualizing 
+## 8.2 - Training and visualizing 
 
 <div markdown = "1">
 
@@ -149,11 +149,9 @@ After training the autoencoder, use display_network.m to visualize the learned w
 
   1. Code
   
-**Do not forget to vectorize your code for speed**
-
 </div>{: .notice--info} 
 
-## 8.3 - Logistic regression model
+## 8.3 - Logistic regression
 
 <div markdown = "1">
 
@@ -192,7 +190,7 @@ Now that you've verified that your gradients are correct, you can train your sof
 
 </div>{: .notice--info}  
 
-## 8.4 - Classifying the test set
+## 8.4 - Classification
 
 <div markdown = "1">
 
@@ -200,3 +198,42 @@ Finally, complete the code to make predictions on the test set (testFeatures) an
 As a comparison, when raw pixels are used (instead of the learned features), we obtained a test accuracy of only around 96% (for the same train and test sets).
 
 </div>{: .notice--blank}
+
+**Exercise**  
+<div markdown="1">  
+
+  1. Code
+  
+</div>{: .notice--info} 
+
+## 8.4 - Convolutional layers
+
+<div markdown = "1">
+
+Finally.
+
+</div>{: .notice--blank}
+
+
+**Exercise**  
+<div markdown="1">  
+
+  1. Code
+  
+</div>{: .notice--info} 
+
+## 8.5 - Visualizing filters
+
+<div markdown = "1">
+
+Finally.
+
+</div>{: .notice--blank}
+
+
+**Exercise**  
+<div markdown="1">  
+
+  1. Code
+  
+</div>{: .notice--info} 
