@@ -48,11 +48,11 @@ The corresponding slides cover
 
 <div markdown = "1">
 
-In this exercise, we will use the self-taught learning paradigm with a *sparse autoencoder* and (optionnaly in the supplementary exercice) *softmax classifier* to build both a classifier for spectral windows, but also an unsupervised audition system.  
+In this exercise, we will use the self-taught learning paradigm with a *sparse autoencoder* in order to build an unsupervised audition system. Then, we will see how to transfer this learning and also rely on the *softmax classifier* (implemented in the [neural networks tutorial](/atiam-ml-2-neural-networks/) to build a classifier for spectral windows.
 
-First, you will train your sparse autoencoder on an **unlabeled** training dataset of audio data (in this case, you can use all the datasets from the tutorials, and even add your own audio files), which will be represented as a set of concatenated spectral windows (to keep the temporal information. This should produce features that are similar to the current theory of *Spectro-Temporal Receptive Fields* (SRTF), which models neurons in the primary auditory cortex (A1).  
+First, you will train your sparse autoencoder on an **unlabeled** training dataset of audio data (in this case, you can use all the datasets from the tutorials, and even add your own audio files), which will be represented as a set of concatenated spectral windows (to keep the temporal information).
 
-Then, we will extract these learned features from the **labeled** dataset of audio files. These features will then be used as inputs to a *softmax classifier*. Concretely, for each example in the the labeled training dataset, we forward propagate the example to obtain the activation of the hidden units. This transformed representation is used as the new feature representation with which to train the softmax classifier.  
+Then, we will extract these learned features from the *weights* of the network trained in an unsupervised fashion, in order to apply this knowledge to a **labeled** dataset of audio files (by using these features as inputs to a *softmax classifier*). Finally, we will extend this classifier by using *convolutional filters*.
 
 </div>{: .notice--blank}
 
@@ -60,23 +60,25 @@ Then, we will extract these learned features from the **labeled** dataset of aud
 
 <div markdown = "1">
 
-We will rely on the set of spectral transforms described in the first exercice.  
+As seen in the course, an auto-encoder is composed of an encoder and a decoder, where the output of the encoder provides a reduced (compressed) representation of the input and the decoder allows to reconstruct the orginal input from this encoded representation. Hence, both the encoding and decoding part are tuned through the minimization of a reconstruction error function, which finds a non-linear dimensionality reduction and representation fit to a certain dataset (as the encoder has a lower number of units than the input data). 
 
-In the starting code, we provide the basic functions to perform 
-  * ''???.m''       - ???
-  * ''???.m''       - ???
+We can see that the framework defined by AEs fit the overarching goal of unsupervised and self-taught learning, as it tries to exploit statistical correlations of the data structure to find a non-linear representation aimed at decomposing and then reconstructing the input.  
+In the starting code, we provide the basic functions to perform this learning.
 
-In order to perform the various computations, we will use the minFunc package and develop the following function
+|**File**|*Explanation*|
+|-------:|:---------|
+|`base-toolboxes`|Toolboxes to perform learning|
+|`display_network.m`|Network visualization function|
+|`initializeParameters.m`|Random initialization of network weights|
+|`params2stack.m`|Transform parameters as a stack|
+|`pcaWhitening.m`|Perform PCA whitening on input data|
+|`sampleSpectrums.m`|Sample from a set of spectrums|
+|`sparseAutoencoderCost.m`|Cost and gradient function for an SAE|
+|`stack2params.m`|Transform stack to a parameter|
+|`stackedAECost.m`|Cost and gradient for multiple layers|
+|`stackedAEPredict.m`|Prediction function for logistic regression|
 
-{% highlight Matlab %}
-function dataStruct = computeTransforms(dataStruct)
-% dataStruct   : Dataset structure with filenames
-
-% Returns the dataStruct structure with
-dataStruct.???     % ???
-dataStruct.???     % ???
-dataStruct.???     % ???
-{% endhighlight %}  
+In order to perform the various computations, we will use the `minFunc` package and develop the different function
 
 We will use the unlabeled data (any audio files) to train a sparse autoencoder. However, we first need to prepare an input set, so that the given data is formatted to a common size (slices of audio input). In the following problem, you will implement the sparse autoencoder algorithm, and show how it discovers an optimal representation for spectral windows. 
 
@@ -193,6 +195,8 @@ Now that you've verified that your gradients are correct, you can train your sof
 ## 8.4 - Classification
 
 <div markdown = "1">
+
+Concretely, for each example in the the labeled training dataset, we forward propagate the example to obtain the activation of the hidden units. This transformed representation is used as the new feature representation with which to train the softmax classifier.
 
 Finally, complete the code to make predictions on the test set (testFeatures) and see how your learned features perform! If you've done all the steps correctly, you should get an accuracy of about 98% percent.
 As a comparison, when raw pixels are used (instead of the learned features), we obtained a test accuracy of only around 96% (for the same train and test sets).
