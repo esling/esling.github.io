@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-The present tutorials covers .
+The present tutorials covers the basic implementation towards *deep learning*. Most of this young research field is quite extensively based on the neural networks (that we implemented in a [previous tutorial](/atiam-ml-2-neural-networks/)). Therefore, a good knowledge of the previous implementations is required. We will first construct an **auto-encoder** to perform an *unsupervised learning* directly from any data. Then, we will see how we can *transfer* this knowledge to a more extensive *supervised classifier*. Finally, we will extend these implementations with the use and visualization of **convolutional filters**.
 
 </div>{: .notice--blank}
 
@@ -44,7 +44,7 @@ The corresponding slides cover
 
 </div>{: .notice--blank}
 
-# Tutorial 
+# Tutorial  
 
 <div markdown = "1">
 
@@ -54,7 +54,7 @@ First, you will train your sparse autoencoder on an **unlabeled** training datas
 
 Then, we will extract these learned features from the **labeled** dataset of audio files. These features will then be used as inputs to a *softmax classifier*. Concretely, for each example in the the labeled training dataset, we forward propagate the example to obtain the activation of the hidden units. This transformed representation is used as the new feature representation with which to train the softmax classifier.  
 
-</div>{: notice--blank}
+</div>{: .notice--blank}
 
 ## 8.1 - Sparse Auto-Encoders
 
