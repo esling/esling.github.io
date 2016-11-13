@@ -8,11 +8,32 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
+{% include toc %}
+
 # Deep learning
+
+<div markdown = "1">
 
 The present tutorials covers .
 
+</div>{: .notice--blank}
+
 # Reference slides
+
+<div markdown = "1">
 
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.11.Deep.Learning.pdf)
 
@@ -20,7 +41,9 @@ The corresponding slides cover
 
   - Deep learning
   - Applications
-  
+
+</div>{: .notice--blank}
+
 # Tutorial 
 
 <div markdown = "1">
@@ -31,7 +54,12 @@ First, you will train your sparse autoencoder on an **unlabeled** training datas
 
 Then, we will extract these learned features from the **labeled** dataset of audio files. These features will then be used as inputs to a *softmax classifier*. Concretely, for each example in the the labeled training dataset, we forward propagate the example to obtain the activation of the hidden units. This transformed representation is used as the new feature representation with which to train the softmax classifier.  
 
+</div>{: notice--blank}
+
 ### 8.1 - Sparse Auto-Encoders (SAE)
+
+<div markdown = "1">
+
 We will rely on the set of spectral transforms described in the first exercice.  
 
 In the starting code, we provide the basic functions to perform 
@@ -58,6 +86,7 @@ Specifically, in this exercise you will implement a sparse autoencoder, trained 
 
 The first step is to generate a training set. To get a single training example $$x$$, we need to compute the spectral transform from a sound and then subsample a set of a given number of consecutive spectral frames. This will allow the network to learn from the complete spectro-temporal information. However, the sampled parts will need to be converted into vectors.
 
+</div>{: .notice--blank}
   
 **Exercise**  
 <div markdown="1">  
@@ -66,9 +95,9 @@ The first step is to generate a training set. To get a single training example $
   2. Run your ''svmTrain'' function on the ''example3.mat'' dataset, you should obtain the result displayed below.
   3. Once again, display the decision boundary at each iteration of the algorithm.
 
-</div>
+</div> {: .notice--info}
 
-#### Objective
+<div markdown = "1">
 
 As seen in course, the learning of an autoencoder is based on a cost function that tries to reconstruct the input from a combination of hidden units. The sparsity aspects allow to force the network to make this reconstruction from fewer data. To do so, we need to both define the cost function $$J_{sparse}(W,b)$$ and the corresponding derivatives of $$J_{sparse}$$ with respect to the different parameters. We will use the sigmoid function for the activation function
 
@@ -87,6 +116,7 @@ In order to test the validity of your implementation, you can use the method of 
 
 **Implementation tip**: If you are debugging your code, performing gradient checking on smaller models and smaller training sets (e.g., using only 10 training examples and 1-2 hidden units) may speed things up.
 
+</div>{: .notice--blank}
   
 **Exercise**  
 <div markdown="1">  
@@ -99,7 +129,9 @@ In order to test the validity of your implementation, you can use the method of 
 </div>{: .notice--info}  
 
 
-### 8.2 - Training the SAE and visualizing 
+## 8.2 - Training the SAE and visualizing 
+
+<div markdown = "1">
 
 Once you have coded and verified your objective and derivatives, you can train the parameters of the model and use it to extract features from the spectral windows. Equiped with the code that computes Jsparse and its derivatives, we're ready to minimize Jsparse with respect to its parameters, and thereby train our sparse autoencoder.  
 
@@ -110,6 +142,7 @@ Train a sparse autoencoder with 4xN input units, 200 hidden units, and 4xN outpu
 ** Visualization **
 After training the autoencoder, use display_network.m to visualize the learned weights. (See train.m, Step 5.).
 
+</div>{: .notice--blank}
   
 **Exercise**  
 <div markdown="1">  
@@ -120,7 +153,9 @@ After training the autoencoder, use display_network.m to visualize the learned w
 
 </div>{: .notice--info} 
 
-### 8.3 - Logistic regression model
+## 8.3 - Logistic regression model
+
+<div markdown = "1">
 
 In softmaxCost.m, implement code to compute the softmax cost function $$J(\theta)$$. Remember to include the weight decay term in the cost as well. Your code should also compute the appropriate gradients, as well as the predictions for the input data (which will be used in the cross-validation step later).  
 
@@ -145,6 +180,7 @@ Once you have written the softmax cost function, you should check your gradients
 
 Now that you've verified that your gradients are correct, you can train your softmax model using the function softmaxTrain in softmaxTrain.m. softmaxTrain which uses the L-BFGS algorithm, in the function minFunc. \\
 
+</div>{: .notice--blank}
   
 **Exercise**  
 <div markdown="1">  
@@ -156,7 +192,11 @@ Now that you've verified that your gradients are correct, you can train your sof
 
 </div>{: .notice--info}  
 
-### 8.4 - Classifying the test set
+## 8.4 - Classifying the test set
+
+<div markdown = "1">
 
 Finally, complete the code to make predictions on the test set (testFeatures) and see how your learned features perform! If you've done all the steps correctly, you should get an accuracy of about 98% percent.
 As a comparison, when raw pixels are used (instead of the learned features), we obtained a test accuracy of only around 96% (for the same train and test sets).
+
+</div>{: .notice--blank}
