@@ -74,6 +74,10 @@ This section summarizes the courses in machine learning applied to music computi
 
 The present tutorials covers coding exercices designed to implement the core notions seen in the machine learning lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercices here target these techniques specifically applied to musical or audio data.
 
+Get the baseline MATLAB code for tutorials from this [zip file ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/F6QlLPgABOVJQRI)  
+Get the audio datasets from this [link ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/FTsaaAMFV1jEwsk).  
+**Unzip the file and place the `00_Datasets` folder along with other code folders**  
+
 # Exercices
 
 # References
