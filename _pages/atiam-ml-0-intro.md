@@ -57,7 +57,7 @@ In this introduction, we will cover basic Music Information Retrieval (MIR) inte
 
 Along the tutorials, we provide a reference code for each section. This code contains helper functions that will alleviate you from the burden of data import and other sideline implementations. You will find designated spaces in each file to develop your solutions. The code is in MATLAB and relies heavily on the concept of [code sections](https://fr.mathworks.com/help/matlab/matlab_prog/run-sections-of-programs.html) which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand.
 
-Get the baseline MATLAB code for all tutorials from this [zip file ![](../images/file.png)](../documents/atiam_ml_exercises.zip)
+Get the baseline MATLAB code for all tutorials from this [zip file ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/F6QlLPgABOVJQRI)
 
 </div>{: .notice--blank}
 
@@ -65,7 +65,7 @@ Get the baseline MATLAB code for all tutorials from this [zip file ![](../images
 
 <div markdown = "1">
 
-In order to test our algorithms on audio and music data, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)](https://pchit.ircam.fr/public.php?service=files&t=a476001b408cfa9dacf8721149b9f151)
+In order to test our algorithms on audio and music data, we will work with several datasets that should be downloaded on your local computer first from this [link ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/FTsaaAMFV1jEwsk)
 
   |**Type**|*Origin*|
   |-------:|:---------|
@@ -74,6 +74,7 @@ In order to test our algorithms on audio and music data, we will work with sever
   |**Source separation**|[*SMC Mirum*](http://smc.inesctec.pt/research/data-2/) dataset|
   |**Speech recognition**|[*CMU Arctic*](http://festvox.org/cmu_arctic/) dataset|
 
+**Unzip the file and place the `00_Datasets` folder along with the other code folders**
 For the first parts of the tutorial, we will mostly rely solely on the classification dataset. In order to facilitate the interactions, we provide the function `importDataset` that will allow to import all audio datasets along the tutorials.
 
 {% highlight Matlab %}
