@@ -30,8 +30,9 @@ $(document).ready(function(){
 The present tutorials are designed to implement the core notions seen in [machine learning](/atiam-ml) lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercises here will introduce the basic mecanisms behind these technics and then, we will target specific applications to musical or audio data.
 
 Get the baseline code from this [zip file ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/F6QlLPgABOVJQRI)  
-Get the audio datasets from this [link ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/FTsaaAMFV1jEwsk).  
-**Unzip the file and place the `00_Datasets` folder along with other code folders**  
+Get the audio datasets from this [link ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/FTsaaAMFV1jEwsk)   
+  
+**Unzip files and place `00_Datasets` along with other folders**  
 
 </div>{: .notice--blank}
 
