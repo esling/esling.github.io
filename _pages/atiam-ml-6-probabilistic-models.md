@@ -14,7 +14,7 @@ sidebar:
 
 <div markdown = "1">
 
-The present tutorials covers .
+The present tutorials covers the basic notions of *probabilities* and *probability distributions*. First, we will try to see how to sample from different distributions in order to generate new data. Then, this tutorial covers the basic theory behind the [Bayes theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem), and how it can be used. We will implement a simple **Bayesian network** in order to perform observation and inference from a model.
 
 </div>{: .notice--blank}
 
