@@ -28,9 +28,15 @@ $(document).ready(function(){
 
 # Bayesian inference
 
-The present tutorials covers .
+<div markdown = "1">
+
+The present tutorials covers the basics behind *.
+
+</div>{: .notice--blank}
 
 # Reference slides
+
+<div markdown = "1">
 
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.7.Bayesian.Inference.pdf)
 
@@ -40,6 +46,8 @@ The corresponding slides cover
   - Undirected graphical models
   - Maximum likelihood  
   
+</div>{: .notice--blank}
+
 # Tutorial 
 
 ### 7.0 - Bayesian framework
