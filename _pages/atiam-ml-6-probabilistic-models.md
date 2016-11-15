@@ -12,9 +12,15 @@ sidebar:
 
 # Probabilistic models
 
+<div markdown = "1">
+
 The present tutorials covers .
 
+</div>{: .notice--blank}
+
 # Reference slides
+
+<div markdown = "1">
 
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.6.Probabilistic.Models.pdf)
 
@@ -22,6 +28,8 @@ The corresponding slides cover
 
   - Probabilities and distributions
   - Belief networks  
+
+</div>{: .notice--blank}
 
 # Tutorial 
 
