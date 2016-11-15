@@ -8,6 +8,22 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+    $("#divq1").hide();
+    $("#divq2").hide();
+    $("#divq3").hide();
+});
+</script>
+
 {% include toc %}
 
 # Bayesian inference
@@ -92,8 +108,9 @@ $$ \mathbb{E}(\hat{p}) = p $$
 
 </div>{: .notice--info}  
 
-**Solution**
-<div markdown = "1">
+**Solution** [<a href="javascript:void(0)" class="abuttons" data-divid="divq1">Reveal</a>]
+
+<div id="divq1" markdown = "1">
 
 Because this problem is simple, we can solve for this in general noting that since $$x=0$$ or $$x=1$$, the terms in the product of $$\mathcal{L}$$ above are either $$p$$, if $$x_i=1$$ or $$1-p$$ if $$x_i=0$$. This means that we can write
 
@@ -452,8 +469,9 @@ $$
 
 </div>{: .notice--info}  
 
-**Solution**
-<div markdown = "1">
+**Solution** [<a href="javascript:void(0)" class="abuttons" data-divid="divq2">Reveal</a>]
+
+<div id="divq2" markdown = "1">
 
 **Estimator for the mean $$\hat{\mu}$$**
 
