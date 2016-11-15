@@ -8,6 +8,22 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+    $("#divq1").hide();
+    $("#divq2").hide();
+    $("#divq3").hide();
+});
+</script>
+
 {% include toc %}
 
 # Gaussian Mixture Models
@@ -114,8 +130,9 @@ For the expectation part we have to compute $$\mathbb{E}(z \mid \Theta)$$
 
 </div>{: .notice--info}  
 
-**Solution**
-<div markdown = "1">
+**Solution** [<a href="javascript:void(0)" class="abuttons" data-divid="divq1">Reveal</a>]
+
+<div id="divq1" markdown = "1">
 
 Since $$z\in \lbrace 0,1 \rbrace$$, the expression of $$\mathbb{E}(z \mid \Theta)$$  simplifies easily
 
@@ -175,9 +192,10 @@ by maximizing it using basic calculus.
 
 </div>{: .notice--info}
 
-**Solution**
+**Solution** [<a href="javascript:void(0)" class="abuttons" data-divid="divq2">Reveal</a>]
 
-<div markdown="1">
+<div id="divq2" markdown = "1">
+
 The trick is to remember that $$\hat{z}_{i}$$ is *fixed*, so we only have to maximize the $$\log$$ parts. This leads to
 
 $$ 
