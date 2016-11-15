@@ -64,7 +64,7 @@ Finally, we say that two events are independent if $$P(a\mid b) = P(a)$$.
 
 </div>{: .notice--blank}
 
-## Probability Distributions
+## 6.1 - Probability Distributions
 
 <div markdown = "1">
 
@@ -132,7 +132,7 @@ $$E[\; Z \;|\; \lambda \;] = \frac{1}{\lambda}$$
 
 </div>{: .notice--info}
 
-## 6.1 - Graphical Models
+## 6.2 - Graphical Models
 
 <div markdown = "1">
 
@@ -147,7 +147,7 @@ A node $$X$$ can have several parents, which means that its value is influenced 
 
 </div>{: .notice--blank}
 
-## 6.2 - Bayes Nets
+**Bayes Nets**
 
 <div markdown = "1">
 
