@@ -171,7 +171,8 @@ Based on this network, we can make predictions about our patient, for instance h
 $$
 \begin{equation}
 \begin{split}
-P = P \left( H \right) = P \left( E=T,S=F,C=F,B=F,A=F \right)   \\
+P \\
+ & = P \left( E=T,S=F,C=F,B=F,A=F \right)   \\
  & = P \left( E=T \right) P \left( S=F \right) P \left( C=F \mid S=F \right) P \left( B=F \mid E=T,S=F \right) P \left( A=F \mid B=F \right)   \\
  & =.4×.85×.6×.95×.95=.184
 \end{split}
@@ -195,8 +196,19 @@ A factor product is a way of joining two CPTs into a new CPT.
 
 <center><img src="../images/atiam-ml/06_6.1_net_4.png" height="500" width="500"/></center>  
   
+**Exercise**
+
+<div markdown="1">
+
+1. Complete the `observe` function for variable observation
+2. Complete the `marginalizeFactor` function for marginalization
+3. Complete the `factorProduct` function for joining the CPTs
+4. Test your functions on the given toy examples.
+
+</div>{: .notice--info}
+  
 **Inference**
-In this tutorial we are going to perform exact inference because our networks are fairly small. We will use the method of Variable elimination to make predictions in our network. The outline of the procedure is as follows
+In this tutorial we are going to perform exact inference because our networks are fairly small. We will use the method of *variable elimination* to make predictions in our network. The outline of the procedure is as follows
 
 1. Observe variables
 2. For each variable that we want to marginalize out
@@ -205,16 +217,39 @@ In this tutorial we are going to perform exact inference because our networks ar
 3. Join all remaining factors
 4. Normalize
 
-Let’s use these methods to analyze how information flows in our network. We can instantiate our bayesian network as:
-Let’s assume that all we know about the patient is that he is a smoker. What does that do to the probability that he will have a heart attack?  
+**Exercise**
+
+<div markdown="1">
+
+1. Complete the `infer` function for variable observation
+2. Test the overall Bayes net behavior on the following examples.
+
+</div>{: .notice--info}
+  
+Let’s use these methods to analyze how information flows in our network. First, all we know about the patient is that he is a smoker. What does that do to the probability that he will have a heart attack?  
+
+{% highlight Matlab %}
 infer(heart_net, ["c", "b", "e", "s"], ["s"], [1])  
+{% endhighlight %}  
+
 As we would expect it increases. This is what is known as causal reasoning, because influence flows from the contributing cause (smoking) to one of the effects (heart attack). There are other ways for information to flow though. For example, let’s say that we know that the patient had a heart attack. Unfortunately, since they are now dead we can’t measure their blood pressure directly, but we can use our model to predict what the probability of them having high blood pressure is.  
+
+{% highlight Matlab %}
 infer(heart_net, ["c", "a", "e", "s"], ["a"], [1])  
+{% endhighlight %}  
+
 Clearly having a heart attack suggests that the patient was likely to have had high blood pressure. This is an example of what is known as evidential reasoning. We used the evidence of a heart attack to better understand the patients initial state.
 The last form of reasoning in these types of networks is known as intercausal reasoning. This is where information flows between two otherwise independent pieces of evidence. Take for example whether or not the patient exercises or smokes. If we observe that the patient has high blood pressure then the probability that he either smokes or doesn’t exercise increases.  
+
+{% highlight Matlab %}
 infer(heart_net, ["c", "a", "b"], ["b"], [1])  
+{% endhighlight %}  
+
 If we then observe that the patient doesn’t exercise we see that the probability that he is a smoker jumps substantially.  
-infer(heart_net, ["c", "a", "b", "e"], ["b", "e"], [1, 1])
+
+{% highlight Matlab %}
+infer(heart_net, ["c", "a", "b", "e"], ["b", "e"], [1, 1])  
+{% endhighlight %}  
 
 This is an example of information flowing between two previously independent factors
 
