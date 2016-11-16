@@ -170,9 +170,11 @@ Based on this network, we can make predictions about our patient, for instance h
 
 $$
 \begin{equation}
-P \left( E=T,S=F,C=F,B=F,A=F \right)   
-= P \left( E=T \right) P \left( S=F \right) P \left( C=F \mid S=F \right) P \left( B=F \mid E=T,S=F \right) P \left( A=F \mid B=F \right)   
-=.4×.85×.6×.95×.95=.184
+\begin{split}
+P \left( E=T,S=F,C=F,B=F,A=F \right)   \\
+ &\quad = P \left( E=T \right) P \left( S=F \right) P \left( C=F \mid S=F \right) P \left( B=F \mid E=T,S=F \right) P \left( A=F \mid B=F \right)   \\
+ &\quad =.4×.85×.6×.95×.95=.184
+\end{split}
 \end{equation}
 $$
 
