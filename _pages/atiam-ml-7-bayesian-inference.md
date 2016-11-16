@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-The present tutorials covers the basics behind *.
+The present tutorials covers the basics behind *Bayesian inference* and how to use the **Bayes theorem** to perform classification in the case of uniformly distributed data points. First, we will see how to derive *estimators* for the different properties of the distributions, and verify that these are *unbiased*. Then, we will implement the **Maximum Likelihood** Estimators (MLE) in order to perform classification of a dataset. First, we will assess the case where parameters are known to implement the discriminant function and decision rule. Then, we will perform the MLE to obtain the means and covariance matrix for each class.
 
 </div>{: .notice--blank}
 
@@ -111,7 +111,7 @@ $$ \mathbb{E}(\hat{p}) = p $$
   1. Compute the *log-likelihood* $$J=\log(\mathcal{L}(p \mid \mathbf{x}))$$ of our given problem
   2. Based on this, compute its derivative $$ \frac{dJ}{dp} $$
   3. Solve it to find the estimator $$\hat{p}$$
-  4. Verify that this estimator is unbiased $$ \mathbb{E}(\hat{p}) = p $$)
+  4. Verify that this estimator is unbiased $$ \mathbb{E}(\hat{p}) = p $$
   5. Compute the variance of the estimator $$ \mathbb{E}\left(\hat{p}^2\right) $$
 
 </div>{: .notice--info}  
