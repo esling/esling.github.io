@@ -28,9 +28,15 @@ $(document).ready(function(){
 
 # Gaussian Mixture Models
 
-The present tutorials covers .
+<div markdown="1">
+
+The present tutorials covers the basics behind the use of **Expectation-Maximization** (EM) algorithm, in order to perform the estimation of Gaussian Mixture Models. First, we will lay down the problem of measuring from unseen groups. Then, we will develop the expectation, in order to perform the MLE on our data. Finally, the maximization step will allow to update the parameters in order to obtain a full classification model for the data.
+
+</div>{: .notice--blank}
 
 # Reference slides
+
+<div markdown="1">
 
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.8.Gaussian.Mixture.Models.pdf)
 
@@ -39,13 +45,15 @@ The corresponding slides cover
   - Expectation Maximization
   - Mixture models  
   
+</div>{: .notice--blank}
+
 ## Tutorial 
 
 <div markdown="1">
 Expectation Maximization (EM) is a powerful technique for creating maximum likelihood estimators when the variables are difficult to separate. Here, we set up a Gaussian mixture experiment with two Gaussians and derive the corresponding estimators of their means using EM.
 </div>{: .notice--blank}
 
-#### 8.1 - Measuring from Unseen Groups 
+#### 8.1 - Measuring unseen groups 
 
 <div markdown="1">
 Suppose we have a population with two distinct groups of individuals with different heights. If we randomly pick an individual from the population, we don't know which group the individual belongs to. The goal is to estimate the mean heights of the two distinct groups when we have an unlabeled distribution sampled from both groups.
