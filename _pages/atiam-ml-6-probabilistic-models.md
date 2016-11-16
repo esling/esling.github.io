@@ -153,7 +153,8 @@ A node $$X$$ can have several parents, which means that its value is influenced 
 
 If we combine several nodes in a network, we call it a ***Bayes Net***. The goal of such graphical models is to represent a *joint distribution* over a set of *random variables*, by using independence assumptions and thus reduce the complexity of the model. In Bayesian networks, nodes represent random variables and the paths represent the independence assumptions. To understand the basics of this method, we will implement0 a simple network for performing medical prediction of potential heart attacks. The idea is to have some pieces of information that we can collect like the patients cholesterol, whether or not they smoke, their blood pressure, and whether or not they exercise. In order to describe this system fully, we would need 2525 interactions. However, most of these interactions do not increase our predictive power. For example, we know that blood pressure is directly related to heart attacks and that both exercise and smoking can affect blood pressure. Thus, we can build a model where we use our domain knowledge to describe the interactions between our features.  
 
-<center><img src="../images/atiam-ml/06_6.1_net_1.png" height="500" width="500"/></center>
+<center><img src="../images/atiam-ml/06_6.1_net_1.png" height="500" width="500"/></center>  
+  
 
 This network embeds several priors on our problem and our assumptions. First, we include the prior probabilities of the individual being a smoker, and whether or not they exercise. We can see that being a smoker affects the individuals cholesterol level influencing whether it is either high (T) or low (F). We also see that the blood pressure is directly influenced by exercise and smoking habits, and that blood pressure influences whether or not our patient is going to have a heart attack.
 
@@ -169,21 +170,29 @@ Based on this network, we can make predictions about our patient, for instance h
 
 $$
 \begin{equation}
-P \left( E=T,S=F,C=F,B=F,A=F \right) =P \left( E=T \right) P \left( S=F \right) P \left( C=F \mid S=F \right) P \left( B=F \mid E=T,S=F \right) P \left( A=F \mid B=F \right) =.4×.85×.6×.95×.95=.184
+P \left( E=T,S=F,C=F,B=F,A=F \right)   
+= P \left( E=T \right) P \left( S=F \right) P \left( C=F \mid S=F \right) P \left( B=F \mid E=T,S=F \right) P \left( A=F \mid B=F \right)   
+=.4×.85×.6×.95×.95=.184
 \end{equation}
 $$
 
 Even though this might be useful, the real power of the Bayesian network comes from the ability to reason about the whole model, and the effects that different variable observations have on each other. In order to perform this inference we’ll need three operations, **observation**, **marginalization**, and **factor products**.  
 
 **Observation**
-Observing a variable is a simple operation where we just ignore all unobserved aspects of that variable (meaning that we now know the real value of this variable). This translates into deleting all rows of a CPT where that observation is not true.
+Observing a variable is a simple operation where we just ignore all unobserved aspects of that variable (meaning that we now know the real value of this variable). This translates into deleting all rows of a CPT where that observation is not true.  
 
+<center><img src="../images/atiam-ml/06_6.1_net_2.png" height="500" width="500"/></center>  
+  
 **Marginalization**
 Marginalization is the process of changing the scope of a CPT by summing over the possible configurations of the variable to eliminate. It gives us a new probability distribution irrespective of the variable that we marginalized.
 
+<center><img src="../images/atiam-ml/06_6.1_net_3.png" height="500" width="500"/></center>  
+  
 **Factor product**
 A factor product is a way of joining two CPTs into a new CPT.
 
+<center><img src="../images/atiam-ml/06_6.1_net_4.png" height="500" width="500"/></center>  
+  
 **Inference**
 In this tutorial we are going to perform exact inference because our networks are fairly small. We will use the method of Variable elimination to make predictions in our network. The outline of the procedure is as follows
 
