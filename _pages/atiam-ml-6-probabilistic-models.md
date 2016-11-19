@@ -8,6 +8,19 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
 {% include toc %}
 
 # Probabilistic models
@@ -103,7 +116,7 @@ $$E\large[ \;Z\; | \; \lambda \;\large] = \lambda $$
 We will plot the probability mass distribution for different $$\lambda$$ values.
 
 **Continuous Case**
-A continuous random variable has a *probability density function*. An example of continuous random variable is a random variable with *exponential density*
+A continuous random variable has a *Probability density function* (PDF). An example of continuous random variable is a random variable with *exponential density*
 
 $$
 \begin{equation}
@@ -117,7 +130,19 @@ $$Z \sim \text{Exp}(\lambda)$$
 
 Given a specific $$\lambda$$, the expected value of an exponential random variable is equal to the inverse of $$\lambda$$, that is
 
-$$E[\; Z \;|\; \lambda \;] = \frac{1}{\lambda}$$
+$$E[\; Z \;|\; \lambda \;] = \frac{1}{\lambda}$$ 
+
+**Sampling from distributions**
+
+The advantage of using probability distributions is that we can *sample* from these to obtain examples that follow the distribution. For instance, if we perform sampling repeatedly (up to infinity) from a Gaussian PDF, the different values will be distributed following the exact Gaussian distribution. However, although we know the PDF, we need to compute the *Cumulative Distribution Function* (CDF), and then its inverse to obtain the sampling function. Therefore, if we denote the PDF as $$f_{X}(x)$$, we need to compute the CDF 
+
+$$
+\begin{equation}
+F_{X}\left(x\right)=\intop_{\infty}^{x}f_{X}\left(t\right)dt
+\end{equation}
+$$
+
+Then, the *inverse sampling method* consists in solving and applying the inverse CDF $$F_{X}^{-1}\left(x\right)$$
 
 </div>{: .notice--blank}
 
@@ -127,10 +152,21 @@ $$E[\; Z \;|\; \lambda \;] = \frac{1}{\lambda}$$
 
 1. Code the Poisson probability mass function
 2. Code the exponential probability density functions 
-3. Try these distributions with different $$\lambda$$ values. 
-4. How to generate a random variable that follows one of these distributions ?
+3. Perform the inverse transform method on the exponential distribution PDF
+4. Code the `sampleExponantial` function to sample from the exponential
+5. (optional) Perform the same operations for sampling from the Beta distribution
 
 </div>{: .notice--info}
+
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
+
+<div id="div2">
+<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
 
 ## 6.2 - Graphical Models
 
@@ -253,4 +289,30 @@ infer(heart_net, ["c", "a", "b", "e"], ["b", "e"], [1, 1])
 
 This is an example of information flowing between two previously independent factors
 
+</div>{: .notice--blank}
+
+<div markdown = "1">
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]  
+
+<div id="div1">
+{% highlight matlab %}
+  altotrombone 	: 13.
+       animals 	: 9.
+         bells 	: 7.
+    cellobowed 	: 47.
+        crowds 	: 4.
+      laughter 	: 7.
+      machines 	: 11.
+          oboe 	: 32.
+    percussion 	: 99.
+ speech.female 	: 35.
+   speech.male 	: 17.
+     telephone 	: 17.
+  tubularbells 	: 20.
+   violinbowed 	: 45.
+    violinpizz 	: 40.
+         water 	: 7.
+         total 	: 410.
+{% endhighlight %}
+</div>
 </div>{: .notice--blank}
