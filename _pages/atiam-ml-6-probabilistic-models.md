@@ -296,23 +296,61 @@ This is an example of information flowing between two previously independent fac
 
 <div id="div1">
 {% highlight matlab %}
-  altotrombone 	: 13.
-       animals 	: 9.
-         bells 	: 7.
-    cellobowed 	: 47.
-        crowds 	: 4.
-      laughter 	: 7.
-      machines 	: 11.
-          oboe 	: 32.
-    percussion 	: 99.
- speech.female 	: 35.
-   speech.male 	: 17.
-     telephone 	: 17.
-  tubularbells 	: 20.
-   violinbowed 	: 45.
-    violinpizz 	: 40.
-         water 	: 7.
-         total 	: 410.
+Smoker :
+        variables: {'a'}
+       levelsList: {[1 0]}
+       valuesList: [2x1 double]
+    probabilities: [2x1 double]
+
+    0.4250
+    0.5750
+
+Attack :
+        variables: {'b'}
+       levelsList: {[1 0]}
+       valuesList: [2x1 double]
+    probabilities: [2x1 double]
+
+    0.0875
+    0.9125
+
+Blood :
+        variables: {'s'}
+       levelsList: {[1 0]}
+       valuesList: [2x1 double]
+    probabilities: [2x1 double]
+
+    0.7256
+    0.2744
+
+Blood :
+        variables: {'e'}
+       levelsList: {[1 0]}
+       valuesList: [2x1 double]
+    probabilities: [2x1 double]
+
+    0.8927
+    0.1073
+
+Exercise :
+        variables: {'s'}
+       levelsList: {[1 0]}
+       valuesList: [2x1 double]
+    probabilities: [2x1 double]
+
+    0.3864
+    0.6136
+
+Blood :
+        variables: {'e'  's'}
+       levelsList: {[1 0]  [1 0]}
+       valuesList: [4x2 double]
+    probabilities: [4x1 double]
+
+    0.6841
+    0.2085
+    0.0415
+    0.0659
 {% endhighlight %}
 </div>
 </div>{: .notice--blank}
