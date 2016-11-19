@@ -354,3 +354,22 @@ Blood :
 {% endhighlight %}
 </div>
 </div>{: .notice--blank}
+
+## 6.3 - Audio application
+
+<div markdown = "1">
+
+This exercise is an open style application of Bayesian networks, therefore the scope of your application is entirely open. You will need to find an interesting musical problem that can be solved appropriately through Bayesian network inference. To do so, first identify an audio application. Then, you can lay out a graphical model assessing the problem and set your own prior probabilities table. Finally, try to perform inference inside this network.
+
+</div>{: .notice--blank}
+
+**Exercise**
+
+<div markdown="1">
+
+1. Try to find a fit audio application
+2. Establish your model and prior probabilities
+3. Model this network based on your assumptions
+4. Perform inference on the network
+
+</div>{: .notice--info}
