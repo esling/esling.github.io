@@ -163,7 +163,7 @@ Then, the *inverse sampling method* consists in solving and applying the inverse
 **Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
 
 <div id="div2">
-<img src="../images/atiam-ml/00_0.2_bells.svg" height="350" width="350"/> <img src="../images/atiam-ml/00_0.2_speech.svg" height="350" width="350"/>
+<img src="../images/atiam-ml/06_6.1_beta.svg" height="350" width="350"/> <img src="../images/atiam-ml/06_6.1_exponential.svg" height="350" width="350"/>
 </div>
 
 </div>{: .notice--blank}
