@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-The present tutorials covers .
+The present tutorials covers recurrent problems that afflict almost all machine learning algorithms and how to alleviate them. First, we will discuss the *curse of dimensionnality* and how it can be reduced through dimensionality reduction techniques. Then, we will see examples of *over-fitting* and *over-training* that occurs in every non-convex problems. This hampers the capacity of an algorithm for *generalization*, which can be evaluated through the use of a *validation set* and *cross-validation*. These are also the main techniques to perform *model selection*.
 
 </div>{: .notice--blank}
 
