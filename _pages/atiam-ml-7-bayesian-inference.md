@@ -50,7 +50,7 @@ The corresponding slides cover
 
 # Tutorial 
 
-### 7.0 - Bayesian framework
+## 7.0 - Bayesian framework
 
 <div markdown = "1">
 
@@ -73,7 +73,7 @@ We see that our posterior belief of event $$A$$ given the new evidence $$X$$ is 
 
 </div>{: .notice--blank}
 
-### 7.1 - Bayesian inference
+## 7.1 - Bayesian inference
 
 <div markdown = "1">
 
@@ -268,7 +268,7 @@ where the term on the left is the binomial coefficient of $$n$$ things taken $$k
 
 </div>{: .notice--blank}
 
-### 7.2 - Gaussian classification
+## 7.2 - Gaussian classification
 
 <div markdown = "1">
 
@@ -284,7 +284,7 @@ $$
 
 </div>{: .notice--blank}
 
-### 7.3 - Parameters known
+## 7.3 - Parameters known
 
 <div markdown = "1">
 
@@ -389,7 +389,7 @@ So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\p
 
 </div>{: .notice--info}
 
-### 7.3 - Unknown parameters case
+## 7.3 - Unknown parameters
 
 <div markdown = "1">
 
@@ -521,3 +521,11 @@ Using the estimated parameters $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which we ob
 <div id="div2">
 <img src="../images/atiam-ml/07_7.1_estimate.svg" height="350" width="350"/> <img src="../images/atiam-ml/07_7.1_estimate_2.svg" height="350" width="350"/>
 </div>
+
+## 7.4 - Audio source separation
+
+We can generalize this approach in order to perform a complete blind audio source separation algorithm, such as detailed in the following paper   
+
+Févotte, C., & Cardoso, J. F. "Maximum likelihood approach for blind audio source separation using time-frequency Gaussian source models". *IEEE Workshop on Applications of Signal Processing to Audio and Acoustics*, 2005. (pp. 78-81). IEEE.  
+
+You can try to implement this by relying on the [full paper![](../images/pdf.png)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.640.6981&rep=rep1&type=pdf)
