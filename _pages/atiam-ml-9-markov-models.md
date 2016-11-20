@@ -172,7 +172,7 @@ sum of all $$P(sentence)$$ in the data. In each iteration, just add up all the $
 **Backward algorithm**
 
 The backward pass is almost the same as the forward pass, just backwards. Again, we compute a new lattice, which contains for each node pass the sum of all possible paths that lead from that node to the end. These values are called ***betas***, where $$\beta_{i, j}$$ denotes the summed probability of all paths from node $$(i, j)$$ to the end. This time, however, we start at
-the end, so $$\beta_{end}$ is always $$1.0$$. A useful property for debugging is the fact that $$\beta_{start} = \alpha_{end}$$.
+the end, so $$\beta_{end}$$ is always $$1.0$$. A useful property for debugging is the fact that $$\beta_{start} = \alpha_{end}$$.
 
 </div>{: .notice--blank}
 
@@ -191,7 +191,7 @@ the end, so $$\beta_{end}$ is always $$1.0$$. A useful property for debugging is
 Once we have the alphas and betas, it is easy to compute for each transition how much it contributes
 to $$P(sentence)$$. We have to know the likelihood of all possible paths arriving at a particular node $$(i,j)$$, and the probability – once we have taken the transition – from node $$(i,j+1)$$ to the end.  
 
-We used the forward algorithm to get the probability of arriving at node $$(i,j)$$, and the backward algorithm to compute how likely it is from node $(i,j+1)$ to the end. We divide that by the likelihood of the sentence ($$= \alpha_{end}$$) in order to obtain the fractional counts.
+We used the forward algorithm to get the probability of arriving at node $$(i,j)$$, and the backward algorithm to compute how likely it is from node $$(i,j+1)$$ to the end. We divide that by the likelihood of the sentence ($$= \alpha_{end}$$) in order to obtain the fractional counts.
 
 </div>{: .notice--blank}
 
@@ -233,20 +233,3 @@ In order to
 
 </div>{: .notice--info}
 
-## 9.4 - Advanced Topics
-
-<div markdown = "1">
-
-The goal of his section is mainly to give you a very high-level intuition and refer to related work for details.
-
-**Scaling**
-
-We used logarithms to prevent underflow of the probabilities. There is another way to prevent underflow, called ***scaling***. The idea is that we normalize each column in our lattice so that it sums to 1. That way, the probabilities won’t get too small, and we can still use multiplication and normal addition. Practically, we add a vector to our forward-backward procedure. It has the same length as out lattice, and for each position of the lattice contains the sum of the forward probabilities at that position, the ***scaling factor***.
-
-**Variational Bayes**
-
-We have earlier seen the idea of adding pseudo-counts to the fractional counts, which helps with smoothing. Variational Bayes inference works similarly, only that now we define a prior for our prior parameters. In practice, the prior here is a ***Dirichlet distribution***, which takes two parameters: a probability distribution and a vector of shape parameters. Both have the same number of elements (or dimensions). Typically, the probability distribution are our transition parameters, and the shape parameters are something like pseudo-counts for each element.
-
-In the M-step, the elements of the shape parameter vector are added as pseudo-counts to the matching fractional counts, and the result is passed through a ***Digamma function*** and finally exponentiated. To normalize, we add the sum of all elements in the shape vector to our denominator and again run it though Digamma and exponentiation. This is like a softer version of smoothing with pseudo-counts, where we have separate counts for each parameter.
-
-</div>{: .notice--blank}
