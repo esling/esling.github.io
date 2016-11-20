@@ -389,7 +389,7 @@ So that our decision rule is to choose the class $$\omega_i$$ for which $$g_i(\p
 
 </div>{: .notice--info}
 
-## 7.3 - Unknown parameters
+## 7.4 - Unknown parameters
 
 <div markdown = "1">
 
@@ -522,7 +522,7 @@ Using the estimated parameters $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which we ob
 <img src="../images/atiam-ml/07_7.1_estimate.svg" height="350" width="350"/> <img src="../images/atiam-ml/07_7.1_estimate_2.svg" height="350" width="350"/>
 </div>
 
-## 7.4 - Audio source separation
+## 7.5 - Audio source separation
 
 We can generalize this approach in order to perform a complete blind audio source separation algorithm, such as detailed in the following paper   
 
