@@ -524,8 +524,54 @@ Using the estimated parameters $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which we ob
 
 ## 7.5 - Audio source separation
 
+<div markdown = "1">
+
+The maximum likelihood estimator (MLE) is widely used in practical signal modeling and we can show that the MLE is equivalent to the least squares estimator for a wide class of problems, including well resolved sinusoids in white noise. We are going to consider a model consisting of a complex sinusoid in additive white (complex) noise:
+
+$$
+\displaystyle x(n) \isdef {\cal A}e^{j\omega_{0} n} + v(n) \protect
+$$
+
+Here, $$ {\cal A}= A e^{j\phi} $$ is the complex amplitude of the sinusoid, and $$ v(n) $$ is white noise that we assume to be Gaussian distributed with zero mean. Hence, we assume that its probability density function is given by  
+$$
+\displaystyle p_{v}(\nu) = \frac{1}{\pi \sigma_{v}^2} e^{-\frac{\vert\nu\vert^2}{\sigma_{v}^2}}.
+$$
+
+We express the zero-mean Gaussian assumption by writing
+
+$$
+\displaystyle v(n) \sim {\cal N}(0,\sigma_{v}^2)
+$$
+
+The parameter  $$ \sigma_{v}^2 $$ is the *variance* of the random process $$ v(n) $$ , and $$ \sigma_{v} $$ is its standard deviation. It turns out that when Gaussian random variables $$ v(n) $$ are uncorrelated (i.e., when $$ v(n) $$ is white noise), they are also independent. This means that the probability of observing particular values of $$ v(n) $$ and $$ v(m) $$ is given by the product of their respective probabilities. We will now use this fact to compute an explicit probability for observing any data sequence $$ x(n) $$
+
+Since the sinusoidal part of our signal model,  $$ {\cal A}e^{j\omega_{0}n}$ , is deterministic; i.e., it does not including any random components; it may be treated as the time-varying mean of a Gaussian random process $$ x(n) $$ . That is, our signal model can be rewritten as
+
+$$
+\displaystyle x(n) \sim {\cal N}({\cal A}e^{j\omega_{0} n},\sigma_{v}^2)
+$$
+
+and the probability density function for the whole set of observations $$ x(n) $$ ,  $$ n=0,1,2,\ldots,N-1 $$ is given by
+
+$$
+\displaystyle p(x) = p[x(0)] p[x(1)]\cdots p[x(N-1)] = \left(\frac{1}{\pi \sigma_v^2}\right)^N e^{-\frac{1}{\sigma_v^2}\sum_{n=0}^{N-1} \left\vert x(n) - {\cal A}e^{j\omega_0 n}\right\vert^2}
+$$
+
+Thus, given the noise variance  $$ \sigma_v^2 $$ and the three sinusoidal parameters $$ A,\phi,\omega_0 $$ (remember that $$ {\cal A}= A e^{j\phi} $$ ), we can compute the relative probability of any observed data samples $$ x(n) $$ .
+
 We can generalize this approach in order to perform a complete blind audio source separation algorithm, such as detailed in the following paper   
 
 Févotte, C., & Cardoso, J. F. "Maximum likelihood approach for blind audio source separation using time-frequency Gaussian source models". *IEEE Workshop on Applications of Signal Processing to Audio and Acoustics*, 2005. (pp. 78-81). IEEE.  
 
 You can try to implement this by relying on the [full paper![](../images/pdf.png)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.640.6981&rep=rep1&type=pdf)
+
+</div>{: .notice--blank}
+
+**Exercise**
+<div markdown = "1">
+
+  1. Implement the single sinusoid extraction
+  2. Apply this approach to multiple sinusoids
+  3. Follow the paper to implement blind source separation
+
+</div>{: .notice--info}  
