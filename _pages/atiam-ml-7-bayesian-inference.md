@@ -529,10 +529,11 @@ Using the estimated parameters $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which we ob
 The maximum likelihood estimator (MLE) is widely used in practical signal modeling and we can show that the MLE is equivalent to the least squares estimator for a wide class of problems, including well resolved sinusoids in white noise. We are going to consider a model consisting of a complex sinusoid in additive white (complex) noise:
 
 $$
-\displaystyle x(n) \isdef {\cal A}e^{j\omega_{0} n} + v(n) \protect
+\displaystyle x(n) = {\cal A}e^{j\omega_{0} n} + v(n)
 $$
 
 Here, $$ {\cal A}= A e^{j\phi} $$ is the complex amplitude of the sinusoid, and $$ v(n) $$ is white noise that we assume to be Gaussian distributed with zero mean. Hence, we assume that its probability density function is given by  
+
 $$
 \displaystyle p_{v}(\nu) = \frac{1}{\pi \sigma_{v}^2} e^{-\frac{\vert\nu\vert^2}{\sigma_{v}^2}}.
 $$
@@ -545,7 +546,7 @@ $$
 
 The parameter  $$ \sigma_{v}^2 $$ is the *variance* of the random process $$ v(n) $$ , and $$ \sigma_{v} $$ is its standard deviation. It turns out that when Gaussian random variables $$ v(n) $$ are uncorrelated (i.e., when $$ v(n) $$ is white noise), they are also independent. This means that the probability of observing particular values of $$ v(n) $$ and $$ v(m) $$ is given by the product of their respective probabilities. We will now use this fact to compute an explicit probability for observing any data sequence $$ x(n) $$
 
-Since the sinusoidal part of our signal model,  $$ {\cal A}e^{j\omega_{0}n}$ , is deterministic; i.e., it does not including any random components; it may be treated as the time-varying mean of a Gaussian random process $$ x(n) $$ . That is, our signal model can be rewritten as
+Since the sinusoidal part of our signal model,  $$ {\cal A}e^{j\omega_{0}n}$$ , is deterministic; i.e., it does not including any random components; it may be treated as the time-varying mean of a Gaussian random process $$ x(n) $$ . That is, our signal model can be rewritten as
 
 $$
 \displaystyle x(n) \sim {\cal N}({\cal A}e^{j\omega_{0} n},\sigma_{v}^2)
