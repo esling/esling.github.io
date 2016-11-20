@@ -53,7 +53,7 @@ The corresponding slides cover
 Expectation Maximization (EM) is a powerful technique for creating maximum likelihood estimators when the variables are difficult to separate. Here, we set up a Gaussian mixture experiment with two Gaussians and derive the corresponding estimators of their means using EM.
 </div>{: .notice--blank}
 
-#### 8.1 - Measuring unseen groups 
+## 8.1 - Unseen groups 
 
 <div markdown="1">
 Suppose we have a population with two distinct groups of individuals with different heights. If we randomly pick an individual from the population, we don't know which group the individual belongs to. The goal is to estimate the mean heights of the two distinct groups when we have an unlabeled distribution sampled from both groups.
@@ -104,7 +104,7 @@ We recall that the independent trials assumptions means that the joint probabili
 
 </div>{: .notice--info}
 
-#### 8.2 - Expectation maximization
+## 8.2 - Expectation maximization
 
 <div markdown="1">
 
@@ -193,10 +193,10 @@ by maximizing it using basic calculus.
 </div>{: .notice--blank}  
 
 **Exercise**
-<div>
-
-  1. Derive the maximization of the log-likelihood
-  2. Implement a fonction that performs maximization on a set of data
+<div markdown = "1">
+  
+1. Derive the maximization of the log-likelihood
+2. Implement a fonction that performs maximization on a set of data
 
 </div>{: .notice--info}
 
@@ -242,3 +242,8 @@ Expectation maximization is a powerful algorithm that is especially useful when 
 
 </div>{: .notice--info}
 
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
+
+<div id="div1">
+<img src="../images/atiam-ml/08_8.0_samples.svg" height="350" width="350"/> <img src="../images/atiam-ml/08_8.1_gaussians.svg" height="350" width="350"/>
+</div>
