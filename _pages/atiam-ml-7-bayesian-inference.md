@@ -352,6 +352,12 @@ $$P(\omega_1\; \mid \; \pmb x) \; = \;  P(\omega_2\; \mid \; \pmb x) \; = \; P(\
 
 </div>{: .notice--info}
 
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
+
+<div id="div1">
+<img src="../images/atiam-ml/07_7.0_patterns.svg" height="350" width="350"/> <img src="../images/atiam-ml/07_7.0_patterns_2.svg" height="350" width="350"/>
+</div>
+
 <div markdown = "1">
 
 Here, our **objective function** is to maximize the discriminant function $$g_i(\pmb x)$$, which we define as the posterior probability to perform a **minimum-error classification** (Bayes classifier). 
@@ -509,3 +515,9 @@ which we can also implement and then compare to the actual values of $${\pmb\Sig
 
 Using the estimated parameters $$\pmb \mu_i$$ and $$\pmb \Sigma_i$$, which we obtained via MLE, we can simply compute the error on the sample dataset again.
 </div>{: .notice--success}
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
+
+<div id="div2">
+<img src="../images/atiam-ml/07_7.1_estimate.svg" height="350" width="350"/> <img src="../images/atiam-ml/07_7.1_estimate_2.svg" height="350" width="350"/>
+</div>
