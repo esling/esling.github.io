@@ -116,6 +116,16 @@ $$
 
 <div markdown = "1">
 
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
+
+<div id="div1">
+<img src="../images/atiam-ml/10_10.0_dataset.svg" height="350" width="350"/> <img src="../images/atiam-ml/10_10.0_pca.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
+
+<div markdown = "1">
+
 **Linear Discriminant Analysis (LDA)**  
 
 LDA is a linear transformation technique (related to PCA) that is also commonly used to project a dataset onto a new feature subspace. However, this approach is supervised as the new component axes are selected to maximize the spread between multiple classes. More information can be found on the corresponding [Wikipedia page](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
