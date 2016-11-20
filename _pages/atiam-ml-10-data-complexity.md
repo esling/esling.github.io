@@ -8,13 +8,32 @@ sidebar:
   nav: "teaching-atiam-ml"
 ---
 
+<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".abuttons").click(function () {
+        var idname= $(this).data('divid');
+        $("#"+idname).show("slow");
+    });
+    $("#div1").hide();
+    $("#div2").hide();
+    $("#div3").hide();
+});
+</script>
+
 {% include toc %}
 
 # Data complexity
 
+<div markdown = "1">
+
 The present tutorials covers .
 
+</div>{: .notice--blank}
+
 # Reference slides
+
+<div markdown = "1">
 
 Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.10.Data.Complexity.pdf)
 
@@ -23,6 +42,8 @@ The corresponding slides cover
   - Pitfalls of machine learning
   - Data complexity
   
+</div>{: .notice--blank}
+
 # Tutorial 
 
 ## 10.0 - Curse and generalization
