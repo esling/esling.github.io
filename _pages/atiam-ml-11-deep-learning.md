@@ -131,16 +131,12 @@ The first step is to generate a training set. To get a single training example $
 
 <div markdown = "1">
 
-The learning of an autoencoder is based on a cost function that tries to reconstruct the input from a combination of hidden units. The sparsity aspects allow to force the network to make this reconstruction from fewer data. To do so, we need to both define the cost function $$J_{sparse}(W,b)$$ and the corresponding derivatives of $$J_{sparse}$$ with respect to the different parameters. We will use the sigmoid function for the activation function
+The learning of an autoencoder is based on a cost function that tries to reconstruct the input from a combination of hidden units. Hence, as underlined in the previous question, we will start by implementing the simplest reconstruction cost, given by
 
-$$
-\begin{equation}
-f(z) = \frac{1}{{1+e^{-z}}} 
-\label{eq1}
-\end{equation}
+$$  \mathcal{J}_{AE}\left(\theta\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\mathcal{L}\left(\mathbf{x},d\left(e\left(\mathbf{x}\right)\right)\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\left\Vert \mathbf{x}-\tilde{\mathbf{x}}\right\Vert ^{2}$$
 $$
 
-The sparse autoencoder is parameterized by matrices  $$W^{(1)} \in \Re^{s_1\times s_2}, W^{(2)} \in \Re^{s_2\times s_3}$$ vectors  $$b^{(1)} \in \Re^{s_2},  b^{(2)} \in \Re^{s_3}$$. However, for subsequent notational convenience, we will "unroll" all of these parameters into a very long parameter vector $$\theta$$ with $$s_1s_2 + s_2s_3 + s_2 + s_3$$ elements. The code for converting between the $$(W(1),W(2),b(1),b(2))$$ and the $$\theta$$ parameterization is already provided in the starter code.  
+However, as discussed previously, solely minimizing the reconstruction error, nothing prevents an auto-encoder with an input of $$n$$ dimensions and an encoding of the same (or higher) dimensionnality to simply learn the identity function. The sparsity aspects allow to force the network to make this reconstruction from fewer data. To do so, we need to both define the cost function $$J_{sparse}(W,b)$$ and the corresponding derivatives of $$J_{sparse}$$ with respect to the different parameters. We will use the sigmoid function for the activation function
 
 Implementational tip: The objective $$J_{sparse}(W,b)$$ contains 3 terms, corresponding to the squared error term, the weight decay term, and the sparsity penalty. You're welcome to implement this however you want, but for ease of debugging, you might implement the cost function and derivative computation (backpropagation) only for the squared error term first and then add both the *weight decay* and the *sparsity term* to the objective and derivative function  
 
