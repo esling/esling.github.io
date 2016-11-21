@@ -48,7 +48,7 @@ The corresponding slides cover
 
 <div markdown = "1">
 
-In this tutorial, we will use the self-taught learning paradigm with a *sparse autoencoder* in order to build an unsupervised audition system. Then, we will see how to transfer this learning and also rely on the *softmax classifier* (implemented in the [neural networks tutorial](/atiam-ml-2-neural-networks/) to build a classifier for spectral windows.
+In this tutorial, we will use the self-taught learning paradigm with a *sparse autoencoder* in order to build an unsupervised audition system. Then, we will see how to transfer this learning and also rely on the *softmax classifier* (implemented in the [neural networks tutorial](/atiam-ml-2-neural-networks/)) to build a classifier for spectral windows.
 
 First, you will train your sparse autoencoder on an **unlabeled** training dataset of audio data (in this case, you can use all the datasets from the tutorials, and even add your own audio files), which will be represented as a set of concatenated spectral windows (to keep the temporal information).
 
@@ -60,7 +60,30 @@ Then, we will extract these learned features from the *weights* of the network t
 
 <div markdown = "1">
 
-As seen in the course, an auto-encoder is composed of an encoder and a decoder, where the output of the encoder provides a reduced (compressed) representation of the input and the decoder allows to reconstruct the orginal input from this encoded representation. Hence, both the encoding and decoding part are tuned through the minimization of a reconstruction error function, which finds a non-linear dimensionality reduction and representation fit to a certain dataset (as the encoder has a lower number of units than the input data). 
+The autoencoder aims at learning both an encoding function $$e\left(\mathbf{x}\right)$$ and a decoding function $$d\left(\mathbf{x}\right)$$ such that $${\textstyle d\left(e\left(\mathbf{x}\right)\right)=\tilde{\mathbf{x}}\approx\mathbf{x}}$$. Therefore, the AE is intended to learn a function approximating the identity function, by being able to reconstruct an $${\textstyle\tilde{\mathbf{x}}}$$ similar to the input $$\mathbf{{\textstyle x}}$$ via a hidden representation. In the case of entirely random input data (for instance a set of IID Gaussian noise), this task would not only be hard but also quite meaningless. However, based on the assumption that there might exist an underlying hidden structure in the data (where part of the input features are consistently correlated), then this approach might be able to uncover and exploit these statistical regularities. The encoding function $$e:\mathbb{R}^{d_{x}}\rightarrow\mathbb{R}^{d_{h}}$$ maps an input $$\mathbf{x}\in\mathbb{R}^{d_{x}}$$ to an hidden representation $$\mathbf{h}_{\mathbf{x}}\in\mathbb{R}^{d_{h}}$$ by producing a deterministic mapping  
+
+$$
+\mathbf{h}_{\mathbf{x}}=e\left(\mathbf{x}\right)=s_{e}\left(\mathbf{W_{e}}\mathbf{x}+\mathbf{b}_{e}\right)
+$$
+
+where $$s_{e}$$ is a nonlinear activation function (usually the *sigmoid* function), $$\mathbf{W}_{e}$$ is a $$d_{h}\times d_{x}$$ weight matrix, and $$\mathbf{b}_{e}\in\mathbb{R}^{d_{h}}$$ is a bias vector.  
+
+The decoding function $$d:\mathbb{R}^{d_{h}}\rightarrow\mathbb{R}^{d_{x}}$$ then maps back this encoded representation $$\mathbf{h_{x}}$$ into a reconstruction $$\mathbf{y}$$ of the same dimensionnality as $$\mathbf{x}$$  
+
+$$
+\mathbf{y}=d\left(\mathbf{h_{x}}\right)=s_{d}\left(\mathbf{W}_{d}\mathbf{h_{x}}+\mathbf{b}_{d}\right)
+$$ 
+
+where $$s_{d}$$ is the activation function of the decoder. Usually the weight matrix of the decoding layer $$\mathbf{W}_{d}$$ is tied to be the transpose of the encoder weight matrix $$\mathbf{W}_{d}=\mathbf{W}_{e}^{T}$$, in which case the AE is said to have tied weights.
+
+Hence, training an auto-encoder can be summarized as finding the optimal set of parameters $$\theta=\left\{\mathbf{W}_{e},\mathbf{W}_{d},\mathbf{b}_{e},\mathbf{b}_{d}\right\}$$ (or $$\theta=\left\{ \mathbf{W},\mathbf{b}\right\}$$ in the case of tied weights) in order to minimize the reconstruction error on a dataset of training examples $$\mathcal{D}_{n}$$
+
+$$  \mathcal{J}_{AE}\left(\theta\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\mathcal{L}\left(\mathbf{x},d\left(e\left(\mathbf{x}\right)\right)\right)
+$$
+
+Usual choices for the reconstruction error function $$\mathcal{L}$$ are either the squared error $$\mathcal{L}(x,y)=\left\Vert x-y\right\Vert ^{2}$$ (often used for linear reconstruction) or the cross-entropy loss of the reconstruction $$\mathcal{L}(x,y)=-\sum_{i=1}^{d_{x}}x_{i}log\left(y_{i}\right)+\left(1-x_{i}\right)log\left(1-y_{i}\right)$$ (if the input is interpreted as vectors of probabilities and a sigmoid activation function is used). 
+
+As can be seen from the definition of the objective functions, by solely minimizing the reconstruction error, nothing prevents an auto-encoder with an input of $$n$$ dimensions and an encoding of the same (or higher) dimensionnality to simply learn the identity function. In this case, the AE would merely be mapping an input to a copy of itself. Surprisingly, it has been shown that non-linear autoencoders in this over-complete setting (with a hidden dimensionality strongly superior to that of the input) trained with stochastic gradient descent, could still provide useful representations, even without any additional constraints
 
 We can see that the framework defined by AEs fit the overarching goal of unsupervised and self-taught learning, as it tries to exploit statistical correlations of the data structure to find a non-linear representation aimed at decomposing and then reconstructing the input.  
 In the starting code, we provide the basic functions to perform this learning.
@@ -101,7 +124,7 @@ The first step is to generate a training set. To get a single training example $
 
 <div markdown = "1">
 
-As seen in course, the learning of an autoencoder is based on a cost function that tries to reconstruct the input from a combination of hidden units. The sparsity aspects allow to force the network to make this reconstruction from fewer data. To do so, we need to both define the cost function $$J_{sparse}(W,b)$$ and the corresponding derivatives of $$J_{sparse}$$ with respect to the different parameters. We will use the sigmoid function for the activation function
+The learning of an autoencoder is based on a cost function that tries to reconstruct the input from a combination of hidden units. The sparsity aspects allow to force the network to make this reconstruction from fewer data. To do so, we need to both define the cost function $$J_{sparse}(W,b)$$ and the corresponding derivatives of $$J_{sparse}$$ with respect to the different parameters. We will use the sigmoid function for the activation function
 
 $$
 \begin{equation}
