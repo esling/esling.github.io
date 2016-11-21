@@ -131,9 +131,9 @@ The first step is to generate a training set. To get a single training example $
 
 <div markdown = "1">
 
-The learning of an autoencoder is based on a cost function that tries to reconstruct the input from a combination of hidden units. Hence, as underlined in the previous question, we will start by implementing the simplest reconstruction cost, given by
+The learning of an autoencoder is based on a cost function that tries to reconstruct the input from a combination of hidden units. Hence, as underlined in the previous question, we will start by implementing the simplest reconstruction cost, given by  
 
-$$  \mathcal{J}_{AE}\left(\theta\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\mathcal{L}\left(\mathbf{x},d\left(e\left(\mathbf{x}\right)\right)\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\left\Vert \mathbf{x}-\tilde{\mathbf{x}}\right\Vert ^{2}$$
+$$  \mathcal{J}_{AE}\left(\theta\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\mathcal{L}\left(\mathbf{x},d\left(e\left(\mathbf{x}\right)\right)\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\left\Vert \mathbf{x}-\tilde{\mathbf{x}}\right\Vert ^{2}
 $$
 
 However, as discussed previously, solely minimizing the reconstruction error, nothing prevents an auto-encoder with an input of $$n$$ dimensions and an encoding of the same (or higher) dimensionnality to simply learn the identity function. The sparsity aspects allow to force the network to make this reconstruction from fewer data. To do so, we need to both define the cost function $$J_{sparse}(W,b)$$ and the corresponding derivatives of $$J_{sparse}$$ with respect to the different parameters. We will use the sigmoid function for the activation function
@@ -149,10 +149,10 @@ In order to test the validity of your implementation, you can use the method of 
 **Exercise**  
 <div markdown="1">  
 
-  1. Update your ''svmTrain'' code to perform a cross-validation .
-  2. Run your ''svmTrain'' function on the ''example3.mat'' dataset, you should obtain the result displayed below.
-  3. Once again, display the decision boundary at each iteration of the algorithm.
-**Do not forget to vectorize your code for speed**
+  1. Update the `sparseAutoencoderCost` to perform the simple Euclidean cost.
+  2. Test your algorithm and visualize the learned filters.
+  3. Update the `sparseAutoencoderCost` to include the *sparsity constraint*.
+  4. Test your algorithm and compare the results.
 
 </div>{: .notice--info}  
 
