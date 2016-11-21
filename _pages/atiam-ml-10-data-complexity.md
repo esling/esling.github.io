@@ -46,7 +46,7 @@ The corresponding slides cover
 
 # Tutorial 
 
-## 10.0 - Curse and generalization
+## 10.0 - Curse, generalization
 
 <div markdown = "1">
 
@@ -58,11 +58,11 @@ Choosing an "appropriate" machine learning algorithm depends on the problem, the
 
 **Curse of dimensionality**
 
-One of the biggest challenges for solving machine learning problem is to estimate the underlying parameters to fit the model. Obviously, the larger the number of parameters becomes, the more difficult it is to estimate those parameters accurately from a limited number of training samples, a problem known as the ***curse of dimensionality***. In order to avoid it, learning algorithms are often accompanied by ***dimensionality reduction*** techniques. Common approaches are projection-based, such as ***Principal Component Analysis (PCA)*** (unsupervised) or ***Linear Discriminant (LDA)*** (supervised). It shall be noted though that regularization in classification models such as Logistic Regression, Support Vector Machines, or Neural Networks is to be preferred over using dimensionality reduction to avoid overfitting. An alternative to these approaches is the ***feature selection***. In these, the goal is to reduce the feature space $$D = {x_1, x_2, x_n}$$ to a subset of features $$D - n$$ in order to improve both the *accuracy* and *computational performance* of the algorithms.  The goal is to select a "sufficiently reduced" subset from the feature space $$D$$ "without significantly reducing" the performance of the classifier. In the process of choosing an "optimal" feature subset of size $$k$$, a ***criterion Function*** allows to assess the ***recognition rate*** of the classifier.
+One of the biggest challenges of machine learning is to estimate the model parameters for complex problems, where large number of parameters implies an increased difficulty in estimating those parameters accurately from a limited number of training samples, a problem known as the ***curse of dimensionality***. In order to avoid it, learning algorithms are often accompanied by ***dimensionality reduction*** techniques. Common approaches are projection-based, such as ***Principal Component Analysis (PCA)*** (unsupervised) or ***Linear Discriminant (LDA)*** (supervised). It shall be noted though that regularization in classification models such as Logistic Regression, Support Vector Machines, or Neural Networks is to be preferred over using dimensionality reduction to avoid overfitting. An alternative to these approaches is the ***feature selection***. In these, the goal is to reduce the feature space $$D = {x_1, x_2, x_n}$$ to a subset of features $$D - n$$ in order to improve both the *accuracy* and *computational performance* of the algorithms.  The goal is to select a "sufficiently reduced" subset from the feature space $$D$$ "without significantly reducing" the performance of the classifier.
 
 **Model generalization and overfitting**
 
-Usually, fitting a model to the training data can be iterated up to a perfect score, but interestingly this usually will lead to a model that performs very poorly on unseen data. In these case, the model is said to **generalize poorly** because of **overfitting**. A simple intuition for this effect is that the model becomes *too specialized* for the training data, and might simply memorize the data we fed it and fails to make good predictions on future samples that it hasn't seen before. However, the goal of machine learning is to provide models that are good at predicting unseen data. Hence, we have to evaluate the predictive performance of our model mainly for
+Fitting a model to a training dataset can be iterated up to a perfect score, but interestingly this leads to a model that performs very poorly on unseen data. In these cases, the model is said to **generalize poorly** because of **overfitting**. A simple intuition for this effect is that the model becomes *too specialized* for the training data, and might simply memorize all training datapoints, while failing to make good predictions on test samples. However, the true goal is to find models that are good at predicting unseen data. Hence, we have to evaluate the predictive performance of our model mainly for
 
 1. Estimating the *generalization accuracy* (predictive performance of our model on unseen data).
 2. Increasing the predictive performance by selecting the best performing model from a given hypothesis space.
@@ -78,9 +78,13 @@ We will see in the following how to adress these problems and a few useful trick
 
 </div>{: .notice--blank}
 
-## 10.1 - Dimensionality reduction
+## 10.1 - Reducing dimensions
 
 <div markdown = "1">
+
+**Pre-processing and whitening**  
+
+Usually, features are first **pre-processed and standardized** through *scaling*. This allow to obtain features with properties close to a normal distribution, easing the work of the learning algorithm. A data pre-processing step for re-scaling features from different measurements to match proportions of a standard normal distribution (unit variance centered at mean=0).
 
 **Principal Component Analysis (PCA)**  
 
@@ -130,23 +134,9 @@ $$
 
 LDA is a linear transformation technique (related to PCA) that is also commonly used to project a dataset onto a new feature subspace. However, this approach is supervised as the new component axes are selected to maximize the spread between multiple classes. More information can be found on the corresponding [Wikipedia page](https://en.wikipedia.org/wiki/Linear_discriminant_analysis)
 
-**Pre-processing and whitening**  
-
-Usually, features are first **pre-processed and standardized** through *scaling*. This allow to obtain features with properties close to a normal distribution, easing the work of the learning algorithm. A data pre-processing step for re-scaling features from different measurements to match proportions of a standard normal distribution (unit variance centered at mean=0).
-
 </div>{: .notice--blank}
 
-## 10.2 - Feature selection
-
-<div markdown = "1">
-
-The ***Sequential Fortward Selection (SFS)*** is one of the simplest and probably fastest *feature selection* algorithms.  
-***SFS*** starts with an empty feature subset and sequentially adds features from the whole input feature space to this subset until the subset reaches a desired (user-specified) size. For every iteration (= inclusion of a new feature), the whole feature subset is evaluated (expect for the features that are already included in the new subset). The evaluation is done by the ***criterion function*** which assesses the feature that leads to the maximum performance improvement of the feature subset if it is included.  
-Note that included features are never removed, which is one of the biggest downsides of this algorithm.
-
-</div>{: .notice--blank}
-
-## 10.3 - Overfitting
+## 10.2 - Overfitting
 
 <div markdown = "1">
 
@@ -180,15 +170,25 @@ The holdout method is the simplest model evaluation technique. We take our label
 
 Our dataset represents a random sample drawn from a probability distribution and we typically assume that this sample is representative of the true population. By subsampling without replacement, we alter the statistic (mean, proportion, and variance) of the sample. For instance, if we have take a random portion of the set, this will lead to non-uniform class distributions. The problem becomes even worse if our dataset has a high class imbalance upfront. In the worst-case scenario, the test set may not contain any instance of a minority class at all. Thus, the common practice is to divide the dataset in a stratified fashion. *Stratification* simply means that we randomly split the dataset so that each class is correctly represented in the resulting subsets.
 
-
-- Repeated holdout validation and the bootstrap method for modeling uncertainty in [Part II](http://sebastianraschka.com/blog/2016/model-evaluation-selection-part2.html)
-- *The holdout method for hyperparameter tuning* &mdash; splitting a dataset into three parts: a training, test, and validation set.  (Part III)
-- *K-fold cross-validation*, a popular alternative to model selection.  (Part III).
-- *Nested cross-validation*, probably the most common technique for model evaluation with hyperparameter tuning or algorithm selection. (Part IV).
+- Repeated holdout validation and the bootstrap method for modeling uncertainty.
+- *The holdout method for hyperparameter tuning* &mdash; splitting a dataset into three parts: a training, test, and validation set. 
+- *K-fold cross-validation*, a popular alternative to model selection.
+- *Nested cross-validation*, probably the most common technique for model evaluation with hyperparameter tuning or algorithm selection.
 
 </div>{: .notice--blank}
 
-## 10.4 - Model selection
+**Exercise**
+<div markdown = "1">
+
+1. Implement the holdout method for splitting a dataset
+2. Implement the stratification method for splitting
+3. Evaluate the effect on class imbalance
+4. Take back one optimization algorithm from previous tutorials
+5. Assess the variance, bias and optimism bias for both methods
+
+</div>{: .notice--info}
+
+## 10.3 - Model selection
 
 <div markdown = "1">
 
@@ -208,7 +208,7 @@ Most models usually contain **hyperparameters**, which are the *tuning parameter
 
 </div>{: .notice--info}
 
-## 10.5 - Cross-validation
+## 10.4 - Cross-validation
 
 <div markdown = "1">
 
@@ -283,11 +283,3 @@ $$\text{ACC}_{boot} \pm t \times \text{SE}_{boot}.$$
 3. Evaluate the variance of classification algorithms
 
 </div>{: .notice--info}
-
-## 10.6 - GPU Computing
-
-<div markdown = "1">
-
-</div>{: .notice--blank}
-
-# References
