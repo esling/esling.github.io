@@ -170,11 +170,6 @@ The holdout method is the simplest model evaluation technique. We take our label
 
 Our dataset represents a random sample drawn from a probability distribution and we typically assume that this sample is representative of the true population. By subsampling without replacement, we alter the statistic (mean, proportion, and variance) of the sample. For instance, if we have take a random portion of the set, this will lead to non-uniform class distributions. The problem becomes even worse if our dataset has a high class imbalance upfront. In the worst-case scenario, the test set may not contain any instance of a minority class at all. Thus, the common practice is to divide the dataset in a stratified fashion. *Stratification* simply means that we randomly split the dataset so that each class is correctly represented in the resulting subsets.
 
-- Repeated holdout validation and the bootstrap method for modeling uncertainty.
-- *The holdout method for hyperparameter tuning* &mdash; splitting a dataset into three parts: a training, test, and validation set. 
-- *K-fold cross-validation*, a popular alternative to model selection.
-- *Nested cross-validation*, probably the most common technique for model evaluation with hyperparameter tuning or algorithm selection.
-
 </div>{: .notice--blank}
 
 **Exercise**
