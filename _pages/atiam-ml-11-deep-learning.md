@@ -48,7 +48,7 @@ The corresponding slides cover
 
 <div markdown = "1">
 
-In this exercise, we will use the self-taught learning paradigm with a *sparse autoencoder* in order to build an unsupervised audition system. Then, we will see how to transfer this learning and also rely on the *softmax classifier* (implemented in the [neural networks tutorial](/atiam-ml-2-neural-networks/) to build a classifier for spectral windows.
+In this tutorial, we will use the self-taught learning paradigm with a *sparse autoencoder* in order to build an unsupervised audition system. Then, we will see how to transfer this learning and also rely on the *softmax classifier* (implemented in the [neural networks tutorial](/atiam-ml-2-neural-networks/) to build a classifier for spectral windows.
 
 First, you will train your sparse autoencoder on an **unlabeled** training dataset of audio data (in this case, you can use all the datasets from the tutorials, and even add your own audio files), which will be represented as a set of concatenated spectral windows (to keep the temporal information).
 
@@ -114,9 +114,9 @@ The sparse autoencoder is parameterized by matrices  $$W^{(1)} \in \Re^{s_1\time
 
 Implementational tip: The objective $$J_{sparse}(W,b)$$ contains 3 terms, corresponding to the squared error term, the weight decay term, and the sparsity penalty. You're welcome to implement this however you want, but for ease of debugging, you might implement the cost function and derivative computation (backpropagation) only for the squared error term first and then add both the *weight decay* and the *sparsity term* to the objective and derivative function  
 
-In order to test the validity of your implementation, you can use the method of gradient checking, which allows you to verify that your numerically evaluated gradient is very close to the true (analytically computed) gradient.  
+In order to test the validity of your implementation, you can use the method of *gradient checking*, which allows you to verify that your numerically evaluated gradient is very close to the true (analytically computed) gradient. To do so, you can evaluate both  
 
-**Implementation tip**: If you are debugging your code, performing gradient checking on smaller models and smaller training sets (e.g., using only 10 training examples and 1-2 hidden units) may speed things up.
+**Implementation tip**: If you are debugging your code, perform the learning on smaller models and smaller training sets (e.g., using only 10 training examples and 1-2 hidden units) may speed things up.
 
 </div>{: .notice--blank}
   
@@ -142,14 +142,16 @@ We will use the L-BFGS algorithm. This is provided to you in a function called m
 Train a sparse autoencoder with 4xN input units, 200 hidden units, and 4xN output units. In our starter code, we have provided a function for initializing the parameters. We initialize the biases $$b^{(l)}_i$$ to zero, and the weights $$W^{(l)}_{ij}$$ to random numbers drawn uniformly from the interval $$\left[-\sqrt{\frac{6}{n_{\rm in}+n_{\rm out}+1}},\sqrt{\frac{6}{n_{\rm in}+n_{\rm out}+1}}\,\right]$$, where $$n_{in}$$ is the fan-in (the number of inputs feeding into a node) and $$n_{out}$$ is the fan-out (the number of units that a node feeds into).  
 
 ** Visualization **
-After training the autoencoder, use display_network.m to visualize the learned weights. (See train.m, Step 5.).
+After training the autoencoder, you can use `display_network` to visualize the learned weights.
 
 </div>{: .notice--blank}
   
 **Exercise**  
 <div markdown="1">  
 
-  1. Code
+  1. Run your full implementation on a reduced dataset.
+  2. Perform the visualization in order to see the learned weights.
+  3. Compare the results with using the full dataset.
   
 </div>{: .notice--info} 
 
@@ -157,24 +159,38 @@ After training the autoencoder, use display_network.m to visualize the learned w
 
 <div markdown = "1">
 
-In softmaxCost.m, implement code to compute the softmax cost function $$J(\theta)$$. Remember to include the weight decay term in the cost as well. Your code should also compute the appropriate gradients, as well as the predictions for the input data (which will be used in the cross-validation step later).  
+As we have seen in the [Neural Networks tutorial](/atiam-ml-2-neural-networks/), in order to perform multi-class predictions, we cannot rely on simply computing the distance between desired patterns and the obtained binary value. The idea here is to rely on the *softmax regression*, by considering classes as a vector of probabilities. If you have implemented the logistic regression in the [previous tutorial](/atiam-ml-2-neural-networks/), you can simply copy and paste your code here. Otherwise, we recall the mathematical bases behind these computations.  
 
-**Implementation Tip**: Computing the ground truth matrix - In your code, you may need to compute the ground truth matrix $$M$$, such that $$M(r, c)$$ is $$1$$ if $$y(c) = r$$ and $$0$$ otherwise. This can be done quickly, without a loop, using the MATLAB functions sparse and full. Specifically, the command `M = sparse(r, c, v)` creates a sparse matrix such that $$M(r(i), c(i)) = v(i)$$ for all i. That is, the vectors r and c give the position of the elements whose values we wish to set, and v the corresponding values of the elements. Running full on a sparse matrix gives a "full" representation of the matrix for use (meaning that Matlab will no longer try to represent it as a sparse matrix in memory). The code for using sparse and full to compute the ground truth matrix has already been included in softmaxCost.m.
+The desired answers will be considered as a set of *probabilities*, where the desired class is $$1$$ and the others are $$0$$ (called *one-hot* representation). Then, the cost function will rely on the softmax formulation
+
+$$
+\begin{equation}
+\mathcal{L_D}(\theta) = - \frac{1}{m} \left[ \sum_{i=1}^{m} \sum_{j=1}^{k} 1\left\{y^{(i)} = j\right\} \log \frac{e^{\theta_{j}^{T} x^{(i)}}}{\sum_{l=1}^{k} e^{ \theta_{l}^{T} x^{(i)} }}  \right]
+\end{equation}
+$$
+
+Therefore, we compute the output of the softmax by taking 
+
+$$
+\begin{equation}
+p(y^{(i)} = j | x^{(i)}; \theta) = \frac{e^{\theta_{j}^{T} x^{(i)}}}{\sum_{l=1}^{k} e^{ \theta_{l}^{T} x^{(i)}} }
+\end{equation}
+$$
+
+By taking derivatives, we can show that the gradient of the softmax layer is
+
+$$
+\begin{equation}
+\nabla_{\theta_{j}} \mathcal{L_D}(\theta) = - \frac{1}{m} \sum_{i=1}^{m}{ \left[ x^{(i)} \left( 1\{ y^{(i)} = j\}  - p(y^{(i)} = j \mid x^{(i)}, \theta) \right) \right]}
+\end{equation}
+$$
+
+In `softmaxCost`, implement code to compute the softmax cost function $$J(\theta)$$. Remember to include the weight decay term in the cost as well. Your code should also compute the appropriate gradients, as well as the predictions for the input data (which will be used in the cross-validation step later).  
+
+**Implementation Tip**: Computing the ground truth matrix - In your code, you may need to compute the ground truth matrix $$M$$, such that $$M(r, c)$$ is $$1$$ if $$y(c) = r$$ and $$0$$ otherwise. This can be done quickly, without a loop, using the MATLAB functions sparse and full. Specifically, the command `M = sparse(r, c, v)` creates a sparse matrix such that $$M(r(i), c(i)) = v(i)$$ for all i. This code for using sparse and full to compute the ground truth matrix is already provided in softmaxCost.m.
 
 **Implementation tip: Preventing overflows**  
 In the softmax regression, we compute the unbounded hypothesis of the input belonging to each class, which can lead to overflow. However, given the definition of the logistic function, the overall (relative) probabilities remain equivalent if we substract the same quantity from each of the $$\theta_j^T x^{(i)}$$. Hence, to prevent overflow, we shall simply subtract some large constant value from each of the $$\theta_j^T x^{(i)}$$ terms before computing the exponential. 
-
-**Implementation tip: Computing the predictions** 
-You may also find `bsxfun` useful in computing your predictions. If you have a matrix $$M$$ containing the $$e^{\theta_j^T x^{(i)}}$$ terms, such that $$M(r, c)$$ contains the $$e^{\theta_r^T x^{(c)}}$$ term, you can use the following code to compute the hypothesis (by dividing all elements in each column by their column sum)
-
-{% highlight Matlab %}
-% M is the matrix as described in the text
-M = bsxfun(@rdivide, M, sum(M))
-{% endhighlight %}  
-
-** Gradient checking **
-
-Once you have written the softmax cost function, you should check your gradients numerically. In general, whenever implementing any learning algorithm, you should always check your gradients numerically before proceeding to train the model. 
 
 ** Learning parameters **
 
@@ -185,10 +201,9 @@ Now that you've verified that your gradients are correct, you can train your sof
 **Exercise**  
 <div markdown="1">  
 
-  - Update your ''svmTrain'' code to perform a cross-validation .
-  - Run your ''svmTrain'' function on the ''example3.mat'' dataset, you should obtain the result displayed below.
-  - Once again, display the decision boundary at each iteration of the algorithm.
-**Do not forget to vectorize your code for speed**
+  - Update `softmaxCost` to compute the softmax cost
+  - Train the softmax model by using `softmaxTrain` and the L-BFGS algorithm.
+  - Evaluate the accuracy of training the softmax on different architectures.
 
 </div>{: .notice--info}  
 
