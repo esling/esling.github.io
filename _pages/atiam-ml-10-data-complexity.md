@@ -188,6 +188,16 @@ Our dataset represents a random sample drawn from a probability distribution and
 
 </div>{: .notice--info}
 
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div2">Reveal</a>]
+
+<div id="div2">
+<img src="../images/atiam-ml/10_10.1_validation_1.svg" height="350" width="350"/> <img src="../images/atiam-ml/10_10.1_validation_2" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
+
 ## 10.3 - Model selection
 
 <div markdown = "1">
