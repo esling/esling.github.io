@@ -85,8 +85,7 @@ Usual choices for the reconstruction error function $$\mathcal{L}$$ are either t
 
 As can be seen from the definition of the objective functions, by solely minimizing the reconstruction error, nothing prevents an auto-encoder with an input of $$n$$ dimensions and an encoding of the same (or higher) dimensionnality to simply learn the identity function. In this case, the AE would merely be mapping an input to a copy of itself. Surprisingly, it has been shown that non-linear autoencoders in this over-complete setting (with a hidden dimensionality strongly superior to that of the input) trained with stochastic gradient descent, could still provide useful representations, even without any additional constraints
 
-We can see that the framework defined by AEs fit the overarching goal of unsupervised and self-taught learning, as it tries to exploit statistical correlations of the data structure to find a non-linear representation aimed at decomposing and then reconstructing the input.  
-In the starting code, we provide the basic functions to perform this learning.
+We can see that the framework defined by AEs fit the overarching goal of unsupervised and self-taught learning, as it tries to exploit statistical correlations of the data structure to find a non-linear representation aimed at decomposing and then reconstructing the input. In the starting code, we provide the basic functions to perform this learning.
 
 |**File**|*Explanation*|
 |-------:|:---------|
@@ -101,11 +100,9 @@ In the starting code, we provide the basic functions to perform this learning.
 |`stackedAECost.m`|Cost and gradient for multiple layers|
 |`stackedAEPredict.m`|Prediction function for logistic regression|
 
-In order to perform the various computations, we will use the `minFunc` package and develop the different function
+In order to perform the various computations, we will use the `minFunc` package as an advanced optimizer and the unlabeled data (any audio files) to train a sparse autoencoder. However, we first need to prepare an input set, so that the given data is formatted to a common size (slices of audio input). In the following problem, you will implement the sparse autoencoder algorithm, and show how it discovers an optimal representation for spectral windows. 
 
-We will use the unlabeled data (any audio files) to train a sparse autoencoder. However, we first need to prepare an input set, so that the given data is formatted to a common size (slices of audio input). In the following problem, you will implement the sparse autoencoder algorithm, and show how it discovers an optimal representation for spectral windows. 
-
-Specifically, in this exercise you will implement a sparse autoencoder, trained with 4 consecutive spectral distributions (FFT, Mel, Bark or Cepstrum) using the L-BFGS optimization algorithm (this algorithm is provided in the `minFunc` subdirectory, which is a 3rd party CCA software implementing L-BFGS).
+Specifically, in this exercise you will implement a sparse autoencoder, trained with 4 consecutive spectral distributions (FFT, Mel, Bark or Cepstrum) using the L-BFGS optimization algorithm (this algorithm is provided in the `minFunc` subdirectory, which is a 3rd party CCA software).
 
 **Inputs**
 
@@ -116,11 +113,21 @@ The first step is to generate a training set. To get a single training example $
 **Exercise**  
 <div markdown="1">  
 
-  1. Update the code to generate examples
-  2. Run your ''svmTrain'' function on the ''example3.mat'' dataset, you should obtain the result displayed below.
-  3. Once again, display the decision boundary at each iteration of the algorithm.
+  1. Update the `sampleSpectrums` function to generate examples
+  2. Test your function on different transforms to observe the outputs
+  3. Check the random intialization of parameters
 
 </div> {: .notice--info}
+
+<div markdown = "1">
+
+**Expected output** [<a href="javascript:void(0)" class="abuttons" data-divid="div1">Reveal</a>]
+
+<div id="div1">
+<img src="../images/atiam-ml/11_11.1_samples_constantq.svg" height="350" width="350"/> <img src="../images/atiam-ml/11_11.1_samples_chroma.svg" height="350" width="350"/>
+</div>
+
+</div>{: .notice--blank}
 
 <div markdown = "1">
 
