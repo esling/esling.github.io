@@ -136,9 +136,37 @@ The learning of an autoencoder is based on a cost function that tries to reconst
 $$  \mathcal{J}_{AE}\left(\theta\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\mathcal{L}\left(\mathbf{x},d\left(e\left(\mathbf{x}\right)\right)\right)=\sum_{\mathbf{x}\in\mathcal{D}_{n}}\left\Vert \mathbf{x}-\tilde{\mathbf{x}}\right\Vert ^{2}
 $$
 
-However, as discussed previously, solely minimizing the reconstruction error, nothing prevents an auto-encoder with an input of $$n$$ dimensions and an encoding of the same (or higher) dimensionnality to simply learn the identity function. The sparsity aspects allow to force the network to make this reconstruction from fewer data. To do so, we need to both define the cost function $$J_{sparse}(W,b)$$ and the corresponding derivatives of $$J_{sparse}$$ with respect to the different parameters. We will use the sigmoid function for the activation function
+However, as discussed previously, solely minimizing the reconstruction error, nothing prevents an auto-encoder with an input of $$n$$ dimensions and an encoding of the same (or higher) dimensionnality to simply learn the identity function. One way to avoid this situation is to enforce a *sparsity constraint* on the learning. The idea is to force the network to make this reconstruction from fewer data. If we denote $$a^{h}_{j}\left(x\right)$$ as the activation of hidden unit $$j$$ in the hidden layer of the autoencoder when given a specific input $$x$$. Furthermore, let  
 
-Implementational tip: The objective $$J_{sparse}(W,b)$$ contains 3 terms, corresponding to the squared error term, the weight decay term, and the sparsity penalty. You're welcome to implement this however you want, but for ease of debugging, you might implement the cost function and derivative computation (backpropagation) only for the squared error term first and then add both the *weight decay* and the *sparsity term* to the objective and derivative function  
+$$
+\hat\rho_j = \frac{1}{m} \sum_{i=1}^m \left[ a^{h}_j(x_{i}) \right]
+$$
+
+be the average activation of hidden unit $$j$$ (averaged over the training set). We would like to (approximately) enforce the constraint  
+
+$$
+\hat\rho_j = \rho
+$$
+
+where $$\rho$$ is a given *sparsity parameter*, typically a small value close to zero. In other words, we would like the average activation of each hidden neuron $$j$$ to be small. To satisfy this constraint, the hidden unit's activations must mostly be near 0. To achieve this, we will add an extra penalty term to our optimization objective that penalizes $$\hat\rho_j$$ deviating significantly from $$\rho$$. Many choices of the penalty term will give reasonable results. We will choose the following  
+
+$$
+\sum_{j=1}^{n_{h}} \rho \log \frac{\rho}{\hat\rho_j} + (1-\rho) \log \frac{1-\rho}{1-\hat\rho_j}.
+$$
+
+Here, $$n_{h}$$ is the number of neurons in the hidden layer, and the index $$j$$ is summing over the hidden units in our network. If you are familiar with the concept of KL divergence, this penalty term is based on it, and can also be written
+
+$$
+\sum_{j=1}^{n_{h}} {\rm KL}(\rho || \hat\rho_j),
+$$
+
+where $${\rm KL}(\rho || \hat\rho_j) = \rho \log \frac{\rho}{\hat\rho_j} + (1-\rho) \log \frac{1-\rho}{1-\hat\rho_j} $$is the Kullback-Leibler (KL) divergence
+ 
+Hence, we can simply define the cost function $$\mathcal{J}_{sparse}\left(\theta\right)$$ and the corresponding derivatives of $$\mathcal{J}_{sparse}$$ with respect to the different parameters as the original cost with the added constraint
+
+$$
+\mathcal{J}_{sparse}\left(\theta\right)=\mathcal{J}_{sparse}\left(\theta\right) + \beta \sum_{j=1}^{s_2} {\rm KL}(\rho || \hat\rho_j)
+$$ 
 
 In order to test the validity of your implementation, you can use the method of *gradient checking*, which allows you to verify that your numerically evaluated gradient is very close to the true (analytically computed) gradient. To do so, you can evaluate both  
 
@@ -148,11 +176,13 @@ In order to test the validity of your implementation, you can use the method of 
   
 **Exercise**  
 <div markdown="1">  
-
+  
+  
   1. Update the `sparseAutoencoderCost` to perform the simple Euclidean cost.
   2. Test your algorithm and visualize the learned filters.
   3. Update the `sparseAutoencoderCost` to include the *sparsity constraint*.
   4. Test your algorithm and compare the results.
+  5. Also add the *weight decay* to further regularize learning.
 
 </div>{: .notice--info}  
 
