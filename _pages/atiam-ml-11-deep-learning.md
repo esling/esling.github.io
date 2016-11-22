@@ -186,16 +186,15 @@ In order to test the validity of your implementation, you can use the method of 
 
 </div>{: .notice--info}  
 
-
 ## 8.2 - Training and visualizing 
 
 <div markdown = "1">
 
-Once you have coded and verified your objective and derivatives, you can train the parameters of the model and use it to extract features from the spectral windows. Equiped with the code that computes Jsparse and its derivatives, we're ready to minimize Jsparse with respect to its parameters, and thereby train our sparse autoencoder.  
+Once you have coded and verified your objective and derivatives, you can train the parameters of the model and use it to extract features from the spectral windows. Equiped with the code that computes $$\mathcal{J}_{sparse}$$ and its derivatives, we can now minimize $$\mathcal{J}_{sparse}$$ with respect to its parameters, and thereby train our sparse autoencoder.  
 
-We will use the L-BFGS algorithm. This is provided to you in a function called minFunc (code provided by Mark Schmidt) included in the starter code. (For the purpose of this assignment, you only need to call minFunc with the default parameters. You do not need to know how L-BFGS works). We have already provided code in train.m (Step 4) to call minFunc. The minFunc code assumes that the parameters to be optimized are a long parameter vector; so we will use the $$\theta$$ parameterization rather than the $$(W(1),W(2),b(1),b(2))$$ parameterization when passing our parameters to it.  
+We will use the L-BFGS algorithm. This is provided to you in a function called `minFunc` (code provided by Mark Schmidt) included in the starter code. (For the purpose of this assignment, you only need to call minFunc with the default parameters). The minFunc code assumes that the parameters to be optimized are a long parameter vector; so we will use the $$\theta$$ parameterization (one long vector containing all parameters) rather than passing each parameter separately.  
 
-Train a sparse autoencoder with 4xN input units, 200 hidden units, and 4xN output units. In our starter code, we have provided a function for initializing the parameters. We initialize the biases $$b^{(l)}_i$$ to zero, and the weights $$W^{(l)}_{ij}$$ to random numbers drawn uniformly from the interval $$\left[-\sqrt{\frac{6}{n_{\rm in}+n_{\rm out}+1}},\sqrt{\frac{6}{n_{\rm in}+n_{\rm out}+1}}\,\right]$$, where $$n_{in}$$ is the fan-in (the number of inputs feeding into a node) and $$n_{out}$$ is the fan-out (the number of units that a node feeds into).  
+In the starter code, we have provided a function for initializing the parameters. We initialize the biases $$b^{h}_i$$ to zero, and the weights $$W^{h}_{ij}$$ to random numbers drawn uniformly from the interval $$\left[-\sqrt{\frac{6}{n_{\rm in}+n_{\rm out}+1}},\sqrt{\frac{6}{n_{\rm in}+n_{\rm out}+1}}\,\right]$$, where $$n_{in}$$ is the fan-in (the number of inputs feeding into a node) and $$n_{out}$$ is the fan-out (the number of units that a node feeds into).  
 
 ** Visualization **
 After training the autoencoder, you can use `display_network` to visualize the learned weights.
@@ -263,7 +262,7 @@ Now that you've verified that your gradients are correct, you can train your sof
 
 </div>{: .notice--info}  
 
-## 8.4 - Classification
+## 8.4 - Transfer learning
 
 <div markdown = "1">
 
@@ -277,27 +276,15 @@ As a comparison, when raw pixels are used (instead of the learned features), we 
 **Exercise**  
 <div markdown="1">  
 
-  1. Code
+  1. Setup a target architecture.
+  2. Train each autoencoder separately.
+  3. Perform the *weight transfer* into a single network.
+  4. Fine-tune this network to obtain a complete classifier.
+  5. Evaluate your classifier on audio data.
   
 </div>{: .notice--info} 
 
 ## 8.4 - Convolutional layers
-
-<div markdown = "1">
-
-Finally.
-
-</div>{: .notice--blank}
-
-
-**Exercise**  
-<div markdown="1">  
-
-  1. Code
-  
-</div>{: .notice--info} 
-
-## 8.5 - Visualizing filters
 
 <div markdown = "1">
 
