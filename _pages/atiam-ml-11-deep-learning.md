@@ -160,12 +160,12 @@ $$
 \sum_{j=1}^{n_{h}} {\rm KL}(\rho || \hat\rho_j),
 $$
 
-where $$KL(\rho || \hat\rho_j) = \rho \log \frac{\rho}{\hat\rho_j} + (1-\rho) \log \frac{1-\rho}{1-\hat\rho_j}$$ is the Kullback-Leibler (KL) divergence
+where $$KL(\rho \mid \mid \hat\rho_j) = \rho \log \frac{\rho}{\hat\rho_j} + (1-\rho) \log \frac{1-\rho}{1-\hat\rho_j}$$ is the Kullback-Leibler (KL) divergence
  
 Hence, we can simply define the cost function $$\mathcal{J}_{sparse}\left(\theta\right)$$ and the corresponding derivatives of $$\mathcal{J}_{sparse}$$ with respect to the different parameters as the original cost with the added constraint
 
 $$
-\mathcal{J}_{sparse}\left(\theta\right)=\mathcal{J}_{sparse}\left(\theta\right) + \beta \sum_{j=1}^{s_2} {\rm KL}(\rho || \hat\rho_j)
+\mathcal{J}_{sparse}\left(\theta\right)=\mathcal{J}_{sparse}\left(\theta\right) + \beta \sum_{j=1}^{s_2} {\rm KL}(\rho \mid \mid \hat\rho_j)
 $$ 
 
 In order to test the validity of your implementation, you can use the method of [*gradient checking*](http://ufldl.stanford.edu/wiki/index.php/Gradient_checking_and_advanced_optimization), which allows you to verify that your numerically evaluated gradient is very close to the true (analytically computed) gradient.
@@ -176,12 +176,13 @@ In order to test the validity of your implementation, you can use the method of 
   
 **Exercise**  
 <div markdown="1">
-
-  1. Update the `sparseAutoencoderCost` to perform the simple Euclidean cost.
-  2. Test your algorithm and visualize the learned filters.
-  3. Update the `sparseAutoencoderCost` to include the *sparsity constraint*.
-  4. Test your algorithm and compare the results.
-  5. Also add the *weight decay* to further regularize learning.
+  
+  
+  1. Update the `sparseAutoencoderCost` to perform the simple Euclidean cost.  
+  2. Test your algorithm and visualize the learned filters.  
+  3. Update the `sparseAutoencoderCost` to include the *sparsity constraint*.  
+  4. Test your algorithm and compare the results.  
+  5. Also add the *weight decay* to further regularize learning.  
 
 </div>{: .notice--info}  
 
