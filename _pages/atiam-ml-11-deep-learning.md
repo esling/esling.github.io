@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-The present tutorials covers the basic implementation towards *deep learning*. Most of this young research field is quite extensively based on the neural networks (that we implemented in a [previous tutorial](/atiam-ml-2-neural-networks/)). Therefore, a good knowledge of the previous implementations is required. We will first construct an **auto-encoder** to perform an *unsupervised learning* directly from any data. Then, we will see how we can *transfer* this knowledge to a more extensive *supervised classifier*. Finally, we will extend these implementations with the use and visualization of **convolutional filters**.
+The present tutorials covers the basic implementation towards *deep learning*. Most of this young research field is quite extensively based on the neural networks (that we implemented in a [previous tutorial](/atiam-ml-2-neural-networks/)). Therefore, a good knowledge of the previous implementations is required. We will first construct an **auto-encoder** to perform an *unsupervised learning* directly from any data. Then, we will see how we can *transfer* this knowledge to a more extensive *supervised classifier*. Finally, we will extend these implementations with the use and visualization of **convolutional filters**. This tutorial is an adaptation of the [UFLDL tutorials](http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial) for audio data.
 
 </div>{: .notice--blank}
 
@@ -160,7 +160,7 @@ $$
 \sum_{j=1}^{n_{h}} {\rm KL}(\rho || \hat\rho_j),
 $$
 
-where $${\rm KL}(\rho || \hat\rho_j) = \rho \log \frac{\rho}{\hat\rho_j} + (1-\rho) \log \frac{1-\rho}{1-\hat\rho_j} $$is the Kullback-Leibler (KL) divergence
+where $$KL(\rho || \hat\rho_j) = \rho \log \frac{\rho}{\hat\rho_j} + (1-\rho) \log \frac{1-\rho}{1-\hat\rho_j}$$ is the Kullback-Leibler (KL) divergence
  
 Hence, we can simply define the cost function $$\mathcal{J}_{sparse}\left(\theta\right)$$ and the corresponding derivatives of $$\mathcal{J}_{sparse}$$ with respect to the different parameters as the original cost with the added constraint
 
@@ -168,16 +168,15 @@ $$
 \mathcal{J}_{sparse}\left(\theta\right)=\mathcal{J}_{sparse}\left(\theta\right) + \beta \sum_{j=1}^{s_2} {\rm KL}(\rho || \hat\rho_j)
 $$ 
 
-In order to test the validity of your implementation, you can use the method of *gradient checking*, which allows you to verify that your numerically evaluated gradient is very close to the true (analytically computed) gradient. To do so, you can evaluate both  
+In order to test the validity of your implementation, you can use the method of [*gradient checking*](http://ufldl.stanford.edu/wiki/index.php/Gradient_checking_and_advanced_optimization), which allows you to verify that your numerically evaluated gradient is very close to the true (analytically computed) gradient.
 
-**Implementation tip**: If you are debugging your code, perform the learning on smaller models and smaller training sets (e.g., using only 10 training examples and 1-2 hidden units) may speed things up.
+**Implementation tip**: If you are debugging your code, perform the learning on smaller models and smaller training sets (using few training examples and hidden units) to speed things up.
 
 </div>{: .notice--blank}
   
 **Exercise**  
-<div markdown="1">  
-  
-  
+<div markdown="1">
+
   1. Update the `sparseAutoencoderCost` to perform the simple Euclidean cost.
   2. Test your algorithm and visualize the learned filters.
   3. Update the `sparseAutoencoderCost` to include the *sparsity constraint*.
