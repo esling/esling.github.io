@@ -190,13 +190,11 @@ In order to test the validity of your implementation, you can use the method of 
 
 <div markdown = "1">
 
-Once you have coded and verified your objective and derivatives, you can train the parameters of the model and use it to extract features from the spectral windows. Equiped with the code that computes $$\mathcal{J}_{sparse}$$ and its derivatives, we can now minimize $$\mathcal{J}_{sparse}$$ with respect to its parameters, and thereby train our sparse autoencoder.  
-
-We will use the L-BFGS algorithm. This is provided to you in a function called `minFunc` (code provided by Mark Schmidt) included in the starter code. (For the purpose of this assignment, you only need to call minFunc with the default parameters). The minFunc code assumes that the parameters to be optimized are a long parameter vector; so we will use the $$\theta$$ parameterization (one long vector containing all parameters) rather than passing each parameter separately.  
+Once you have coded and verified your objective and derivatives, you can train the parameters of the model and use it to extract features from the spectral windows. Equiped with the code that computes $$\mathcal{J}_{sparse}$$ and its derivatives, we will minimize $$\mathcal{J}_{sparse}$$ by using the L-BFGS algorithm, provided in the `minFunc` package (code provided by Mark Schmidt) included in the starter code. (For the purpose of this assignment, you can use its default parameters). The minFunc code assumes that the parameters to be optimized are a long parameter vector, so we will use the $$\theta$$ parameterization rather than passing each parameter separately.  
 
 In the starter code, we have provided a function for initializing the parameters. We initialize the biases $$b^{h}_i$$ to zero, and the weights $$W^{h}_{ij}$$ to random numbers drawn uniformly from the interval $$\left[-\sqrt{\frac{6}{n_{\rm in}+n_{\rm out}+1}},\sqrt{\frac{6}{n_{\rm in}+n_{\rm out}+1}}\,\right]$$, where $$n_{in}$$ is the fan-in (the number of inputs feeding into a node) and $$n_{out}$$ is the fan-out (the number of units that a node feeds into).  
 
-** Visualization **
+**Visualization**  
 After training the autoencoder, you can use `display_network` to visualize the learned weights.
 
 </div>{: .notice--blank}
@@ -240,16 +238,13 @@ $$
 \end{equation}
 $$
 
-In `softmaxCost`, implement code to compute the softmax cost function $$J(\theta)$$. Remember to include the weight decay term in the cost as well. Your code should also compute the appropriate gradients, as well as the predictions for the input data (which will be used in the cross-validation step later).  
+In `softmaxCost`, implement the softmax cost function $$J(\theta)$$. Remember to include the weight decay term in the cost as well. Your code should also compute the appropriate gradients, as well as the predictions for the input data (which will be used in the cross-validation step later).  
 
 **Implementation Tip**  
 Computing the ground truth matrix - In your code, you may need to compute the ground truth matrix $$M$$, such that $$M(r, c)$$ is $$1$$ if $$y(c) = r$$ and $$0$$ otherwise. This can be done quickly, without a loop, using the MATLAB functions sparse and full. Specifically, the command `M = sparse(r, c, v)` creates a sparse matrix such that $$M(r(i), c(i)) = v(i)$$ for all i. This code for using sparse and full to compute the ground truth matrix is already provided in softmaxCost.m.
 
 **Implementation tip: Preventing overflows**  
 In the softmax regression, we compute the unbounded hypothesis of the input belonging to each class, which can lead to overflow. However, given the definition of the logistic function, the overall (relative) probabilities remain equivalent if we substract the same quantity from each of the $$\theta_j^T x^{(i)}$$. Hence, to prevent overflow, we shall simply subtract some large constant value from each of the $$\theta_j^T x^{(i)}$$ terms before computing the exponential. 
-
-**Learning parameters**  
-Now that you've verified that your gradients are correct, you can train your softmax model using the function softmaxTrain in softmaxTrain.m. softmaxTrain which uses the L-BFGS algorithm, in the function minFunc. \\
 
 </div>{: .notice--blank}
   
@@ -268,7 +263,7 @@ Now that you've verified that your gradients are correct, you can train your sof
 
 Up to now, we have seen how to train a single AE, which will basically learn one abstraction over the raw input data. Hence, we would like to perform learning of several AEs, each time by feeding the output of the previous one, in order to learn higher-level abstractions. The *greedy layerwise* approach for pretraining a deep network works by training each layer in turn. We will see autoencoders can be "stacked" in a greedy layerwise fashion for pretraining (initializing) the weights of a deep network.  
 
-A stacked autoencoder is a neural network consisting of multiple layers of sparse autoencoders in which the outputs of each layer is wired to the inputs of the successive layer. Formally, consider a stacked autoencoder with n layers. Using notation from the autoencoder section, let W(k,1),W(k,2),b(k,1),b(k,2) denote the parameters W(1),W(2),b(1),b(2) for kth autoencoder. Then the encoding step for the stacked autoencoder is given by running the encoding step of each layer in forward order  
+A stacked autoencoder is simply a neural network consisting of **multiple layers** of sparse autoencoders in which the outputs of each layer is wired to the inputs of the successive layer. Formally, consider a stacked autoencoder with $$n$$ layers. The encoding step for the stacked autoencoder is given by running the encoding step of each layer in forward order  
 
 $$
 a^{(l)} = f(z^{(l)}) \\
@@ -282,16 +277,12 @@ a^{(n + l)} = f(z^{(n + l)}) \\
 z^{(n + l + 1)} = W^{(n - l, 2)}a^{(n + l)} + b^{(n - l, 2)}
 $$
 
-The information of interest is contained within a(n), which is the activation of the deepest layer of hidden units. This vector gives us a representation of the input in terms of higher-order features. The features from the stacked autoencoder can be used for classification problems by feeding a(n) to a softmax classifier.  
+The information of interest is contained within $$a^{(n)}$$, which is the activation of the deepest layer of hidden units. This vector gives us a representation of the input in terms of higher-order features. The features from the stacked autoencoder can be used for classification problems by feeding $$a^{(n)}$$ to a softmax classifier.  
 
-A good way to obtain good parameters for a stacked autoencoder is to use greedy layer-wise training. To do this, first train the first layer on raw input to obtain parameters W(1,1),W(1,2),b(1,1),b(1,2). Use the first layer to transform the raw input into a vector consisting of activation of the hidden units, A. Train the second layer on this vector to obtain parameters W(2,1),W(2,2),b(2,1),b(2,2). Repeat for subsequent layers, using the output of each layer as input for the subsequent layer.
-This method trains the parameters of each layer individually while freezing parameters for the remainder of the model. To produce better results, after this phase of training is complete, fine-tuning using backpropagation can be used to improve the results by tuning the parameters of all layers are changed at the same time.
+To learn this architecture, we first train the first layer on the raw input. Then, we use the first layer to transform the raw input into a vector consisting of activation of the hidden units (by performing a *forward pass*), The second second layer is then trained on this vector and we repeat the operation for any subsequent layers, using the output of each layer as input for the subsequent layer. Finally, to produce better results, after this phase of training is complete, we *fine-tune the whole network* using backpropagation by tuning the parameters of all layers at the same time.
 
-If one is only interested in finetuning for the purposes of classification, the common practice is to then discard the "decoding" layers of the stacked autoencoder and link the last hidden layer a(n) to the softmax classifier. The gradients from the (softmax) classification error will then be backpropagated into the encoding layers.
+Concretely, for each example in the the labeled training dataset, we forward propagate the example to obtain the activation of the hidden units. This transformed representation is used as the new feature representation with which to train the softmax classifier. Therefore, in the end we will use a single network composed at each layer of the **encoding** function of each AEs, therefore this can be seen as a way to *transfer* the knowledge on features learned by each AE.
 
-To give a concrete example, suppose you wished to train a stacked autoencoder with 2 hidden layers for classification of MNIST digits, as you will be doing in the next exercise. First, you would train a sparse autoencoder on the raw inputs x(k) to learn primary features h(1)(k) on the raw input. Next, you would feed the raw input into this trained sparse autoencoder, obtaining the primary feature activations h(1)(k) for each of the inputs x(k). You would then use these primary features as the "raw input" to another sparse autoencoder to learn secondary features h(2)(k) on these primary features. Following this, you would feed the primary features into the second sparse autoencoder to obtain the secondary feature activations h(2)(k) for each of the primary features h(1)(k) (which correspond to the primary features of the corresponding inputs x(k)). You would then treat these secondary features as "raw input" to a softmax classifier, training it to map secondary features to digit labels. Finally, you would combine all three layers together to form a stacked autoencoder with 2 hidden layers and a final softmax classifier layer capable of classifying the MNIST digits as desired.  
-
-Concretely, for each example in the the labeled training dataset, we forward propagate the example to obtain the activation of the hidden units. This transformed representation is used as the new feature representation with which to train the softmax classifier.  
 
 </div>{: .notice--blank}
 
@@ -310,7 +301,22 @@ Concretely, for each example in the the labeled training dataset, we forward pro
 
 <div markdown = "1">
 
-Finally.
+We have seen the auto-encoder which consider a non-linear transform of its input data. This can be seen as a *fully-connected network*. However, this implicitly requires a very large number of parameters and also does not consider that most features will essentially focus on *local information* given that most data have a property of [stationarity](http://itl.nist.gov/div898/handbook/pmc/section4/pmc442.htm). A very successful type of transform used in deep learning is *convolutional layer*. These restrict the connections between hidden and input units, allowing each hidden unit to connect to only a small subset of the input units. Specifically, each hidden unit will connect to only a small contiguous region of pixels in the input. 
+
+**Convolution**
+The property of stationary data means that the statistics of one part of the data are the same as any other part. This suggests that the features that we learn at one part can also be applied to other parts, and we can use the same features at all locations. More precisely, having learned features over small (say 8x8) patches sampled randomly from the larger set, we can then apply this learned 8x8 feature detector anywhere. Specifically, we can take the learned 8x8 features and convolve them with the larger image, thus obtaining a different feature activation value at each location in the input matrix.
+
+Formally, given some large $$r \times c$$ input matrix, we first train a sparse autoencoder on small $$a \times b$$ patches sampled from these inputs, learning $$k$$ features $$f = \sigma\left(Wx_{small} + b\right)$$ (where $$\sigma$$ is the sigmoid function), given by the weights $$W$$ and biases $$b$$ from the visible units to the hidden units. For every $$a \times b$$ patch $$x_{s} in the large image, we compute $$f_{s} = \sigma\left(Wx_{small} + b\right)$$, giving us $$f_{convolved}$$, a $$k \times (r - a + 1) \times (c - b + 1)$$ array of convolved features.
+
+**Implementing convolution**
+First, we want to compute $$\sigma\left(W(r,c) + b\right)$$ for all valid $$(r,c)$$ (valid meaning that the entire 8x8 patch is contained within the input data), where $$W$$ and $$b$$ are the learned weights and biases from the input layer to the hidden layer, and $$x(r,c)$$ is the 8x8 patch with the upper left corner at $$(r,c)$$. To accomplish this, one naive method is to loop over all such patches and compute $$\sigma\left(W(r,c) + b\right)$$ for each of them; while this is fine in theory, it can very slow. Hence, we usually use Matlab's built in convolution functions, which are well optimized.  
+
+Observe that the convolution above can be broken down into the following three small steps. First, compute $$Wx(r,c)$$ for all $$(r,c)$$. Next, add $$b$$ to all the computed values. Finally, apply the sigmoid function to the resulting values. You can replace the loop in the first step with one of MATLAB's optimized convolution functions, `conv2`, speeding up the process significantly.
+
+It should be noted that `conv2` performs a 2-D convolution, but we have 4 "dimensions" - input number, feature number, row, column of image, and (color) channel of image - that you want to convolve over. Because of this, you will have to convolve each feature separately for each input, using the row and column as the 2 dimensions you convolve over. Second, because of the mathematical definition of convolution, the feature matrix must be "flipped" before passing it to `conv2`. The following implementation tip explains the "flipping" of feature matrices when using MATLAB's convolution functions (using both 
+
+**Pooling**
+After obtaining features using convolution, we would next like to use them for classification. In theory, one could use all the extracted features with a classifier such as a softmax classifier, but this can be computationally challenging. Furthermore, learning a classifier with inputs having 3+ million features can be unwieldy, and can also be prone to over-fitting. Thus, to describe a large input, one natural approach is to aggregate statistics of these features at various locations. For example, one could compute the mean (or max) value of a particular feature over a region of the image. These summary statistics are much lower in dimension (compared to using all of the extracted features) and can also improve results (less over-fitting). This aggregation operation is called **pooling**, or sometimes *mean pooling* or *max pooling* (depending on the pooling operation applied).
 
 </div>{: .notice--blank}
 
@@ -318,6 +324,10 @@ Finally.
 **Exercise**  
 <div markdown="1">  
 
-  1. Code
+  1. Implement the convolution operator
+  2. Derive the convolution and pooling operations
+  3. Enhance the auto-encoder with a convolutional layer
+  4. Train a multi-layer convolutional AE to perform classification
+  5. Visualize the corresponding filters
   
 </div>{: .notice--info} 
