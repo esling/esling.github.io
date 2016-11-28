@@ -133,13 +133,13 @@ Ultimately, we want to learn which hidden states follow one another, and which o
 
 If we decompose our original question of finding $$P(o \mid h)$$, we can see that this turns to ask how likely it is that we end up at the node that has $$P(o \mid h)$$ as outgoing transition. And once we took that transition, what is the probability from the node we reach to the end of the sequence. Given the observation space $$O=\{o_{1},o_{2},\dots ,o_{N}\}$$, the state space $$S=\{s_{1},s_{2},\dots ,s_{K}\}$$, a sequence of observations $$Y=\{y_{1},y_{2},\ldots ,y_{T}\}$$, transition matrix $$A$$ of size $$K\cdot K$$ such that $$A_{ij}$$ stores the transition probability of transiting from state $$s_{i}$$ to state $$s_{j}$$, emission matrix $$E$$ of size $$K\cdot N$$ such that $$E_{ij}$$ stores the probability of observing $$o_{j}$$ from state $$s_{i}$$, an array of initial probabilities $$s$$  of $$K$$ such that $$\pi _{i}$$ stores the probability that $$x_{1}==s_{i}$$. We say a path $$X=\{x_{1},x_{2},\ldots ,x_{T}\}$$ is a sequence of states that generate the observations $$Y=\{y_{1},y_{2},\ldots ,y_{T}\}$$.
 
-In this dynamic programming problem, we construct two 2-dimensional tables $$T_{1},T_{2}$$ of size $$K\cdot T$$. Each element $$T_{1}[i,j]$$ of $$T_{1}$$ stores the probability of the most likely path so far $${\hat {X}}=\{{\hat {x}}_{1},{\hat {x}}_{2},\ldots ,{\hat {x}}_{j}\}$$ with $${\hat {x}}_{j}=s_{i}$$ that generates $$Y=\{y_{1},y_{2},\ldots ,y_{j}\}$$. Each element $$T_{2}[i,j]$$ of $$T_{2}$$ stores $${\hat {x}}_{j-1}$$ of the most likely path so far $${\hat {X}}=\{{\hat {x}}_{1},{\hat {x}}_{2},\ldots ,{\hat {x}}_{j-1},{\hat {x}}_{j}\}$$ for $$\forall j,2\leq j\leq T$$
+In this dynamic programming problem, we construct two 2-dimensional tables $$T_{1},T_{2}$$ of size $$K\cdot T$$. Each element $$T_{1}[i,j]$$ of $$T_{1}$$ stores the probability of the most likely path so far $$\hat{X}=\{\hat{x}_{1},{\hat {x}}_{2},\ldots ,{\hat {x}}_{j}\}$$ with $${\hat {x}}_{j}=s_{i}$$ that generates $$Y=\{y_{1},y_{2},\ldots ,y_{j}\}$$. Each element $$T_{2}[i,j]$$ of $$T_{2}$$ stores $${\hat {x}}_{j-1}$$ of the most likely path so far $$\hat {X}=\{\hat{x}_{1},{\hat {x}}_{2},\ldots ,{\hat {x}}_{j-1},{\hat {x}}_{j}\}$$ for $$\forall j,2\leq j\leq T$$
 
 We fill entries of two tables $$T_{1}[i,j],T_{2}[i,j]$$ by increasing order of $$K\cdot j+i$$.  
 
 $$
 T_{1}[i,j]=\max _{k}{(T_{1}[k,j-1]\cdot A_{ki}\cdot E_{iy_{j}})}
-$$, and
+$$, and  
 $$
 T_{2}[i,j]=\arg \max _{k}{(T_{1}[k,j-1]\cdot A_{ki})}
 $$
