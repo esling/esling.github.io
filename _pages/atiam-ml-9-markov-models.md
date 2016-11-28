@@ -50,12 +50,12 @@ Hence, the model can be represented as a **Graphical Probabilistic Model** (GPM)
 Based on this model, several tasks can be performed by a HMM
 
   1. **Parse** of a sequence
-  2. **Decoding**
-  3. **Model estimation**
+  2. **Decoding** the hidden states from observations (*Viterbi*)
+  3. **Model estimation** through Expectation-Maximization (*Baum-Welsh*)
 
-In most applications, a single hidden layer is sufficient to model the behavior of a system. There are several algorithms to do the inference in a HMM, but we will be using the ***Forward-Backward*** (or Baum-Welch) algorithm for labeling.
+In most applications, a single hidden layer is sufficient to model the behavior of a system. There are several algorithms to do the inference in a HMM, but we will be using the ***Viterbi*** algorithm for decoding the hidden states based on a sequence of observations and the ***Forward-Backward*** (or Baum-Welch) algorithm for labeling.
 
-What we want in the end is the ***model parameters*** of our graphical model (the conditional probability tables) that best explain the observed data. The configuration we want is the one which **maximizes the likelihood** of observing our data given one set of parameters for the model (the global maxima). Hence, we model a joint probability distribution  $$P(\mathbf{o}, \mathbf{h})$$, which represents the probability of an observation $$\mathbf{o}$$ and a hidden variable $$\mathbf{h}$$ sequence occurring together
+What we want in the end of the EM algorithm is the ***model parameters*** of our graphical model (the conditional probability tables) that best explain the observed data. The configuration we want is the one which **maximizes the likelihood** of observing our data given one set of parameters for the model (the global maxima). Hence, we model a joint probability distribution  $$P(\mathbf{o}, \mathbf{h})$$, which represents the probability of an observation $$\mathbf{o}$$ and a hidden variable $$\mathbf{h}$$ sequence occurring together
 
 $$
 \begin{equation}
@@ -103,11 +103,19 @@ P(\mathbf{h} \mid \mathbf{o}) = P(h_{1}) \times P(o_{1} \mid h_{1}) \times \prod
 $$
 
 In order to compute the parameters, we have to develop a data structure that allows us to manipulate
-them. We will use a HMM to represent the model and ***lattice-based dynamic programming*** to compute and manipulate the probabilities. 
+them. We will use a HMM to represent the model and ***lattice-based dynamic programming*** to compute and manipulate the probabilities.   
+
+In the remainder of this tutorial, we will rely on a simple modelisation of a ***phone***, in which we want to decompose the different states of a spoken unit, depending on the observed fundamental frequency. This model can be represented as  
+
+<div id="div1">
+<img src="../images/atiam-ml/09_9.0_hmm_model.gif" height="480" width="640"/>
+</div>  
+
+We use three simple states that represent the onset, sustained and release part of a phone. Each of these states can produced different fundamental frequencies (Here we simply quantify to the octaves *C1* to *C7*). 
 
 </div>{: .notice--blank}
 
-## 9.1 - HMM as Lattice
+## 9.1 - Viterbi decoding
 
 <div markdown="1">
 
@@ -121,16 +129,33 @@ $$
 
 We can model HMMs as a ***lattice*** of hidden states and observations, by replacing each random variable in the HMM with all possible values and drawing all possible arcs between them. It is important to specify all the hidden states you want to use. We start from a designated start state and from there choose one of the hidden state with the respective probability $$P(h)$$. From each of those possible hidden states, we can emit an observation with the respective probability $$P(o \mid h)$$. Then, we choose the next hidden state with some probability $$P(h_{i} \mid h_{i-1})$$.
 
-Ultimately, we want to learn which hidden states follow one another, and which observations correspond to those sequences. Hence, as previously in this course, we need to reward good parameters (transitions that increase $$P(sequence)$$) and we decrease bad ones. As a first step, instead of just taking whole counts of how often we see a transition, we "weigh" them by how likely the resulting sequence was ($$P(sequence)$$). This is called ***fractional counts***.
+Ultimately, we want to learn which hidden states follow one another, and which observations correspond to those sequences. Hence, as previously in this course, we need to reward good parameters (transitions that increase $$P(sequence)$$) and we decrease bad ones.  To do so, we will implement the *Viterbi* algorithm, which allows to discover the sequence of hidden states based on the observation of a sequence of emitted states.  
+
+If we decompose our original question of finding $$P(o \mid h)$$, we can see that this turns to ask how likely it is that we end up at the node that has $$P(o \mid h)$$ as outgoing transition. And once we took that transition, what is the probability from the node we reach to the end of the sequence. Given the observation space $$O=\{o_{1},o_{2},\dots ,o_{N}\}$$, the state space $$S=\{s_{1},s_{2},\dots ,s_{K}\}$$, a sequence of observations $$Y=\{y_{1},y_{2},\ldots ,y_{T}\}$$, transition matrix $$A$$ of size $$K\cdot K$$ such that $$A_{ij}$$ stores the transition probability of transiting from state $$s_{i}$$ to state $$s_{j}$$, emission matrix $$E$$ of size $$K\cdot N$$ such that $$E_{ij}$$ stores the probability of observing $$o_{j}$$ from state $$s_{i}$$, an array of initial probabilities $$s$$  of $$K$$ such that $$\pi _{i}$$ stores the probability that $$x_{1}==s_{i}$$. We say a path $$X=\{x_{1},x_{2},\ldots ,x_{T}\}$$ is a sequence of states that generate the observations $$Y=\{y_{1},y_{2},\ldots ,y_{T}\}$$.
+
+In this dynamic programming problem, we construct two 2-dimensional tables $$T_{1},T_{2}$$ of size $$K\cdot T$$. Each element $$T_{1}[i,j]$$ of $$T_{1}$$ stores the probability of the most likely path so far $${\hat {X}}=\{{\hat {x}}_{1},{\hat {x}}_{2},\ldots ,{\hat {x}}_{j}\}$$ with $${\hat {x}}_{j}=s_{i}$$ that generates $$Y=\{y_{1},y_{2},\ldots ,y_{j}\}$$. Each element $$T_{2}[i,j]$$ of $$T_{2}$$ stores $${\hat {x}}_{j-1}$$ of the most likely path so far $${\hat {X}}=\{{\hat {x}}_{1},{\hat {x}}_{2},\ldots ,{\hat {x}}_{j-1},{\hat {x}}_{j}\}$$ for $$\forall j,2\leq j\leq T$$
+
+We fill entries of two tables $$T_{1}[i,j],T_{2}[i,j]$$ by increasing order of $$K\cdot j+i$$.  
+
+$$
+T_{1}[i,j]=\max _{k}{(T_{1}[k,j-1]\cdot A_{ki}\cdot E_{iy_{j}})}
+$$, and
+$$
+T_{2}[i,j]=\arg \max _{k}{(T_{1}[k,j-1]\cdot A_{ki})}
+$$
+
+Note that $$E_{iy_{j}}$$ does not need to appear in the latter expression, as it's constant with i and j and does not affect the argmax.
 
 </div>{: .notice--blank}
 
 **Exercise**
 <div markdown = "1">
 
-  1. What would be the best representation for a lattice ?
-  2. Implement a simple and complex data structure for HMMs
-  3. What would be a good function to weight the transitions ?
+  1. Fill the Viterbi algorithm function `hmmViterbi`
+  2. Perform the decoding for the input sequences
+  3. Try to observe differences in likelihood
+  4. Define new models (emission and transition probabilities)
+  5. What happens on the decoding of different prior models ?
 
 </div>{: .notice--info}
 
@@ -139,13 +164,11 @@ Ultimately, we want to learn which hidden states follow one another, and which o
 Since we will multiply probabilistic transitions, the numbers can quickly become very small and lead to an underflow (numbers too small to be handled numerically). As usual, to deal with this, we can use the logarithm of the probabilities. Furthermore, in this case, all multiplications become additions, and all additions have to be log-additions, a special computation that unfortunately is quite slow.
 </div>{: .notice--warning}
 
-## 9.2 - Dynamic Programming
+## 9.2 - Model inference
 
 <div markdown = "1">
 
-If we decompose our original question of finding $$P(o \mid h)$$, we can see that this turns to ask how likely it is that we end up at the node that has $$P(o \mid h)$$ as outgoing transition. And once we took that transition, what is the probability from the node we reach to the end of the sequence. By using dynamic programming, we can compute how likely it is to arrive at each node (with the Forward algorithm), and to get to the end from there (with the Backward algorithm).
-
-We use Forward-Backward in order to efficiently compute for each sequence how often we see each transition and what the probability of that sequence is. We need both for the fractional counts. Forward-Backward is the E step in an EM implementation: we compute the expected counts given the current model parameters.
+We use Forward-Backward in order to efficiently compute for each sequence how often we see each transition and what the probability of that sequence is. We need both for the fractional counts. Forward-Backward is the E step in an EM implementation: we compute the expected counts given the current model parameters. By using dynamic programming, we can compute how likely it is to arrive at each node (with the Forward algorithm), and to get to the end from there (with the Backward algorithm).
 
 **Forward algorithm**
 
