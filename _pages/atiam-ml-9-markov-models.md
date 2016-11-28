@@ -168,23 +168,23 @@ Since we will multiply probabilistic transitions, the numbers can quickly become
 
 <div markdown = "1">
 
-We use Forward-Backward in order to efficiently compute for each sequence how often we see each transition and what the probability of that sequence is. We need both for the fractional counts. Forward-Backward is the E step in an EM implementation: we compute the expected counts given the current model parameters. By using dynamic programming, we can compute how likely it is to arrive at each node (with the Forward algorithm), and to get to the end from there (with the Backward algorithm).
+To perform model inference, we will use the Forward-Backward algorithm in order to efficiently compute for each sequence how often we see each transition and what the probability of that sequence is. This algorithm is the E step in an EM implementation: we compute the expected counts given the current model parameters. By using dynamic programming, we can compute how likely it is to arrive at each node (with the Forward algorithm), and to get to the end from there (with the Backward algorithm).
 
 **Forward algorithm**
 
-In the forward pass, we compute a new lattice with the same dimensions as the original one, which forward pass contains for each node the sum of all possible paths that lead up to there. These values are also called ***alphas***, where $$\alpha_{i, j}$$ denotes the probability of all paths up to node $$(i, j)$$ (assigning hidden state $$i$$ to observation $$j$$). 
+In the forward pass, we compute a new lattice with the same dimensions as the original one, which contains for each node the sum of all possible paths that lead up to there. These values are called ***alphas***, where $$\alpha_{i, j}$$ denotes the probability of all paths up to node $$(i, j)$$ (assigning hidden state $$i$$ to observation $$j$$). 
 
 $$\alpha_{start}$$ is always $$1.0$$. Each subsequent $$\alpha$$ is just the sum of all transitions arriving there, each multiplied by the $$\alpha$$ of the node where the transition originated.
 
 $$\alpha_{end}$$ is the sum of all paths through the lattice, which is equal to $$P(sentence)$$. $$P(data)$$ is the
-sum of all $$P(sentence)$$ in the data. In each iteration, just add up all the $$\alpha_{end}$$ of the sentences. Remember, $$P(data)$$ has to increase with each iteration, or there is something wrong. The EM algorithm guarantees that the likelihood of the data increases at each iteration over the data.
+sum of all $$P(sentence)$$ in the data. In each iteration, just add up all the $$\alpha_{end}$$ of the sentences. Remember, $$P(data)$$ has to increase with each iteration, or there is something wrong. 
 
 </div>{: .notice--blank}
 
 **Exercise**
 <div markdown = "1">
 
-  1. Implement the forward algorithm
+  1. Implement the forward part of the algorithm
   2. Compute the parse for the set of synthetic sequences
   3. Evaluate the different sequences 
 
@@ -202,7 +202,7 @@ the end, so $$\beta_{end}$$ is always $$1.0$$. A useful property for debugging i
 **Exercise**
 <div markdown = "1">
 
-  1. Implement the forward algorithm
+  1. Implement the backward algorithm
   2. Verify the likelihoods of the sequences
   3. Check that you obtain coherent probabilities
 
@@ -237,22 +237,6 @@ Computing alphas and betas and collecting the fractional counts for all free par
 
   1. Implement the complete algorithm
   2. Run it on the set of sequences to obtain the model parameters
-
-</div>{: .notice--info}
-
-## 9.3 - Audio applications
-
-<div markdown = "1">
-
-In order to 
-
-</div>{: .notice--blank}
-
-**Exercise**
-<div markdown = "1">
-
-  1. Apply the previous algorithms to the audio dataset 
-  2. Evaluate the accuracy of the obtained model
 
 </div>{: .notice--info}
 
