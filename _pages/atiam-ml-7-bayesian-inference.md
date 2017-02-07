@@ -93,7 +93,7 @@ $$
 \end{equation}
 $$
 
-(the independent-trials assumption allows us to just substituted everything into $$ \phi(x)$$). 
+(the independent-trials assumption allows us to just substitute everything into $$ \phi(x)$$). 
 
 The idea of *maximum likelihood* will be to maximize this as the function of $$p$$ after given all of the $$x_i$$ data. This means that our estimator, $$\hat{p}$$, is a function of the observed $$x_i$$ data, and as such, is a random variable with its own distribution.
 
