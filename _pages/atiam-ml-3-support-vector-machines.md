@@ -105,7 +105,7 @@ f\left(x\right)=\sum_{i=1}^{m}\alpha_{i}y_{i}\left\langle \phi\left(x_{i}\right)
 \end{equation}
 $$
 
-Where we can introduce a kernel $$K\left(x_{i},x\right)=\phi\left(x_{i}\right)\cdot\phi\left(x\right)$$ in the equation in order to solve non-linear optimization problems. We can use this formulation to perform the *predictions* of the algorithm and in the first part of this tutorial, we will only conider the *linear* kernel $$K\left(x_{i},x\right)=x_{i}\cdot x$$. Computing the predictions should be performed in the `svmPredict` function
+Where we can introduce a kernel $$K\left(x_{i},x\right)=\phi\left(x_{i}\right)\cdot\phi\left(x\right)$$ in the equation in order to solve non-linear optimization problems. We can use this formulation to perform the *predictions* of the algorithm and in the first part of this tutorial, we will only consider the *linear* kernel $$K\left(x_{i},x\right)=x_{i}\cdot x$$. Computing the predictions should be performed in the `svmPredict` function
 
 {% highlight Matlab %}
 function pred = svmPredict(model, X)
