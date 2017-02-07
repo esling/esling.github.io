@@ -94,7 +94,7 @@ The same observation holds for the way we decided to "merge" the different dista
 
 <div markdown = "1">
 
-First, we can use the nearest-neighbor idea to devise a very simple *querying* system. This type of method is typically used in many systems such as *Query By Humming (QBH)* softwares (similar to [Shazam](http://www.shazam.com/)). As previously, we provide a baseline code in the main script. First, we create a $$ N x M $$ distance matrix `dataMatrix` corresponding to the $$M$$ features of the $$ N $$ elements of the datasets. We selected here only the *SpectralCentroidMean, SpectralFlatnessMean* and *SpectralSkewnessMean* features. Then, after your code is filled, the `dist` matrix should contain the mean distances (eventually, for various types of distances), which will then be sorted to the `nnIDs` vector allowing to select the nearest neighbors.
+First, we can use the nearest-neighbor idea to devise a very simple *querying* system. This type of method is typically used in many systems such as *Query By Humming (QBH)* softwares (similar to [Shazam](http://www.shazam.com/)). As previously, we provide a baseline code in the main script. First, we create a $$ N \times M $$ distance matrix `dataMatrix` corresponding to the $$M$$ features of the $$ N $$ elements of the datasets. We selected here only the *SpectralCentroidMean, SpectralFlatnessMean* and *SpectralSkewnessMean* features. Then, after your code is filled, the `dist` matrix should contain the mean distances (eventually, for various types of distances), which will then be sorted to the `nnIDs` vector allowing to select the nearest neighbors.
 
 </div>{: .notice--blank}
 
