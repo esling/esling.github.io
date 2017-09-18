@@ -48,7 +48,7 @@ We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or
 
 ### Baseline
 
-First download the [baseline code ![](../images/zip.png)](../documents/atiam-fpa.zip)
+First download the [baseline code ![](../images/file.png)](../documents/atiam-fpa.zip)
 
 After unzipping the file, you will find the following files
 
