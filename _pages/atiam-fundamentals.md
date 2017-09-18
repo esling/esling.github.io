@@ -52,15 +52,23 @@ We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or
 
 All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here to help you out and also provide an indicative grading system for each.
 
-(3 pts) - Q-1.1 Implement the Needleman-Wunsch (NW) algorithm.\\
-(1 pts) - Q-2.1 Sort the collection of composers by decreasing number of tracks\\
-(1 pts) - Q-2.2 Apply the NW algorithm between all tracks of each composer\\
-(2 pts) - Q-2.3 Extend your previous code so that it can compare\\
-(5 pts) - Q-3.1 Extending to a true musical name matching\\
-(1 pts) - Q-4.1 Import and plot some MIDI files\\
-(3 pts) - Q-4.2 Exploring MIDI properties\\
-(5 pts) - Q-5.1 Automatic evaluation of a MIDI file quality\\
-(4 pts) - Q-6.1 Extending your alignment algorithm to MIDI scores\\
+**(3 pts) - Q-1.1** Implement the Needleman-Wunsch (NW) algorithm.
+
+**(1 pts) - Q-2.1** Sort the collection of composers by decreasing number of tracks
+
+**(1 pts) - Q-2.2** Apply the NW algorithm between all tracks of each composer
+
+**(2 pts) - Q-2.3** Extend your previous code so that it can compare
+
+**(5 pts) - Q-3.1** Extending to a true musical name matching
+
+**(1 pts) - Q-4.1** Import and plot some MIDI files
+
+**(3 pts) - Q-4.2** Exploring MIDI properties
+
+**(5 pts) - Q-5.1** Automatic evaluation of a MIDI file quality
+
+**(4 pts) - Q-6.1** Extending your alignment algorithm to MIDI scores
 
 ### Instructions
 
