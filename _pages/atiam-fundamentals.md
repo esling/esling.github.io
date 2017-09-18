@@ -15,34 +15,35 @@ sidebar:
 
 ### Assignment
 
-Using multiple computer structures and solving symbolic alignments for classical music pieces
+Using multiple computer structures and solving symbolic alignments for classical music pieces in Python.
 
-In this exercise, we will use our knowledge on computer structures to solve a very well-known problem of symbolic alignement. Hence, you this part is split 
-  1 - Implement a string alignment algorithm
-  2 - Try to apply this to a collection of classical music pieces names
-  3 - Develop your own more adapted procedure to have a matching inside large set
-  4 - Extending your approach to align MIDI scores
-  5 - Proposing your own approach to MIDI quality evaluation
+In this exercise, we will use our knowledge on computer structures to solve a very well-known problem of symbolic alignement. Hence, the overall goal of your work is
+1. Implement a *string alignment* algorithm
+2. Try to apply this to a collection of classical music pieces names
+3. Develop your own more adapted procedure to the specific problem of classical names matching
+4. Proposing your own approach to the problem of *MIDI quality evaluation*
+4. Extending your alignment algorithm to align MIDI scores
   
-To simplify your 
+To simplify your work, the global layout of the exercise has been pre-coded inside the `atiam-fpa.py` script. You simply have to follow the questiosn
+
 The set of classical music pieces is provided in the `atiam-fpa.pkl` file, which is already loaded at this point of the script and contain two structures
     - composers         = Array of all composers in the database
     - composers_tracks  = Hashtable of tracks for a given composer
 
-#### Baseline
-
 #### Dependencies
+
+In order to get the baseline script to work, you need to have a working distribution of Python, along with the following libraries
+  - [SciPy](https://www.scipy.org/)
+  - [Music21](http://web.mit.edu/music21/)
+  - [NwAlign](https://pypi.python.org/pypi/nwalign)
+  
+We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage any install of the Python libraries. 
+
+#### Baseline
 
 #### Questions
 
 All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here to help you out.
-
-1. Implement the dynamic programming algorithm presented in the following articles by using the language of your choice. (15 points)  
-
-Y. Jeong, M. Jeong, and O. Omitaomu, *Weighted dynamic time warping for time series* Pattern Recognition, vol. 44, 2011.  
-[![](../images/pdf.png)](http://lig-membres.imag.fr/bisson/cours/M2INFO-AIW-ML/papers/Jeong11.pdf)
-
-2. Produce a musical application of this algorithm. (5 points)
 
 ##### Informations
 
