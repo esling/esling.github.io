@@ -15,7 +15,7 @@ sidebar:
 
 ### Assignment
 
-Using multiple computer structures and solving symbolic alignments for classical music pieces in Python.
+***Using multiple computer structures and solving symbolic alignments for classical music pieces in Python.***
 
 In this exercise, we will use our knowledge on computer structures to solve a very well-known problem of symbolic alignement. Hence, the overall goal of your work is
 1. Implement a *string alignment* algorithm
@@ -24,11 +24,19 @@ In this exercise, we will use our knowledge on computer structures to solve a ve
 4. Proposing your own approach to the problem of *MIDI quality evaluation*
 4. Extending your alignment algorithm to align MIDI scores
   
-To simplify your work, the global layout of the exercise has been pre-coded inside the `atiam-fpa.py` script. You simply have to follow the questiosn
+To simplify your work, the global layout of the exercise has been pre-coded inside the `atiam-fpa.py` script. You simply have to follow the questions written along the script, and insert your own code where the following tags appear
+
+{% highlight Python %}
+################
+# YOUR CODE HERE
+################
+{% endhighlight %} 
 
 The set of classical music pieces is provided in the `atiam-fpa.pkl` file, which is already loaded at this point of the script and contain two structures
-    - composers         = Array of all composers in the database
-    - composers_tracks  = Hashtable of tracks for a given composer
+{% highlight Python %}
+composers         # Array of all composers in the database
+composers_tracks  # Hashtable of tracks for a given composer
+{% endhighlight %}  
 
 #### Dependencies
 
