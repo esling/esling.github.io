@@ -48,6 +48,18 @@ We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or
 
 ### Baseline
 
+First download the [baseline code ![](../images/zip.png)](../documents/atiam-fpa.zip)
+
+After unzipping the file, you will find the following files
+
+{% highlight Python %}
+atiam-fpa/            # Folder of anonymized Beethoven MIDI files
+atiam-fpa_alpha.dist  # Basic symbolic distance matrix
+atiam-fpa_dna.dist    # Example of DNA-based distance matrix
+atiam-fpa.pkl         # Serialized file with all track names and composers
+atiam-fpa.py          # Basic script to start from
+{% endhighlight %}
+
 ### Questions
 
 All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here and also provide an indicative grading value for each. Remember that if you have trouble implementing it, you can at least provide a commented answer as to how you would approach the solution.
