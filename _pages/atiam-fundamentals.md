@@ -8,12 +8,11 @@ sidebar:
   nav: "teaching-atiam"
 ---
 
-## ATIAM - Fundamentals
 
-### Slides
+## Slides
   * The lesson on data structures and algorithms [slides ![](../images/pdf.png)](../documents/Generic.5.Structures.pdf)
 
-### Assignment
+## Assignment
 
 ***Using multiple computer structures and solving symbolic alignments for classical music pieces in Python.***
 
@@ -38,27 +37,37 @@ composers         # Array of all composers in the database
 composers_tracks  # Hashtable of tracks for a given composer
 {% endhighlight %}  
 
-#### Dependencies
+### Dependencies
 
 In order to get the baseline script to work, you need to have a working distribution of Python, along with the following libraries
   - [SciPy](https://www.scipy.org/)
   - [Music21](http://web.mit.edu/music21/)
   - [NwAlign](https://pypi.python.org/pypi/nwalign)
   
-We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage any install of the Python libraries. 
+We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
 
-#### Baseline
+### Baseline
 
-#### Questions
+### Questions
 
-All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here to help you out.
+All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here to help you out and also provide an indicative grading system for each.
 
-##### Informations
+(3 pts) - Q-1.1 Implement the Needleman-Wunsch (NW) algorithm.\\
+(1 pts) - Q-2.1 Sort the collection of composers by decreasing number of tracks\\
+(1 pts) - Q-2.2 Apply the NW algorithm between all tracks of each composer\\
+(2 pts) - Q-2.3 Extend your previous code so that it can compare\\
+(5 pts) - Q-3.1 Extending to a true musical name matching\\
+(1 pts) - Q-4.1 Import and plot some MIDI files\\
+(3 pts) - Q-4.2 Exploring MIDI properties\\
+(5 pts) - Q-5.1 Automatic evaluation of a MIDI file quality\\
+(4 pts) - Q-6.1 Extending your alignment algorithm to MIDI scores\\
+
+### Instructions
 
 The script defines the overall exercise which should be filled
- - Use this as a baseline script
- - You are authorized to define other files for functions
- - Write a (small) report document (PDF) explaining your approach if needed
+ - Use the given file `atiam-fpa.py` as a baseline script
+ - You are authorized to define other files if you prefer
+ - If stuck with code, you can still write your overall approach as a set of comments to earn some point
  - All your files should be packed in a zip file named
      \[ATIAM\]\[FpA2017\]FirstName_LastName.zip
 
