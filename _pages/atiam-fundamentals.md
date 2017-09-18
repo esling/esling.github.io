@@ -50,7 +50,7 @@ We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or
 
 ### Questions
 
-All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here to help you out and also provide an indicative grading system for each.
+All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here and also provide an indicative grading value for each. Remember that if you have trouble implementing it, you can at least provide a commented answer as to how you would approach the solution.
 
 **(3 pts) - Q-1.1** Implement the Needleman-Wunsch (NW) algorithm.
 
