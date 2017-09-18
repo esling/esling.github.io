@@ -16,7 +16,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "post-teaser.jpg"
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 202
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -83,7 +83,7 @@ analytics:
 author:
   name             : "Philippe Esling"
   avatar           : "bio-photo.jpg"
-  bio              : "Associate Professor  IRCAM - UPMC"
+  bio              : "Associate Professor  IRCAM, UPMC"
   location         : "Paris"
   email            : "esling@ircam.fr"
   uri              :
