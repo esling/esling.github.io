@@ -46,6 +46,11 @@ In order to get the baseline script to work, you need to have a working distribu
   
 We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
 
+For those of you who have never coded in Python, here are a few interesting resources to get started.
+
+  - [TutorialPoint](https://www.tutorialspoint.com/python/)
+  - [Programiz](https://www.programiz.com/python-programming)
+
 ### Baseline
 
 First download the [baseline code ![](../images/file.png)](../documents/atiam-fpa.zip)
