@@ -29,7 +29,9 @@ $(document).ready(function(){
 
 The present tutorials are designed to implement the core notions seen in [machine learning](/atiam-ml) lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercises here will introduce the basic mecanisms behind these technics and then, we will target specific applications to musical or audio data.
 
-Get the baseline code from this [zip file ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/F6QlLPgABOVJQRI)  
+Get the baseline code for your language of choice :
+[Matlab zip file ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/F6QlLPgABOVJQRI)  
+[Python zip file ![](../images/file.png)](../documents/Exercices_Python.zip)  
 Get the audio datasets from this [link ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/FTsaaAMFV1jEwsk)   
   
 **Unzip files and place `00_Datasets` along with other folders**  
@@ -63,6 +65,7 @@ In this introduction, we will cover basic Music Information Retrieval (MIR) inte
 Along the tutorials, we provide a reference code for each section. This code contains helper functions that will alleviate you from the burden of data import and other sideline implementations. You will find designated spaces in each file to develop your solutions. The code is in MATLAB and relies heavily on the concept of [code sections](https://fr.mathworks.com/help/matlab/matlab_prog/run-sections-of-programs.html) which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand.
 
 Get the baseline MATLAB code for all tutorials from this [zip file ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/F6QlLPgABOVJQRI)
+Get the baseline Python code for all tutorials from this [zip file ![](../images/file.png)](../documents/Exercices_Python.zip)
 
 </div>{: .notice--blank}
 
