@@ -13,6 +13,10 @@ This section summarizes the courses in machine learning applied to music computi
   * [Exercices](/atiam-ml/#exercices)
   * [References](/atiam-ml/#references)
 
+# Evaluation
+
+The evaluation of the ML course is defined by a group project. All details can be found on the corresponding [projects page](../atiam-ml-project/)
+
 # Course summary
 
 ## [![](../images/pdf.png)](../documents/MML.Lesson.1.Introduction.pdf) [![](../images/html.png)](../atiam-ml-0-intro/) [![](../images/html.png)](../atiam-ml-1-nearest-neighbors/) Introduction
