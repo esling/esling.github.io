@@ -32,16 +32,20 @@ This page introduces the 2017-18 projects for the ATIAM [machine learning](/atia
 ## Global instructions
 
 We detail here the global instructions that are common to all projects.
- - Groups if 3 to 4 students per project
- - Project should be coded in Python (cf. Coding style section underneath)
+ - Groups of **3 to 4 students** per project
+ - Projects are **coded in Python** (cf. Coding style section underneath)
  - All projects should be accompanied with a small report **in english**
- -  
+ - The report should be of **8 pages maximum** following scientific papers
+ - Reports must be written in **LaTeX** with a given **format style**
+ - Each project has a **referent PhD** along with myself
 
 </div>{: .notice--blank}
 
 ## Evaluation
 
-The following generic 
+<div markdown = "1">
+
+All projects will be evaluated by the referent PhD, myself and another randomly picked PhD to ensure equity across different projects. The project should 
  - Use the given file `atiam-fpa.py` as a baseline script
  - You are authorized to define other files if you prefer
  - If stuck with code, you can still write your overall approach as a set of comments to earn some point
@@ -53,16 +57,17 @@ The following generic
 **Formatting** : mail with subject : \[ATIAM\]\[FpA2017\] Name  
 
 `Evaluation grid`: 
-**(4 pts) - Report** Including content and style
-**(4 pts) - Toy dataset** Quality and completeness of the dataset
-**(5 pts) - Strategy**
-**(7 pts) - Code**
+**(6 pts) - Report** Including content and style
+**(6 pts) - Toy dataset** Quality and completeness of the dataset
+**(8 pts) - Code** Accuracy, evaluation and coding style
+
+</div>{: .notice--blank}
 
 ## Code and style
 
 <div markdown = "1">
 
-Along the tutorials, we provide a reference code for each section. This code contains helper functions that will alleviate you from the burden of data import and other sideline implementations. You will find designated spaces in each file to develop your solutions. The code is in MATLAB and relies heavily on the concept of [code sections](https://fr.mathworks.com/help/matlab/matlab_prog/run-sections-of-programs.html) which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand.
+We will provide small reference codes for each project if needed. This code will contain helper functions that will alleviate you from the burden of data import and other sideline implementations. The code is in Python and relies heavily on the concept of `code sections` which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand).
 
 In order to get the baseline script to work, you need to have a working distribution of Python, along with the following libraries
   - [SciPy](https://www.scipy.org/)
@@ -71,7 +76,29 @@ In order to get the baseline script to work, you need to have a working distribu
   - [Yaafe](http://yaafe.sourceforge.net/)
   - [Keras](https://keras.io/)
   
-We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
+We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
+
+**Coding style**
+We impose that your code follow the PEP8 coding style recommandation
+https://www.python.org/dev/peps/pep-0008/
+
+Each folder represents a module, you should consequently ensure everything
+related to module definition.
+    * Write a __init__.py file
+    * Check that the documentation inside is valid
+    * Always document any new functionality
+    * Implement examples in a root-based script
+    
+**Code documentation**
+All code should be highly documented at all levels. In order to facilitate a common documentation, you are required to follow the Numpy documentation style practice, which can be found here
+http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html
+
+**Unit testing**
+Unit testing is optional for the project but highly recommended (and for your future projects in any case). Every time you add a new `independent` functionnality to the toolbox, you should develop a set of unit tests in order to ensure that all the functions work correctly and also that future modifications will not impair previous development.
+If you do not know the principle of unit testing, you can read
+https://docs.python.org/2/library/unittest.html
+
+</div>{: .notice--blank}
 
 # Subjects 
 
