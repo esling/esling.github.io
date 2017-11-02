@@ -27,7 +27,9 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-The present tutorials are designed to implement the core notions seen in [machine learning](/atiam-ml) lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercises here will introduce the basic mecanisms behind these technics and then, we will target specific applications to musical or audio data.
+This page introduces the 2017-18 projects for the ATIAM [machine learning](/atiam-ml) lessons. Each subject will target various notions seen in class. We will re-introduce the basic mecanisms behind each approach, along with the fundamental papers to understand and then, we will target specific applications to musical or audio data.
+
+## Global instructions
 
 Get the baseline code for your language of choice :
 
@@ -41,6 +43,19 @@ Get the audio datasets from this [link ![](../images/file.png)](https://nuage.ir
 
 </div>{: .notice--blank}
 
+## Evaluation
+
+The script defines the overall exercise which should be filled
+ - Use the given file `atiam-fpa.py` as a baseline script
+ - You are authorized to define other files if you prefer
+ - If stuck with code, you can still write your overall approach as a set of comments to earn some point
+ - All your files should be packed in a zip file named
+     \[ATIAM\]\[FpA2017\]FirstName_LastName.zip
+
+**Deadline**   : 23/10/2017 - 23h59  
+**Submission** : esling [at] ircam (dot) fr  
+**Formatting** : mail with subject : \[ATIAM\]\[FpA2017\] Name  
+
 # Reference slides
 
 <div markdown = "1">
@@ -53,11 +68,12 @@ Download the [slides ![](../images/pdf.png)](../documents/MML.Lesson.1.Introduct
   
 </div>{: .notice--blank}
 
-# Tutorial 
+# Subjects 
 
 <div markdown = "1">
 
-In this introduction, we will cover basic Music Information Retrieval (MIR) interactions, in which we process a dataset of sound files and try to observe the properties of their various temporal and spectral features. Hence, we will quickly review basic calculus required to perform further machine learning tasks. This tutorial is also intended to review basic Matlab coding and plotting operations.
+We detail here the various subjects. You can find a PDF version of the different topics here
+
 
 </div>{: .notice--blank}
 
