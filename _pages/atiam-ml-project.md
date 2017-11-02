@@ -82,7 +82,8 @@ We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) th
 
 **Coding style**
 We impose that your code follow the PEP8 coding style recommandation
-https://www.python.org/dev/peps/pep-0008/
+
+[PEP8 style](https://www.python.org/dev/peps/pep-0008/)
 
 Each folder represents a module, you should consequently ensure everything
 related to module definition.
@@ -93,12 +94,14 @@ related to module definition.
     
 **Code documentation**
 All code should be highly documented at all levels. In order to facilitate a common documentation, you are required to follow the Numpy documentation style practice, which can be found here
-http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html
+
+[Numpy documentation style](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html)
 
 **Unit testing**
 Unit testing is optional for the project but highly recommended (and for your future projects in any case). Every time you add a new `independent` functionnality to the toolbox, you should develop a set of unit tests in order to ensure that all the functions work correctly and also that future modifications will not impair previous development.
 If you do not know the principle of unit testing, you can read
-https://docs.python.org/2/library/unittest.html
+
+[Unit testing](https://docs.python.org/2/library/unittest.html)
 
 </div>{: .notice--blank}
 
