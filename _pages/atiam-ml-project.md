@@ -69,12 +69,7 @@ All projects will be evaluated by the referent PhD, myself and another randomly 
 
 We will provide small reference codes for each project if needed. This code will contain helper functions that will alleviate you from the burden of data import and other sideline implementations. The code is in Python and relies heavily on the concept of `code sections` which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand).
 
-In order to get the baseline script to work, you need to have a working distribution of Python, along with the following libraries
-  - [SciPy](https://www.scipy.org/)
-  - [Music21](http://web.mit.edu/music21/)
-  - [Librosa](http://librosa.github.io/librosa/index.html)
-  - [Yaafe](http://yaafe.sourceforge.net/)
-  - [Keras](https://keras.io/)
+In order to get the baseline script to work, you need to have a working distribution of Python, along with the following libraries [SciPy](https://www.scipy.org/), [Music21](http://web.mit.edu/music21/), [Librosa](http://librosa.github.io/librosa/index.html), [Tensorflow](https://www.tensorflow.org/), [Pytorch](http://pytorch.org/)
   
 We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
 
