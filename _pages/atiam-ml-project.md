@@ -111,21 +111,31 @@ If you do not know the principle of unit testing, you can read
 
 We detail here the various subjects (organized alphabetically by the last name of the referent PhD). For each, you can find a detailed PDF version in the following list, and we summarize the abstracts underneath.
 
-### [![](../images/pdf.png) Bitton - Disentangling variation factors in audio samples](../documents/mlProj_bitton.pdf)
-### [![](../images/pdf.png) Carsault - Generation of lead sheets and inference in jazz](../documents/mlProj_carsault.pdf)
-### [![](../images/pdf.png) Chemla - Regularization and representations in modular sound synthesis](../documents/mlProj_chemla.pdf)
-### [![](../images/pdf.png) Crestel - Seq2seq generation of symbolic orchestral music](../documents/mlProj_crestel.pdf)
-### [![](../images/pdf.png) Prang - Embedding music for automatic composition spaces](../documents/mlProj_prang.pdf)
+#### [![](../images/pdf.png) Bitton - Disentangling variation factors in audio samples](../documents/mlProj_bitton.pdf)
+#### [![](../images/pdf.png) Carsault - Generation of lead sheets and inference in jazz](../documents/mlProj_carsault.pdf)
+#### [![](../images/pdf.png) Chemla - Regularization and representations in modular sound synthesis](../documents/mlProj_chemla.pdf)
+#### [![](../images/pdf.png) Crestel - Seq2seq generation of symbolic orchestral music](../documents/mlProj_crestel.pdf)
+#### [![](../images/pdf.png) Prang - Embedding music for automatic composition spaces](../documents/mlProj_prang.pdf)
 
-## Bitton - Disentangling variation factors in audio samples
+## Bitton
 
-## Carsault - Generation of lead sheets and inference in jazz
+**Disentangling variation factors in audio samples**
 
-## Chemla - Regularization and representations in modular sound synthesis
+## Carsault
 
-## Crestel - Seq2seq generation of symbolic orchestral music
+**Generation of lead sheets and inference in jazz**
 
-## Prang - Embedding music for automatic composition spaces
+## Chemla
+
+**Regularization and representations in modular sound synthesis**
+
+## Crestel 
+
+**Seq2seq generation of symbolic orchestral music**
+
+## Prang
+
+**Embedding music for automatic composition spaces**
 
 
 </div>{: .notice--blank}
