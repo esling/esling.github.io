@@ -45,20 +45,27 @@ We detail here the global instructions that are common to all projects.
 
 <div markdown = "1">
 
-All projects will be evaluated by the referent PhD, myself and another randomly picked PhD to ensure equity across different projects. The project should 
- - Use the given file `atiam-fpa.py` as a baseline script
- - You are authorized to define other files if you prefer
- - If stuck with code, you can still write your overall approach as a set of comments to earn some point
- - All your files should be packed in a zip file named
-     \[ATIAM\]\[FpA2017\]FirstName_LastName.zip
+All projects will be evaluated by the referent PhD, myself and another randomly picked PhD to ensure equity across different projects. The project should be delivered with an archive containing 3 folders
+
+`code/` : Should contain your well-documented code (cf. Coding style section) along with simple scripts that demonstrate the use of the developped methodologies. We recommend that you organize your code following modules.
+
+`report/` : Should contain your report in PDF format along with the LaTeX source and eventual figures.
+
+`toy/` : Should contain a well-documented toy dataset, along with the procedural scripts to generate it. You can create another PDF document describing the set if you fill the need, otherwise detail it in your report
+
+All your files should be packed in a zip file unfolding to a folder named
+     \[ATIAM\]\[ML2017\] (LastName of all students).zip
 
 **Deadline**   : 23/10/2017 - 23h59  
 **Submission** : esling [at] ircam (dot) fr  
-**Formatting** : mail with subject : \[ATIAM\]\[FpA2017\] Name  
+**Formatting** : mail with subject : \[ATIAM\]\[ML2017\] (Last names of all students involved)  
 
-`Evaluation grid`: 
+`Evaluation grid`: This generic grid will be applied and sub-grids will be modulated for each subject.
+
 **(6 pts) - Report** Including content and style
+
 **(6 pts) - Toy dataset** Quality and completeness of the dataset
+
 **(8 pts) - Code** Accuracy, evaluation and coding style
 
 </div>{: .notice--blank}
@@ -79,10 +86,10 @@ https://www.python.org/dev/peps/pep-0008/
 
 Each folder represents a module, you should consequently ensure everything
 related to module definition.
-    * Write a __init__.py file
-    * Check that the documentation inside is valid
-    * Always document any new functionality
-    * Implement examples in a root-based script
+ - Write a __init__.py file
+ - Check that the documentation inside is valid
+ - Always document any new functionality
+ - Implement examples in a root-based script
     
 **Code documentation**
 All code should be highly documented at all levels. In order to facilitate a common documentation, you are required to follow the Numpy documentation style practice, which can be found here
