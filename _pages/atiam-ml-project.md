@@ -56,7 +56,7 @@ All projects will be evaluated by the referent PhD, myself and another randomly 
 All your files should be packed in a zip file unfolding to a folder named
      \[ATIAM\]\[ML2017\] (LastName of all students).zip
 
-**Deadline**   : 31/12/2017 - 23h59  
+**Deadline**   : 25/12/2017 - 23h59  
 **Submission** : esling [at] ircam (dot) fr  
 **Formatting** : mail with subject : \[ATIAM\]\[ML2017\] (Last names of all students involved)  
 
