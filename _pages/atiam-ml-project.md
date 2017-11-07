@@ -113,11 +113,9 @@ We detail here the various subjects (organized alphabetically by the last name o
 
 **[![](../images/pdf.png) Bitton - Disentangling variation factors in audio samples](../documents/mlProj_bitton.pdf)**
 
-**[![](../images/pdf.png) Carsault - Generation of lead sheets and inference in jazz](../documents/mlProj_carsault.pdf)**
+**[![](../images/pdf.png) Carsault - Generation of chord progressions and inference in jazz](../documents/mlProj_carsault.pdf)**
 
-**[![](../images/pdf.png) Chemla - Regularization and representations in modular sound synthesis](../documents/mlProj_chemla.pdf)**
-
-**[![](../images/pdf.png) Crestel - Seq2seq generation of symbolic orchestral music](../documents/mlProj_crestel.pdf)**
+**[![](../images/pdf.png) Chemla - Latent representations for real-time synthesis space exploration](../documents/mlProj_chemla.pdf)**
 
 **[![](../images/pdf.png) Prang - Embedding music for automatic composition spaces](../documents/mlProj_prang.pdf)**
 
@@ -125,21 +123,36 @@ We detail here the various subjects (organized alphabetically by the last name o
 
 **Disentangling variation factors in audio samples**
 
+**Abstract**
+Observations of complex data in the real world might be caused by several underlying generative factors that account for specific perceptual features. However, these factors are usually entangled and cannot be underlined directly from the data. Modeling such factors could generalize the learning of complex concepts through compositions of simpler abstractions. This enables us to understand the inner structure of the data, to process it efficiently and to control meaningful generative processes which may eventually open up on artificial creativity. An extensive body of research has been carried in the field of computer vision through the `Variational Auto-Encoders`. The goal of this project is to extend these recent approaches to sound and music data, by defining a procedural toy dataset of sound synthesis and then applying the recent $\beta$-`VAE` and `SCAN` approaches to these data.
+
+**[![](../images/pdf.png) Full project](../documents/mlProj_bitton.pdf)**
+
 ## Carsault
 
-**Generation of lead sheets and inference in jazz**
+**Generation of chord progressions and inference in jazz**
+
+**Abstract**
+Symbolic music generation is a field that has been widely explored through Hidden Markov Models (HMM). For instance, Paiement, Bengio and Eck published a probabilistic models for melodic prediction using chord instantiation. Nevertheless, HMMs are bounded by their order of complexity. On the opposite, deep learning techniques are capable of computing highly non-linear functions and can extract information from complex data. Therefore, most recent works in the symbolic music generation field are now based on Neural Networks (NN), and particularly on Recurrent Neural Networks (RNN). 
+
+**[![](../images/pdf.png) Full project](../documents/mlProj_carsault.pdf)**
 
 ## Chemla
 
-**Regularization and representations in modular sound synthesis**
+**Latent representations for real-time synthesis space exploration**
 
-## Crestel 
+**Abstract**
+`Generative systems` are machine-learning models whose training is based on two simultaneous optimization tasks. The first is to build a latent space, that provides a low-dimensional representation of the data, eventually subject to various regularizations and constraints. The second is the reconstruction of the original data through the sampling of this latent space. These systems are very promising because their space is a high-level, "over-compressed" representation that can be used as an intermediate space for several tasks, such as visualization, measurements, or classification. The main goal of this project is to develop variational models to find generative `sound synthesis space`, where each point of this space correspond to a new data content that comes from the `high-level` understanding of the input data.
 
-**Seq2seq generation of symbolic orchestral music**
+**[![](../images/pdf.png) Full project](../documents/mlProj_chemla.pdf)**
 
 ## Prang
 
 **Embedding music for automatic composition spaces**
 
+**Abstract**
+This project aims to develop new representations for symbolic music generation and automatic composition. Whereas the previous approaches are based on known mathematical rules, you will try to develop a more empirical model through machine learning. Your goal is to represent musical symbols in a space that carry semantics relationships between them, called `embedding space`. This approach allows to extract new descriptive dimensions that may be relevant for music analysis and generation. To that end, you will use Convolutional Neural Networks in order to capture features of the piano-roll representation of musical pieces. First, you will propose a toy dataset that has to follow some semantical rules in order to evaluate your embedding spaces. To that end, you will need to define what are the contextual rules that could mimic semantic relationships in music. Then, you will extend these approaches by using Recurrent Neural Networks to train your models with a symbolic prediction task.
+
+**[![](../images/pdf.png) Full project](../documents/mlProj_prang.pdf)**
 
 </div>{: .notice--blank}
