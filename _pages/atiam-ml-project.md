@@ -32,7 +32,7 @@ This page introduces the 2017-18 projects for the ATIAM [machine learning](/atia
 ## Global instructions
 
 We detail here the global instructions that are common to all projects.
- - Groups of **3 to 4 students** per project
+ - Groups of **4 to 5 students** per project
  - Projects are **coded in Python** (cf. Coding style section underneath)
  - All projects should be accompanied with a small report **in english**
  - The report should be of **8 pages maximum** following scientific papers
