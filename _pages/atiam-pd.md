@@ -8,22 +8,27 @@ sidebar:
   nav: "teaching-atiam"
 ---
 
-## Distributed musical informatics
+## Reactive programming - PureData
 
 #### Slides
 
-##### Open Sound Control (OSC) protocols
-[![](../images/pdf.png) Slides](../documents/esling:generic.6.osc.pdf)
+Here you will find the slides for the *reactive programming* course. It contains both the generic reactive programming theory and the applied Pure Data examples.
+
+##### Reactive programming
+[![](../images/pdf.png) Slides](../documents/esling:Cours_PD_ATIAM.pdf)
 
 *Supporting information*:
 
-  * Official [OSC website](http://opensoundcontrol.org)
-  * List of [implementations](http://opensoundcontrol.org/implementations)
+  * Official [Pure Data website](https://puredata.info/)
+  * The amazing [audio synthesis book](http://msp.ucsd.edu/techniques/latest/book.pdf) by Miller Puckette is a bible for implementing projects in Pure Data.
 
-##### High-Performance Computing (HPC) and parallelism
-[![](../images/pdf.png) Slides](../documents/esling:generic.6b.concurrence.pdf)
+##### Exercises and project
 
-*Suggested reading*:
+The basic Pure Data exercises can be found directly in the slides. The rest of the "project" is based on implementing a set of Pure Data externals. The complete explanations can be found in the following pdf
 
-  - Official [OpenMP implementation](http://openmp.org/wp/)
-  - Description of [MATLAB Parallel](http://www.mathworks.com/products/parallel-computing/)
+[![](../images/pdf.png) Project](../documents/esling:Project_PD.pdf)
+
+*How-to and annexes* are highly recommended reads, as they give you a full view over the external system and also a cheatsheet reference on types and SDK provided by Pure Data.
+
+  - Full guide on [how to write PD externals](../documents/esling:Project_Annex_HowTo.pdf)
+  - Cheat sheet and annex on [Pure Data SDK](../documents/esling:Project_Annex_PD.pdf)
