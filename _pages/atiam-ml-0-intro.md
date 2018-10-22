@@ -81,7 +81,8 @@ In order to get the baseline script to work, you need to have a working distribu
   - [SciPy](https://www.scipy.org/)
   - [Music21](http://web.mit.edu/music21/)
   - [Librosa](http://librosa.github.io/librosa/index.html)
-  - [Yaafe](http://yaafe.sourceforge.net/)
+  - [Yaafe](https://github.com/Yaafe/Yaafe)
+  - [PyTorch](https://pytorch.org/)
   - [Keras](https://keras.io/)
   
 We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
