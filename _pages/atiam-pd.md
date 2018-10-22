@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /atiam-distributed/
+permalink: /atiam-pd/
 author_profile: false
 share: true
 comments: true
