@@ -11,6 +11,7 @@ sidebar:
 This page contains the slides and assignments for parts of the musical informatics lesson presented at the ATIAM master in IRCAM.
 
   * [Data structure and algorithms](/atiam-fundamentals/)
+  * [Reactive programming - PureData](/atiam-pd/)
   * [Distributed musical informatics](/atiam-distributed/)
   * [Musical machine learning](/atiam-ml/)
 
