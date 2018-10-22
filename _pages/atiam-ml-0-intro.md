@@ -35,7 +35,7 @@ Get the baseline code for your language of choice :
 
 [Python zip file ![](../images/file.png)](../documents/Exercices_Python.zip)  
 
-Get the audio datasets from this [link ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/FTsaaAMFV1jEwsk)   
+Get the audio datasets from this [link ![](../images/file.png)](https://nubo.ircam.fr/index.php/s/oRHRMCYNDXc5cWJ)   
   
 **Unzip files and place `00_Datasets` along with other folders**  
 
