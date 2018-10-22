@@ -13,6 +13,7 @@ sidebar:
 ### ATIAM - M2
 
 * [Fundamentals - Data structures](/atiam-fundamentals/)
+* [Reactive programming - PureData](/atiam-pd/)
 * [OSC Protocol and distributed computing](/atiam-distributed/)
 * [Musical machine learning](/atiam-ml/)
 
