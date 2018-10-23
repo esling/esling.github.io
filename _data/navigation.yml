@@ -87,6 +87,8 @@ teaching-atiam:
     children:
       - title: "Fundamentals"
         url: /atiam-fundamentals/
+      - title: "Reactive - PureData"
+        url: /atiam-pd/
       - title: "Distributed music"
         url: /atiam-distributed/
       - title: "Machine learning"
