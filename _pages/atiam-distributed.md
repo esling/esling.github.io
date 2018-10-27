@@ -13,7 +13,7 @@ sidebar:
 #### Slides
 
 ##### Open Sound Control (OSC) protocols
-[![](../images/pdf.png) Slides](../documents/generic.6.osc.pdf)
+[![](../images/pdf.png) Slides](../documents/Generic.6.OSC.pdf)
 
 *Supporting information*:
 
@@ -21,7 +21,7 @@ sidebar:
   * List of [implementations](http://opensoundcontrol.org/implementations)
 
 ##### High-Performance Computing (HPC) and parallelism
-[![](../images/pdf.png) Slides](../documents/generic.6b.concurrence.pdf)
+[![](../images/pdf.png) Slides](../documents/Generic.6b.Concurrence.pdf)
 
 *Suggested reading*:
 
