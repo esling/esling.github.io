@@ -39,6 +39,7 @@ Cette unité d’enseignement permet aux étudiants d’appréhender le langage 
 
   - [Tutorial Git](https://try.github.io/levels/1/challenges/1)
   - [Cours programmation / Java débutant](https://openclassrooms.com/courses/apprenez-a-programmer-en-java) (partie 1 principalement)
+  - [Tutoriels Java](https://www.ukonline.be/programmation/java/tutoriel/principal.php)
   - Livres sur le développement logiciel :
     - Gang of Four, Design Patterns: Elements of Reusable Object-Oriented Software.
     - Andrew Hunt and David Thomas, The Pragmatic Programmer: From Journeyman to Master.
