@@ -34,6 +34,9 @@ Cette unité d’enseignement permet aux étudiants d’appréhender le langage 
 </div>{: .notice--blank}
 
 ## Ressources générales 
+
+<div markdown = "1">
+
   - [Tutorial Git](https://try.github.io/levels/1/challenges/1)
   - [Cours programmation / Java débutant](https://openclassrooms.com/courses/apprenez-a-programmer-en-java) (partie 1 principalement)
   - Livres sur le développement logiciel :
@@ -53,6 +56,8 @@ Cette unité d’enseignement permet aux étudiants d’appréhender le langage 
     - Langr Jeff and Hunt Andrew and Thomas David, Pragmatic unit testing in Java 8 with JUnit
   - Livres sur le développement WEB/Servlet :
     - B. Basham, K. Sierra, and B. Bates, Head First Servlets and JSP. Sebastopol, Calif.; Farnham: O’Reilly, 2003.
+
+</div>{: .notice--blank}
 
 ## Cours et exercices
 
