@@ -27,7 +27,11 @@ $(document).ready(function(){
 
 ## Descriptif de l'UE
 
+<div markdown = "1">
+
 Cette unité d’enseignement permet aux étudiants d’appréhender le langage Java qui est maintenant au coeur de l’informatique professionnelle. Devenu le language de référence pour le traitement multimédia, web client et serveur ainsi que des systèmes d’informations, celui-ci s’appuie sur une simplicité de syntaxe et une flexibilité issue de la programmation objet. L’unité permettra ainsi aux étudiants de partir des bases du langage Java puis à travers une formation rapide, leur permettre de développer leurs propres applications et interfaces jusqu’à l’intégration au développement d’applications plus ambitieuses dans le cadre d’un projet d’envergure. Après avoir appris les aspects essentiels de la programmation objets, l’unité se développera autour de mécanismes permettant d'accélérer les temps de développement de façon tangible et d'aborder des notions plus complexes : mécanismes d'exceptions, threads, réseau. Les étudiants iront par la suite jusqu’au développement d’une application sur des plateformes mobiles (telles que Androïd ou iPhone), de jeux vidéos (grâce à la librairie OpenGL pour Java) et pour le web réactif (à travers l’apprentissage des servlets). A noter que l’unité se termine par la réalisation d’un projet sur plusieurs mois qui appartiendra aux étudiants en fin d’année (leurs permettant ainsi de les rendre disponibles sur les stores d’applications des différentes plateformes).
+
+</div>{: .notice--blank}
 
 ## Cours et exercices
 
@@ -45,7 +49,7 @@ Cette unité d’enseignement permet aux étudiants d’appréhender le langage 
   - Semaine 9 : Slides - Exercice 
   - Semaine 10 : Slides - Exercice 
 
-</div>
+</div>{: .notice--blank}
 
 
 ## Responsables pédagogiques
@@ -60,7 +64,7 @@ Pierre Talbot (pierre.talbot@ircam.fr)
   * Contrôle continu	: Pour chaque séance de cours (3h), les étudiants développeront une application pratique des connaissances proposées qui mènera ainsi à un ensemble de mini-projet. Chaque mini-projet devra être rendu avant le début de la séance suivante, permettant ainsi de développer ses capacités de programmation.
   * Projet			: Dès le début du semestre, un projet devra être défini par groupes d’étudiants. Des sujets seront proposés par l’équipe pédagogique, mais l’étudiant reste entièrement libre de proposer son propre projet, les enseignants pouvant en modifier les modalités pour harmoniser la difficulté entre les différents groupes.
 
-</div>
+</div>{: .notice--blank}
 
 ## Programme par semaine
 
@@ -92,7 +96,7 @@ Pierre Talbot (pierre.talbot@ircam.fr)
   - __Séance question/réponse et retour sur les projets__ \\ Erreurs fréquemment commises sur les projets, ré-explication des notions mal comprises. Réponses aux questions des étudiants, notamment sur le design ou les patterns. 
   ** Mini-projet : module dans un application existante.**
 
-</div>
+</div>{: .notice--blank}
 
 ### 2ème semestre 
 
@@ -123,14 +127,17 @@ Pierre Talbot (pierre.talbot@ircam.fr)
   Gestion de l’avancement des projets. 
   ** Projet final **
 
-</div>
+</div>{: .notice--blank}
 
 ### Références bibliographiques
 
 <div markdown = "1">
 
-[1] Introduction à Java, par Patrick Niemeyer et Jonathan Knudsen. O'Reilly, 2002.\\
-[2] Java in a Nutshell. D. Flanagan. O’Reilly, 2000.\\
-[3] http ://java.sun.com\\
+[1] Introduction à Java, par Patrick Niemeyer et Jonathan Knudsen. O'Reilly, 2002.
 
-</div>
+[2] Java in a Nutshell. D. Flanagan. O’Reilly, 2000.
+
+[3] http ://java.sun.com
+
+
+</div>{: .notice--blank}
