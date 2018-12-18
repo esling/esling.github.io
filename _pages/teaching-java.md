@@ -33,6 +33,27 @@ Cette unité d’enseignement permet aux étudiants d’appréhender le langage 
 
 </div>{: .notice--blank}
 
+## Ressources générales 
+  - [Tutorial Git](https://try.github.io/levels/1/challenges/1)
+  - [Cours programmation / Java débutant](https://openclassrooms.com/courses/apprenez-a-programmer-en-java) (partie 1 principalement)
+  - Livres sur le développement logiciel :
+    - Gang of Four, Design Patterns: Elements of Reusable Object-Oriented Software.
+    - Andrew Hunt and David Thomas, The Pragmatic Programmer: From Journeyman to Master.
+    - Frederick Brooks, The Mythical Man-Month: Essays on Software Engineering.
+    - Robert C. Martin, Agile Software Development, Principles, Patterns, and Practices.
+  - Sites / Blogs :
+    - Forum d'entraide informatique [developpez.com](http://www.developpez.com/)
+    - [Stack Overflow](http://stackoverflow.com/)
+    - [Emmanuel Deloget, Architecture Orientée Objet](http://blog.emmanueldeloget.com/index.php?category/Ood)
+  - [Raccourcis clavier Netbeans](https://netbeans.org/project_downloads/usersguide/shortcuts-80.pdf)
+  - [Raccourcis clavier Eclipse](http://www.n0sl33p.org/dev/eclipse_keys.html)
+  - Livres sur l'écosystème Java :
+    - Maven: The complete reference et Maven by Example
+    - Appel Frank, Testing with JUnit
+    - Langr Jeff and Hunt Andrew and Thomas David, Pragmatic unit testing in Java 8 with JUnit
+  - Livres sur le développement WEB/Servlet :
+    - B. Basham, K. Sierra, and B. Bates, Head First Servlets and JSP. Sebastopol, Calif.; Farnham: O’Reilly, 2003.
+
 ## Cours et exercices
 
 <div markdown = "1">
@@ -55,7 +76,6 @@ Cette unité d’enseignement permet aux étudiants d’appréhender le langage 
 ## Responsables pédagogiques
 
 Philippe Esling (philippe.esling@ircam.fr)
-Pierre Talbot (pierre.talbot@ircam.fr)
 
 ## Modalités de contrôle des Connaissances
 
