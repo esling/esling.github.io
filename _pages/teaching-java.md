@@ -68,14 +68,29 @@ Pierre Talbot (pierre.talbot@ircam.fr)
 
 <div markdown = "1">
 
-  - __Présentation de l’UE et fondamentaux.__ \\ De la programmation impérative à l’OO. Kernel impératif de Java : types primitifs, opérateurs arithmétiques/logiques, structures de contrôles. Kernel de base d’une couche objet : constructeurs, attributs, méthodes. Notion d’encapsulation, visibilité (public + private). Passage de paramètre par référence. \\ ** Mini-Projet : Bataille de carte (console) **
-  - __Énumération, héritage et polymorphisme.__ \\ Retour sur la bataille de carte : Utilisation d’une énumération. Modèle mémoire (brève description du garbage collector – 1 ou 2 slides). Héritage avec les interfaces et classes abstraites, différences entre les deux. Visibilté protected. Overriding. Utilisation des interfaces/classes abstraites dans la librairie standard (exemple avec les ArrayList). \\ ** Mini-Projet : lecteur de fichiers complexe factorisé**
-  - __Règles des surcharges et surdéfinition.__ \\ Overloading et overriding, les règles des surcharges. \\ ** Mini-Projet : types de données complexes et jeux (cartes pokémon)**
-  - __Gestion des erreurs et architecture d’un projet__ \\ Gestion des erreurs (code de retour “à la C”, null, Optional<T>, exceptions), test unitaires (TDD). Retour sur le lecteur de fichier avec une gestion des erreurs réfléchie et tests. Diagramme de classe UML. Structure d’un projet (repertoires). \\ ** Mini-projet : algorithme génétique **
-  - __Interfaces Homme/Machine__ \\ Éléments de Communication Homme-Machine et création d’interfaces graphiques. \\ ** Mini-Projet : Jeu démineur**
-  - __Design patterns I__ \\ Introduction aux patterns avec le singleton. Retour sur les IHM avec observers. Mêler plusieurs design patterns : factory + observers. Quand utiliser un design pattern ? \\ ** Mini-Projet : Refactoring du projet sur les graphes en utilisant ces concepts. Implémentation d’un labyrinthe.**
-  - __Design patterns II__ \\ Design patterns strategy, decorator, visitor. Architecture MVC. Aperçu des différents patterns et overengineering. \\ **Séance projet 1**
-  - __Séance question/réponse et retour sur les projets__ \\ Erreurs fréquemment commises sur les projets, ré-explication des notions mal comprises. Réponses aux questions des étudiants, notamment sur le design ou les patterns. \\ ** Mini-projet : module dans un application existante.**
+  - __Présentation de l’UE et fondamentaux.__ 
+  De la programmation impérative à l’OO. Kernel impératif de Java : types primitifs, opérateurs arithmétiques/logiques, structures de contrôles. Kernel de base d’une couche objet : constructeurs, attributs, méthodes. Notion d’encapsulation, visibilité (public + private). Passage de paramètre par référence. 
+  ** Mini-Projet : Bataille de carte (console) **
+  - __Énumération, héritage et polymorphisme.__ 
+  Retour sur la bataille de carte : Utilisation d’une énumération. Modèle mémoire (brève description du garbage collector – 1 ou 2 slides). Héritage avec les interfaces et classes abstraites, différences entre les deux. Visibilté protected. Overriding. Utilisation des interfaces/classes abstraites dans la librairie standard (exemple avec les ArrayList). 
+  ** Mini-Projet : lecteur de fichiers complexe factorisé**
+  - __Règles des surcharges et surdéfinition.__ 
+  Overloading et overriding, les règles des surcharges. 
+  ** Mini-Projet : types de données complexes et jeux (cartes pokémon)**
+  - __Gestion des erreurs et architecture d’un projet__ 
+  Gestion des erreurs (code de retour “à la C”, null, Optional<T>, exceptions), test unitaires (TDD). Retour sur le lecteur de fichier avec une gestion des erreurs réfléchie et tests. Diagramme de classe UML. Structure d’un projet (repertoires). 
+  ** Mini-projet : Pokedeck **
+  - __Interfaces Homme/Machine__ 
+  Éléments de Communication Homme-Machine et création d’interfaces graphiques. 
+  ** Mini-Projet : Pokedeck **
+  - __Design patterns I__ 
+  Introduction aux patterns avec le singleton. Retour sur les IHM avec observers. Mêler plusieurs design patterns : factory + observers. Quand utiliser un design pattern ? 
+  ** Mini-Projet : Refactoring du projet sur les graphes en utilisant ces concepts. Implémentation d’un labyrinthe.**
+  - __Design patterns II__ 
+  Design patterns strategy, decorator, visitor. Architecture MVC. Aperçu des différents patterns et overengineering. 
+  **Séance projet 1**
+  - __Séance question/réponse et retour sur les projets__ \\ Erreurs fréquemment commises sur les projets, ré-explication des notions mal comprises. Réponses aux questions des étudiants, notamment sur le design ou les patterns. 
+  ** Mini-projet : module dans un application existante.**
 
 </div>
 
@@ -83,14 +98,30 @@ Pierre Talbot (pierre.talbot@ircam.fr)
 
 <div markdown = "1">
 
-  - __Modèles de programmation réseau et répartie.__ \\ Threads, exécution parallèle. Modèle client/serveur. \\ ** Mini-projet : Serveur de chat.**
-  - __Programmation web.__ \\ Problématique du web (beaucoup de technologies/langages à maitriser). Solution partielle en Java à base de servlets, Awt, JSP, programmation réactive. \\ ** Mini-projet : servlet réactif.**
-  - __Programmation graphique__ \\ Introduction à OpenGL \\ ** Mini-Projet : jeu vidéo colonization (part I)**
-  - __OpenGL et programmation jeux vidéos 3D__ \\ Concepts avancés en OpenGL \\ ** Mini-Projet : jeu vidéo colonization (part II)**
-  - __Plateformes mobiles (Androïd, iPhone, ...)__ \\ Contraintes des systèmes embarqués, introduction à la librairie LibGDX \\ ** Mini-Projet : jeu vidéo colonization (part III)**
-  - __Plateformes mobiles (Androïd, iPhone, …) - Concepts avancés__ \\ Développement avancé sur plateformes mobiles, communication Bluetooth et Wifi \\ ** Mini-Projet : jeu vidéo colonization (part IV)**
-  - __Concept avancé et Java 8. Projet et extensions.__ \\ Introduction aux concepts avancés et nouveautés de Java 8 tels que la reflection, introspection. Vers quoi tendent les langages ? Multi-paradigmes, notamment la programmation fonctionnelle. Gestion de l’avancement des projets et proposition d’extensions. \\ ** Projet final **
-  - __Projet Final et réponses aux questions.__ \\ Gestion de l’avancement des projets. \\ ** Projet final **
+  - __Modèles de programmation réseau et répartie.__
+  Threads, exécution parallèle. Modèle client/serveur.
+  ** Mini-projet : Serveur de chat.**
+  - __Programmation web.__ 
+  Problématique du web (beaucoup de technologies/langages à maitriser). Solution partielle en Java à base de servlets, Awt, JSP, programmation réactive. 
+  ** Mini-projet : servlet réactif.**
+  - __Programmation graphique__ 
+  Introduction à OpenGL 
+  ** Mini-Projet : jeu vidéo colonization (part I)**
+  - __OpenGL et programmation jeux vidéos 3D__ 
+  Concepts avancés en OpenGL 
+  ** Mini-Projet : jeu vidéo colonization (part II)**
+  - __Plateformes mobiles (Androïd, iPhone, ...)__ 
+  Contraintes des systèmes embarqués, introduction à la librairie LibGDX 
+  ** Mini-Projet : jeu vidéo colonization (part III)**
+  - __Plateformes mobiles (Androïd, iPhone, …) - Concepts avancés__ 
+  Développement avancé sur plateformes mobiles, communication Bluetooth et Wifi 
+  ** Mini-Projet : jeu vidéo colonization (part IV)**
+  - __Concept avancé et Java 8. Projet et extensions.__
+  Introduction aux concepts avancés et nouveautés de Java 8 tels que la reflection, introspection. Vers quoi tendent les langages ? Multi-paradigmes, notamment la programmation fonctionnelle. Gestion de l’avancement des projets et proposition d’extensions. 
+  ** Projet final **
+  - __Projet Final et réponses aux questions.__ 
+  Gestion de l’avancement des projets. 
+  ** Projet final **
 
 </div>
 
