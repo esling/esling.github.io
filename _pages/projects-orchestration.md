@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-# Computational music orchestration
+# Computational orchestration
 Orchestration is the subtle art of mixing instrumental properties. Among all techniques of musical composition, it has always remained an empirical activity. Trying to approach orchestration from a scientific angle involve the use of unformalized knowledge and imply to solve a NP-Complete combinatorial problem.
 
 Our approach is intended to search for sound combinations within instrument sample databases that best match a target timbre defined by the composer. However, former methods use either decomposition or matching pursuit algorithms, and therefore circumvent the combinatorial problem of orchestration. We propose an original approach for the discovery of relevant sound combinations, in which we explicitly address combinatorial issues and tackle the problem of temporal descriptors evolution.
