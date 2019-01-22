@@ -33,7 +33,7 @@ research-projects:
   - title: "Projects"
     url: /projects/
     children:
-      - title: "Artificial Creative Intelligence"
+      - title: "Creative AI"
         url: /projects-ai/
       - title: "Musical orchestration"
         url: /projects-orchestration/
