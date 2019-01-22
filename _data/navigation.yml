@@ -33,16 +33,14 @@ research-projects:
   - title: "Projects"
     url: /projects/
     children:
-      - title: "Time series mining"
-        url: /projects-ts/
-      - title: "Creative intelligence"
+      - title: "Artificial Creative Intelligence"
         url: /projects-ai/
       - title: "Musical orchestration"
         url: /projects-orchestration/
+      - title: "Time series mining"
+        url: /projects-ts/
       - title: "Ecological monitoring"
         url: /projects-monitoring/
-      - title: "Heart diseases"
-        url: /projects-heart/
     
   - title: "Supervision"
     url: /supervision/
