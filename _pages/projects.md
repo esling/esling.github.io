@@ -2,6 +2,8 @@
 layout: single
 permalink: /projects/
 author_profile: false
+share: true
+comments: true
 sidebar:
   nav: "research-projects"
 ---
@@ -19,6 +21,7 @@ $(document).ready(function(){
 </script>
 
 <div markdown = "1">
+# Research projects
 ## [Artificial Creative Intelligence](/projects-ai) (Creative AI)
 The research project carried by the ACIDS team at IRCAM seeks to model musical creativity by extending variational learning approaches towards the use of multivariate and multimodal time series. Our major object of study lies in the properties and perception of musical orchestration. Orchestration is the subtle art of writing musical pieces for orchestra, by combining the spectral properties of each instrument to achieve a particular sonic goal. In this context, the multivariate analysis of temporal processes is required given the inherent multidimensional nature of instrumental mixtures. Furthermore, time series need to be scrutinized at variable time scales (termed here granularities) as a wealth of time scales co-exist in music (from the identity of single notes up to the structure of entire pieces). Furthermore, orchestration lies at the exact intersection between the symbol (musical writing) and signal (audio recording) representations.
 
