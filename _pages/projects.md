@@ -5,7 +5,6 @@ author_profile: false
 sidebar:
   nav: "research-projects"
 ---
-
 <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -20,11 +19,10 @@ $(document).ready(function(){
 </script>
 
 <div markdown = "1">
-
-### [Artificial Creative Intelligence](/projects-ai)
+# [Artificial Creative Intelligence](/projects-ai)
 We present here an innovative problem that can be casted into a new approach merging multiobjective optimization and time series matching algorithms, called //MultiObjective Time Series// (MOTS) matching. We formally state this novel problem that could lead to a whole range of applications in several fields of research and report an efficient implementation. This approach allowed in the scope of sound samples querying to cope with the multidimensional nature of timbre perception and also to obtain a whole set of efficient propositions rather than a single best solution.
 
-### [Musical orchestration](/projects-orchestration/)
+# [Musical orchestration](/projects-orchestration/)
 Orchestration is the subtle art of mixing instrumental properties. Among all techniques of musical composition, it has always remained an empirical activity. Our approach is intended to search for sound combinations within instrument sample databases that best match a target timbre defined by the composer. We propose an original approach for the discovery of relevant sound combinations, in which we explicitly address combinatorial issues and tackle the problem of temporal descriptors evolution.
 
 ### Multiobjective time series matching
