@@ -22,14 +22,27 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-Orchestration is the subtle art of mixing instrumental properties. Among all techniques of musical composition, it has always remained an empirical activity. Our approach is intended to search for sound combinations within instrument sample databases that best match a target timbre defined by the composer. We propose an original approach for the discovery of relevant sound combinations, in which we explicitly address combinatorial issues and tackle the problem of temporal descriptors evolution.
-
-### Musical orchestration
+# Computational music orchestration
 Orchestration is the subtle art of mixing instrumental properties. Among all techniques of musical composition, it has always remained an empirical activity. Trying to approach orchestration from a scientific angle involve the use of unformalized knowledge and imply to solve a NP-Complete combinatorial problem.
 
 Our approach is intended to search for sound combinations within instrument sample databases that best match a target timbre defined by the composer. However, former methods use either decomposition or matching pursuit algorithms, and therefore circumvent the combinatorial problem of orchestration. We propose an original approach for the discovery of relevant sound combinations, in which we explicitly address combinatorial issues and tackle the problem of temporal descriptors evolution.
 
-### Problem definition
+## Research projects
+
+ACTOR
+MAKIMOno
+
+## Research topics
+
+As this problem lies at the crossroads of several research fields, we can ask ourselves to what extent this problem can be defined. The following figure depicts the various link between different parts of the orchestration problem.
+
+;#;
+{{:esling:modules.jpg|}}
+;#;
+
+We can see here that the orchestration problem have several ramifications in various research fields ranging from sound perception to combinatorial optimization. 
+
+## Problem definition
 
 The goal of computational orchestration is to find the mixtures of instruments that best match a given timbre. In our system the user speciﬁes the instruments he would like to use (constraints) and the characteristics of the sound to be produced (a sound target). This target is deﬁned as a set of features coming either from a sound analysis or from a compositional process. Then, an orchestration engine uses an instrumental knowledge database (features database) created by the analysis and structuring of large sound sample databases, to suggest instruments notes combinations (orchestration proposals) that sound closest the target. More precisely, the procedure searches for instrumental combinations whose features best match the target’s features.
 
@@ -45,15 +58,6 @@ The complexity of this problem arise from the exponential number of possible ins
   * Handling the temporal aspects of sound structures.
   * Linking symbolic (writing) and signal (timbre) aspects.
 
-### Research topics
-
-As this problem lies at the crossroads of several research fields, we can ask ourselves to what extent this problem can be defined. The following figure depicts the various link between different parts of the orchestration problem.
-
-;#;
-{{:esling:modules.jpg|}}
-;#;
-
-We can see here that the orchestration problem have several ramifications in various research fields ranging from sound perception to combinatorial optimization. 
 
 ### Existing architecture
 
