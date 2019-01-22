@@ -36,10 +36,6 @@ MAKIMOno
 
 As this problem lies at the crossroads of several research fields, we can ask ourselves to what extent this problem can be defined. The following figure depicts the various link between different parts of the orchestration problem.
 
-;#;
-{{:esling:modules.jpg|}}
-;#;
-
 We can see here that the orchestration problem have several ramifications in various research fields ranging from sound perception to combinatorial optimization. 
 
 ## Problem definition
@@ -63,12 +59,6 @@ The complexity of this problem arise from the exponential number of possible ins
 
 In order to solve the combinatorial problem, we have to use a fast exploration procedure. Moreover, we have to cope with the multidimensional aspect of timbre perception. Therefore, our system is based on a multi-objective genetic search algorithm. The following figure depicts the algorithmic workflow of our system.
 
-;#;
-{{:esling:orchidalgorithm.jpg|}}
-;#;
-
-
-
 ### Temporal structures
 
 All previous works on this subject have focused on vertical orchestration, analyzing only the sustained part of instruments and thus completely discarding the temporal evolution of sounds. However, the territory of timbre is not confined to a static structure of proportions. It rather comprises “variation laws” that regulate the interaction between frequency and amplitude functions in an evolving context over time. It is therefore essential to move to a higher level of modeling, by understanding the micro-temporal qualities of timbre in order to capture the sound as a spectro-temporal structure. Advantages of this approach are twofold. First, the generated orchestration may be considered more realistic as it accounts for the whole spectro-temporal structure. Second, it allows the use of evolving playing modes like crescendo, glissando, multiphonics and so on.
@@ -77,18 +67,13 @@ All previous works on this subject have focused on vertical orchestration, analy
 
 In order to take temporal evolution into account, we first attempted to use a single temporal descriptor based on a Gaussian Mixture Model (GMM). However, this "holistic" descriptor seemed to make the algorithm stray too far from its original multiobjective spirit. Furthermore, model calculations were computationally too intense. We therefore decided to turn ourselves to time series analysis techniques in order to provide more efficient storage and fast querying and computations.
 
-We redirect the interested readers to our webpage and article on time series mining which explains the time series technique and distance measure used in our system.\\
+We redirect the interested readers to our webpage and article on time series mining which explains the time series technique and distance measure used in our system.
 
-ESLING Philippe, AGON Carlos "Time series data mining and analysis", ACM Computing Surveys 2011 (Accepted with modifications).\\
-[[esling/ipad.html|Intelligent sound samples database]]
+ESLING Philippe, AGON Carlos "Time series data mining and analysis", ACM Computing Surveys 2011 (Accepted with modifications).
 
 ### Addition functions
 
 One of the biggest problem that we stumble upon is that descriptors used by our system are not linearly additive. Even if in the scalar case, the error is not too important, for the temporal case, the error function seems to be bursting a lot more. We analyzed over 10.000 instrumental mixtures for cardinalities going from 2 to 10 instruments. The following picture depicts the resulting prediction error for spectral centroid and total energy.
-
-;#;
-{{:esling:additionfuncs.jpg|}}
-;#;
 
 As we can see here, the addition functions are not robust, especially for the temporal case. But the linear drift is encouraging as maybe only part of the equation seems to be missing. In fact, a deeper analysis of these large-scale experiments show some wide error “anomalies” that seems to widely augment the prediction error.
 
@@ -96,10 +81,5 @@ As we can see here, the addition functions are not robust, especially for the te
 ### Comparison functions
 
 Instead of using a simple Euclidean norm (as it is the case for scalar descriptors), we use a more subtle notion of similarity for comparing time series. The idea is to allow for non-linear warping on the time axis.
-
-;#;
-{{:esling:dtwvseuclid.jpg|}}
-;#;
-
 
 </div>{: .notice--blank}
