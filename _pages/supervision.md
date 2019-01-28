@@ -10,6 +10,8 @@ sidebar:
 
 {% include toc %}
 
+# Supervision
+
 <div markdown = "1">
 
 ## PhD students
@@ -32,7 +34,7 @@ Adrien Bardet - ANR CIFRE / Arturia - 2019
 [Axel Chemla--Romeu-Santos](https://www.ircam.fr/person/axel-chemla-romeu-santos/) - PhD - U.Milan - 2016  
 *Generation of embedding spaces from audio signals*
 
-# Awarded PhD
+## Awarded PhD
 
 [Léopold Crestel](https://qsdfo.github.io/LOP/) - EDITE Grant - 2015  
 *Real-time generation of orchestral works through deep temporal learning*.  
@@ -42,7 +44,7 @@ Adrien Bardet - ANR CIFRE / Arturia - 2019
 *Non-deterministic Temporal Constraint Calculus (NTCC) for big musical data*  
 **Defended on 10/6/2018**
 
-# Masters internships
+## Masters internships
 Cyran Aouameur - Master 2 ATIAM - EDITE - 2018  
 *Drum generation with variational auto-regressive models*  
 Clément Tabary - Master 1 Polytechnique - 2018  
@@ -72,7 +74,7 @@ Maria Manonne - Master 2 ATIAM - EDITE - 2012
 Evangelia Kolioupolou - Master 2 ATIAM - EDITE - 2012  
 *Analysis and classification of sound morphology*  
 
-# Engineers
+## Engineers
 
 Antoine Bouchereau - Ingénieur ENSIEE  
 *Algorithmes d'orchestration supportés par BerkeleyDB*
@@ -80,18 +82,18 @@ Antoine Bouchereau - Ingénieur ENSIEE
 Jordan Gerber - Ingénieur du son - Belgique  
 *Multiobjective techniques for sound retrieval*
 
-# Student projects
+## Student projects
 
-Maxime Arbisa, Pierre Mahe, Samuel Bell-Bell, Léo Thirifays
-Master 2 ATIAM - Projet PAM
+Maxime Arbisa, Pierre Mahe, Samuel Bell-Bell, Léo Thirifays  
+Master 2 ATIAM - Projet PAM  
 *Automatic mashup and playlist generator through symbolic similarity*
 
-Quentin Fresnel, Adrien Ycart, Ken Deguernel, Jules Moreau, Xavier Favory
-Master 2 ATIAM - Projet PAM
+Quentin Fresnel, Adrien Ycart, Ken Deguernel, Jules Moreau, Xavier Favory  
+Master 2 ATIAM - Projet PAM  
 *Molecular clock synthesis through multiple sequence alignment*
 
-Jérôme Rahault, Maude Bellamy, Simon Tchernia
-Master 1 STL - Projet STL
+Jérôme Rahault, Maude Bellamy, Simon Tchernia  
+Master 1 STL - Projet STL  
 *Co-generation de musique et jeux vidéos*
 
 </div>{: .notice--blank}
