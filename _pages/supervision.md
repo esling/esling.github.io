@@ -10,9 +10,9 @@ sidebar:
 
 {% include toc %}
 
-# Ongoing PhD
-
 <div markdown = "1">
+
+# Ongoing PhD
 
 Axel Chemla - PhD - Milan - 2016  
 *Generation of embedding spaces from audio signals*
@@ -22,8 +22,6 @@ Léopold Crestel - PhD - EDITE - 2015
 
 Pierre Talbot - PhD - EDITE - 2014  
 *Non-deterministic Temporal Constraint Calculus (NTCC) for big musical data*
-
-</div>{: .notice--blank}
 
 # Masters internships
 
@@ -94,7 +92,7 @@ Encadrement à 100%
 
 01/03/2011 - 31/06/2011
 
-Projets étudiants
+# Student projects
 
 Maxime Arbisa, Pierre Mahe, Samuel Bell-Bell, Léo Thirifays
 
@@ -125,3 +123,5 @@ Master 1 STL - Projet STL
 Encadrement à 100%
 
 01/01/2014 - 31/05/2014
+
+</div>{: .notice--blank}
