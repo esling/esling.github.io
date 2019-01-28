@@ -14,73 +14,62 @@ sidebar:
 
 # PhD students
 
-Adrien Bardet - PhD - ANR CIFRE / Arturia - EDITE - 2019
+Adrien Bardet - ANR CIFRE / Arturia - 2019\
 *Parameter optimization learning for commercial synthesizers*
 
-Théis Bazin - PhD - ANR CIFRE / SonyCSL - EDITE - 2019
+Théis Bazin - ANR CIFRE / SonyCSL - 2019\
 *Graph-based methods for modular synthesizer learning*
 
-Mathieu Prang - PhD - ANR - EDITE - 2018
+Mathieu Prang - ANR MAKIMOno - 2018\
 *Multimodal signal-symbol learning for music generation*
 
-Tristan Carsault - PhD - EDITE - 2017
+Tristan Carsault - EDITE grant - 2017\
 *Multi-scale structure inference and prediction for musical co-improvisation*
 
-Adrien Bitton - PhD - ENS - EDITE - 2017
+Adrien Bitton - ENS grant - 2017\
 *Manifold learning for sound description and generation*
 
-Axel Chemla - PhD - Milan - 2016  
+Axel Chemla - PhD - U.Milan - 2016\
 *Generation of embedding spaces from audio signals*
 
 # Awarded PhD
 
-Léopold Crestel - PhD - EDITE - 2015  
+[Léopold Crestel](https://qsdfo.github.io/LOP/) - EDITE Grant - 2015\  
 *Real-time generation of orchestral works through deep temporal learning*.
+**Defended on 15/12/2018**
 
-Pierre Talbot - PhD - EDITE - 2014  
+[Pierre Talbot](http://hyc.io/) - PhD - EDITE - 2014\
 *Non-deterministic Temporal Constraint Calculus (NTCC) for big musical data*
+**Defended on 10/6/2018**
 
 # Masters internships
-Cyran Aouameur - Master 2 ATIAM - EDITE - 2018
+Cyran Aouameur - Master 2 ATIAM - EDITE - 2018\
 *Drum generation with variational auto-regressive models*
-
-Clément Tabary - Master 1 Polytechnique - 2018
+Clément Tabary - Master 1 Polytechnique - 2018\
 *Style transfer with multimodal latent networks*
-
-Evgenia Eremeeva - Master 2 ATIAM - EDITE - 2017
+Evgenia Eremeeva - Master 2 ATIAM - EDITE - 2017\
 *Multiverse networks for musical style transfer*
-
-Mathieu Prang - Master 2 ATIAM - EDITE - 2017
+Mathieu Prang - Master 2 ATIAM - EDITE - 2017\
 *Multimodal signal-symbol learning for music generation*
-
-Tristan Carsault - Master 2 ATIAM - EDITE - 2017
+Tristan Carsault - Master 2 ATIAM - EDITE - 2017\
 *Multi-scale structure inference and prediction for musical co-improvisation*
-
-Theis Bazin - Master 2 ATIAM - EDITE - 2016  
+Theis Bazin - Master 2 ATIAM - EDITE - 2016\
 *Learning prediction in an automatic improvisation framework*
-
-Emmanuel Pariente - Master 2 ATIAM - EDITE - 2016  
+Emmanuel Pariente - Master 2 ATIAM - EDITE - 2016\
 *Data augmentations and embedding spaces for musical orchestration*
-
-Léopold Crestel - Master 2 ATIAM - EDITE - 2015  
+Léopold Crestel - Master 2 ATIAM - EDITE - 2015\
 *Learning variable time granularities through deep boltzmann machines*
-
-Alice Cohen-Adria - Master 1 Androide - UPMC - 2014  
+Alice Cohen-Adria - Master 1 Androide - UPMC - 2014\
 *Auto-encoders for Time Series Classification (TSC)*
-
-Pierre Talbot - Master 2 STL - EDITE - 2014  
+Pierre Talbot - Master 2 STL - EDITE - 2014\
 *A compiler for Non-deterministic Temporal Constraint Calculus (NTCC)*
-
-Henri NG - Master 2 STL - EDITE - 2013  
+Henri NG - Master 2 STL - EDITE - 2013\
 *Automatic knowledge inference from multivariate time series for musical orchestration*
-
-Marion Pilte - Master 1 - Polytechnique - 2013  
+Marion Pilte - Master 1 - Polytechnique - 2013\
 *Orchestral pieces generation through constraints networks*
-
-Maria Manonne - Master 2 ATIAM - EDITE - 2012
+Maria Manonne - Master 2 ATIAM - EDITE - 2012\
 *Non-Markovianity in temporal processes for orchestration*
-
-Evangelia Kolioupolou - Master 2 ATIAM - EDITE - 2012
+Evangelia Kolioupolou - Master 2 ATIAM - EDITE - 2012\
 *Analysis and classification of sound morphology*
 
 # Engineers
