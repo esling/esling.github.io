@@ -12,24 +12,24 @@ sidebar:
 
 <div markdown = "1">
 
-# PhD students
+## PhD students
 
 Adrien Bardet - ANR CIFRE / Arturia - 2019  
 *Parameter optimization learning for commercial synthesizers*
 
-Théis Bazin - ANR CIFRE / SonyCSL - 2019  
+[Théis Bazin](https://csl.sony.fr/team/theis-bazin/) - ANR CIFRE / SonyCSL - 2019  
 *Graph-based methods for modular synthesizer learning*
 
-Mathieu Prang - ANR MAKIMOno - 2018  
+[Mathieu Prang](https://www.ircam.fr/person/mathieu-prang/) - ANR MAKIMOno - 2018  
 *Multimodal signal-symbol learning for music generation*
 
-Tristan Carsault - EDITE grant - 2017  
+[Tristan Carsault](https://www.ircam.fr/person/tristan-carsault/) - EDITE grant - 2017  
 *Multi-scale structure inference and prediction for musical co-improvisation*
 
-Adrien Bitton - ENS grant - 2017  
+[Adrien Bitton](https://www.ircam.fr/person/adrien-bitton/) - ENS grant - 2017  
 *Manifold learning for sound description and generation*
 
-Axel Chemla - PhD - U.Milan - 2016  
+[Axel Chemla--Romeu-Santos](https://www.ircam.fr/person/axel-chemla-romeu-santos/) - PhD - U.Milan - 2016  
 *Generation of embedding spaces from audio signals*
 
 # Awarded PhD
