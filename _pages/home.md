@@ -22,10 +22,10 @@ $(document).ready(function(){
 I am currently an associate professor and research in machine learning and artificial intelligence applied to music at [IRCAM](http://www.ircam.fr), where I am head of the [ACIDS research group](http://acids.ircam.fr). I teach computer science at [Paris 6 Unversity (UPMC)](http://www.upmc.fr) and machine learning in the [ATIAM](http://atiam.ircam.fr) Masters. I also participate in ecological monitoring and metagenetics research with [Geneva university (UNIGE)](http://genev.unige.ch/research/people/Philippe-Esling).
 
 * [Research](/research/)
+  * [Projets](/projects/)
   * [Publications](/publications/)
   * [Team GitHub](http://acids-ircam.github.com)
 * [Teaching](/teaching/)
-* [Projets](/projects/)
 * [Software](/software/)
 
 ## Contact information
