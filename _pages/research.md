@@ -9,16 +9,19 @@ sidebar:
 <div markdown = "1">
 
 # Research
-I am currently an associate professor and research in data mining and artificial intelligence at [IRCAM](http://www.ircam.fr) within the [Musical representations](http://repmus.ircam.fr/) and teaching computer science at [Paris 6 Unversity (UPMC)](http://www.upmc.fr). I also participate in ecological monitoring research with [Geneva university (UNIGE)](http://genev.unige.ch/research/people/Philippe-Esling).
+I am currently an associate professor and research in data mining and artificial intelligence at [IRCAM](http://www.ircam.fr), where I am head of the [ACIDS research group](http://acids.ircam.fr) within the [Musical representations](http://repmus.ircam.fr/) and teaching computer science at [Paris 6 Unversity (UPMC)](http://www.upmc.fr). I also participate in ecological monitoring research with [Geneva university (UNIGE)](http://genev.unige.ch/research/people/Philippe-Esling).
 
 You can find detailed lists of  
 
-1. [Scientific publications](/publications/) and other papers.
-2. [Projects](/projects/) and main research axes.
+1. [Projects](/projects/) and main research axes.
+2. [Scientific publications](/publications/) and other papers.
 3. [Supervision](/supervision/) of PhD and students.
 
 
 ## Selected publications  
+
+**Esling P.**, Chemla--Romeu-Santos A. & Bitton A. *Generative timbre spaces: regularizing variational auto-encoders with perceptual metrics*, 19th International Society for Music Information Retrieval (ISMIR2018) Conference. **Best presentation award**
+[![](../images/pdf.png)](https://arxiv.org/pdf/1805.08501.pdf) [![](../images/html.png)](https://acids-ircam.github.io/variational-timbre/) [![](../images/file.png)]() [[Blog]](https://acids-ircam.github.io/variational-timbre/) 
 
 **Esling P.**, Lejzerowicz F. & Pawlowski J. *High-throughput accuracy for multiplex amplicon sequencing*, Nucleic Acid Research, February 17, 2015 doi:10.1093/nar/gkv107. (2015). IF: 8.055  
 [![](../images/pdf.png)](https://www.researchgate.net/profile/Philippe_Esling/publication/272513307_Accurate_multiplexing_and_filtering_for_high-throughput_amplicon-sequencing/links/54eb3c0c0cf25ba91c864edb.pdf) [![](../images/html.png)](http://nar.oxfordjournals.org/content/early/2015/02/16/nar.gkv107.full) [![](../images/file.png)]() [[Blog]](/blog/)  
