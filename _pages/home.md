@@ -24,7 +24,7 @@ I am currently an associate professor and research in machine learning and artif
 * [Research](/research/)
   * [Projets](/projects/)
   * [Publications](/publications/)
-  * [Team GitHub](http://acids-ircam.github.com)
+  * [Team GitHub](https://github.com/acids-ircam)
 * [Teaching](/teaching/)
 * [Software](/software/)
 
