@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-# HDR Application supporting webpage
+# HDR Application
 
 Cette page contient les éléments de soutien pour la candidature de
 Philippe Esling aux fonctions de maître de conférences pour la Section 27 (Informatique).
@@ -29,38 +29,37 @@ Pour toute information complémentaire, contacter\\
 (+33) 6.32.58.91.08\\
 <esling@ircam.fr>\\
 
-==== Document principal ====
+## Application file
 
 Le dossier contient les informations principales d'enseignement, recherche et charges administratives ainsi que les différentes pièces complémentaires.\\
 
 Dossier de qualification - Philippe Esling\\
 {{:esling:dossier_esling.pdf| - Dossier}}\\
 
+## PhD documents
 
-==== Doctorat ====
-
-** Multiobjective time series matching **
+### Multiobjective time series matching
 
 Lien vers le manuscript de thèse complet\\
-{{:esling:esling_thesis.pdf.zip| - Version PDF zippée}}\\
+[Zipped PDF](http://repmus.ircam.fr/_media/esling/esling_thesis.pdf.zip)
 
-** Rapports **
+### Rapports
 
 Rapports de pré-soutenance des rapporteurs officiels\\
-{{:esling:rapport_ammari.pdf| - Habib Ammari}}\\
-{{:esling:rapport_slaney.pdf| - Malcolm Slaney}}\\
+- [Habib Ammari](http://repmus.ircam.fr/_media/esling/rapport_ammari.pdf)
+- [Malcolm Slaney](http://repmus.ircam.fr/_media/esling/rapport_slaney.pdf)
 
 Rapports de soutenance du jury\\
-{{:esling:rapport_jury.pdf| - Rapport final}}\\
+[Rapport final](http://repmus.ircam.fr/_media/esling/rapport_jury.pdf)
 
 Attestation de diplôme de doctorat\\
-{{:esling:attestation_diplome.pdf| - Diplôme}}\\
+[Diploma](http://repmus.ircam.fr/_media/esling/attestation_diplome.pdf)
 
 ** Jury **
 
 Pour chaque membre du jury, un lien est disponible vers sa page personnelle, contenant son CV et ses activités de recherche.\\
-|[[http://slaney.org/malcolm/pubs.html|Malcolm Slaney]]|Rapporteur|Professor|Stanford University|
-|[[http://www.cmap.polytechnique.fr/~ammari/|Habib Ammari]]|Rapporteur|Directeur de recherche|ENS - CNRS|
+|[Malcolm Slaney](http://slaney.org/malcolm/pubs.html)|Rapporteur|Professor|Stanford University|
+|[Habib Ammari](http://www.cmap.polytechnique.fr/~ammari/)]|Rapporteur|Directeur de recherche|ENS - CNRS|
 |[[http://repmus.ircam.fr/agon|Carlos Agon]]|Directeur|Professeur des universités|UPMC|
 |[[http://www.math.jussieu.fr/~allouche/|Jean-Paul Allouche]]|Examinateur|Directeur de recherche|CNRS - UPMC|
 |[[http://www.csl.sony.fr/~pachet/|François Pachet]]|Examinateur|Senior Researcher|Sony CSL|
