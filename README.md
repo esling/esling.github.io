@@ -1,6 +1,6 @@
 # Website for Pr. Philippe Esling
 
-This website is made with [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
+This website is made with [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) and the website ows completely to them.
 
 [![GitHub release](https://img.shields.io/github/release/mmistakes/minimal-mistakes.svg)](https://github.com/mmistakes/minimal-mistakes/releases) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
 
