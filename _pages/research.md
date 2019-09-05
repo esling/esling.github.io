@@ -36,6 +36,8 @@ You can download the device [here](https://github.com/acids-ircam/flow_synthesiz
 
 Timbre spaces have been used to study the relationships between different instrumental timbres,based on perceptual ratings. However, they provide limited interpretability, no generative capabilityand no generalization. Here, we show that variational auto-encoders (VAE) can alleviate these limitations, by regularizing their latent space during training in order to ensure that the latent space of audio follows the same topology as that of the perceptual timbre space. Hence, we bridge audio analysis, perception and synthesis into a single system.
 
+You can download the [source code](https://github.com/acids-ircam/variational-timbre) or find more information on the [dedicated webpage](https://acids-ircam.github.io/variational-timbre/), or read the [full research paper](https://arxiv.org/abs/1805.08501)
+
 ### Automatic orchestration
 
 ## Selected publications  
