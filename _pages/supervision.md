@@ -16,8 +16,11 @@ sidebar:
 
 ## PhD students
 
-Adrien Bardet - ANR CIFRE / Arturia - 2019  
-*Parameter optimization learning for commercial synthesizers*
+[Antoine Caillon](https://www.ircam.fr/person/douwes-constance/) - EDITE Grant - 2019  
+*Structured prediction learning for granular synthesis*
+
+[Constance Douwes](https://www.ircam.fr/person/douwes-constance/) - EDITE Grant - 2019  
+*Hierarchical variational learning for audio synthesis*
 
 [Théis Bazin](https://csl.sony.fr/team/theis-bazin/) - ANR CIFRE / SonyCSL - 2019  
 *Graph-based methods for modular synthesizer learning*
