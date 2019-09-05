@@ -17,6 +17,26 @@ You can find detailed lists of
 2. [Scientific publications](/publications/) and other papers.
 3. [Supervision](/supervision/) of PhD and students.
 
+## Selected projects
+
+### Flow synthesizer
+
+<img align="left" src="../images/research/flow_paper_workflow_full.svg">
+
+Sound synthesizers are pervasive in music and they now even entirely define new music genres. However, their complexity and sets of parameters renders them difficult to master. We created an innovative generative probabilistic model that learns an invertible mapping between a continuous auditory latent space of a synthesizer audio capabilities and the space of its parameters. We approach this task using variational auto-encoders and normalizing flows Using this new learning model, we can learn the principal macro-controls of a synthesizer, allowing to travel across its organized manifold of sounds, performing parameter inference from audio to control the synthesizer with our voice, and  even address semantic dimension learning where we find how the controls fit to given semantic concepts, all within a single model. These ideas have been implemented in a real-time plugin as a Max4Live device
+
+<img align="left" src="../images/research/flow_synth.jpeg">
+
+You can download the device [here](https://github.com/acids-ircam/flow_synthesizer) along with the [source code](https://github.com/acids-ircam/flow_synthesizer) or find more information on the [dedicated webpage](https://acids-ircam.github.io/flow_synthesizer/), or read the [full research paper](https://arxiv.org/abs/1907.00971)
+
+### Generative timbre spaces
+##### Best presentation award at ISMIR 2019
+
+<img align="left" src="../images/research/generative_timbre_0.png">
+
+Timbre spaces have been used to study the relationships between different instrumental timbres,based on perceptual ratings. However, they provide limited interpretability, no generative capabilityand no generalization. Here, we show that variational auto-encoders (VAE) can alleviate these limitations, by regularizing their latent space during training in order to ensure that the latent space of audio follows the same topology as that of the perceptual timbre space. Hence, we bridge audio analysis, perception and synthesis into a single system.
+
+### Automatic orchestration
 
 ## Selected publications  
 
