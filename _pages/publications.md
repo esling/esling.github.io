@@ -15,8 +15,6 @@ Find me on academia sites
 
 ## International Journals
 
-### 2015
-
 **Esling P.**, Lejzerowicz F. & Pawlowski J. *High-throughput accuracy for multiplex amplicon sequencing*, Nucleic Acid Research, February 17, 2015 doi:10.1093/nar/gkv107. (2015). IF: 8.055  
 [![](../images/pdf.png)](https://www.researchgate.net/profile/Philippe_Esling/publication/272513307_Accurate_multiplexing_and_filtering_for_high-throughput_amplicon-sequencing/links/54eb3c0c0cf25ba91c864edb.pdf) [![](../images/html.png)](http://nar.oxfordjournals.org/content/early/2015/02/16/nar.gkv107.full) [![](../images/file.png)]() [[Blog]](/blog/)  
 
