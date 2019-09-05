@@ -10,6 +10,8 @@ sidebar:
 
 <div markdown = "1">
 
+# Teaching
+
 ## ATIAM - M2
 
 * [Fundamentals - Data structures](/atiam-fundamentals/)
