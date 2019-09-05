@@ -40,6 +40,12 @@ You can download the [source code](https://github.com/acids-ircam/variational-ti
 
 ### Automatic orchestration
 
+#### Orchids
+The orchids software is the first complete system for abstract and temporal computer-assisted orchestration and timbral mixture optimization. It provides a set of algorithms and features to reconstruct any time-evolving target sound with a combination of acoustic instruments, given a set of psychoacoustic criteria. It can help composers to achieve unthinkable timbral colors by providing efficient sets of solutions that best match a sound target. Find more information [on the dedicated webpage](http://forumnet.ircam.fr/product/orchids-en/)
+
+#### Live Orchestral Piano
+We recently developed the first live orchestral piano (LOP) system. The system provides a way to compose music with a full classical orchestra in real-time by simply playing on a MIDI keyboard. Our approach is to perform statistical inference on a [corpus of midi files](https://qsdfo.github.io/LOP/database.html). This corpus contains piano scores and their orchestration by famous composers.This objective might seem too ambitious : learning orchestration through the mere observation of scores ? We believe that by observing the correlation between piano scores and corresponding orchestrations made by famous composers, we might be able to infer the spectral kwnoledge of composers. The probabilistic models we investigate are neural networks with conditional and temporal structures. Find more information [on this webpage](https://qsdfo.github.io/LOP/)
+
 ## Selected publications  
 
 **Esling P.**, Masuda, N. Bardet, A. Despres, R. Chemla--Romeu-Santos A. *Universal audio synthesizer control with normalizing flows*, 22nd International Digital Audio Effects (DAFx2019) Conference. 
