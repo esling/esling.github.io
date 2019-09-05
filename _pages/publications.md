@@ -5,6 +5,9 @@ author_profile: false
 sidebar:
   nav: "research-publications"
 ---
+
+<div markdown = "1">
+
 Find me on academia sites  
 [Google Scholar](https://scholar.google.com/citations?user=soZrPYAAAAAJ&hl=en)  
 [ResearchGate](https://www.researchgate.net/profile/Philippe_Esling)  
@@ -110,3 +113,5 @@ Lecroq B., Lejzerowicz F., **Esling P.**, Pawlowski J. *Ultra-deep sequencing of
 
 ### 2009
 **Esling P.** Agon C. *Orchestration et mixtures sonores*, Journées Jeunes Chercheurs en Acoustique Audition et Signal, Marseille, 2009.
+
+</div>{: .notice--blank}
