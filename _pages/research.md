@@ -20,6 +20,9 @@ You can find detailed lists of
 
 ## Selected publications  
 
+**Esling P.**, Masuda, N. Bardet, A. Despres, R. Chemla--Romeu-Santos A. *Universal audio synthesizer control with normalizing flows*, 22nd International Digital Audio Effects (DAFx2019) Conference. 
+[![](../images/pdf.png)](https://arxiv.org/abs/1907.00971) [![](../images/html.png)](https://acids-ircam.github.io/flow_synthesizer/) [![](../images/file.png)]() [[Blog]](https://acids-ircam.github.io/flow_synthesizer/) 
+
 **Esling P.**, Chemla--Romeu-Santos A. & Bitton A. *Generative timbre spaces: regularizing variational auto-encoders with perceptual metrics*, 19th International Society for Music Information Retrieval (ISMIR2018) Conference. **Best presentation award**
 [![](../images/pdf.png)](https://arxiv.org/pdf/1805.08501.pdf) [![](../images/html.png)](https://acids-ircam.github.io/variational-timbre/) [![](../images/file.png)]() [[Blog]](https://acids-ircam.github.io/variational-timbre/) 
 
