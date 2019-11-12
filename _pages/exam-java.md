@@ -29,7 +29,7 @@ $("#div3").hide();
 
 <div markdown = "1">
 
-Vous trouverez le sujet de l'examen complet en [suivant ce lien](../documents/exam_11122019.pdf).
+Vous trouverez le sujet de l'examen complet en [suivant ce lien](../documents/exam_12112019.pdf).
 
 L'examen dure 2 heures, et tous les documents sont autorisés. Le rendu s'effectuera en envoyant une unique archive zip contenant
 - Un fichier `exam.txt` à la racine (contenant les réponses textes et explications si nécessaires)
