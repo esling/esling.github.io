@@ -69,7 +69,7 @@ Cette unité d’enseignement permet aux étudiants d’appréhender le langage 
 - Semaine 3 : [Slides ![](../images/pdf.png)](../documents/cours3.pdf) - Exercice 
 - Semaine 4 : [Slides ![](../images/pdf.png)](../documents/cours4.pdf) - Exercice
 - [Sujet Pokedeck ![](../images/pdf.png)](../documents/Java_Pokedeck.pdf)
-- Semaine 5 : Slides - Exercice 
+- Semaine 5 : [Slides ![](../images/pdf.png)](../documents/cours5.pdf) - Exercice 
 - Semaine 6 : Slides - Exercice 
 - Semaine 7 : Slides - Exercice
 - Semaine 8 : Slides - Exercice 
