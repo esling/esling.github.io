@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-This page introduces the 2017-18 projects for the ATIAM [machine learning](/atiam-ml) lessons. Each subject will target various notions seen in class. We will re-introduce the basic mecanisms behind each approach, along with the fundamental papers to understand and then, we will target specific applications to musical or audio data.
+This page introduces the 2019-20 projects for the ATIAM [machine learning](/atiam-ml) lessons. Each subject will target various notions seen in class. We will re-introduce the basic mecanisms behind each approach, along with the fundamental papers to understand and then, we will target specific applications to musical or audio data.
 
 ## Global instructions
 
@@ -56,9 +56,9 @@ All projects will be evaluated by the referent PhD, myself and another randomly 
 All your files should be packed in a zip file unfolding to a folder named
      \[ATIAM\]\[ML2017\] (LastName of all students).zip
 
-**Deadline**   : 25/12/2017 - 23h59  
+**Deadline**   : 25/12/2019 - 23h59  
 **Submission** : esling [at] ircam (dot) fr  
-**Formatting** : mail with subject : \[ATIAM\]\[ML2017\] (Last names of all students involved)  
+**Formatting** : mail with subject : \[ATIAM\]\[ML2019\] (Last names of all students involved)  
 
 `Evaluation grid`: This generic grid will be applied and sub-grids will be modulated for each subject.
 
@@ -111,40 +111,40 @@ If you do not know the principle of unit testing, you can read
 
 We detail here the various subjects (organized alphabetically by the last name of the referent PhD). For each, you can find a detailed PDF version in the following list, and we summarize the abstracts underneath.
 
-**[![](../images/pdf.png) Bitton - Disentangling variation factors in audio samples](../documents/mlProj_bitton.pdf)**
+**[![](../images/pdf.png) Caillon / Bazin - Realtime instrument interpolation using Differentiable Digital Signal Processing](../documents/mlProj_2019_Caillon.pdf)**
 
-**[![](../images/pdf.png) Carsault - Generation of chord progressions and inference in jazz](../documents/mlProj_carsault.pdf)**
+**[![](../images/pdf.png) Carsault - Introduction of musical distances for multi-step inference of jazz chord progressions](../documents/mlProj_2019_Carsault.pdf)**
 
-**[![](../images/pdf.png) Chemla - Latent representations for real-time synthesis space exploration](../documents/mlProj_chemla.pdf)**
+**[![](../images/pdf.png) Douwes / Chemla - Granular synthesis using variational learning](../documents/mlProj_chemla.pdf)**
 
-**[![](../images/pdf.png) Prang - Embedding music for automatic composition spaces](../documents/mlProj_prang.pdf)**
+**[![](../images/pdf.png) Prang - Multimodal embedding music for automatic piece recognition spaces](../documents/mlProj_2019_Douwes.pdf)**
 
-## Bitton
+## Caillon / Bazin
 
-**Regularized auto-encoders (VAE/WAEs) applied to latent audio synthesis**
+**Realtime instrument interpolation using Differentiable Digital Signal Processing**
 
 **Abstract**
-Auto-Encoders are a major class of unsupervised representation learning models that mirror a data distribution with a latent space that supports continuous gen- eration by sampling and decoding latent codes to data domain. Unregularized auto-encoders do not have a training objective that structures the latent encoding, hence continuous generation is not satisfying as there is no model of the distribution that lies in-between the encoded coordinates seen during training. To address this limitation, the encoding distribution can be regularized against a latent prior and is jointly optimized with the reconstruction objective of the auto-encoder. This learning can be implemented through stochastic Variational Inference in the form of the Variational Auto-Encoder which trains on the Evidence Lower Bound: the Negative Log-Likelihood (reconstruction) and the Kullback-Leibler Divergence that assesses the distance of each encoding to the unit Gaussian prior. Alternatively, the Wasserstein Auto-Encoder minimizes the Wasserstein distance and leads to a different latent regularizer based on the Optimal Transport theory. The Maximum Mean Discrepancy is used to assess the distance of the mini-batch encoding to any latent prior sampling. Their potential is to be investigated in this Machine Learning project, applied first to traditional image datasets such as MNIST and then tailored to audio synthesis.
+Most generative models of audio directly generate samples in one of two domains: time or frequency. While sufficient to express any signal, these representations are inefficient, as they do not utilize ex- isting knowledge of how sound is generated and perceived. A third approach (vocoders/synthesizers) successfully incorporates strong domain knowledge of signal processing and perception, but has been less actively researched due to limited expressivity and difficulty integrating with modern auto differen- tiation based machine learning methods. The use and potential of such approaches are to be evaluated during this Machine Learning project
 
-**[![](../images/pdf.png) Full project](../documents/mlProj_bitton.pdf)**
+**[![](../images/pdf.png) Full project](../documents/mlProj_2019_Caillon.pdf)**
 
 ## Carsault
 
-**Multi-step generation of chord progressions for inference in jazz through recurrent neural networks**
+**Introduction of musical distances for multi-step inference of jazz chord progressions**
 
 **Abstract**
-This project aims to generate chord progressions of jazz music, represented as co- herent chord label sequences with the help of probabilistic models. The motivation for this approach comes from a recent article on text-based LSTM networks for automatic music composition Choi et al. [2016]. In this paper, the authors use a recurrent neural network (RNN-LSTM) to generate symbolic chord sequences. They focus on two different approaches named word-RNN and char-RNN. These two variants use the same model architecture but rely on different learning methods. In this project, we will improve the word-RNN approach by doing multi-step prediction and by injecting music theory knowledge through the learning method in order to be able to perform accurate prediction of chord sequence and jazz melody generation. Ultimately, this project could be used to perform automatic accompaniment and improvisation.
+This project aims to predict chord progressions of jazz music, represented as coherent chord label sequences with the help of probabilistic models. In this study, we propose to use different neural network models to generate symbolic chord sequences. Besides, we study the impact of the introduction of different musical distances through the loss function during the training of our models. Thus, we want to improve existing methods by doing multi-step prediction and by injecting music theory knowledge through the learning method in order to be able to perform accurate prediction of chord sequence and jazz melody generation. Ultimately, this project could be used to perform automatic accompaniment and improvisation.
 
-**[![](../images/pdf.png) Full project](../documents/mlProj_carsault.pdf)**
+**[![](../images/pdf.png) Full project](../documents/mlProj_2019_Carsault.pdf)**
 
-## Chemla
+## Douwes / Chemla
 
-**Latent sequencing for dynamic musical patterns**
+**Granular synthesis using variational learning**
 
 **Abstract**
-Generative systems are machine-learning models whose training is based on two simultaneous optimization tasks. The first is to build a latent space, that provides a low-dimensional representation of the data, eventually subject to various regularizations and constraints. The second is the reconstruction of the original data through the sampling of this latent space. These systems are very promising because their space is a high-level, "over-compressed" representation that can be used as an intermediate space for several tasks, such as visualization, measurements, or classification. The main goal of this project is to use variational models in both audio and symbolic worlds, and to make them interact to have a end-to-end, full and controllable instrument.
+Generative systems are machine-learning models whose training is based on two simultaneous optimization tasks. The first is to build a latent space, that provides a low-dimensional representation of the data, eventually subject to various regularizations and constraints. The second is the reconstruction of the original data through the sampling of this latent space. These systems are very promising because their space is a high-level, ”over-compressed” representation that can be used as an inter- mediate space for several tasks, such as visualization, measurements, or classification. The main goal of this project is to use variational models for raw audio in order to create a granular synthesizer based on latent sampling.
 
-**[![](../images/pdf.png) Full project](../documents/mlProj_chemla.pdf)**
+**[![](../images/pdf.png) Full project](../documents/mlProj_2019_Douwes.pdf)**
 
 ## Prang
 
@@ -153,6 +153,6 @@ Generative systems are machine-learning models whose training is based on two si
 **Abstract**
 This project aims to develop new representations for symbolic and audio music. You will try to implement the work done by Dorfer et al. [2018] and published in ISMIR 2018. Your goal is to represent musical symbols and the corresponding short excerpts of audio in the same space called multimodal embedding space. This approach allows to address the problem of matching musical audio directly to musical symbols. Moreover, theses kind of spaces could be very powerful tools for the orchestration field. By disentangling the correlation between the orchestral score and the audio signal result, we can provide efficient systems for analyze and generate specific orchestral effects. You will use Convolutional Neural Networks in order to capture features of the both modalities and represent them with vectors of the same dimension. First, you will have to prepare your dataset by synthesizing and aligning corresponding audio from MIDI files. Then, you will implement the model proposed by Dorfer et al which is composed by two networks and train it on your synthesized dataset. Once your model will be efficient on the training data, you will test it on real data through two tasks: (1) piece/score identification from audio queries and (2) retrieving relevant performances given a score as a search query. Finally, you will propose (or even implement) improvements in the architecture or the training of the model.
 
-**[![](../images/pdf.png) Full project](../documents/mlProj_prang.pdf)**
+**[![](../images/pdf.png) Full project](../documents/mlProj_Prang.pdf)**
 
 </div>{: .notice--blank}
