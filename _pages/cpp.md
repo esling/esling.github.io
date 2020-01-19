@@ -63,22 +63,15 @@ PhD diploma
 
 ### Jury
 
-Pour chaque membre du jury, un lien est disponible vers sa page personnelle, contenant son CV et ses activités de recherche.\\
+Pour chaque membre du jury, un lien est disponible vers sa page personnelle, contenant son CV et ses activités de recherche.
 
-[Malcolm Slaney](http://slaney.org/malcolm/pubs.html)
-Rapporteur - Professor - Stanford University
-[Habib Ammari](http://www.cmap.polytechnique.fr/~ammari/)
-Rapporteur - Directeur de recherche - ENS - CNRS
-[Carlos Agon](http://repmus.ircam.fr/agon)
-Directeur - Professeur des universités - UPMC
-[Jean-Paul Allouche](http://www.math.jussieu.fr/~allouche/)
-Examinateur - Directeur de recherche - CNRS - UPMC
-[François Pachet](http://www.csl.sony.fr/~pachet/)
-Examinateur - Senior Researcher - Sony CSL
-[Patrice Perny](http://www-poleia.lip6.fr/~perny/fr/index.php)
-Examinateur - Professeur des universités - LIP6
-[Daniel Pressnitzer](http://lpp.psycho.univ-paris5.fr/person.php?name=DanielP)
-Examinateur - Directeur de recherche - ENS - CNRS
+  * [Malcolm Slaney](http://slaney.org/malcolm/pubs.html) (Rapporteur - Professor - Stanford University)
+  * [Habib Ammari](http://www.cmap.polytechnique.fr/~ammari/) (Rapporteur - Directeur de recherche - ENS - CNRS)
+  * [Carlos Agon](http://repmus.ircam.fr/agon) (Directeur - Professeur des universités - UPMC)
+  * [Jean-Paul Allouche](http://www.math.jussieu.fr/~allouche/) (Examinateur - Directeur de recherche - CNRS - UPMC)
+  * [François Pachet](http://www.csl.sony.fr/~pachet/) (Examinateur - Senior Researcher - Sony CSL)
+  * [Patrice Perny](http://www-poleia.lip6.fr/~perny/fr/index.php) (Examinateur - Professeur des universités - LIP6)
+  * [Daniel Pressnitzer](http://lpp.psycho.univ-paris5.fr/person.php?name=DanielP) (Examinateur - Directeur de recherche - ENS - CNRS)
 
 <!---
 
