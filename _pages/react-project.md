@@ -97,14 +97,18 @@ Nous imposons que votre code suive un certain nombre de standards permettant de 
 
 1. Utilisation de [prop-types](https://github.com/facebook/prop-types) (comme vu en cours), pour permettre de forcer des contraintes de types sur vos props
 2. Ecrire des commentaires au format [Doxygen](http://www.doxygen.nl/manual/starting.html) pour permettre par la suite d'utiliser [react-docgen](https://github.com/reactjs/react-docgen) pour générer automatiquement une documentation.
-3. 
-    
+3. Définition d'une syntaxe commune (même simpliste) grâce à l'utilisation de [ESLint](https://eslint.org/)
+4. Utilisation d'un schéma d'architecture objet (type UML) pensé à l'avance
+5. Modules et dossiers séparés pour augmenter la lisibilité du code
+6. Suivez une norme de code commune, par exemple la norme de [AirBnB](https://airbnb.io/javascript/react/) ou [Pagarme](https://github.com/pagarme/react-style-guide).
+
+
 **Documentation du code**
 Tout le code doit être hautement documenté à tous les niveaux. Afin de faciliter une documentation commune, vous devez suivre la pratique du style de documentation Doxygen, qui peut être trouvée [ici](http://www.doxygen.nl/manual/starting.html)
 
 **Tests unitaires**
 Les tests unitaires sont facultatifs pour le projet mais fortement recommandés (et pour vos futurs projets en tout cas). Chaque fois que vous ajoutez une nouvelle fonctionnalité «indépendante» à la boîte à outils, vous devez développer un ensemble de tests unitaires afin de vous assurer que toutes les fonctions fonctionnent correctement et également que les modifications futures n'entraveront pas le développement précédent.
-Si vous ne connaissez pas le principe du test unitaire, vous pouvez lire
+Si vous ne connaissez pas le principe du test unitaire, vous pouvez apprendre [Jest](https://jestjs.io/docs/en/tutorial-react-native)
 
 </div>{: .notice--blank}
 
@@ -112,7 +116,7 @@ Si vous ne connaissez pas le principe du test unitaire, vous pouvez lire
 
 <div markdown = "1">
 
-Nous détaillons ici les différents sujets dont le résumé est disponible par la suite. Notez que les sujets sont **volontairement simplifiés**, car le but de ce projet est également d'évaluer votre _capacité à choisir intelligemment la structure et l'architecture_ d'une application mobile complexe.
+Nous détaillons ici les différents sujets dont le résumé est disponible par la suite. Notez que les sujets sont **volontairement simplifiés**, car le but de ce projet est également d'évaluer votre _capacité à choisir intelligemment la structure et l'architecture_ d'une application mobile complexe. Les sujets définissent donc les grandes lignes du comportement et des fonctionnalités attendues, et vous laissons toute liberté sur les choix d'architecture et d'interface utilisateur.
 
 </div>{: .notice--blank}
 
