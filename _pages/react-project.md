@@ -32,12 +32,12 @@ Cette page présente les projets tutorés 2019-2020 pour les leçons de [React N
 ## Instructions globales
 
 Nous détaillons ici les instructions globales communes à tous les projets.
- - Groupes de **3 à 4 étudiants** par projet
+ - Groupes de **3 à 4 étudiants** par projet
  - **Répartition équilibrée** entre les deux sujets
- - Les projets sont **codés en React Native** (cf. section Style de codage ci-dessous)
- - Tous les projets doivent être accompagnés d'un petit rapport **en anglais**
- - Le rapport doit être de **8 pages maximum** suivant un format de _documentation développeur_
- - Les rapports doivent être rédigés en **LaTeX**
+ - Les projets sont **codés en React Native** (cf. section Style de codage ci-dessous)
+ - Tous les projets doivent être accompagnés d'un petit rapport **en anglais**
+ - Le rapport doit être de **8 pages maximum** suivant un format de _documentation développeur_
+ - Les rapports doivent être rédigés en **LaTeX**
  - Les **contributions individuelles doivent être explicitées**
 
 </div>{: .notice--blank}
