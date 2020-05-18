@@ -73,7 +73,11 @@ La soumission peut également se faire sous forme d'un lien vers un repository s
 
 </div>{: .notice--blank}
 
-ous fournirons de petits codes de référence pour chaque projet si nécessaire. Ce code contiendra des fonctions d'assistance qui vous allégeront de la charge de l'importation de données et d'autres implémentations secondaires. Le code est en Python et s'appuie fortement sur le concept de «sections de code» qui vous permet d'évaluer seulement une partie du code (pour éviter d'exécuter plusieurs fois de longues tâches d'importation et de vous concentrer sur la question à résoudre).
+## Code et style
+
+<div markdown = "1">
+
+Nous fournirons de petits codes de référence pour chaque projet si nécessaire. Ce code contiendra des fonctions d'assistance qui vous allégeront de la charge de l'importation de données et d'autres implémentations secondaires. Le code est en Python et s'appuie fortement sur le concept de «sections de code» qui vous permet d'évaluer seulement une partie du code (pour éviter d'exécuter plusieurs fois de longues tâches d'importation et de vous concentrer sur la question à résoudre).
 
 Pour que le script de base fonctionne, vous devez avoir une distribution fonctionnelle de Python, ainsi que les bibliothèques suivantes [SciPy] (https://www.scipy.org/), [Music21] (http: // web .mit.edu / music21 /), [Librosa] (http://librosa.github.io/librosa/index.html), [Tensorflow] (https://www.tensorflow.org/), [Pytorch] ( http://pytorch.org/)
   
