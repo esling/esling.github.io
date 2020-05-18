@@ -80,14 +80,14 @@ La soumission peut également se faire sous forme d'un lien vers un repository s
 
 <div markdown = "1">
 
-Nous fournirons de petits codes de référence pour chaque projet si nécessaire. Ce code contiendra des fonctions d'assistance qui vous allégeront de la charge de l'importation de données et d'autres implémentations secondaires. Le code est en Python et s'appuie fortement sur le concept de «sections de code» qui vous permet d'évaluer seulement une partie du code (pour éviter d'exécuter plusieurs fois de longues tâches d'importation et de vous concentrer sur la question à résoudre).
-
-Pour que le script de base fonctionne, vous devez avoir une distribution fonctionnelle de Python, ainsi que les bibliothèques suivantes [SciPy] (https://www.scipy.org/), [Music21] (http: // web .mit.edu / music21 /), [Librosa] (http://librosa.github.io/librosa/index.html), [Tensorflow] (https://www.tensorflow.org/), [Pytorch] ( http://pytorch.org/)
+Le code est en React Native et s'appuie fortement sur le concept de ré-évaluation temps réelle qui vous permet de mettre à jour l'application de manière dynamique au fur et à mesure de l'implémentation (pour éviter d'exécuter plusieurs fois de longues tâches d'importation et de vous concentrer sur la question à résoudre). Il est donc **fortement conseillé** de bien réfléchir à la manière dont vous comptez vous répartir les tâches. Réfléchissez notamment au découpage du projet, ainsi que la manière dont vous partagerez l'état du code source à tout moment.
   
-Nous vous recommandons fortement d'installer [Pip] (https://pypi.python.org/pypi/pip/) qui gérera l'installation automatique de ces bibliothèques Python (ainsi que leurs dépendances).
+Nous vous recommandons fortement d'installer [Expo](https://expo.io/) et [Yarn](https://yarnpkg.com/) qui permettent de simplifier la gestion des bibliothèques React (ainsi que leurs dépendances).
 
 ** Style de codage **
-Nous imposons que votre code suive la recommandation de style de codage PEP8
+Nous imposons que votre code suive un certain nombre de standards permettant de s'assurer que différents aspects de l'application soit sûrs et maintenable.
+
+1. Utilisation de [prop-types](https://github.com/facebook/prop-types) 
 
 [Style PEP8] (https://www.python.org/dev/peps/pep-0008/)
 
