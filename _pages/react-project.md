@@ -32,11 +32,12 @@ Cette page présente les projets tutorés 2019-2020 pour les leçons de [React N
 ## Instructions globales
 
 Nous détaillons ici les instructions globales communes à tous les projets.
- - Groupes de ** 3 à 4 étudiants ** par projet
- - Les projets sont ** codés en React Native ** (cf. section Style de codage ci-dessous)
- - Tous les projets doivent être accompagnés d'un petit rapport ** en anglais **
- - Le rapport doit être de ** 8 pages maximum ** suivant un format de _documentation développeur_
- - Les rapports doivent être rédigés en ** LaTeX **
+ - Groupes de **3 à 4 étudiants** par projet
+ - **Répartition équilibrée** entre les deux sujets
+ - Les projets sont **codés en React Native** (cf. section Style de codage ci-dessous)
+ - Tous les projets doivent être accompagnés d'un petit rapport **en anglais**
+ - Le rapport doit être de **8 pages maximum** suivant un format de _documentation développeur_
+ - Les rapports doivent être rédigés en **LaTeX**
  - Les **contributions individuelles doivent être explicitées**
 
 </div>{: .notice--blank}
@@ -45,63 +46,59 @@ Nous détaillons ici les instructions globales communes à tous les projets.
 
 <div markdown = "1">
 
-All projects will be evaluated by the referent PhD, myself and another randomly picked PhD to ensure equity across different projects. The project should be delivered with an archive containing 3 folders
+Tous les projets seront évalués de manière alternée avec une grille équivalente pour assurer l'équité entre les différents projets. Le projet doit être livré sous forme de 3 dossiers
 
-`code/` : Should contain your well-documented code (cf. Coding style section) along with simple scripts that demonstrate the use of the developped methodologies. We recommend that you organize your code following modules.
+`code /`: Devrait contenir votre code bien documenté (cf. section Style de codage) ainsi que des scripts simples qui démontrent l'utilisation des méthodologies développées. Nous vous recommandons d'organiser votre code en suivant les modules que vous devez définir dans l'architecture.
 
-`report/` : Should contain your report in PDF format along with the LaTeX source and eventual figures.
+`report /`: Devrait contenir votre rapport au format PDF avec la source LaTeX. Celui-ci devra détailler la manière dont vous avez architecturé votre projet, les problèmes et solutions, ainsi que des screenshots d'utilisation.
 
-`toy/` : Should contain a well-documented toy dataset, along with the procedural scripts to generate it. You can create another PDF document describing the set if you fill the need, otherwise detail it in your report
+`tests /`: devrait contenir un ensemble décrivant les tests, ainsi que la manière de les effectuer. Vous pouvez créer un autre document PDF décrivant l'ensemble de tests si vous en sentez le besoin, sinon détaillez-le dans votre rapport
 
-All your files should be packed in a zip file unfolding to a folder named
-     \[ATIAM\]\[ML2017\] (LastName of all students).zip
+Tous vos fichiers doivent être emballés dans un fichier zip se dépliant dans un dossier nommé
+     \[React\]\[Projet2020\] (Nom de tous les élèves) .zip
+La soumission peut également se faire sous forme d'un lien vers un repository sur GitHub.
 
-**Deadline**   : 25/12/2019 - 23h59  
-**Submission** : esling [at] ircam (dot) fr  
-**Formatting** : mail with subject : \[ATIAM\]\[ML2019\] (Last names of all students involved)  
+**Date limite**: 25/12/2019 - 23h59
+**Soumission**: esling [at] ircam (dot) fr
+**Formatage**: courrier avec sujet: \[React\]\[Projet2020\] (Noms de tous les étudiants impliqués)
 
-`Evaluation grid`: This generic grid will be applied and sub-grids will be modulated for each subject.
+`Grille d'évaluation`: cette grille générique sera appliquée et les sous-grilles seront modulées pour chaque sujet.
 
-**(6 pts) - Report** Including content and style
+**(6 pts) - Rapport** Noté à la fois sur le contenu et le style
 
-**(6 pts) - Toy dataset** Quality and completeness of the dataset
+**(6 pts) - Architecture, extensibilité** Qualité et exhaustivité de la modélisation, facilité à étendre l'application
 
-**(8 pts) - Code** Accuracy, evaluation and coding style
+**(8 pts) - Code** Exactitude, évaluation et style de codage
+
 
 </div>{: .notice--blank}
 
-## Code and style
+ous fournirons de petits codes de référence pour chaque projet si nécessaire. Ce code contiendra des fonctions d'assistance qui vous allégeront de la charge de l'importation de données et d'autres implémentations secondaires. Le code est en Python et s'appuie fortement sur le concept de «sections de code» qui vous permet d'évaluer seulement une partie du code (pour éviter d'exécuter plusieurs fois de longues tâches d'importation et de vous concentrer sur la question à résoudre).
 
-<div markdown = "1">
+Pour que le script de base fonctionne, vous devez avoir une distribution fonctionnelle de Python, ainsi que les bibliothèques suivantes [SciPy] (https://www.scipy.org/), [Music21] (http: // web .mit.edu / music21 /), [Librosa] (http://librosa.github.io/librosa/index.html), [Tensorflow] (https://www.tensorflow.org/), [Pytorch] ( http://pytorch.org/)
+  
+Nous vous recommandons fortement d'installer [Pip] (https://pypi.python.org/pypi/pip/) qui gérera l'installation automatique de ces bibliothèques Python (ainsi que leurs dépendances).
 
-We will provide small reference codes for each project if needed. This code will contain helper functions that will alleviate you from the burden of data import and other sideline implementations. The code is in Python and relies heavily on the concept of `code sections` which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand).
+** Style de codage **
+Nous imposons que votre code suive la recommandation de style de codage PEP8
 
-In order to get the baseline script to work, you need to have a working distribution of Python, along with the following libraries [SciPy](https://www.scipy.org/), [Music21](http://web.mit.edu/music21/), [Librosa](http://librosa.github.io/librosa/index.html), [Tensorflow](https://www.tensorflow.org/), [Pytorch](http://pytorch.org/)
-  
-We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
+[Style PEP8] (https://www.python.org/dev/peps/pep-0008/)
 
-**Coding style**
-We impose that your code follow the PEP8 coding style recommandation
+Chaque dossier représente un module, vous devez donc vous assurer de tout
+liés à la définition du module.
+ - Écrivez un fichier __init__.py
+ - Vérifiez que la documentation à l'intérieur est valide
+ - Documentez toujours toute nouvelle fonctionnalité
+ - Implémenter des exemples dans un script basé sur root
+    
+** Documentation du code **
+Tout le code doit être hautement documenté à tous les niveaux. Afin de faciliter une documentation commune, vous devez suivre la pratique du style de documentation Numpy, qui peut être trouvée ici
 
-[PEP8 style](https://www.python.org/dev/peps/pep-0008/)
+[Style de documentation Numpy] (http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html)
 
-Each folder represents a module, you should consequently ensure everything
-related to module definition.
- - Write a __init__.py file
- - Check that the documentation inside is valid
- - Always document any new functionality
- - Implement examples in a root-based script
-    
-**Code documentation**
-All code should be highly documented at all levels. In order to facilitate a common documentation, you are required to follow the Numpy documentation style practice, which can be found here
-
-[Numpy documentation style](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html)
-
-**Unit testing**
-Unit testing is optional for the project but highly recommended (and for your future projects in any case). Every time you add a new `independent` functionnality to the toolbox, you should develop a set of unit tests in order to ensure that all the functions work correctly and also that future modifications will not impair previous development.
-If you do not know the principle of unit testing, you can read
-
-[Unit testing](https://docs.python.org/2/library/unittest.html)
+** Tests unitaires **
+Les tests unitaires sont facultatifs pour le projet mais fortement recommandés (et pour vos futurs projets en tout cas). Chaque fois que vous ajoutez une nouvelle fonctionnalité «indépendante» à la boîte à outils, vous devez développer un ensemble de tests unitaires afin de vous assurer que toutes les fonctions fonctionnent correctement et également que les modifications futures n'entraveront pas le développement précédent.
+Si vous ne connaissez pas le principe du test unitaire, vous pouvez lire
 
 </div>{: .notice--blank}
 
@@ -109,7 +106,7 @@ If you do not know the principle of unit testing, you can read
 
 <div markdown = "1">
 
-We detail here the various subjects (organized alphabetically by the last name of the referent PhD). For each, you can find a detailed PDF version in the following list, and we summarize the abstracts underneath.
+Nous détaillons ici les différents sujets qui sont sous formes PDF, et dont le résumé est disponible par la suite. 
 
 **[![](../images/pdf.png) Caillon / Bazin - Realtime instrument interpolation using Differentiable Digital Signal Processing](../documents/mlProj_2019_Caillon.pdf)**
 
