@@ -124,13 +124,46 @@ Nous détaillons ici les différents sujets dont le résumé est disponible par 
 
 <div markdown = "1">
 
+Ces dernières années, de nombreuses applications permettant de gérer sa vie eete améliorer sa productivité ont vues le jour. Cependant, peu d'applications permettent d'automatiser l'organisation des tâches régulières (lessive, lecture) de manière optimale. On se propose d'écrire une application qui trouvera pour nous un emploi du temps nous permettant de réaliser toutes lees tâches qu'on se fixe pour chaque semaine.
+
+***Partie 1 - Gestion de vie***
+
+Nous allons dans un premier temps définir l'ensemble des tâches que nous devons gérer lors d'une semaine, et que le programme permettra de
+1. Définir une liste de tâches "datées" (cours, rendez-vous)
+2. Définir une liste de tâches "récurrentes" (lessive, lecture, etc...)
+3. Modifier toutes les propriétés de chaque tâche
+4. Personnaliser les tâches
+
+Pour simplifier l'utilisation de l'application, nous voulons également qu'elle soit capable de
+1. Récupérer des évènements dans d'autres calendriers (Google Calendar)
+2. S'abonner à un flux d'évènements (RSS)
+3. Importer des évènements iCal
+
+***Partie 2 - Automatisation de calendrier***
+
+Le coeur de l'application est de trouver la manière optimale d'organiser tous les évènements de notre semaine. Ici nous allons permettre de définir un algorithme simplissime d'organisation
+1. L'utilisateur définit des propriétés (heure de réveil, heure de repas, ...)
+2. L'algorithme place les évènements "datés" en premier
+3. On calcule l'ensemble des "places restantes" (temps disponible entre tâches obligatoires)
+4. L'algorithme range les jours aléatoirement
+5. On place les tâches une à une en partant des plus longues vers les plus courtes
+
+L'interface finale nous permettra de
+1. Afficher le calendrier résultant
+2. Modifier et sauver les résultats de l'algorithme
+
+Pour permettre d'intégrer les résultats de notre application de manière plus forte avec les utilisateurs, nous voulons ajouter le lien avec les apps les plus utilisées (Google calendar, Calendrier MacOS). Pour cela l'application devra
+1. Exporter des objets de type iCal
+2. Interagir avec _Google Calendar_ (et autres au choix)
+3. Editer les propriétés d'export
+
 </div>{: .notice--blank}
 
 ## Bot Twitter
 
 <div markdown = "1">
 
-Le réseau social [Twitter]() propose une [API publique](https://developer.twitter.com/en), permettant de publiez et analyser les tweets, ouvrant la possibilité de programmer un _bot_ (système de publication ou réponse automatique). 
+Le réseau social _Twitter_ propose une [API publique](https://developer.twitter.com/en), permettant de publiez et analyser les tweets, ouvrant la possibilité de programmer un _bot_ (système de publication ou réponse automatique). 
 
 Un _bot rudimentaire_ peut permettre de tweeter régulièrement de manière programmatique, ou inversement de répondre à des tweets. Un exemple de service permettant de mettre en place en bot sans aucune connaissance en programmation est [Cheap Bots Done Quick](http://cheapbotsdonequick.com/). Nous allons dans ce projet écrire une application permettant d'effectuer des analyses sur Twitter, et de mettre en place des bots très simples.
 
