@@ -130,4 +130,32 @@ Nous détaillons ici les différents sujets dont le résumé est disponible par 
 
 <div markdown = "1">
 
+Le réseau social [Twitter]() propose une [API publique](https://developer.twitter.com/en), permettant de publiez et analyser les tweets, ouvrant la possibilité de programmer un _bot_ (système de publication ou réponse automatique). 
+
+Un _bot rudimentaire_ peut permettre de tweeter régulièrement de manière programmatique, ou inversement de répondre à des tweets. Un exemple de service permettant de mettre en place en bot sans aucune connaissance en programmation est [Cheap Bots Done Quick](http://cheapbotsdonequick.com/). Nous allons dans ce projet écrire une application permettant d'effectuer des analyses sur Twitter, et de mettre en place des bots très simples.
+
+***Partie 1 - Utilisation de l'API Twitter***
+
+Nous voulons avoir une première partie de l'application qui permet d'utiliser l'API Twitter d'un point de vue analytique. Il faudra donc utiliser l'API [Search](https://developer.twitter.com/en/docs/tweets/search/overview). Dans cette première partie, nous voulons pouvoir récupérer des méta-données et effectuer des analyses
+1. Récupérer une liste d'utilisateurs
+2. Récupérer les tweets d'un utilisateur particulier
+3. Effectuer des recherches dans les tweets
+4. Calculer des statistiques sur les tweets
+
+***Partie 2 - Cheap bot***
+
+Nous voulons une deuxième partie permettant de mettre en place un bot simpliste. Celui-ci pourra être d'un des deux types (choisi par l'utilisateur) 
+1. Répondeur automatique
+2. Posteur automatique
+
+Dans le cas du répondeur automatique, deux types de comportements sont attendus
+1. Définir une liste de messages automatiques
+2. Choisir des propriétés de réponse
+3. Répondre à des mentions faites au bot (type @xxxx)
+4. Répondre aux messages d'un utilisateur
+
+Dans le cas du posteur automatique, le bot permettra d'envoyer des messages définis par règles. On attend donc de pouvoir
+1. Définir des règles sur les envois (message de base, combinaison des mots, ...)
+2. Choisir les propriétés de l'envoi (heure, fréquence, etc ...)
+
 </div>{: .notice--blank}
