@@ -60,7 +60,7 @@ Tous vos fichiers doivent être emballés dans un fichier zip se dépliant dans 
      
 La soumission peut également se faire sous forme d'un lien vers un repository sur GitHub.
 
-**Date limite**: 25/12/2019 - 23h59
+**Date limite**: 30/06/2020 - 23h59
 
 **Soumission**: esling [at] ircam (dot) fr
 
@@ -82,7 +82,7 @@ Cette grille générique sera appliquée et les sous-grilles seront modulées po
 
 <div markdown = "1">
 
-Le code est en React Native et s'appuie fortement sur le concept de ré-évaluation temps réelle qui vous permet de mettre à jour l'application de manière dynamique au fur et à mesure de l'implémentation (pour éviter d'exécuter plusieurs fois de longues tâches d'importation et de vous concentrer sur la question à résoudre). Il est donc **fortement conseillé** de bien réfléchir à la manière dont vous comptez vous répartir les tâches. Réfléchissez notamment au découpage du projet, ainsi que la manière dont vous partagerez l'état du code source à tout moment.
+Le code est en React Native, langage qui s'appuie fortement sur le concept de ré-évaluation temps réelle qui vous permet de mettre à jour l'application de manière dynamique au fur et à mesure de l'implémentation (pour éviter d'exécuter plusieurs fois de longues tâches d'importation et de vous concentrer sur la question à résoudre). Il est donc **fortement conseillé** de bien réfléchir à la manière dont vous comptez vous répartir les tâches. Réfléchissez notamment au découpage du projet, ainsi que la manière dont vous partagerez l'état du code source à tout moment.
 
 
 Nous vous recommandons fortement d'installer [Expo](https://expo.io/) et [Yarn](https://yarnpkg.com/) qui permettent de simplifier la gestion des bibliothèques React (ainsi que leurs dépendances). Nous recommandons également de mettre en place dès le début une architecture de travail partagé (Git) et modulaire, permettant au groupe d'avancer de manière solide.
@@ -93,7 +93,7 @@ Nous vous recommandons fortement d'installer [Expo](https://expo.io/) et [Yarn](
 
 <div markdown = "1">
 
-Nous imposons que votre code suive un certain nombre de standards permettant de s'assurer que différents aspects de l'application soit sûrs et maintenable.
+Nous imposons que votre code suive un certain nombre de standards permettant de s'assurer que différents aspects de l'application soient sûrs et maintenable.
 
 1. Utilisation de [prop-types](https://github.com/facebook/prop-types) (comme vu en cours), pour permettre de forcer des contraintes de types sur vos props
 2. Ecrire des commentaires au format [Doxygen](http://www.doxygen.nl/manual/starting.html) pour permettre par la suite d'utiliser [react-docgen](https://github.com/reactjs/react-docgen) pour générer automatiquement une documentation.
@@ -107,7 +107,7 @@ Nous imposons que votre code suive un certain nombre de standards permettant de 
 Tout le code doit être hautement documenté à tous les niveaux. Afin de faciliter une documentation commune, vous devez suivre la pratique du style de documentation Doxygen, qui peut être trouvée [ici](http://www.doxygen.nl/manual/starting.html)
 
 **Tests unitaires**
-Les tests unitaires sont facultatifs pour le projet mais fortement recommandés (et pour vos futurs projets en tout cas). Chaque fois que vous ajoutez une nouvelle fonctionnalité «indépendante» à la boîte à outils, vous devez développer un ensemble de tests unitaires afin de vous assurer que toutes les fonctions fonctionnent correctement et également que les modifications futures n'entraveront pas le développement précédent.
+Les tests unitaires sont facultatifs pour le projet mais fortement recommandés (et pour vos futurs projets en tout cas). Chaque fois que vous ajoutez une nouvelle fonctionnalité «indépendante» à la boîte à outils, vous devez développer un ensemble de tests unitaires afin de vous assurer que toutes les fonctions marchent correctement et également que les modifications futures n'entraveront pas le développement précédent.
 Si vous ne connaissez pas le principe du test unitaire, vous pouvez apprendre [Jest](https://jestjs.io/docs/en/tutorial-react-native)
 
 </div>{: .notice--blank}
@@ -124,11 +124,11 @@ Nous détaillons ici les différents sujets dont le résumé est disponible par 
 
 <div markdown = "1">
 
-Ces dernières années, de nombreuses applications permettant de gérer sa vie eete améliorer sa productivité ont vues le jour. Cependant, peu d'applications permettent d'automatiser l'organisation des tâches régulières (lessive, lecture) de manière optimale. On se propose d'écrire une application qui trouvera pour nous un emploi du temps nous permettant de réaliser toutes lees tâches qu'on se fixe pour chaque semaine.
+Ces dernières années, de nombreuses applications permettant de gérer sa vie et d'améliorer sa productivité ont vues le jour. Cependant, peu d'applications permettent d'automatiser l'organisation des tâches régulières (lessive, lecture) de manière optimale. On se propose d'écrire une application qui trouvera pour nous un emploi du temps nous permettant de réaliser toutes les tâches qu'on se fixe pour chaque semaine.
 
 ***Partie 1 - Gestion de vie***
 
-Nous allons dans un premier temps définir l'ensemble des tâches que nous devons gérer lors d'une semaine, et que le programme permettra de
+Nous allons dans un premier temps définir l'ensemble des tâches que nous devons gérer lors d'une semaine, ainsi le programme permettra de
 1. Définir une liste de tâches "datées" (cours, rendez-vous)
 2. Définir une liste de tâches "récurrentes" (lessive, lecture, etc...)
 3. Modifier toutes les propriétés de chaque tâche
@@ -163,7 +163,7 @@ Pour permettre d'intégrer les résultats de notre application de manière plus 
 
 <div markdown = "1">
 
-Le réseau social _Twitter_ propose une [API publique](https://developer.twitter.com/en), permettant de publiez et analyser les tweets, ouvrant la possibilité de programmer un _bot_ (système de publication ou réponse automatique). 
+Le réseau social _Twitter_ propose une [API publique](https://developer.twitter.com/en), permettant de publier et analyser les tweets, ouvrant la possibilité de programmer un _bot_ (système de publication ou réponse automatique). 
 
 Un _bot rudimentaire_ peut permettre de tweeter régulièrement de manière programmatique, ou inversement de répondre à des tweets. Un exemple de service permettant de mettre en place en bot sans aucune connaissance en programmation est [Cheap Bots Done Quick](http://cheapbotsdonequick.com/). Nous allons dans ce projet écrire une application permettant d'effectuer des analyses sur Twitter, et de mettre en place des bots très simples.
 
@@ -177,11 +177,11 @@ Nous voulons avoir une première partie de l'application qui permet d'utiliser l
 
 ***Partie 2 - Cheap bot***
 
-Nous voulons une deuxième partie permettant de mettre en place un bot simpliste. Celui-ci pourra être d'un des deux types (choisi par l'utilisateur) 
+Nous voulons une deuxième partie dans l'application permettant de mettre en place un bot simpliste. Celui-ci pourra être d'un des deux types (choisi par l'utilisateur) 
 1. Répondeur automatique
 2. Posteur automatique
 
-Dans le cas du répondeur automatique, deux types de comportements sont attendus
+Dans le cas du répondeur automatique, les comportements attendus sont
 1. Définir une liste de messages automatiques
 2. Choisir des propriétés de réponse
 3. Répondre à des mentions faites au bot (type @xxxx)
