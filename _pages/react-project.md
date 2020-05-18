@@ -27,17 +27,17 @@ $(document).ready(function(){
 
 <div markdown = "1">
 
-This page introduces the 2019-20 projects for the ATIAM [machine learning](/atiam-ml) lessons. Each subject will target various notions seen in class. We will re-introduce the basic mecanisms behind each approach, along with the fundamental papers to understand and then, we will target specific applications to musical or audio data.
+Cette page présente les projets tutorés 2019-2020 pour les leçons de [React Native](http://reactnative.dev/). Les deux sujets ciblent différentes notions vues en classe. Nous réintroduirons les mécanismes de base derrière chaque approche, ainsi que les concepts fondamentaux à comprendre, puis nous ciblerons une application spécifique de la programmation mobile.
 
-## Global instructions
+## Instructions globales
 
-We detail here the global instructions that are common to all projects.
- - Groups of **4 to 5 students** per project
- - Projects are **coded in Python** (cf. Coding style section underneath)
- - All projects should be accompanied with a small report **in english**
- - The report should be of **8 pages maximum** following scientific papers
- - Reports must be written in **LaTeX** with a given **format style**
- - Each project has a **referent PhD** along with myself
+Nous détaillons ici les instructions globales communes à tous les projets.
+ - Groupes de ** 3 à 4 étudiants ** par projet
+ - Les projets sont ** codés en React Native ** (cf. section Style de codage ci-dessous)
+ - Tous les projets doivent être accompagnés d'un petit rapport ** en anglais **
+ - Le rapport doit être de ** 8 pages maximum ** suivant un format de _documentation développeur_
+ - Les rapports doivent être rédigés en ** LaTeX **
+ - Les **contributions individuelles doivent être explicitées**
 
 </div>{: .notice--blank}
 
