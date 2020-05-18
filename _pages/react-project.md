@@ -83,29 +83,26 @@ Cette grille générique sera appliquée et les sous-grilles seront modulées po
 <div markdown = "1">
 
 Le code est en React Native et s'appuie fortement sur le concept de ré-évaluation temps réelle qui vous permet de mettre à jour l'application de manière dynamique au fur et à mesure de l'implémentation (pour éviter d'exécuter plusieurs fois de longues tâches d'importation et de vous concentrer sur la question à résoudre). Il est donc **fortement conseillé** de bien réfléchir à la manière dont vous comptez vous répartir les tâches. Réfléchissez notamment au découpage du projet, ainsi que la manière dont vous partagerez l'état du code source à tout moment.
-  
-Nous vous recommandons fortement d'installer [Expo](https://expo.io/) et [Yarn](https://yarnpkg.com/) qui permettent de simplifier la gestion des bibliothèques React (ainsi que leurs dépendances).
 
-** Style de codage **
+
+Nous vous recommandons fortement d'installer [Expo](https://expo.io/) et [Yarn](https://yarnpkg.com/) qui permettent de simplifier la gestion des bibliothèques React (ainsi que leurs dépendances). Nous recommandons également de mettre en place dès le début une architecture de travail partagé (Git) et modulaire, permettant au groupe d'avancer de manière solide.
+
+</div>{: .notice--blank}
+
+### Style de codage
+
+<div markdown = "1">
+
 Nous imposons que votre code suive un certain nombre de standards permettant de s'assurer que différents aspects de l'application soit sûrs et maintenable.
 
 1. Utilisation de [prop-types](https://github.com/facebook/prop-types) (comme vu en cours), pour permettre de forcer des contraintes de types sur vos props
-2. Ecrire des commentaires au format [Doxygen]() pour permettre par la suite d'utiliser [react-docgen](https://github.com/reactjs/react-docgen) pour générer automatiquement une documentation.
+2. Ecrire des commentaires au format [Doxygen](http://www.doxygen.nl/manual/starting.html) pour permettre par la suite d'utiliser [react-docgen](https://github.com/reactjs/react-docgen) pour générer automatiquement une documentation.
 3. 
-
-Chaque dossier représente un module, vous devez donc vous assurer de tout
-liés à la définition du module.
- - Écrivez un fichier __init__.py
- - Vérifiez que la documentation à l'intérieur est valide
- - Documentez toujours toute nouvelle fonctionnalité
- - Implémenter des exemples dans un script basé sur root
     
-** Documentation du code **
-Tout le code doit être hautement documenté à tous les niveaux. Afin de faciliter une documentation commune, vous devez suivre la pratique du style de documentation Numpy, qui peut être trouvée ici
+**Documentation du code**
+Tout le code doit être hautement documenté à tous les niveaux. Afin de faciliter une documentation commune, vous devez suivre la pratique du style de documentation Doxygen, qui peut être trouvée [ici](http://www.doxygen.nl/manual/starting.html)
 
-[Style de documentation Numpy] (http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html)
-
-** Tests unitaires **
+**Tests unitaires**
 Les tests unitaires sont facultatifs pour le projet mais fortement recommandés (et pour vos futurs projets en tout cas). Chaque fois que vous ajoutez une nouvelle fonctionnalité «indépendante» à la boîte à outils, vous devez développer un ensemble de tests unitaires afin de vous assurer que toutes les fonctions fonctionnent correctement et également que les modifications futures n'entraveront pas le développement précédent.
 Si vous ne connaissez pas le principe du test unitaire, vous pouvez lire
 
@@ -115,7 +112,7 @@ Si vous ne connaissez pas le principe du test unitaire, vous pouvez lire
 
 <div markdown = "1">
 
-Nous détaillons ici les différents sujets dont le résumé est disponible par la suite. Notez que les sujets sont **volontairement simplifiés**, car le but de ce projet est également d'évaluer votre _capacité à choisir intelligemment la structure et l'aarchitecture_ d'une application mobile complexe
+Nous détaillons ici les différents sujets dont le résumé est disponible par la suite. Notez que les sujets sont **volontairement simplifiés**, car le but de ce projet est également d'évaluer votre _capacité à choisir intelligemment la structure et l'architecture_ d'une application mobile complexe.
 
 </div>{: .notice--blank}
 
