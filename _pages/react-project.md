@@ -55,11 +55,14 @@ Tous les projets seront évalués de manière alternée avec une grille équival
 `tests /`: devrait contenir un ensemble décrivant les tests, ainsi que la manière de les effectuer. Vous pouvez créer un autre document PDF décrivant l'ensemble de tests si vous en sentez le besoin, sinon détaillez-le dans votre rapport
 
 Tous vos fichiers doivent être emballés dans un fichier zip se dépliant dans un dossier nommé
-     \[React\]\[Projet2020\] (Nom de tous les élèves) .zip
+     `\[React\]\[Projet2020\] (Nom de tous les élèves) .zip`
+     
 La soumission peut également se faire sous forme d'un lien vers un repository sur GitHub.
 
 **Date limite**: 25/12/2019 - 23h59
+
 **Soumission**: esling [at] ircam (dot) fr
+
 **Formatage**: courrier avec sujet: \[React\]\[Projet2020\] (Noms de tous les étudiants impliqués)
 
 `Grille d'évaluation`: cette grille générique sera appliquée et les sous-grilles seront modulées pour chaque sujet.
