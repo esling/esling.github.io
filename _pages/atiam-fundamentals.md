@@ -72,7 +72,8 @@ All the questions are already detailed inside the code provided in the `atiam-fp
 
 #### Part 1 - Exploring the collection / playing with MIDI
 
-**(1 pts) - Q-1.1** Re-implement one of the array sorting algorithm seen in class either bubble sort or quicksort (+1 pt bonus)
+
+**(1 pts) - Q-1.1** Re-implement a sorting algorithm seen in class either bubble sort or quicksort (+1 pt)
 
 **(1 pts) - Q-1.2** Sort the collection of composers by decreasing number of tracks
 
@@ -84,6 +85,7 @@ All the questions are already detailed inside the code provided in the `atiam-fp
 
 #### Part 2 - Implementing the alignment algorithm
 
+
 **(3 pts) - Q-2.1** Implement the basic (simple gap cost) Needleman-Wunsch (NW) algorithm
 
 **(1 pts) - Q-2.2** Apply the NW algorithm between all tracks of each composer
@@ -92,11 +94,13 @@ All the questions are already detailed inside the code provided in the `atiam-fp
 
 #### Part 3 - Extending the alignment algorithm and musical matching
 
+
 **(2 pts) - Q-3.1** Extending your algorithm to perform to a true musical name matching
 
 **(3 pts) - Q-3.2** Extend the NW algorithm to include affine gaps penalties ([Gotoh algorithm](http://helios.mi.parisdescartes.fr/~lomn/Cours/BI/Material2019/gap-penalty-gotoh.pdf))
 
 #### Part 4 - Extending the alignment algorithm and musical matching
+
 
 **(3 pts) - Q-4.1** Exploring MIDI properties
 
