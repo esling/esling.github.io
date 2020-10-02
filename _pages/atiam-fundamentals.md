@@ -8,6 +8,7 @@ sidebar:
   nav: "teaching-atiam"
 ---
 
+<div markdown = "1">
 
 ## Slides
   * The lesson on data structures and algorithms [slides ![](../images/pdf.png)](../documents/Generic.5.Structures.pdf)
@@ -115,3 +116,5 @@ The script defines the overall exercise which should be filled
 **Deadline**   : 06/11/2020 - 23h59  
 **Submission** : esling [at] ircam (dot) fr  
 **Formatting** : mail with subject : \[ATIAM\]\[FpA2020\] Name  
+
+</div>{: .notice--blank}
