@@ -73,7 +73,7 @@ All the questions are already detailed inside the code provided in the `atiam-fp
 #### Part 1 - Exploring the collection / playing with MIDI
 
 
-**(1 pts) - Q-1.1** Re-implement a sorting algorithm seen in class either bubble sort or quicksort (+1 pt)
+**(1 pts) - Q-1.1** Re-implement either the bubble sort or quicksort (+1 pt) algorithm
 
 **(1 pts) - Q-1.2** Sort the collection of composers by decreasing number of tracks
 
