@@ -67,25 +67,41 @@ atiam-fpa.py          # Basic script to start from
 
 ### Questions
 
-All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here and also provide an indicative grading value for each. Remember that if you have trouble implementing it, you can at least provide a commented answer as to how you would approach the solution.
+All the questions are already detailed inside the code provided in the `atiam-fpa.py` script, but we recall them here and also provide an indicative grading value for each. Remember that if you have trouble implementing a given question, the different parts are almost completely independent, so you can jump to the next section. In open questions you can also at least provide a commented answer as to how you would approach the solution.
 
-**(3 pts) - Q-1.1** Implement the Needleman-Wunsch (NW) algorithm.
+#### Part 1 - Exploring the collection / playing with MIDI
 
-**(1 pts) - Q-2.1** Sort the collection of composers by decreasing number of tracks
+**(1 pts) - Q-1.1** Re-implement one of the array sorting algorithm seen in class either bubble sort or quicksort (+1 pt bonus)
+
+**(1 pts) - Q-1.2** Sort the collection of composers by decreasing number of tracks
+
+**(1 pts) - Q-1.3** Extend your sorting procedure, to sort all tracks from all composers alphabetically 
+
+**(1 pts) - Q-1.4** Import some MIDI and produce prettier plots
+
+**(1 pts) - Q-1.5** Compute the number of notes in a MIDI and sort the collection
+
+#### Part 2 - Implementing the alignment algorithm
+
+**(3 pts) - Q-2.1** Implement the basic (simple gap cost) Needleman-Wunsch (NW) algorithm
 
 **(1 pts) - Q-2.2** Apply the NW algorithm between all tracks of each composer
 
-**(2 pts) - Q-2.3** Extend your previous code so that it can compare
+**(2 pts) - Q-2.3** Extend your previous code so that it can compare more advanced properties
 
-**(5 pts) - Q-3.1** Extending to a true musical name matching
+#### Part 3 - Extending the alignment algorithm and musical matching
 
-**(1 pts) - Q-4.1** Import and plot some MIDI files
+**(2 pts) - Q-3.1** Extending your algorithm to perform to a true musical name matching
 
-**(3 pts) - Q-4.2** Exploring MIDI properties
+**(3 pts) - Q-3.1** Extend the NW algorithm to include affine gaps penalties ([Gotoh algorithm](http://helios.mi.parisdescartes.fr/~lomn/Cours/BI/Material2019/gap-penalty-gotoh.pdf))
 
-**(5 pts) - Q-5.1** Automatic evaluation of a MIDI file quality
+#### Part 4 - Extending the alignment algorithm and musical matching
 
-**(4 pts) - Q-6.1** Extending your alignment algorithm to MIDI scores
+**(3 pts) - Q-4.1** Exploring MIDI properties
+
+**(4 pts) - Q-4.2** Automatic evaluation of a MIDI file quality
+
+**(4 pts) - Q-4.3** Extending your alignment algorithm to MIDI scores
 
 ### Instructions
 
@@ -94,8 +110,8 @@ The script defines the overall exercise which should be filled
  - You are authorized to define other files if you prefer
  - If stuck with code, you can still write your overall approach as a set of comments to earn some point
  - All your files should be packed in a zip file named
-     \[ATIAM\]\[FpA2017\]FirstName_LastName.zip
+     \[ATIAM\]\[FpA2020\]FirstName_LastName.zip
 
-**Deadline**   : 23/10/2017 - 23h59  
+**Deadline**   : 06/11/2020 - 23h59  
 **Submission** : esling [at] ircam (dot) fr  
-**Formatting** : mail with subject : \[ATIAM\]\[FpA2017\] Name  
+**Formatting** : mail with subject : \[ATIAM\]\[FpA2020\] Name  
