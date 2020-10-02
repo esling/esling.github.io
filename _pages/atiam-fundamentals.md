@@ -93,7 +93,7 @@ All the questions are already detailed inside the code provided in the `atiam-fp
 
 **(2 pts) - Q-3.1** Extending your algorithm to perform to a true musical name matching
 
-**(3 pts) - Q-3.1** Extend the NW algorithm to include affine gaps penalties ([Gotoh algorithm](http://helios.mi.parisdescartes.fr/~lomn/Cours/BI/Material2019/gap-penalty-gotoh.pdf))
+**(3 pts) - Q-3.2** Extend the NW algorithm to include affine gaps penalties ([Gotoh algorithm](http://helios.mi.parisdescartes.fr/~lomn/Cours/BI/Material2019/gap-penalty-gotoh.pdf))
 
 #### Part 4 - Extending the alignment algorithm and musical matching
 
