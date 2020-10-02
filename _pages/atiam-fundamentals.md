@@ -15,7 +15,7 @@ sidebar:
 
 ## Assignment
 
-***Using multiple computer structures and solving symbolic alignments for classical music pieces in Python.***
+***Using multiple computer structures and solving symbolic alignments for classical music pieces in Python 3.***
 
 In this exercise, we will use our knowledge on computer structures to solve a very well-known problem of symbolic alignement. Hence, the overall goal of your work is
 1. Implement a *string alignment* algorithm
