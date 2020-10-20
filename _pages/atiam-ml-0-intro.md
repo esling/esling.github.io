@@ -65,11 +65,13 @@ In this introduction, we will cover basic Music Information Retrieval (MIR) inte
 
 <div markdown = "1">
 
-Along the tutorials, we provide a reference code for each section. This code contains helper functions that will alleviate you from the burden of data import and other sideline implementations. You will find designated spaces in each file to develop your solutions. The code is in MATLAB and relies heavily on the concept of [code sections](https://fr.mathworks.com/help/matlab/matlab_prog/run-sections-of-programs.html) which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand.
+Along the tutorials, we provide a reference code for each section. This code contains helper functions that will alleviate you from the burden of data import and other sideline implementations. You will find designated spaces in each file to develop your solutions. The code is in Python (notebooks impending) and relies heavily on the concept of [code sections](https://fr.mathworks.com/help/matlab/matlab_prog/run-sections-of-programs.html) which allows you to evaluate only part of the code (to avoid running long import tasks multiple times and concentrate on the question at hand.
 
 Get the baseline MATLAB code for all tutorials from this [zip file ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/F6QlLPgABOVJQRI)
 
 Get the baseline Python code for all tutorials from this [zip file ![](../images/file.png)](../documents/Exercices_Python.zip)
+
+Get the baseline Jupyter notebooks code for all tutorials from this [zip file ![](../images/file.png)](../documents/Exercices_Python.zip)
 
 </div>{: .notice--blank}
 
@@ -77,20 +79,39 @@ Get the baseline Python code for all tutorials from this [zip file ![](../images
 
 <div markdown = "1">
 
-In order to get the baseline script to work, you need to have a working distribution of Python, along with the following libraries
+#### Python installation
+
+In order to get the baseline script to work, you need to have a working distribution of `Python 3.5` as a minimum (we also recommend to update your version to `Python 3.7`). We will also be using the following libraries
+
+  - [Matplotlib](https://matplotlib.org/)
+  - [Numpy](https://numpy.org/)
   - [SciPy](https://www.scipy.org/)
+  - [Scikit-Learn](https://scikit-learn.org/)
   - [Music21](http://web.mit.edu/music21/)
   - [Librosa](http://librosa.github.io/librosa/index.html)
-  - [Yaafe](https://github.com/Yaafe/Yaafe)
   - [PyTorch](https://pytorch.org/)
-  - [Keras](https://keras.io/)
   
-We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
+We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage the automatic installation of those Python libraries (along with their dependencies). If you are using `Pip`, you can use the following commands
+
+```
+pip install matplotlib
+pip install numpy
+pip install scipy
+pip install scikit-learn
+pip install music21
+pip install librosa
+pip install torch torchvision
+```
 
 For those of you who have never coded in Python, here are a few interesting resources to get started.
 
   - [TutorialPoint](https://www.tutorialspoint.com/python/)
   - [Programiz](https://www.programiz.com/python-programming)
+
+#### Jupyter notebooks and lab
+
+In order to ease following the exercises along with the course, we will be relying on [**Jupyter Notebooks**](). If you have never used a notebook before, we recommend that you look at their website to understand the concept. You need to install it on your computer as follows
+
 
 </div>{: .notice--blank}
 
