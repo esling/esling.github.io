@@ -110,8 +110,17 @@ For those of you who have never coded in Python, here are a few interesting reso
 
 #### Jupyter notebooks and lab
 
-In order to ease following the exercises along with the course, we will be relying on [**Jupyter Notebooks**](). If you have never used a notebook before, we recommend that you look at their website to understand the concept. You need to install it on your computer as follows
+In order to ease following the exercises along with the course, we will be relying on [**Jupyter Notebooks**](https://jupyter.org/). If you have never used a notebook before, we recommend that you look at their website to understand the concept. Here we also provide the instructions to install **Jupyter Lab** which is a more integrative version of notebooks. You can install it on your computer as follows (if you use `pip`)
 
+```
+pip install jupyterlab
+```
+
+Then, once installed, you can go to the folder where you cloned this repository, and type in
+
+```
+jupyter lab
+```
 
 </div>{: .notice--blank}
 
