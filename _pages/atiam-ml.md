@@ -74,9 +74,13 @@ The evaluation of the ML course is defined by a group project. All details can b
 
 # Tutorials
 
-The present tutorials covers coding exercices designed to implement the core notions seen in the machine learning lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercices here target these techniques specifically applied to musical or audio data.
+The present tutorials covers coding exercices designed to implement the core notions seen in the machine learning lessons. Most techniques can be applied to any type of data from which sets of features can be computed. The exercices here target these techniques specifically applied to musical or audio data. **The newest version of this course is being actively developed as a set of Python Notebooks, that you can find at the following repo (that you should clone)**
 
-Get the baseline code for your language of choice :
+[https://github.com/esling/atiam_ml](https://github.com/esling/atiam_ml)
+
+**Please pull this repo regularly for the time of the course development to stay updated**
+
+Note that the legacy course with its set of MATLAB and Python exercises is still maintained here and valid. Get the baseline code for your language of choice (legacy course) :
 
 [Matlab zip file ![](../images/file.png)](https://nuage.ircam.fr/index.php/s/F6QlLPgABOVJQRI)  
 
