@@ -151,6 +151,6 @@ Generative systems are machine-learning models whose training is based on two si
 **Abstract**
 Generative systems are machine-learning models whose training is based on two simultaneous optimization tasks. The first is to build a latent space, that provides a low-dimensional representation of the data, eventually subject to various regularizations and constraints. The second is the reconstruction of the original data through the sampling of this latent space. These systems are very promising because their space is a high-level, ”over-compressed” representation that can be used as an inter- mediate space for several tasks, such as visualization, measurements, or classification. The main goal of this project is to use variational models for raw audio in order to create a granular synthesizer based on latent sampling.
 
-<> **[![](../images/pdf.png) Full project](../documents/mlProj_2019_Douwes.pdf)**
+{% **[![](../images/pdf.png) Full project](../documents/mlProj_2019_Douwes.pdf)** %}
 
 </div>{: .notice--blank}
