@@ -99,7 +99,7 @@ All the questions are already detailed inside the code provided in the `atiam-fp
 
 **(3 pts) - Q-3.2** Extend the NW algorithm to include affine gaps penalties ([Gotoh algorithm](http://helios.mi.parisdescartes.fr/~lomn/Cours/BI/Material2019/gap-penalty-gotoh.pdf))
 
-#### Part 4 - Extending the alignment algorithm and musical matching
+#### Part 4 - Alignments between MIDI files and error-detection
 
 
 **(3 pts) - Q-4.1** Exploring MIDI properties

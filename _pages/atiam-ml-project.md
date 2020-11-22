@@ -119,40 +119,38 @@ We detail here the various subjects (organized alphabetically by the last name o
 
 **[![](../images/pdf.png) Prang - Multimodal embedding music for automatic piece recognition spaces](../documents/mlProj_2019_Douwes.pdf)**
 
-## Caillon / Bazin
+## Caillon / Bitton
 
-**Realtime instrument interpolation using Differentiable Digital Signal Processing**
+**Learning controls and interactions for DDSP**
 
 **Abstract**
-Most generative models of audio directly generate samples in one of two domains: time or frequency. While sufficient to express any signal, these representations are inefficient, as they do not utilize ex- isting knowledge of how sound is generated and perceived. A third approach (vocoders/synthesizers) successfully incorporates strong domain knowledge of signal processing and perception, but has been less actively researched due to limited expressivity and difficulty integrating with modern auto differen- tiation based machine learning methods. The use and potential of such approaches are to be evaluated during this Machine Learning project
+Most generative models of audio directly synthesize samples in one of two domains: waveform or time-frequency. While sufficient to express any signals, these representations are inefficient as they do not utilize prior knowledge of how sound is produced and perceived. The Differentiable Digital Signal Processing (DDSP) model generates audio based on an additive sinusoidal synthesizer summed with a subtractive noise synthesizer (SMS decomposition), which are jointly controlled by a neural network. Conditioning signals of f0 and loudness are extracted from an audio at a 100Hz frame rate, then processed and upsampled by the DDSP decoder which infers time-varying control parameters for the output synthesizers. It achieves high audio quality with an unprecedented efficiency and has been used for creative purposes such as timbre transfer. However, its use for sampling and composition is limited since it requires fine-grained and realistic input envelopes. In this project, we will study several approaches aiming at generating expressive conditioning signals based on a quantized input (event classes, MIDI score) or in an unconditional fashion. Given a pretrained DDSP generator, the experiments will focus on learning an upstream control model and proposing new user interactions
 
 **[![](../images/pdf.png) Full project](../documents/mlProj_2019_Caillon.pdf)**
 
 ## Carsault
 
-**Introduction of musical distances for multi-step inference of jazz chord progressions**
+**Harmonic arpeggiator using variational learning**
 
 **Abstract**
-This project aims to predict chord progressions of jazz music, represented as coherent chord label sequences with the help of probabilistic models. In this study, we propose to use different neural network models to generate symbolic chord sequences. Besides, we study the impact of the introduction of different musical distances through the loss function during the training of our models. Thus, we want to improve existing methods by doing multi-step prediction and by injecting music theory knowledge through the learning method in order to be able to perform accurate prediction of chord sequence and jazz melody generation. Ultimately, this project could be used to perform automatic accompaniment and improvisation.
+In this project, we will target the modeling of complex harmonic structures using variational auto-encoding, in order to generate novel chord sequences from progressions taken from a limited set of data. Hence, we will simultaneously obtain an unsupervised representation of chord sequences and a generative chord generation process, that can be sampled to produce new sequences. Hence, your aim is twofold here : first, developing & training a suitable VAE system for chord generation, and then develop sampling & arpeggiating heuristics to make your model a convincing operational system.
 
-**[![](../images/pdf.png) Full project](../documents/mlProj_2019_Carsault.pdf)**
+<> **[![](../images/pdf.png) Full project](../documents/mlProj_2019_Carsault.pdf)**
 
-## Douwes / Chemla
+## Devis
 
-**Granular synthesis using variational learning**
+**Automatic rhythmic generation with control over semantic rhythms attribute **
+
+**Abstract**
+Generative systems are machine-learning models whose training is based on two simultaneous optimization tasks. The first consists in building a latent space, which provides a low-dimensional representation of the data, eventually subject to various regularization and constraints. The second is the reconstruction of the original data through the sampling of this latent space. These systems are very promising as their space is a high-level, over-compressed representation that can be used as an intermediate space for several tasks, such as visualization, measurements, or classification. The steps of this project are first to develop variational models to find generative rhythms synthesis space, where each point of this space corresponds to a new data content that comes from the high-level understanding of the input data, followed by the implementation of an approach that would provide a certain control over high-level semantic musical attributes of rhythm. The main goal is to develop a new creative tool that strives to break the commonprocess of rhythms composition.
+
+## Douwes / Bazin
+
+**Discrete Latent Representations of Sound for Lightweight Interactive Audio Effects**
 
 **Abstract**
 Generative systems are machine-learning models whose training is based on two simultaneous optimization tasks. The first is to build a latent space, that provides a low-dimensional representation of the data, eventually subject to various regularizations and constraints. The second is the reconstruction of the original data through the sampling of this latent space. These systems are very promising because their space is a high-level, ”over-compressed” representation that can be used as an inter- mediate space for several tasks, such as visualization, measurements, or classification. The main goal of this project is to use variational models for raw audio in order to create a granular synthesizer based on latent sampling.
 
-**[![](../images/pdf.png) Full project](../documents/mlProj_2019_Douwes.pdf)**
-
-## Prang
-
-**Multimodal embedding music for automatic piece recognition spaces**
-
-**Abstract**
-This project aims to develop new representations for symbolic and audio music. You will try to implement the work done by Dorfer et al. [2018] and published in ISMIR 2018. Your goal is to represent musical symbols and the corresponding short excerpts of audio in the same space called multimodal embedding space. This approach allows to address the problem of matching musical audio directly to musical symbols. Moreover, theses kind of spaces could be very powerful tools for the orchestration field. By disentangling the correlation between the orchestral score and the audio signal result, we can provide efficient systems for analyze and generate specific orchestral effects. You will use Convolutional Neural Networks in order to capture features of the both modalities and represent them with vectors of the same dimension. First, you will have to prepare your dataset by synthesizing and aligning corresponding audio from MIDI files. Then, you will implement the model proposed by Dorfer et al which is composed by two networks and train it on your synthesized dataset. Once your model will be efficient on the training data, you will test it on real data through two tasks: (1) piece/score identification from audio queries and (2) retrieving relevant performances given a score as a search query. Finally, you will propose (or even implement) improvements in the architecture or the training of the model.
-
-**[![](../images/pdf.png) Full project](../documents/mlProj_Prang.pdf)**
+<> **[![](../images/pdf.png) Full project](../documents/mlProj_2019_Douwes.pdf)**
 
 </div>{: .notice--blank}
