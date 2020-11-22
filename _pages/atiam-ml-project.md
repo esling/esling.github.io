@@ -139,7 +139,7 @@ In this project, we will target the modeling of complex harmonic structures usin
 
 ## Devis
 
-**Automatic rhythmic generation with control over semantic rhythms attribute **
+**Automatic rhythmic generation with control over semantic rhythms attribute**
 
 **Abstract**
 Generative systems are machine-learning models whose training is based on two simultaneous optimization tasks. The first consists in building a latent space, which provides a low-dimensional representation of the data, eventually subject to various regularization and constraints. The second is the reconstruction of the original data through the sampling of this latent space. These systems are very promising as their space is a high-level, over-compressed representation that can be used as an intermediate space for several tasks, such as visualization, measurements, or classification. The steps of this project are first to develop variational models to find generative rhythms synthesis space, where each point of this space corresponds to a new data content that comes from the high-level understanding of the input data, followed by the implementation of an approach that would provide a certain control over high-level semantic musical attributes of rhythm. The main goal is to develop a new creative tool that strives to break the commonprocess of rhythms composition.
