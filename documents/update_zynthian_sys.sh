@@ -267,25 +267,25 @@ fi
 
 if [ -z "$NO_ZYNTHIAN_UPDATE" ]; then
 	# Copy "etc" config files
-	cp -a $ZYNTHIAN_SYS_DIR/etc/modules /etc
-	cp -a $ZYNTHIAN_SYS_DIR/etc/inittab /etc
-	cp -a $ZYNTHIAN_SYS_DIR/etc/network/* /etc/network
-	cp -an $ZYNTHIAN_SYS_DIR/etc/dbus-1/* /etc/dbus-1
-	cp -an $ZYNTHIAN_SYS_DIR/etc/security/* /etc/security
-	cp -a $ZYNTHIAN_SYS_DIR/etc/systemd/* /etc/systemd/system
-	cp -a $ZYNTHIAN_SYS_DIR/etc/udev/rules.d/* /etc/udev/rules.d 2>/dev/null
-	cp -a $ZYNTHIAN_SYS_DIR/etc/avahi/* /etc/avahi
-	cp -a $ZYNTHIAN_SYS_DIR/etc/default/* /etc/default
-	cp -a $ZYNTHIAN_SYS_DIR/etc/ld.so.conf.d/* /etc/ld.so.conf.d
-	cp -a $ZYNTHIAN_SYS_DIR/etc/modprobe.d/* /etc/modprobe.d
-	cp -an $ZYNTHIAN_SYS_DIR/etc/vim/* /etc/vim
-	cp -a $ZYNTHIAN_SYS_DIR/etc/update-motd.d/* /etc/update-motd.d
+#   cp -a $ZYNTHIAN_SYS_DIR/etc/modules /etc
+#   cp -a $ZYNTHIAN_SYS_DIR/etc/inittab /etc
+#   cp -a $ZYNTHIAN_SYS_DIR/etc/network/* /etc/network
+#	cp -an $ZYNTHIAN_SYS_DIR/etc/dbus-1/* /etc/dbus-1
+#	cp -an $ZYNTHIAN_SYS_DIR/etc/security/* /etc/security
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/systemd/* /etc/systemd/system
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/udev/rules.d/* /etc/udev/rules.d 2>/dev/null
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/avahi/* /etc/avahi
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/default/* /etc/default
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/ld.so.conf.d/* /etc/ld.so.conf.d
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/modprobe.d/* /etc/modprobe.d
+#	cp -an $ZYNTHIAN_SYS_DIR/etc/vim/* /etc/vim
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/update-motd.d/* /etc/update-motd.d
 	# WIFI Hotspot
-	cp -a $ZYNTHIAN_SYS_DIR/etc/hostapd/* /etc/hostapd
-	cp -a $ZYNTHIAN_SYS_DIR/etc/dnsmasq.conf /etc
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/hostapd/* /etc/hostapd
+#	cp -a $ZYNTHIAN_SYS_DIR/etc/dnsmasq.conf /etc
 	# WIFI Network
 	#rm -f /etc/wpa_supplicant/wpa_supplicant.conf
-	cp -an $ZYNTHIAN_SYS_DIR/etc/wpa_supplicant/wpa_supplicant.conf $ZYNTHIAN_CONFIG_DIR
+#	cp -an $ZYNTHIAN_SYS_DIR/etc/wpa_supplicant/wpa_supplicant.conf $ZYNTHIAN_CONFIG_DIR
 fi
 
 # Display zynthian info on ssh login
