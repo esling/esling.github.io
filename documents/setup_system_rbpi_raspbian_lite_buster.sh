@@ -156,8 +156,8 @@ mkdir "$ZYNTHIAN_CONFIG_DIR"
 mkdir "$ZYNTHIAN_SW_DIR"
 
 # Zynthian System Scripts and Config files
-cd $ZYNTHIAN_DIR
-git clone -b ""${ZYNTHIAN_SYS_BRANCH}"" "${ZYNTHIAN_SYS_REPO}"
+#cd $ZYNTHIAN_DIR
+#git clone -b ""${ZYNTHIAN_SYS_BRANCH}"" "${ZYNTHIAN_SYS_REPO}"
 
 # Install WiringPi
 $ZYNTHIAN_RECIPE_DIR/install_wiringpi.sh
@@ -239,7 +239,7 @@ fi
 
 # Run configuration script
 $ZYNTHIAN_SYS_DIR/scripts/update_zynthian_data.sh
-$ZYNTHIAN_SYS_DIR/scripts/update_zynthian_sys.sh
+#$ZYNTHIAN_SYS_DIR/scripts/update_zynthian_sys.sh
 
 # Configure Systemd Services
 systemctl daemon-reload
@@ -272,13 +272,13 @@ systemctl enable jack2
 systemctl enable mod-ttymidi
 systemctl enable a2jmidid
 systemctl enable zynthian
-systemctl enable zynthian-webconf
+#systemctl enable zynthian-webconf
 systemctl enable zynthian-config-on-boot
 
 # Setup loading of Zynthian Environment variables ...
 echo "source $ZYNTHIAN_CONFIG_DIR/zynthian_envars.sh" >> /root/.bashrc
 # => Shell & Login Config
-echo "source $ZYNTHIAN_SYS_DIR/etc/profile.zynthian" >> /root/.profile
+#echo "source $ZYNTHIAN_SYS_DIR/etc/profile.zynthian" >> /root/.profile
 
 # On first boot, resize SD partition, regenerate keys, etc.
 $ZYNTHIAN_SYS_DIR/scripts/set_first_boot.sh
