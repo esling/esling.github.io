@@ -156,8 +156,8 @@ mkdir "$ZYNTHIAN_CONFIG_DIR"
 mkdir "$ZYNTHIAN_SW_DIR"
 
 # Zynthian System Scripts and Config files
-#cd $ZYNTHIAN_DIR
-#git clone -b ""${ZYNTHIAN_SYS_BRANCH}"" "${ZYNTHIAN_SYS_REPO}"
+cd $ZYNTHIAN_DIR
+git clone -b ""${ZYNTHIAN_SYS_BRANCH}"" "${ZYNTHIAN_SYS_REPO}"
 
 # Install WiringPi
 $ZYNTHIAN_RECIPE_DIR/install_wiringpi.sh
@@ -168,19 +168,19 @@ git clone https://github.com/zynthian/zyncoder.git
 ./zyncoder/build.sh
 
 # Zynthian UI
-#cd $ZYNTHIAN_DIR
-#git clone https://github.com/zynthian/zynthian-ui.git
-#cd $ZYNTHIAN_UI_DIR
-#if [ -d "zynlibs" ]; then
-#	find ./zynlibs -type f -name build.sh -exec {} \;
-#else
-#	if [ -d "jackpeak" ]; then
-#		./jackpeak/build.sh
-#	fi
-#	if [ -d "zynseq" ]; then
-#		./zynseq/build.sh
-#	fi
-#fi
+cd $ZYNTHIAN_DIR
+git clone https://github.com/zynthian/zynthian-ui.git
+cd $ZYNTHIAN_UI_DIR
+if [ -d "zynlibs" ]; then
+	find ./zynlibs -type f -name build.sh -exec {} \;
+else
+	if [ -d "jackpeak" ]; then
+		./jackpeak/build.sh
+	fi
+	if [ -d "zynseq" ]; then
+		./zynseq/build.sh
+	fi
+fi
 
 # Zynthian Data
 cd $ZYNTHIAN_DIR
@@ -239,7 +239,7 @@ fi
 
 # Run configuration script
 $ZYNTHIAN_SYS_DIR/scripts/update_zynthian_data.sh
-#$ZYNTHIAN_SYS_DIR/scripts/update_zynthian_sys.sh
+./update_zynthian_sys.sh
 
 # Configure Systemd Services
 systemctl daemon-reload
@@ -248,20 +248,20 @@ systemctl enable avahi-daemon
 #
 # NOTE : This is a lot to comment ^^
 #
-#systemctl disable raspi-config
-#systemctl disable cron
-#systemctl disable rsyslog
-#systemctl disable ntp
-#systemctl disable htpdate
-#systemctl disable wpa_supplicant
-#systemctl disable hostapd
-#systemctl disable dnsmasq
-#systemctl disable unattended-upgrades
-#systemctl disable apt-daily.timer
-#systemctl disable packagekit
-#systemctl disable polkit
-#systemctl mask packagekit
-#systemctl mask polkit
+systemctl disable raspi-config
+systemctl disable cron
+systemctl disable rsyslog
+systemctl disable ntp
+systemctl disable htpdate
+systemctl disable wpa_supplicant
+systemctl disable hostapd
+systemctl disable dnsmasq
+systemctl disable unattended-upgrades
+systemctl disable apt-daily.timer
+systemctl disable packagekit
+systemctl disable polkit
+systemctl mask packagekit
+systemctl mask polkit
 #systemctl disable serial-getty@ttyAMA0.service
 #systemctl disable sys-devices-platform-soc-3f201000.uart-tty-ttyAMA0.device
 systemctl enable backlight
@@ -278,10 +278,10 @@ systemctl enable zynthian-config-on-boot
 # Setup loading of Zynthian Environment variables ...
 echo "source $ZYNTHIAN_CONFIG_DIR/zynthian_envars.sh" >> /root/.bashrc
 # => Shell & Login Config
-#echo "source $ZYNTHIAN_SYS_DIR/etc/profile.zynthian" >> /root/.profile
+echo "source $ZYNTHIAN_SYS_DIR/etc/profile.zynthian" >> /root/.profile
 
 # On first boot, resize SD partition, regenerate keys, etc.
-$ZYNTHIAN_SYS_DIR/scripts/set_first_boot.sh
+#$ZYNTHIAN_SYS_DIR/scripts/set_first_boot.sh
 
 
 #************************************************
@@ -423,14 +423,14 @@ mkdir /root/Pd/externals
 #------------------------------------------------
 
 #Install MOD-HOST
-#$ZYNTHIAN_RECIPE_DIR/install_mod-host.sh
+$ZYNTHIAN_RECIPE_DIR/install_mod-host.sh
 
 #Install MOD-UI
-#$ZYNTHIAN_RECIPE_DIR/install_mod-ui.sh
-#$ZYNTHIAN_RECIPE_DIR/install_phantomjs.sh
+$ZYNTHIAN_RECIPE_DIR/install_mod-ui.sh
+$ZYNTHIAN_RECIPE_DIR/install_phantomjs.sh
 
 #Install MOD-SDK
-#$ZYNTHIAN_RECIPE_DIR/install_mod-sdk.sh
+$ZYNTHIAN_RECIPE_DIR/install_mod-sdk.sh
 
 #------------------------------------------------
 # Install Plugins
@@ -456,7 +456,7 @@ if [ ! -d "$ZYNTHIAN_CONFIG_DIR/updates" ]; then
 fi
 
 # Run configuration script before ending
-$ZYNTHIAN_SYS_DIR/scripts/update_zynthian_sys.sh
+./update_zynthian_sys.sh
 
 #************************************************
 #------------------------------------------------
