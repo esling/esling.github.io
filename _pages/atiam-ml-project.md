@@ -111,13 +111,13 @@ If you do not know the principle of unit testing, you can read
 
 We detail here the various subjects (organized alphabetically by the last name of the referent PhD). For each, you can find a detailed PDF version in the following list, and we summarize the abstracts underneath.
 
-**[![](../images/pdf.png) Caillon / Bitton - Learning controls and interactions for DDSP](../documents/projML_2020_Caillon.pdf)**
+**[![](../images/pdf.png) Caillon - Adversarial modelling of electronic music loops](../documents/atiam2021_Caillon.pdf)**
 
-**[![](../images/pdf.png) Carsault - Harmonic arpeggiator using variational learning](../documents/projML_2020_Carsault.pdf)**
+**[![](../images/pdf.png) Chemla - Audio networks hacking : novelty search through active divergence](../documents/atiam2021_Chemla.pdf)**
 
-**[![](../images/pdf.png) Devis - Automatic rhythmic generation with control over semantic rhythms attribute](../documents/projML_2020_Devis.pdf)**
+**[![](../images/pdf.png) Devis - Effects modeling, distortion simplification for Eurorack](../documents/atiam2021_Devis.pdf)**
 
-**[![](../images/pdf.png) Douwes / Bazin - Discrete Latent Representations of Sound for Lightweight Interactive Audio Effects](../documents/projML_2020_Bazin.pdf)**
+**[![](../images/pdf.png) Douwes - Music compression and generation](../documents/atiam2021_Douwes.pdf)**
 
 ## Caillon / Bitton
 
