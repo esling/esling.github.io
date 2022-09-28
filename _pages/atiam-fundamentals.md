@@ -117,8 +117,8 @@ The script defines the overall exercise which should be filled
  - All your files should be packed in a zip file named
      \[ATIAM\]\[FpA2020\]FirstName_LastName.zip
 
-**Deadline**   : 06/11/2020 - 23h59  
+**Deadline**   : 06/11/2022 - 23h59  
 **Submission** : esling [at] ircam (dot) fr  
-**Formatting** : mail with subject : \[ATIAM\]\[FpA2020\] Name  
+**Formatting** : mail with subject : \[ATIAM\]\[FpA2022\] Name  
 
 </div>{: .notice--blank}
