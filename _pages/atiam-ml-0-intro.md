@@ -107,6 +107,7 @@ For those of you who have never coded in Python, here are a few interesting reso
 
   - [TutorialPoint](https://www.tutorialspoint.com/python/)
   - [Programiz](https://www.programiz.com/python-programming)
+  - [Scaler Topics](https://www.scaler.com/topics/python/)
 
 #### Jupyter notebooks and lab
 
