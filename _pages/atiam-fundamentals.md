@@ -41,9 +41,9 @@ composers_tracks  # Hashtable of tracks for a given composer
 ### Dependencies
 
 In order to get the baseline script to work, you need to have a working distribution of Python, along with the following libraries
-  - [SciPy](https://www.scipy.org/)
+  - [Numpy](https://www.numpy.org/)
   - [Music21](http://web.mit.edu/music21/)
-  - [NwAlign](https://pypi.python.org/pypi/nwalign)
+  - [Minineedle](https://pypi.org/project/minineedle/)
   
 We highly recommend that you install [Pip](https://pypi.python.org/pypi/pip/) or [Anaconda](https://www.anaconda.com/download/) that will manage the automatic installation of those Python libraries (along with their dependencies). 
 
@@ -63,7 +63,7 @@ atiam-fpa/            # Folder of anonymized Beethoven MIDI files
 atiam-fpa_alpha.dist  # Basic symbolic distance matrix
 atiam-fpa_dna.dist    # Example of DNA-based distance matrix
 atiam-fpa.pkl         # Serialized file with all track names and composers
-atiam-fpa.py          # Basic script to start from
+atiam-fpa.ipynb       # Python notebook to fill out
 {% endhighlight %}
 
 ### Questions
