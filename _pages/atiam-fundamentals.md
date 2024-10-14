@@ -54,7 +54,7 @@ For those of you who have never coded in Python, here are a few interesting reso
 
 ### Baseline
 
-First download the [baseline code ![](../images/file.png)](../documents/atiam-fpa.zip)
+First download the [baseline code ![](../images/file.png)](https://github.com/esling/esling.github.io/raw/refs/heads/master/documents/atiam-fpa.zip)
 
 After unzipping the file, you will find the following files
 
