@@ -115,10 +115,10 @@ The script defines the overall exercise which should be filled
  - You are authorized to define other files if you prefer
  - If stuck with code, you can still write your overall approach as a set of comments to earn some point
  - All your files should be packed in a zip file named
-     \[ATIAM\]\[FpA2020\]FirstName_LastName.zip
+     \[ATIAM\]\[FpA2024\]FirstName_LastName.zip
 
-**Deadline**   : 06/11/2022 - 23h59  
+**Deadline**   : 14/11/2024 - 23h59  
 **Submission** : esling [at] ircam (dot) fr  
-**Formatting** : mail with subject : \[ATIAM\]\[FpA2022\] Name  
+**Formatting** : mail with subject : \[ATIAM\]\[FpA2024\] Name  
 
 </div>{: .notice--blank}
